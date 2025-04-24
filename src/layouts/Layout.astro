@@ -1,13 +1,19 @@
 ---
-import '../styles/global.css'
-
+// Custom fonts
 import '@fontsource-variable/urbanist'
 import '@fontsource-variable/oswald';
+
+// Styles 
+import '../styles/global.css'
+
+// i18n
+import { getLangFromUrl } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
 
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang={lang}>
   <head>
     <meta charset='UTF-8' />
     <meta
