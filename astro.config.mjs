@@ -1,10 +1,16 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-import tailwindcss from "@tailwindcss/vite";
+import starlight from '@astrojs/starlight';
+import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  integrations: [
+    starlight({
+      title: 'Docs with Tailwind',
+      customCss: [
+        // Path to your Tailwind base styles:
+        './src/styles/global.css',
+      ],
+    }),
+  ],
+  vite: { plugins: [tailwindcss()] },
 });

@@ -1,1 +1,15 @@
-@import "tailwindcss";
+@layer base, starlight, theme, components, utilities;
+
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+
+@theme {
+    --font-title: 'Oswald Variable', 'sans-serif';
+    --font-sans: 'Urbanist Variable', 'sans-serif';
+    --color-brand-blue: #4f6a9e;
+    --color-brand-white: #ffffff;
+    --color-brand-black: #000000;
+    --color-brand-gold: #c7b66b;
+}
