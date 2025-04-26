@@ -8,21 +8,23 @@ interface Props {
   class?: string
 }
 
-const { imageSrc, imageAlt, text, class: className = '' } = Astro.props as Props
+const { imageSrc, imageAlt, text, class: className = 'clase' } = Astro.props as Props
 ---
 
-<img
-  src={imageSrc}
-  alt={imageAlt}
-  class={clsx(
-    'w-80',
-    'h-80',
-    'object-cover',
-    'rounded-lg',
-    'transition-transform',
-    'duration-300',
-    'hover:scale-105',
-    className
-  )}
-/>
-<p>{text}</p>
+<div class={clsx(
+  "w-80", // Mismo ancho que la imagen
+  "transition-transform duration-300 hover:scale-105",
+  className
+)}>
+  <img
+    src={imageSrc}
+    alt={imageAlt}
+    class={clsx(
+      "w-full h-80 object-cover rounded-lg", // Usa w-full para que ocupe el 100% del contenedor
+    )}
+  />
+  <p class="mt-2 p-2 text-center text-pretty break-words"> 
+    {/* text-pretty evita desbordamientos, break-words rompe palabras largas */}
+    {text}
+  </p>
+</div>

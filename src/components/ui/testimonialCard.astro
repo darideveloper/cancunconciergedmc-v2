@@ -1,28 +1,40 @@
 ---
-import clsx from 'clsx';
+import clsx from "clsx";
 
 interface Props {
-    imageSrc: String;
-    imageAlt: String;
-    name: String;
-    quote: String;
+  imageSrc: String;
+  imageAlt: String;
+  name: String;
+  quote: String;
 }
 
-const { imageSrc,imageAlt,name,quote } = Astro.props as Props;
+const { imageSrc, imageAlt, name, quote } = Astro.props as Props;
 ---
 
-<img 
-src={imageSrc} 
-alt={imageAlt} 
-class={clsx(
-    "w-40", 
-    "h-40", 
-    "object-cover", 
-    "rounded-lg", 
-    "transition-transform", 
-    "duration-300", 
-    "hover:scale-105"
-
-  )}/>
-<p>Nombre: {name}</p>
-<p>Cotizacion: {quote}</p>
+<div
+  class="group inline-block transition-transform duration-300 hover:scale-105 font-oswald"
+>
+  <img
+    src={imageSrc}
+    alt={imageAlt}
+    class={clsx(
+      "w-80 h-80", // Imagen cuadrada
+      "object-cover",
+      "rounded-lg",
+      "transition-transform",
+      "duration-300",
+    )}
+  />
+  <div class="mt-2 p-2 text-center w-80">
+    <h3
+      class="group-hover:scale-105 transition-transform duration-300 px-6 text-lg font-bold tracking-wide"
+    >
+      {name}
+    </h3>
+    <p
+      class="group-hover:scale-105 transition-transform duration-300 mt-1 tracking-wide"
+    >
+      {quote}
+    </p>
+  </div>
+</div>
