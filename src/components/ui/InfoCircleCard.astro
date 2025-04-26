@@ -1,0 +1,70 @@
+---
+import { clsx } from 'clsx';
+
+interface Props {
+  imageSrc: string;
+  imageAlt: string;
+}
+
+const { imageSrc, imageAlt } = Astro.props;
+
+const clasesContenedor = clsx(
+  'relative',
+  'w-[400px]',
+  'h-[400px]',
+  'rounded-full',
+  'overflow-hidden',
+  'group'
+);
+
+const clasesImagen = clsx(
+  'w-full',
+  'h-full',
+  'object-cover',
+  'rounded-full',
+  'transition-opacity',
+  'duration-300',
+  'group-hover:opacity-50'
+);
+
+const clasesOverlay = clsx(
+  'absolute',
+  'inset-0',
+  'flex',
+  'flex-col',
+  'items-center',
+  'justify-center',
+  'text-center',
+  'opacity-0',
+  'transition-opacity',
+  'duration-300',
+  'group-hover:opacity-100',
+  'bg-transparent'
+);
+
+const clasesTitulo = clsx(
+  'text-3xl',
+  'font-bold',
+  'mb-2',
+  'text-[var(--color-black)]',
+  'font-[var(--font-title)]'
+);
+
+const clasesTexto = clsx(
+  'text-lg',
+  'text-[var(--color-black)]',
+  'font-[var(--font-sans)]'
+);
+---
+
+<div class={clasesContenedor}>
+  <img src={imageSrc} alt={imageAlt} class={clasesImagen} />
+  <div class={clasesOverlay}>
+    <h3 class={clasesTitulo}>
+      <slot name="title" />
+    </h3>
+    <p class={clasesTexto}>
+      <slot name="text" />
+    </p>
+  </div>
+</div>

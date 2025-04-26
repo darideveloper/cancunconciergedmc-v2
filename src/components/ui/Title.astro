@@ -1,0 +1,28 @@
+---
+import { clsx } from 'clsx';
+
+interface Props {
+  isH1?: boolean;
+}
+
+const { isH1 = false } = Astro.props;
+
+const clases = clsx(
+  'text-4xl',
+  'font-bold',
+  'text-[var(--color-black)]',
+  'font-[var(--font-title)]',
+  'tracking-wide',
+  'leading-tight'
+);
+---
+
+{isH1 ? (
+  <h1 class={clases}>
+    <slot />
+  </h1>
+) : (
+  <h2 class={clases}>
+    <slot />
+  </h2>
+)}

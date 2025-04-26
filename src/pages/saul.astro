@@ -1,12 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Link from '../components/ui/Link.astro';
+import Title from '../components/ui/Title.astro';
+import InfoCircleCard from '../components/ui/InfoCircleCard.astro';
 
 
 ---
 
 <Layout>
+	<InfoCircleCard imageSrc="../src/assets/test1.jpg" imageAlt="Descripción">
+		<span slot="title">Titulo</span>
+		<span slot="text">Texto</span>
+	  </InfoCircleCard>
+	<Title isH1={true}>H1 Prueba</Title>
 	<Link href="https://www.youtube.com/" target="_blank">Hijo</Link>
-	<Link href="#">Hola</Link>
+
+	<InfoCircleCard imageSrc="../src/assets/test.webp" imageAlt="Descripción">
+		<span slot="title">Título</span>
+		<span slot="text">Texto</span>
+	  </InfoCircleCard>
+	<Title>H2 Prueba</Title>
+	<Link href="#">LEARN MORE</Link>
 </Layout>
 
