@@ -4,9 +4,10 @@ import clsx from 'clsx';
 interface Props {
   href: string;
   target?: string;
+  class?:string;
 }
 
-const { href, target = "_self",  }: Props = Astro.props;
+const { href, target = "_self", class:className='' }: Props = Astro.props;
 ---
 
 <a
@@ -23,10 +24,9 @@ const { href, target = "_self",  }: Props = Astro.props;
     "cursor-pointer",
     "px-6",
     "py-2",
-    "my-3",
-    "mx-2",
     "hover:scale-110",
-    "inline-block"
+    "inline-block",
+    className
 
   )}
 >
