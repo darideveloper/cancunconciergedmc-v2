@@ -1,28 +1,22 @@
 ---
-import TestimonialCard from '../components/ui/testimonialCard.astro';
-import InfoCard from '../components/ui/infoCard.astro';
-import Layout from '../layouts/Layout.astro';
-import "../styles/global.css"
+import TestimonialCard from '../components/ui/testimonialCard.astro'
+import InfoCard from '../components/ui/InfoCard.astro'
+import Layout from '../layouts/Layout.astro'
+import '../styles/global.css'
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Marco</title>
-  </head>
-  <body>
-    <!-- Aquí le pasas "hola" como prop titulo -->
-    <TestimonialCard 
-    imageAlt="descripcion-por-definir"  
-    imageSrc="/hombre-parado.jpg"
-    name="Dari"
-    quote="10000"
-    />
+<Layout>
+  <!-- Aquí le pasas "hola" como prop titulo -->
+  <TestimonialCard
+    imageAlt='descripcion-por-definir'
+    imageSrc='/hombre-parado.jpg'
+    name='Dari'
+    quote='10000'
+  />
 
-    <InfoCard
-    imageAlt="descripcion-por-definir"  
-    imageSrc="/logo-america.jpg"
-    />
-
-  </body>
-</html>
+  <InfoCard
+    imageAlt='descripcion-por-definir'
+    imageSrc='/logo-america.jpg'
+    text='Texto informativo aquí'
+  />
+</Layout>

@@ -1,0 +1,28 @@
+---
+import clsx from 'clsx'
+
+interface Props {
+  imageSrc: string
+  imageAlt: string
+  text: string
+  class?: string
+}
+
+const { imageSrc, imageAlt, text, class: className = '' } = Astro.props as Props
+---
+
+<img
+  src={imageSrc}
+  alt={imageAlt}
+  class={clsx(
+    'w-80',
+    'h-80',
+    'object-cover',
+    'rounded-lg',
+    'transition-transform',
+    'duration-300',
+    'hover:scale-105',
+    className
+  )}
+/>
+<p>{text}</p>
