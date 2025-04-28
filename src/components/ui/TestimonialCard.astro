@@ -9,23 +9,23 @@ interface Props {
 }
 
 const { imageSrc, imageAlt, name, quote } = Astro.props as Props;
-const textStyles = "transition-transform duration-300 mt-1 tracking-wide text-center text-5xl"
+const textStyles = "transition-transform duration-300 mt-1 text-center text-xs px-8"
 ---
 
-<div class="duration-300 hover:scale-105 font-oswald w-240">
-  <div class="w-240 h-240 overflow-hidden">
+<div class="duration-300 hover:scale-105 w-80 mt-7">
+  <div class="w-80 h-80 overflow-hidden">
     <img
       src={imageSrc}
       alt={imageAlt}
       class={clsx(
-        "w-full h-full",
+        "w-80 h-80",
         "object-cover",
         "transition-transform",
         "duration-300",
       )}
     />
   </div>
-  <div class="mt-2 p-18 text-center">
+  <div class="mt-2 p-2 text-center">
     <h3
       class={`${textStyles} font-title`}
     >
