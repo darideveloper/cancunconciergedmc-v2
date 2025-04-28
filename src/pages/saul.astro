@@ -8,18 +8,19 @@ import InfoCircleCard from '../components/ui/InfoCircleCard.astro';
 ---
 
 <Layout>
-	<InfoCircleCard imageSrc="../src/assets/test1.jpg" imageAlt="Descripción">
-		<span slot="title">Titulo</span>
-		<span slot="text">Texto</span>
-	  </InfoCircleCard>
+
 	<Title isH1={true}>H1 Prueba</Title>
 	<Link href="https://www.youtube.com/" target="_blank">Hijo</Link>
 
-	<InfoCircleCard imageSrc="../src/assets/test.webp" imageAlt="Descripción">
-		<span slot="title">Título</span>
-		<span slot="text">Texto</span>
-	  </InfoCircleCard>
+	<InfoCircleCard 
+	imageBgSrc="../src/assets/test1.jpg"
+	imageTopSrc="../src/assets/test1.jpg"
+	imageAlt="Hola">
+	<span slot="title">Excelencia en el Servicio</span>
+	<span slot="text">Inspirados por una trayectoria de más de dos décadas 
+		en hospitalidad de lujo, en Cancun Concierge nos comprometemos a anticipar 
+		necesidades, cuidar cada detalle y superar expectativas en cada experiencia.</span></InfoCircleCard>
 	<Title>H2 Prueba</Title>
-	<Link href="#">LEARN MORE</Link>
+	<Link href="#" class="mx-2 my-3">LEARN MORE</Link>
 </Layout>
 

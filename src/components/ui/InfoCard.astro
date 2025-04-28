@@ -12,8 +12,10 @@ const { imageSrc, imageAlt, text, class: className = 'clase' } = Astro.props as 
 ---
 
 <div class={clsx(
-  "w-240 h-240", 
-  "transition-transform duration-300 hover:scale-105",
+  "w-240",
+  "h-240", 
+  "duration-300",
+  "hover:scale-105",
   className
 )}>
   <img
@@ -23,7 +25,6 @@ const { imageSrc, imageAlt, text, class: className = 'clase' } = Astro.props as 
       "w-full",
       "h-full", 
       "object-cover",
-       "rounded-lg" 
     )}
   />
   <p class={clsx(

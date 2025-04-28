@@ -1,34 +1,33 @@
 ---
-import clsx from 'clsx';
+import clsx from 'clsx'
 
 interface Props {
-  href: string;
-  target?: string;
+  href: string
+  target?: string
+  class?: string
 }
 
-const { href, target = "_self",  }: Props = Astro.props;
+const { href, target = '_self', class: className = '' }: Props = Astro.props
 ---
 
 <a
   href={href}
   target={target}
   class={clsx(
-    "font-title",
-    "no-underline",
-    "border-2",
-    "border-blue",
-    "text-blue hover:text-white",
-    "hover:bg-blue",
-    "duration-300",
-    "cursor-pointer",
-    "px-6",
-    "py-2",
-    "my-3",
-    "mx-2",
-    "hover:scale-110",
-    "inline-block"
-
+    'font-title',
+    'no-underline',
+    'border-2',
+    'border-blue',
+    'text-blue hover:text-white',
+    'hover:bg-blue',
+    'duration-300',
+    'cursor-pointer',
+    'px-6',
+    'py-2',
+    'hover:scale-110',
+    'inline-block',
+    className
   )}
 >
-  <slot/>
+  <slot />
 </a>

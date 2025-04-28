@@ -1,70 +1,74 @@
 ---
-import { clsx } from 'clsx';
+import { clsx } from 'clsx'
 
 interface Props {
-  imageSrc: string;
-  imageAlt: string;
+  imageBgSrc: string
+  imageTopSrc: string
+  imageAlt: string
 }
 
-const { imageSrc, imageAlt } = Astro.props;
-
-const clasesContenedor = clsx(
-  'relative',
-  'w-[400px]',
-  'h-[400px]',
-  'rounded-full',
-  'overflow-hidden',
-  'group'
-);
-
-const clasesImagen = clsx(
-  'w-full',
-  'h-full',
-  'object-cover',
-  'rounded-full',
-  'transition-opacity',
-  'duration-300',
-  'group-hover:opacity-50'
-);
-
-const clasesOverlay = clsx(
-  'absolute',
-  'inset-0',
-  'flex',
-  'flex-col',
-  'items-center',
-  'justify-center',
-  'text-center',
-  'opacity-0',
-  'transition-opacity',
-  'duration-300',
-  'group-hover:opacity-100',
-  'bg-transparent'
-);
-
-const clasesTitulo = clsx(
-  'text-3xl',
-  'font-bold',
-  'mb-2',
-  'text-[var(--color-black)]',
-  'font-[var(--font-title)]'
-);
-
-const clasesTexto = clsx(
-  'text-lg',
-  'text-[var(--color-black)]',
-  'font-[var(--font-sans)]'
-);
+const { imageBgSrc, imageTopSrc, imageAlt } = Astro.props
 ---
 
-<div class={clasesContenedor}>
-  <img src={imageSrc} alt={imageAlt} class={clasesImagen} />
-  <div class={clasesOverlay}>
-    <h3 class={clasesTitulo}>
-      <slot name="title" />
+<div
+  class={clsx(
+    'relative',
+    'w-96',
+    'h-96',
+    'rounded-full',
+    'overflow-hidden',
+    'group'
+  )}
+>
+  <img
+    src={imageBgSrc}
+    alt={imageAlt}
+    class={clsx(
+      'absolute',
+      'inset-0',
+      'w-full',
+      'h-full',
+      'object-cover',
+      'opacity-30',
+      'pointer-events-none'
+    )}
+  />
+
+  <div
+    class={clsx(
+      'absolute',
+      'inset-0',
+      'flex',
+      'flex-col',
+      'items-center',
+      'justify-center',
+      'text-center',
+      'z-10'
+    )}
+  >
+    <h3
+      class={clsx('text-3xl', 'font-bold', 'mb-2', 'text-black', 'font-title')}
+    >
+      <slot name='title' />
     </h3>
-    <p class={clasesTexto}>
-      <slot name="text" />
+    <p class={clsx('text-lg', 'text-black', 'font-font-sans')}>
+      <slot name='text' />
     </p>
   </div>
+
+  <img
+    src={imageTopSrc}
+    alt={imageAlt}
+    class={clsx(
+      'absolute',
+      'inset-0',
+      'w-full',
+      'h-full',
+      'object-cover',
+      'transition-opacity',
+      'duration-300',
+      'group-hover:opacity-0',
+      'z-20'
+    )}
+  />
 </div>
