@@ -1,29 +1,30 @@
 ---
-import TestimonialCard from "../components/ui/TestimonialCard.astro";
-import FullWidthMedia from "../components/ui/FullWidthMedia.astro";
-import InfoCard from "../components/ui/InfoCard.astro";
-import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
+import TestimonialCard from '../components/ui/TestimonialCard.astro'
+import FullWidthMedia from '../components/ui/FullWidthMedia.astro'
+import InfoCard from '../components/ui/InfoCard.astro'
+import Layout from '../layouts/Layout.astro'
+import '../styles/global.css'
 ---
 
-  <Layout>
-    <!-- Llamas al componente FullWidthMedia aquí -->
-    <FullWidthMedia 
-    src="/gotas.mp4"
-    logoSrc="/logo.webp"
-    />
+<Layout>
+  <!-- Llamas al componente FullWidthMedia aquí -->
+  <FullWidthMedia
+    src='/gotas.mp4'
+    logoSrc='/logo.webp'
+    isVideo={true}
+  />
 
   <!-- Aquí le pasas "hola" como prop titulo -->
   <TestimonialCard
-    imageAlt="descripcion-por-definir"
-    imageSrc="/hombre-parado.jpg"
-    name="Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a detalles."
-    quote=""
+    imageAlt='descripcion-por-definir'
+    imageSrc='/hombre-parado.jpg'
+    name='Dari Dev'
+    quote='Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a detalles.'
   />
 
   <InfoCard
-    imageAlt="descripcion-por-definir"
-    imageSrc="/logo-america.jpg"
-    text="Más de 20 años de experiencia en Destination Management."
+    imageAlt='descripcion-por-definir'
+    imageSrc='/logo-america.jpg'
+    text='Más de 20 años de experiencia en Destination Management.'
   />
 </Layout>
