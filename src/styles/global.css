@@ -13,3 +13,7 @@
     --color-black: #000000;
     --color-gold: #c7b66b;
 }
+
+.container {
+    margin: 0 auto;
+}
