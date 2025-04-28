@@ -2,37 +2,49 @@
 import clsx from "clsx";
 
 interface Props {
-  imageSrc: String;
-  imageAlt: String;
-  name: String;
-  quote: String;
+  imageSrc: string;
+  imageAlt: string;
+  name: string;
+  quote: string;
 }
 
 const { imageSrc, imageAlt, name, quote } = Astro.props as Props;
 ---
 
-<div
-  class="group inline-block transition-transform duration-300 hover:scale-105 font-oswald"
->
-  <img
-    src={imageSrc}
-    alt={imageAlt}
-    class={clsx(
-      "w-80 h-80", // Imagen cuadrada
-      "object-cover",
-      "rounded-lg",
-      "transition-transform",
-      "duration-300",
-    )}
-  />
-  <div class="mt-2 p-2 text-center w-80">
+<div class="duration-300 hover:scale-105 font-oswald w-240">
+  <div class="w-240 h-240 overflow-hidden">
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      class={clsx(
+        "w-full h-full",
+        "object-cover",
+        "transition-transform",
+        "duration-300",
+      )}
+    />
+  </div>
+  <div class="mt-2 p-18 text-center">
     <h3
-      class="group-hover:scale-105 transition-transform duration-300 px-6 text-lg font-bold tracking-wide"
+      class={clsx(
+        "w-full",
+        "group-hover:scale-105",
+        "transition-transform",
+        "duration-300",
+        "tracking-wide",
+        "text-5xl",
+      )}
     >
       {name}
     </h3>
     <p
-      class="group-hover:scale-105 transition-transform duration-300 mt-1 tracking-wide"
+      class={clsx(
+        "group-hover:scale-105",
+        "transition-transform",
+        "duration-300",
+        "mt-1",
+        "tracking-wide"
+      )}
     >
       {quote}
     </p>

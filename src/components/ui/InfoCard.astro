@@ -12,7 +12,7 @@ const { imageSrc, imageAlt, text, class: className = 'clase' } = Astro.props as 
 ---
 
 <div class={clsx(
-  "w-80", // Mismo ancho que la imagen
+  "w-240 h-240", 
   "transition-transform duration-300 hover:scale-105",
   className
 )}>
@@ -20,11 +20,18 @@ const { imageSrc, imageAlt, text, class: className = 'clase' } = Astro.props as 
     src={imageSrc}
     alt={imageAlt}
     class={clsx(
-      "w-full h-80 object-cover rounded-lg", // Usa w-full para que ocupe el 100% del contenedor
+      "w-full",
+      "h-full", 
+      "object-cover",
+       "rounded-lg" 
     )}
   />
-  <p class="mt-2 p-2 text-center text-pretty break-words"> 
-    {/* text-pretty evita desbordamientos, break-words rompe palabras largas */}
+  <p class={clsx(
+    "mt-2", 
+    "p-10", 
+    "text-center", 
+    "text-5xl"
+  )}> 
     {text}
   </p>
 </div>

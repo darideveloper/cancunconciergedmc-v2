@@ -1,17 +1,24 @@
 ---
 import TestimonialCard from "../components/ui/TestimonialCard.astro";
+import FullWidthMedia from "../components/ui/FullWidthMedia.astro";
 import InfoCard from "../components/ui/InfoCard.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
 
-<Layout>
+  <Layout>
+    <!-- Llamas al componente FullWidthMedia aquí -->
+    <FullWidthMedia 
+    src="/gotas.mp4"
+    logoSrc="/logo.webp"
+    />
+
   <!-- Aquí le pasas "hola" como prop titulo -->
   <TestimonialCard
     imageAlt="descripcion-por-definir"
     imageSrc="/hombre-parado.jpg"
     name="Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a detalles."
-    quote="10000"
+    quote=""
   />
 
   <InfoCard

@@ -1,0 +1,61 @@
+---
+import clsx from 'clsx';
+
+interface Props {
+  src: string;
+  isVideo?: boolean;
+  logoSrc: string;
+}
+
+const { src, isVideo = false, logoSrc } = Astro.props;
+
+const video = isVideo || src.endsWith('.mp4');
+---
+
+<div class="w-full h-screen">
+  {video ? (
+    <video 
+      src={src} autoplay muted loop 
+      class={clsx(
+      "w-screen", 
+      "h-screen", 
+      "object-cover")}
+    />
+  ) : (
+    <img 
+      src={src} 
+      alt="Imagen dinámica" 
+      class={clsx(
+      "w-screen",
+      "h-screen", 
+      "block",
+      "object-cover")}
+    />
+  )}
+
+  <img 
+    src={logoSrc} 
+    alt="Logo superior" 
+    class={clsx(
+    "absolute", 
+    "top-0", 
+    "left-0",
+    "p-4",
+    "w-16",
+    "h-16",
+    "z-20")}
+    />
+
+  <img 
+    src={logoSrc} 
+    alt="Logo inferior" 
+    class={clsx(
+    "absolute",
+    "top-20",
+    "right-40",
+    "p-4", 
+    "w-120",
+    "h-80", 
+    "z-0")}
+  />
+</div>
