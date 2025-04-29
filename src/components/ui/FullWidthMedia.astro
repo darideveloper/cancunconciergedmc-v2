@@ -2,16 +2,16 @@
 import clsx from 'clsx'
 
 interface Props {
-  src: string;
-  isVideo?: boolean;
+  src: string
+  isVideo?: boolean
 }
 
-const { src, isVideo = false } = Astro.props;
+const { src, isVideo = false } = Astro.props
 
-const logoSrc = "/logo.webp";
+const logoSrc = '/logo.webp'
 ---
 
-<div class='w-full h-screen'>
+<div class={clsx('w-full', 'h-screen', 'relative')}>
   {
     isVideo ? (
       <video
@@ -27,19 +27,12 @@ const logoSrc = "/logo.webp";
         alt='Imagen dinámica'
         class={clsx('w-screen', 'h-screen', 'block', 'object-cover')}
       />
+      <img
+        src={logoSrc}
+        alt='Logo inferior'
+        class={clsx('absolute', 'bottom-5', 'right-10', 'p-4', 'w-auto', 'h-32', 'z-0')}
+      />
     )
   }
 
-  <img 
-    src={logoSrc} 
-    alt="Logo inferior" 
-    class={clsx(
-    "absolute",
-    "top-5",
-    "right-10",
-    "p-4", 
-    "w-60",
-    "h-40", 
-    "z-0")}
-  />
 </div>
