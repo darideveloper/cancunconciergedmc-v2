@@ -4,12 +4,12 @@ import clsx from 'clsx';
 interface Props {
   src: string;
   isVideo?: boolean;
-  logoSrc: string;
 }
 
-const { src, isVideo = false, logoSrc } = Astro.props;
+const { src, isVideo = false } = Astro.props;
 
 const video = isVideo || src.endsWith('.mp4');
+const logoSrc = "/logo.webp";
 ---
 
 <div class="w-full h-screen">
