@@ -6,15 +6,34 @@ interface Props {
   imageAlt: string;
   name: string;
   quote: string;
-  class?: string
+  class?: string;
 }
 
-const { imageSrc, imageAlt, name, quote, class: className = "clase" } = Astro.props as Props;
-const textStyles = "transition-transform duration-300 mt-1 text-left"
+const {
+  imageSrc,
+  imageAlt,
+  name,
+  quote,
+  class: className = "clase",
+} = Astro.props as Props;
+const textStyles = clsx(
+"transition-transform", 
+"duration-300", 
+"mt-1", 
+"text-left", 
+"text-xs");
 ---
- 
-<div class="duration-300 hover:scale-105 w-96 mt-7">
-  <div class="w-80 h-80 overflow-hidden mx-auto">
+
+<div class={clsx(
+  "duration-300", 
+  "hover:scale-105", 
+  "w-80", 
+  "mt-7")}
+  >
+  <div class={clsx(
+  "w-80", 
+  "h-80",
+  "overflow-hidden")}>
     <img
       src={imageSrc}
       alt={imageAlt}
@@ -23,23 +42,20 @@ const textStyles = "transition-transform duration-300 mt-1 text-left"
         "object-cover",
         "transition-transform",
         "duration-300",
-        className
+        className,
       )}
     />
   </div>
-  <div class="flex flex-col-reverse mt-2 p-2 text-justify">
-    <h3
-      class={clsx(
-        textStyles,
-        "font-title",
-        "font-bold",
-      )}
-    >
+  <div class={clsx(
+  "flex",
+  "flex-col-reverse",
+  "mt-2",
+  "p-2",
+)} >
+    <h3 class={`${textStyles} font-title`}>
       {name}
     </h3>
-    <p
-      class={textStyles}
-    >
+    <p class={textStyles}>
       {quote}
     </p>
   </div>
