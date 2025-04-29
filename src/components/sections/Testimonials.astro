@@ -1,6 +1,7 @@
 ---
 // Components
 import TestimonialCard from '../ui/TestimonialCard.astro'
+import Title from '../ui/Title.astro'
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
@@ -18,18 +19,23 @@ const testimonials = t('testimonials.quotes')
   id='team'
   class='container'
 >
-  {
-    testimonialsKeys.map((testimonialsKey) => {
-      const testimonial = testimonials[testimonialsKey]
+  <Title>
+    {t('testimonials.title')}
+  </Title>
+  <div class="cards">
+    {
+      testimonialsKeys.map((testimonialsKey) => {
+        const testimonial = testimonials[testimonialsKey]
 
-      return (
-        <TestimonialCard
-          imageSrc={`/testimonials/${testimonial.name}.webp`}
-          imageAlt={`${t('general.photoAlt')} ${testimonial.name}`}
-          name={testimonial.name}
-          quote={testimonial.quote}
-        />
-      )
-    })
-  }
+        return (
+          <TestimonialCard
+            imageSrc={`/testimonials/${testimonial.name}.webp`}
+            imageAlt={`${t('general.photoAlt')} ${testimonial.name}`}
+            name={testimonial.name}
+            quote={testimonial.quote}
+          />
+        )
+      })
+    }
+  </div>
 </section>
