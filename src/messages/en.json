@@ -1,0 +1,29 @@
+{
+    "general": {
+        "photoAlt": "Photo of"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "twitter": "Twitter"
+    },
+    "contact": {
+        "title": "Contact me"
+    },
+    "testimonials": {
+        "quotes": {
+            "ana": {
+                "name": "Anne Carpentier",
+                "quote": "Omar, I thank you so much for all your hard work and great communication skills, I really liked what you did for us. It was great to find you because I haven't heard from you before. I will send you all my clients so that you and I can continue working together."
+            },
+            "erick": {
+                "name": "Erik Sabato",
+                "quote": "Omar, your level of service is unlike any other. I will share your name with everyone I know and tell them about your excellent level of service. Thank you for all your assistance!"
+            },
+            "gabriel": {
+                "name": "Gabriel Suarez",
+                "quote": "Omar, I thank you so much for all your hard work and great communication skills, I really liked what you did for us. It was great to find you because I have't heard from you before. I will send you all my clients so that you and I can continue working together"
+            }
+        }
+    }
+}

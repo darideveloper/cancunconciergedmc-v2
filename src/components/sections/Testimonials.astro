@@ -1,49 +1,35 @@
 ---
-
 // Components
 import TestimonialCard from '../ui/TestimonialCard.astro'
 
+// Libs
+import { useTranslations } from '../../i18n/utils'
+
 // i18n
-import { useTranslations } from '../../i18n/utils';
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
 
-const { lang } = Astro.params as any;
-const t = useTranslations(lang);
-
-// Data
-const testimonialsData = [
-  {
-    name: 'Anne Carpentier',
-    quote:
-      "Omar, I thank you so much for all your hard work and great communication skills, I really liked what you did for us. It was great to find you because I haven't heard from you before. I will send you all my clients so that you and I can continue working together.",
-    imageAlt: 'Photo of ',
-  },
-  {
-    name: 'Erik Sabato',
-    quote:
-      "Omar, your level of service is unlike any other. I will share your name with everyone I know and tell them about your excellent level of service. Thank you for all your assistance!",
-    imageAlt: 'Photo of ',
-  },
-  {
-    name: 'Gabriel Suarez',
-    quote:
-      "Omar, I thank you so much for all your hard work and great communication skills, I really liked what you did for us. It was great to find you because I haven't heard from you before. I will send you all my clients so that you and I can continue working together",
-    imageAlt: 'Photo of ',
-  },
-]
+// Data and translations
+const testimonialsKeys = ['ana', 'erick', 'gabriel']
+const testimonials = t('testimonials.quotes')
 ---
 
 <section
   id='team'
   class='container'
 >
-{
-    testimonialsData.map(testimonialData => (
+  {
+    testimonialsKeys.map((testimonialsKey) => {
+      const testimonial = testimonials[testimonialsKey]
+
+      return (
         <TestimonialCard
-          imageSrc={`/testimonials/${testimonialData.name}.webp`}
-          imageAlt={`Photo of ${testimonialData.name}`}
-          name={testimonialData.name}
-          quote={testimonialData.quote}
+          imageSrc={`/testimonials/${testimonial.name}.webp`}
+          imageAlt={`${t('general.photoAlt')} ${testimonial.name}`}
+          name={testimonial.name}
+          quote={testimonial.quote}
         />
-    ))
-}
+      )
+    })
+  }
 </section>
