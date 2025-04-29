@@ -10,11 +10,11 @@ interface Props {
 }
 
 const { imageSrc, imageAlt, name, quote, class: className = "clase" } = Astro.props as Props;
-const textStyles = "transition-transform duration-300 mt-1 text-left text-xs "
+const textStyles = "transition-transform duration-300 mt-1 text-left"
 ---
  
-<div class="duration-300 hover:scale-105 w-80 mt-7">
-  <div class="w-80 h-80 overflow-hidden">
+<div class="duration-300 hover:scale-105 w-96 mt-7">
+  <div class="w-80 h-80 overflow-hidden mx-auto">
     <img
       src={imageSrc}
       alt={imageAlt}
@@ -27,9 +27,13 @@ const textStyles = "transition-transform duration-300 mt-1 text-left text-xs "
       )}
     />
   </div>
-  <div class="flex flex-col-reverse mt-2 p-2">
+  <div class="flex flex-col-reverse mt-2 p-2 text-justify">
     <h3
-      class={`${textStyles} font-title` }
+      class={clsx(
+        textStyles,
+        "font-title",
+        "font-bold",
+      )}
     >
       {name}
     </h3>
