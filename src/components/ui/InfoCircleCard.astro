@@ -1,15 +1,23 @@
 ---
-import { clsx } from "clsx"
+import { clsx } from "clsx";
 
 interface Props {
-  imageBgSrc: string
-  imageTopSrc: string
-  imageAlt: string
-  class?: string
-
+  imageBgSrc: string;
+  imageTopSrc: string;
+  imageAlt: string;
+  class?: string;
+  title: string;
+  text: string;
 }
 
-const { imageBgSrc, imageTopSrc, imageAlt, class: className = '' }: Props = Astro.props
+const {
+  imageBgSrc,
+  imageTopSrc,
+  imageAlt,
+  title,
+  text,
+  class: className = "",
+}: Props = Astro.props;
 ---
 
 <div
@@ -50,23 +58,18 @@ const { imageBgSrc, imageTopSrc, imageAlt, class: className = '' }: Props = Astr
   >
     <h3
       class={clsx(
-        "text-3xl", 
-        "font-bold", 
-        "mb-2", 
-        "text-blue", 
+        "text-3xl",
+        "font-bold",
+        "mb-2",
+        "text-blue",
         "font-title",
         "px-6"
-        )}
+      )}
     >
-      <slot name="title"/>
+      {title}
     </h3>
-    <p class={clsx(
-      "text-lg", 
-      "text-black", 
-      "font-sans",
-      "px-6"
-      )}>
-      <slot name="text"/>
+    <p class={clsx("text-lg", "text-black", "font-sans", "px-6")}>
+      {text}
     </p>
   </div>
 
