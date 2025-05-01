@@ -4,11 +4,7 @@ import Layout from '../../layouts/Layout.astro'
 
 // Sections
 import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'; 
-import Testimonials from '../../components/sections/Testimonials.astro';
-
-// Components
-import Title from '../../components/ui/Title.astro';
-
+import About from '../../components/sections/About.astro';
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { getStaticPathsLangs } from '../../libs/getStaticPaths';
@@ -21,6 +17,5 @@ const t = useTranslations(lang)
 
 <Layout>
     <FullWidthMedia src='/videos/about.mp4' isVideo={true} />
-    <Testimonials />
-    <Title>{t('home.title')}</Title>
+    <About />
 </Layout>
