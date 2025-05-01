@@ -13,18 +13,18 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Data
-const text = marked(t('about.text'))
+const text1 = marked(t('whatWeDo.text1'))
+const text2 = marked(t('whatWeDo.text2'))
 ---
 
 <section class={clsx('container', "py-20")} id="about">
-  <Title isH1={true}>{t('about.title')}</Title>
+  <Title isH1={true}>{t('whatWeDo.title')}</Title>
   <div
     class={clsx('md-content')}
-    set:html={text}
+    set:html={text1}
   />
   <div
-    class={clsx('text-center', 'mt-8')}
-  >
-      <Link href='./about'>{t('about.cta')}</Link>
-  </div>
+    class={clsx('md-content')}
+    set:html={text2}
+  />
 </section>

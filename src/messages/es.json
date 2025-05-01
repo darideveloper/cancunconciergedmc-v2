@@ -27,9 +27,14 @@
             }
         }
     },
-    "info": {
+    "about": {
         "title": "Cancun Concierge DMC",
-        "text": "En **Cancun Concierge DMC**, creamos experiencias *a la medida* que convierten tu visita a Cancún y la **Riviera Maya** en algo verdaderamente inolvidable. Nos especializamos en la **organización integral de eventos, viajes de incentivo, reuniones corporativas y celebraciones privadas**, ocupándonos de cada detalle desde la llegada hasta el último momento. Ofrecemos una gama completa de servicios **premium**, que incluyen **traslados VIP, renta de yates, actividades acuáticas, excursiones grupales, experiencias de integración, decoración y entretenimiento, servicios de fotografía**, y más. Ya sea una boda de ensueño, un retiro ejecutivo o un evento social, nuestro equipo se encarga de todo para que tú solo te dediques a **disfrutar**.",
-        "cta": "Saber más"
+        "text": "En Cancun Concierge DMC, nos especializamos en diseñar **experiencias fluidas e inolvidables** para **viajeros, grupos corporativos y eventos especiales** en **Cancún** y la **Riviera Maya**. Nuestra experiencia va más allá de la logística: anticipamos tus necesidades y **superamos expectativas** con servicios personalizados que hacen que cada momento sea **extraordinario**.",
+        "cta": "Conoce más"
+    },
+    "whatWeDo": {
+        "title": "¿Qué hacemos?",
+        "text1": "En Cancun Concierge DMC, creamos experiencias a la medida que convierten tu visita a Cancún y la **Riviera Maya** en algo verdaderamente inolvidable. Nos especializamos en la **organización integral de eventos, viajes de incentivo, reuniones corporativas y celebraciones privadas**, ocupándonos de cada detalle desde tu llegada hasta el último momento.",
+        "text2": "Ofrecemos una gama completa de servicios premium, que incluyen **traslados VIP, renta de yates, actividades acuáticas, excursiones grupales, experiencias de trabajo en equipo, decoración y entretenimiento, servicios de fotografía**, y mucho más. Ya sea una boda de ensueño, un retiro ejecutivo o un evento social, nuestro equipo se encarga de todo para que tú simplemente **disfrutes.**"
     }
 }
