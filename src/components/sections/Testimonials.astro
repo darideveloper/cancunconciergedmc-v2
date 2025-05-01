@@ -5,35 +5,63 @@ import Title from '../ui/Title.astro'
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
+import { clsx } from 'clsx'
 
 // i18n
 const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Data and translations
-const testimonialsKeys = ['ana', 'erick', 'gabriel']
+const testimonialsKeys = ['ana', 'erick', 'gabriel', 'ana', 'erick', 'gabriel']
 const testimonials = t('testimonials.quotes')
 ---
 
 <section
   id='team'
-  class='container'
+  class={clsx(
+    'container',
+    'flex',
+    'flex-col',
+    'items-center',
+    'justify-center',
+  )}
 >
   <Title>
     {t('testimonials.title')}
   </Title>
-  <div class="cards">
+  <div
+    class={clsx(
+      'grid',
+      'grid-cols-1 md:grid-cols-2',
+      'w-auto',
+      'max-w-5xl',
+      'gap-8 md:gap-20',
+      'align-center',
+      'justify-center',
+      'align-center',
+    )}
+  >
     {
       testimonialsKeys.map((testimonialsKey) => {
         const testimonial = testimonials[testimonialsKey]
 
         return (
-          <TestimonialCard
-            imageSrc={`/testimonials/${testimonial.name}.webp`}
-            imageAlt={`${t('general.photoAlt')} ${testimonial.name}`}
-            name={testimonial.name}
-            quote={testimonial.quote}
-          />
+          <div
+            class={clsx(
+              'card-wrapper',
+              'flex',
+              'flex-col',
+              'items-cebter',
+              'justify-start',
+            )}
+          >
+            <TestimonialCard
+              imageSrc={`/testimonials/${testimonial.name}.webp`}
+              imageAlt={`${t('general.photoAlt')} ${testimonial.name}`}
+              name={testimonial.name}
+              quote={testimonial.quote}
+            />
+          </div>
         )
       })
     }
