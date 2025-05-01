@@ -8,7 +8,7 @@ import { clsx } from 'clsx'
 import { useState } from 'react'
 
 // Styles
-import { titleClasses } from '../../styles/classes'
+import { titleClasses, getMenuLinksClasses } from '../../styles/classes'
 
 // Props interface
 interface TeamProps {}
@@ -54,17 +54,8 @@ export default function Team({}: TeamProps) {
                 onClick={() => {
                   setActiveOption(member.key)
                 }}
-                className={clsx(
-                  'py-1',
-                  'duration-300',
-                  'text-center md:text-left',
-                  'w-full',
-                  'opacity-70',
-                  activeOption == member.key ? 'text-blue' : 'text-black',
-                  activeOption == member.key ? 'pl-2' : 'pl-0',
+                className={getMenuLinksClasses(
                   activeOption == member.key
-                    ? 'cursor-default'
-                    : 'cursor-pointer'
                 )}
               >
                 {member.name}
