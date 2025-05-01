@@ -1,0 +1,30 @@
+---
+// Components
+import Title from '../ui/Title.astro'
+import Link from '../ui/Link.astro'
+
+// Libs
+import clsx from 'clsx'
+import { useTranslations } from '../../i18n/utils'
+import { marked } from 'marked'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+// Data
+const text = marked(t('info.text'))
+---
+
+<section class={clsx('container', "py-20")} id="about">
+  <Title isH1={true}>{t('info.title')}</Title>
+  <div
+    class={clsx('md-content')}
+    set:html={text}
+  />
+  <div
+    class={clsx('text-center', 'mt-8')}
+  >
+      <Link href='../about'>{t('info.cta')}</Link>
+  </div>
+</section>

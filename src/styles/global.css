@@ -15,5 +15,11 @@
 }
 
 .container {
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+}
+
+.debug {
+    border: 1px solid red;
 }
