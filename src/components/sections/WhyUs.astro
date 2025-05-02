@@ -1,14 +1,30 @@
 ---
 // Styles
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/autoplay';
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+import 'swiper/css/autoplay'
 
 // Libs
-import { clsx } from 'clsx';
+import { clsx } from 'clsx'
 
 // Components
-import InfoCard from '../ui/InfoCard.astro';
+import InfoCard from '../ui/InfoCard.astro'
+
+// Data
+const slidesData = [
+  {
+    name: 'years',
+    text: 'Más de 20 años de experiencia en Destination Management.',
+  },
+  {
+    name: 'experience',
+    text: 'Nos enfocamos en ofrecer experiencias extraordinarias e inolvidables a todos nuestros clientes y huéspedes.',
+  },
+  {
+    name: 'personalization',
+    text: 'Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a los detalles.',
+  },
+]
 ---
 
 <section
@@ -17,44 +33,41 @@ import InfoCard from '../ui/InfoCard.astro';
 >
   <div class='swiper'>
     <div class='swiper-wrapper'>
-      <div class='swiper-slide flex flex-col items-center justify-center py-12'>
-        <InfoCard
-          imageSrc='/why-us/experience.webp'
-          imageAlt='Foto de concierto en cancún'
-          text='Más de 20 años de experiencia en Destination Management.'
-          class={clsx('mx-auto')}
-        />
-      </div>
-      <div class='swiper-slide flex flex-col items-center justify-center'>
-        <InfoCard
-          imageSrc='/why-us/experience.webp'
-          imageAlt='Foto de concierto en cancún'
-          text='Más de 20 años de experiencia en Destination Management.'
-          class={clsx('mx-auto')}
-        />
-      </div>
-      <div class='swiper-slide flex flex-col items-center justify-center'>
-        <InfoCard
-          imageSrc='/why-us/experience.webp'
-          imageAlt='Foto de concierto en cancún'
-          text='Más de 20 años de experiencia en Destination Management.'
-          class={clsx('mx-auto')}
-        />
-      </div>
+      {
+        slidesData.map((slide) => (
+          <div
+            class={clsx(
+              'swiper-slide',
+              'flex flex-col',
+              'items-center',
+              'justify-center',
+              'py-12',
+              'cursor-pointer',
+            )}
+          >
+            <InfoCard
+              imageSrc={`/why-us/${slide.name}.webp`}
+              imageAlt='Foto de concierto en cancún'
+              text={slide.text}
+              class={clsx('mx-auto')}
+            />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
 
 <script>
-  import Swiper from 'swiper';
-  import { Autoplay, EffectFade } from 'swiper/modules';
+  import Swiper from 'swiper'
+  import { Autoplay, EffectFade } from 'swiper/modules'
 
   // Initialize Swiper with required modules
   const swiper = new Swiper('.swiper', {
     modules: [Autoplay, EffectFade],
     loop: true,
     autoplay: {
-      delay: 2500,
+      delay: 5000,
       disableOnInteraction: false,
     },
     slidesPerView: 1,
@@ -62,17 +75,17 @@ import InfoCard from '../ui/InfoCard.astro';
     fadeEffect: {
       crossFade: true, // Optional: makes the fade smoother
     },
-  });
+  })
 
   // Add click event listener to each slide
   document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
     slide.addEventListener('click', () => {
       // Check if it's the last slide
       if (index === swiper.slides.length - 1) {
-        swiper.slideTo(0); // Go to the first slide
+        swiper.slideTo(0) // Go to the first slide
       } else {
-        swiper.slideTo(index + 1); // Go to the next slide
+        swiper.slideTo(index + 1) // Go to the next slide
       }
-    });
-  });
+    })
+  })
 </script>
