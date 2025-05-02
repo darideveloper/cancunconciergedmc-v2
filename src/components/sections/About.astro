@@ -16,15 +16,16 @@ const t = useTranslations(lang)
 const text = marked(t('about.text'))
 ---
 
-<section class={clsx('container', "py-20")} id="about">
+<section
+  class={clsx('container', 'py-20')}
+  id='about'
+>
   <Title isH1={true}>{t('about.title')}</Title>
   <div
     class={clsx('md-content')}
     set:html={text}
   />
-  <div
-    class={clsx('text-center', 'mt-8')}
-  >
-      <Link href='./about'>{t('about.cta')}</Link>
+  <div class={clsx('text-center', 'mt-8')}>
+    <Link href='./about'>{t('about.cta')}</Link>
   </div>
 </section>

@@ -34,9 +34,6 @@ export default function Team({}: TeamProps) {
     },
   ]
 
-  const dataTitles = data.map((item) => item.name)
-  console.log(dataTitles, data)
-
   return (
     <section
       className={clsx('container', 'team', 'flex', 'flex-col md:flex-row', 'gap-8')}
