@@ -1,58 +1,75 @@
 ---
-import { clsx } from 'clsx'
+import { clsx } from "clsx";
 
 interface Props {
-  imageBgSrc: string
-  imageTopSrc: string
-  imageAlt: string
+  imageBgSrc: string;
+  imageTopSrc: string;
+  imageAlt: string;
+  class?: string;
+  title: string;
+  text: string;
 }
 
-const { imageBgSrc, imageTopSrc, imageAlt } = Astro.props
+const {
+  imageBgSrc,
+  imageTopSrc,
+  imageAlt,
+  title,
+  text,
+  class: className = "",
+}: Props = Astro.props;
 ---
 
 <div
   class={clsx(
-    'relative',
-    'w-96',
-    'h-96',
-    'rounded-full',
-    'overflow-hidden',
-    'group'
+    "relative",
+    "w-96",
+    "h-96",
+    "rounded-full",
+    "overflow-hidden",
+    "group"
   )}
 >
   <img
     src={imageBgSrc}
     alt={imageAlt}
     class={clsx(
-      'absolute',
-      'inset-0',
-      'w-full',
-      'h-full',
-      'object-cover',
-      'opacity-30',
-      'pointer-events-none'
+      "absolute",
+      "inset-0",
+      "w-full",
+      "h-full",
+      "object-cover",
+      "opacity-30",
+      "pointer-events-none"
     )}
   />
 
   <div
     class={clsx(
-      'absolute',
-      'inset-0',
-      'flex',
-      'flex-col',
-      'items-center',
-      'justify-center',
-      'text-center',
-      'z-10'
+      "absolute",
+      "inset-0",
+      "flex",
+      "flex-col",
+      "items-center",
+      "justify-center",
+      "text-center",
+      "z-10"
     )}
   >
     <h3
-      class={clsx('text-3xl', 'font-bold', 'mb-2', 'text-black', 'font-title')}
+      class={clsx(
+        "text-3xl",
+        "font-bold",
+        "mb-2",
+        "text-blue",
+        "font-title",
+        "px-6"
+      )}
     >
-      <slot name='title' />
+      {title}
     </h3>
-    <p class={clsx('text-lg', 'text-black', 'font-font-sans')}>
-      <slot name='text' />
+    <p class={clsx("text-lg", "text-black", "font-sans", "px-6")}>
+      {text}
     </p>
   </div>
 
@@ -60,15 +77,15 @@ const { imageBgSrc, imageTopSrc, imageAlt } = Astro.props
     src={imageTopSrc}
     alt={imageAlt}
     class={clsx(
-      'absolute',
-      'inset-0',
-      'w-full',
-      'h-full',
-      'object-cover',
-      'transition-opacity',
-      'duration-300',
-      'group-hover:opacity-0',
-      'z-20'
+      "absolute",
+      "inset-0",
+      "w-full",
+      "h-full",
+      "object-cover",
+      "transition-opacity",
+      "duration-300",
+      "group-hover:opacity-0",
+      "z-20"
     )}
   />
 </div>
