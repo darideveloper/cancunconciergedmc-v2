@@ -26,6 +26,6 @@ const text = marked(t('about.text'))
     set:html={text}
   />
   <div class={clsx('text-center', 'mt-8')}>
-    <Link href='./about'>{t('about.cta')}</Link>
+    <Link href=`/${lang}/about`>{t('about.cta')}</Link>
   </div>
 </section>
