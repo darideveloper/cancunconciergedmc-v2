@@ -13,8 +13,8 @@ const { imageSrc, imageAlt, name, quote, class: className = "clase" } = Astro.pr
 const textStyles = "transition-transform duration-300 mt-1 text-left"
 ---
  
-<div class="duration-300 hover:scale-105 w-96 mt-7">
-  <div class="w-80 h-80 overflow-hidden mx-auto">
+<div class={clsx("duration-300", "hover:scale-105", "max-w-96", "w-full", "mt-7")}>
+  <div class="w-full overflow-hidden mx-auto">
     <img
       src={imageSrc}
       alt={imageAlt}
