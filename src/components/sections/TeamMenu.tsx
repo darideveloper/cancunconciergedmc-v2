@@ -36,7 +36,13 @@ export default function Team({}: TeamProps) {
 
   return (
     <section
-      className={clsx('container', 'team', 'flex', 'flex-col md:flex-row', 'gap-8')}
+      className={clsx(
+        'container',
+        'team',
+        'flex',
+        'flex-col md:flex-row',
+        'gap-8'
+      )}
       id='team'
     >
       <div className={clsx('aside', 'w-full md:w-4/12 lg:w-1/4')}>
@@ -51,9 +57,7 @@ export default function Team({}: TeamProps) {
                 onClick={() => {
                   setActiveOption(member.key)
                 }}
-                className={getMenuLinksClasses(
-                  activeOption == member.key
-                )}
+                className={getMenuLinksClasses(activeOption == member.key)}
               >
                 {member.name}
               </button>
