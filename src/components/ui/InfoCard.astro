@@ -8,25 +8,29 @@ interface Props {
   class?: string
 }
 
-const { imageSrc, imageAlt, text, class: className = 'clase' } = Astro.props as Props
+const {
+  imageSrc,
+  imageAlt,
+  text,
+  class: className = 'clase',
+} = Astro.props as Props
 ---
 
-<div class={clsx(
-  "w-80",
-  "duration-300",
-  "hover:scale-105",
-  className
-)}>
+<div
+  class={clsx(
+    'w-full',
+    'max-w-80',
+    'duration-300',
+    'hover:scale-105',
+    className
+  )}
+>
   <img
     src={imageSrc}
     alt={imageAlt}
-    class={clsx(
-      "w-80",
-      "h-80", 
-      "object-cover",
-    )}
+    class={clsx('w-80', 'h-80', 'object-cover')}
   />
-  <p class="mt-2 px-4 text-center text-sm">
+  <p class='mt-2 px-4 text-center text-sm'>
     {text}
   </p>
 </div>
