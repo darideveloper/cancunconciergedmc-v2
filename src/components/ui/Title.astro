@@ -1,5 +1,9 @@
 ---
+// Style
 import { titleClasses } from '../../styles/classes';
+
+// Libs
+import { clsx } from 'clsx';
 
 interface Props {
   isH1?: boolean;
@@ -10,13 +14,12 @@ interface Props {
 const { isH1 = false, class: className = ''} = Astro.props;
 
 ---
-
 {isH1 ? (
-  <h1 class={titleClasses}>
+  <h1 class={clsx(titleClasses, className)}>
     <slot />
   </h1>
 ) : (
-  <h2 class={titleClasses}>
+  <h2 class={clsx(titleClasses, className)}>
     <slot />
   </h2>
 )}
