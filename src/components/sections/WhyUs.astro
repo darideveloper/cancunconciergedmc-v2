@@ -6,25 +6,18 @@ import 'swiper/css/autoplay'
 
 // Libs
 import { clsx } from 'clsx'
+import { useTranslations } from '../../i18n/utils'
 
 // Components
 import InfoCard from '../ui/InfoCard.astro'
 
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
 // Data
-const slidesData = [
-  {
-    name: 'years',
-    text: 'Más de 20 años de experiencia en Destination Management.',
-  },
-  {
-    name: 'experience',
-    text: 'Nos enfocamos en ofrecer experiencias extraordinarias e inolvidables a todos nuestros clientes y huéspedes.',
-  },
-  {
-    name: 'personalization',
-    text: 'Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a los detalles.',
-  },
-]
+const slidesKeys = ['years', 'experience', 'personalization',]
+const slides = t('whyUs.slides')
 ---
 
 <section
@@ -34,7 +27,11 @@ const slidesData = [
   <div class='swiper'>
     <div class='swiper-wrapper'>
       {
-        slidesData.map((slide) => (
+        slidesKeys.map((slideKey) => {
+          
+          const slide = slides[slideKey]
+
+          return (
           <div
             class={clsx(
               'swiper-slide',
@@ -46,13 +43,14 @@ const slidesData = [
             )}
           >
             <InfoCard
-              imageSrc={`/why-us/${slide.name}.webp`}
-              imageAlt='Foto de concierto en cancún'
+              imageSrc={`/why-us/${slideKey}.webp`}
+              imageAlt={slide.alt}
               text={slide.text}
               class={clsx('mx-auto')}
             />
           </div>
-        ))
+          )
+        })
       }
     </div>
   </div>

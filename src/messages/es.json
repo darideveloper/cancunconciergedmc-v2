@@ -36,5 +36,21 @@
         "title": "¿Qué hacemos?",
         "text1": "En Cancun Concierge DMC, creamos experiencias a la medida que convierten tu visita a Cancún y la **Riviera Maya** en algo verdaderamente inolvidable. Nos especializamos en la **organización integral de eventos, viajes de incentivo, reuniones corporativas y celebraciones privadas**, ocupándonos de cada detalle desde tu llegada hasta el último momento.",
         "text2": "Ofrecemos una gama completa de servicios premium, que incluyen **traslados VIP, renta de yates, actividades acuáticas, excursiones grupales, experiencias de trabajo en equipo, decoración y entretenimiento, servicios de fotografía**, y mucho más. Ya sea una boda de ensueño, un retiro ejecutivo o un evento social, nuestro equipo se encarga de todo para que tú simplemente **disfrutes.**"
+    },
+    "whyUs": {
+        "slides": {
+            "years": {
+                "text": "Más de 20 años de experiencia en Destination Management.",
+                "alt": "Foto de concierto en Cancún"
+            },
+            "experience": {
+                "text": "Nos enfocamos en ofrecer experiencias extraordinarias e inolvidables a todos nuestros clientes y huéspedes.",
+                "alt": "Foto de experiencias inolvidables en Cancún"
+            },
+            "personalization": {
+                "text": "Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a los detalles.",
+                "alt": "Foto de servicios a la medida y necesidades de nuestros clientes"
+            }
+        }
     }
 }
