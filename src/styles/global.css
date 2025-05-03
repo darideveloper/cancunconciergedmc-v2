@@ -4,7 +4,6 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
-
 @theme {
     --font-title: 'Oswald Variable', 'sans-serif';
     --font-sans: 'Urbanist Variable', 'sans-serif';
@@ -15,8 +14,7 @@
 }
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
+    margin: 8rem auto;
     max-width: 1200px;
     padding-right: 1rem;
     padding-left: 1rem;
