@@ -11,6 +11,9 @@ import { useState } from 'react'
 // Styles
 import { titleClasses, getMenuLinksClasses } from '../../styles/classes'
 
+// Animation Library
+import { motion } from 'motion/react'
+
 // Props interface
 interface TeamProps {
   lang: 'en' | 'es'
@@ -21,7 +24,6 @@ export default function Team({ lang }: TeamProps) {
   const t = useTranslations(lang)
   const teamKeys = ['omar', 'claudia', 'luis']
   const teamData = t('teamMenu.members')
-  console.log('teamData', teamData)
 
   // States
   const [activeOption, setActiveOption] = useState('omar')
@@ -38,7 +40,7 @@ export default function Team({ lang }: TeamProps) {
       id='team'
     >
       <div className={clsx('aside', 'w-full md:w-4/12 lg:w-1/4')}>
-        {/* Page tile */}
+        {/* Page title */}
         <h2 className={clsx(titleClasses)}>Our Team</h2>
 
         {/* Links */}
@@ -62,13 +64,21 @@ export default function Team({ lang }: TeamProps) {
         {teamKeys.map((teamKey) => {
           const member = teamData[teamKey]
           return (
-            <TeamCard
-              id={teamKey}
-              key={teamKey}
-              name={member.name}
-              bio={member.bio}
-              className={activeOption != teamKey ? 'hidden' : ''}
-            />
+            activeOption === teamKey && (
+              <motion.div
+                key={teamKey}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+              >
+                <TeamCard
+                  id={teamKey}
+                  name={member.name}
+                  bio={member.bio}
+                />
+              </motion.div>
+            )
           )
         })}
       </div>
