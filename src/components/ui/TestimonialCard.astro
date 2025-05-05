@@ -23,17 +23,9 @@ const textStyles = clsx(
 "text-left", 
 "text-xs");
 ---
-
-<div class={clsx(
-  "duration-300", 
-  "hover:scale-105", 
-  "w-80", 
-  "mt-7")}
-  >
-  <div class={clsx(
-  "w-80", 
-  "h-80",
-  "overflow-hidden")}>
+ 
+<div class={clsx("duration-300", "hover:scale-105", "max-w-96", "w-full", "mt-7")}>
+  <div class="w-full overflow-hidden mx-auto">
     <img
       src={imageSrc}
       alt={imageAlt}

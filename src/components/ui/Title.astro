@@ -1,29 +1,25 @@
 ---
+// Style
+import { titleClasses } from '../../styles/classes';
+
+// Libs
 import { clsx } from 'clsx';
 
 interface Props {
   isH1?: boolean;
+  class?: string
+
 }
 
-const { isH1 = false } = Astro.props;
+const { isH1 = false, class: className = ''} = Astro.props;
 
-const clases = clsx(
-  'text-3xl',
-  'font-bold',
-  'text-black',
-  'font-title',
-  'tracking-wide',
-  'leading-tight',
-  'my-6',
-);
 ---
-
 {isH1 ? (
-  <h1 class={clases}>
+  <h1 class={clsx(titleClasses, className)}>
     <slot />
   </h1>
 ) : (
-  <h2 class={clases}>
+  <h2 class={clsx(titleClasses, className)}>
     <slot />
   </h2>
 )}

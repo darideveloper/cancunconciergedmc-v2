@@ -1,0 +1,68 @@
+---
+// Libs
+import { clsx } from 'clsx'
+
+// Styles
+import { titleClasses, getMenuLinksClasses } from '../../../styles/classes'
+
+// Data
+const menuItems = [
+  'Weddings',
+  'Social Events',
+  'Board Meetings',
+  'Executive Retreats',
+  'Congresses &',
+  'Conferences',
+  'Incentive Programs',
+  "President's Club",
+  'Family Reunions',
+  'Special Celebrations',
+]
+
+const title = 'Our Clients'
+const baseMessage = 'Hola, me interesa su servicio de '
+const phoneNumber = '5219982391978'
+const baseUrl = 'https://api.whatsapp.com/send?phone='
+const imageSrc = '/clients.webp'
+const imageAlt = 'Nuestros clientes en Cancun Concierge DMC'
+const id = 'team'
+---
+
+<section
+  class={clsx(
+    'container',
+    'team',
+    'flex',
+    'flex-col md:flex-row',
+    'gap-8'
+  )}
+  id={id}
+>
+  <div class={clsx('aside', 'w-full md:w-4/12 lg:w-1/4')}>
+    <!-- Page title -->
+    <h2 class={clsx(titleClasses)}>{title}</h2>
+
+    <!-- Links -->
+    <ul>
+      {menuItems.map((item) => (
+        <li>
+          <a
+            href={`${baseUrl}${phoneNumber}&text=${baseMessage}${item}`}
+            target="_blank"
+            class={getMenuLinksClasses(false)}
+          >
+            {item}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class={clsx('content', 'w-full md:w-7/12 lg:w-3/4')}>
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      class={clsx('w-full', 'h-auto')}
+    />
+  </div>
+</section>

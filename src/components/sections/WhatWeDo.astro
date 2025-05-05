@@ -1,0 +1,29 @@
+---
+// Components
+import Title from '../ui/Title.astro'
+
+// Libs
+import clsx from 'clsx'
+import { useTranslations } from '../../i18n/utils'
+import { marked } from 'marked'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+// Data
+const text1 = marked(t('whatWeDo.text1'))
+const text2 = marked(t('whatWeDo.text2'))
+---
+
+<section class={clsx('container')} id="what-we-do">
+  <Title isH1={true}>{t('whatWeDo.title')}</Title>
+  <div
+    class={clsx('md-content')}
+    set:html={text1}
+  />
+  <div
+    class={clsx('md-content')}
+    set:html={text2}
+  />
+</section>

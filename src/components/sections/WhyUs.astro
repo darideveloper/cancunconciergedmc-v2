@@ -1,0 +1,89 @@
+---
+// Styles
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+import 'swiper/css/autoplay'
+
+// Libs
+import { clsx } from 'clsx'
+import { useTranslations } from '../../i18n/utils'
+
+// Components
+import InfoCard from '../ui/InfoCard.astro'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+// Data
+const slidesKeys = ['years', 'experience', 'personalization',]
+const slides = t('whyUs.slides')
+---
+
+<section
+  class={clsx('container', '!max-w-xl')}
+  id='why-us'
+>
+  <div class='swiper'>
+    <div class='swiper-wrapper group'>
+      {
+        slidesKeys.map((slideKey) => {
+          
+          const slide = slides[slideKey]
+
+          return (
+          <div
+            class={clsx(
+              'swiper-slide',
+              'flex flex-col',
+              'items-center',
+              'justify-center',
+              'py-12',
+              'cursor-pointer',
+            )}
+          >
+            <InfoCard
+              imageSrc={`/why-us/${slideKey}.webp`}
+              imageAlt={slide.alt}
+              text={slide.text}
+              class={clsx('mx-auto')}
+            />
+          </div>
+          )
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from 'swiper'
+  import { Autoplay, EffectFade } from 'swiper/modules'
+
+  // Initialize Swiper with required modules
+  const swiper = new Swiper('.swiper', {
+    modules: [Autoplay, EffectFade],
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true, // Optional: makes the fade smoother
+    },
+  })
+
+  // Add click event listener to each slide
+  document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      // Check if it's the last slide
+      if (index === swiper.slides.length - 1) {
+        swiper.slideTo(0) // Go to the first slide
+      } else {
+        swiper.slideTo(index + 1) // Go to the next slide
+      }
+    })
+  })
+</script>

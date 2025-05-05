@@ -7,6 +7,13 @@ import '../styles/global.css'
 import { getLangFromUrl } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 
+// Fonts
+import '@fontsource-variable/oswald';
+import '@fontsource-variable/urbanist';
+
+// Sections
+import WhyUs from '../components/sections/WhyUs.astro';
+
 ---
 
 <!doctype html>
@@ -32,6 +39,9 @@ const lang = getLangFromUrl(Astro.url);
     <main class="font-sans">
       <slot />
     </main>
+
+    <!-- Footer -->
+    <WhyUs client:load />
   </body>
 </html>
 

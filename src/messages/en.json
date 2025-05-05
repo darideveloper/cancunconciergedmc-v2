@@ -26,5 +26,47 @@
                 "quote": "Omar, I thank you so much for all your hard work and great communication skills, I really liked what you did for us. It was great to find you because I have't heard from you before. I will send you all my clients so that you and I can continue working together"
             }
         }
+    },
+    "about": {
+        "title": "Cancun Concierge DMC",
+        "text": "At Cancun Concierge DMC, we specialize in designing **seamless and memorable experiences** for **travelers, corporate groups, and special events** in **Cancun** and the **Riviera Maya**. Our expertise goes beyond logistics—we anticipate your needs and **exceed expectations** with tailored services that make every moment **extraordinary**.",
+        "cta": "Learn more"
+    },
+    "whatWeDo": {
+        "title": "What we do?",
+        "text1": "At Cancun Concierge DMC, we create tailor-made experiences that turn your visit to Cancun and the **Riviera Maya** into something truly unforgettable. We specialize in the **comprehensive organization of events, incentive trips, corporate meetings, and private celebrations**, taking care of every detail from arrival to the very last moment.",
+        "text2": "We offer a full range of premium services, including **VIP transfers, yacht rentals, water activities, group excursions, teambuilding experiences, décor and entertainment, photography services**, and more. Whether it's a dream wedding, an executive retreat, or a social event, our team takes care of everything so you can simply **enjoy.**"
+    },
+    "whyUs": {
+        "slides": {
+            "years": {
+                "text": "Over 20 years of experience in Destination Management.",
+                "alt": "Photo of a concert in Cancun"
+            },
+            "experience": {
+                "text": "We focus on delivering extraordinary and unforgettable experiences to all our clients and guests.",
+                "alt": "Photo of unforgettable experiences in Cancun"
+            },
+            "personalization": {
+                "text": "Personalized service from start to finish. You have a single point of contact, ensuring no information or attention to detail is lost.",
+                "alt": "Photo of tailor-made services that meet our clients' needs"
+            }
+        }
+    },
+    "teamMenu": {
+        "members": {
+            "omar": {
+                "name": "Omar Guzman, General Manager",
+                "bio": "Born in the picturesque city of Orizaba, Mexico, Omar Guzman brings over two decades of luxury hospitality expertise to his role as General Manager. Omar's educational foundation in the industry was laid at UDLAP University in Mexico, where he earned a Bachelor's degree in Tourism Management followed by a Postgraduate Certificate in Executive Management.;Omar's journey in luxury hospitality began in 1998 when he first moved to Cancun, a hub of premier tourist experiences. His career flourished with The Ritz-Carlton Hotels, where he dedicated 20 years, honing his skills and leadership across various prestigious locations in Mexico, the Caribbean, and the USA. His deep-rooted passion for luxury service is evident in his extensive training with all luxury hotel brand services.;Known for his unwavering commitment and meticulous attention to detail, Omar excels in anticipating the needs of his clients and going above and beyond to craft unforgettable experiences. His leadership is guided by a focus on excellence and a personal touch in every aspect of hospitality management.;Outside of his professional life, Omar is a devoted family man, married with two wonderful children. He enjoys playing the guitar and relishes his morning walks, which provide him with a cherished opportunity to connect with God and nature. He is fluent in Spanish, English, and Italian, which enables him to connect with a diverse clientele and enhance their experience with personalized communication.;Omar continues to set the standard for exceptional service, making every stay memorable with his unique blend of expertise, passion, and dedication."
+            },
+            "claudia": {
+                "name": "Claudia Rueda, Operations Manager",
+                "bio": "Claudia Rueda, born in Monterrey, Mexico, is a seasoned Operations Manager with over 20 years of experience in the tourism industry, specializing in Destination Management Companies (DMCs). Her career has been marked by significant tenures with prestigious hospitality brands, including The Ritz-Carlton, and leading DMCs in the US Virgin Islands and Mexico.; In 1994, Claudia first moved to Cancun, where she has since played a pivotal role in shaping the luxury travel experience. She holds an Associate Degree in Hospitality and Tourism from Instituto Regiomontano de Hotelería, which laid the groundwork for her extensive career.;Claudia is not only recognized for her detailed-oriented and enthusiastic approach but also for her exceptional leadership skills that inspire teamwork and a 'make it happen' attitude. Honest and caring, she excels in operations management, ensuring every aspect of service exceeds expectations.;Outside of her professional endeavors, Claudia enjoys yoga, reading books, watching mystery movies, and cooking. She also loves spending time at the beach with her two children and two dogs. Fluent in both English and Spanish, her ability to connect with diverse teams and clients enhances her effectiveness as a leader in the global hospitality industry."
+            },
+            "luis": {
+                "name": "Luis Canché, Operations Coordinator",
+                "bio": "Luis Antonio Canché, hailing from Cancún, Quintana Roo, is a seasoned professional in the travel agency and Destination Management Company (DMC) sector, boasting an impressive 18-year career. Luis brings a wealth of experience and a deep understanding of business management, especially in the tourism and event organization fields, underpinned by his Associate Degree in Business Administration.;Throughout his career, Luis has distinguished himself with his adept coordination and management of unique tourism experiences both locally and internationally. His unwavering passion for delivering quality service has not only marked his professional journey but also enabled him to forge lasting relationships with colleagues across the industry.;As a devoted father of two, a boy and a girl, Luis balances his professional commitments with personal fulfillment. He is an avid fisherman, a hobby that reflects his love for nature and his calm, patient demeanor. Fluent in both his native Spanish and English, Luis effectively bridges communication with international clients, enhancing service delivery and client satisfaction.;Continually seeking new opportunities for growth, Luis remains committed to enriching the region's tourism sector, leveraging his extensive experience and passion for tourism alongside his robust administrative skills."
+            }
+        }
     }
 }
