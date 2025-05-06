@@ -1,12 +1,12 @@
 ---
-import clsx from "clsx";
+import clsx from 'clsx'
 
 interface Props {
-  imageSrc: string;
-  imageAlt: string;
-  name: string;
-  quote: string;
-  class?: string;
+  imageSrc: string
+  imageAlt: string
+  name: string
+  quote: string
+  class?: string
 }
 
 const {
@@ -14,37 +14,42 @@ const {
   imageAlt,
   name,
   quote,
-  class: className = "clase",
-} = Astro.props as Props;
+  class: className = '',
+} = Astro.props as Props
 const textStyles = clsx(
-"transition-transform", 
-"duration-300", 
-"mt-1", 
-"text-left", 
-"text-xs");
+  'transition-transform',
+  'duration-300',
+  'mt-1',
+  'text-left'
+)
 ---
- 
-<div class={clsx("duration-300", "hover:scale-105", "max-w-96", "w-full", "mt-7")}>
-  <div class="w-full overflow-hidden mx-auto">
+
+<div
+  class={clsx(
+    'duration-300',
+    'hover:scale-105',
+    'max-w-96',
+    'w-full',
+    'mt-7',
+    className
+  )}
+>
+  <div class={clsx('w-full', 'overflow-hidden', 'mx-auto')}>
     <img
       src={imageSrc}
       alt={imageAlt}
       class={clsx(
-        "w-80 h-80",
-        "object-cover",
-        "transition-transform",
-        "duration-300",
-        className,
+        'w-80',
+        'h-80',
+        'object-cover',
+        'transition-transform',
+        'duration-300',
+        'mx-auto'
       )}
     />
   </div>
-  <div class={clsx(
-  "flex",
-  "flex-col-reverse",
-  "mt-2",
-  "p-2",
-)} >
-    <h3 class={`${textStyles} font-title`}>
+  <div class={clsx('flex', 'flex-col-reverse', 'mt-2', 'p-2', 'text-justify')}>
+    <h3 class={clsx(textStyles, 'font-title', 'font-bold')}>
       {name}
     </h3>
     <p class={textStyles}>
