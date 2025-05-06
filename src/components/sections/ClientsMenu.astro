@@ -1,76 +1,35 @@
 ---
 import LinksMenu from './base/LinksMenu.astro'
 
-// const menuItems = [
-//   'Weddings',
-//   'Social Events',
-//   'Board Meetings',
-//   'Executive Retreats',
-//   'Congresses &',
-//   'Conferences',
-//   'Incentive Programs',
-//   "President's Club",
-//   'Family Reunions',
-//   'Special Celebrations',
-// ]
+// Libs
+import { useTranslations } from '../../i18n/utils'
 
-// const menuItems = {
-//   weddings: 'Weddings',
-//   social: 'Social Events',
-//   board: 'Board Meetings',
-//   executive: 'Executive Retreats',
-//   congresses: 'Congresses & Conferences',
-//   incentive: 'Incentive Programs',
-//   president: "President's Club",
-//   family: 'Family Reunions',
-//   special: 'Special Celebrations',
-// }
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
 
 const menuItems = [
-    {
-        key: 'weddings',
-        text: 'Weddings',
-    },
-    {
-        key: 'social',
-        text: 'Social Events',
-    },
-    {
-        key: 'board',
-        text: 'Board Meetings',
-    },
-    {
-        key: 'executive',
-        text: 'Executive Retreats',
-    },
-    {
-        key: 'congresses',
-        text: 'Congresses & Conferences',
-    },
-    {
-        key: 'incentive',
-        text: 'Incentive Programs',
-    },
-    {
-        key: 'president',
-        text: "President's Club",
-    },
-    {
-        key: 'family',
-        text: 'Family Reunions',
-    },
-    {
-        key: 'special',
-        text: 'Special Celebrations',
-    }
+    'weddings',
+    'social',
+    'board',
+    'executive',
+    'congresses',
+    'incentive',
+    'president',
+    'family',
+    'special',
 ]
+
+const menuItemsLang = menuItems.map((item) => {
+    return t(`clients.menuItems.${item}`)
+})
 ---
 
 <LinksMenu 
-    menuItems={menuItems}
-    title='Our Clients'
-    baseMessage='Hola, me interesan sus servicios para '
+    menuItems={menuItemsLang}
+    title={t('clients.title')}
+    baseMessage={t('clients.baseMessage')}
     imageSrc='/clients.webp'
-    imageAlt='Nuestros clientes en Cancun Concierge DMC'
+    imageAlt={t('clients.imageAlt')}
     id='clients'
 />

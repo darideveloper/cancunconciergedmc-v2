@@ -68,5 +68,21 @@
                 "bio": "Luis Antonio Canché, hailing from Cancún, Quintana Roo, is a seasoned professional in the travel agency and Destination Management Company (DMC) sector, boasting an impressive 18-year career. Luis brings a wealth of experience and a deep understanding of business management, especially in the tourism and event organization fields, underpinned by his Associate Degree in Business Administration.;Throughout his career, Luis has distinguished himself with his adept coordination and management of unique tourism experiences both locally and internationally. His unwavering passion for delivering quality service has not only marked his professional journey but also enabled him to forge lasting relationships with colleagues across the industry.;As a devoted father of two, a boy and a girl, Luis balances his professional commitments with personal fulfillment. He is an avid fisherman, a hobby that reflects his love for nature and his calm, patient demeanor. Fluent in both his native Spanish and English, Luis effectively bridges communication with international clients, enhancing service delivery and client satisfaction.;Continually seeking new opportunities for growth, Luis remains committed to enriching the region's tourism sector, leveraging his extensive experience and passion for tourism alongside his robust administrative skills."
             }
         }
+    },
+    "clients": {
+        "menuItems": {
+            "weddings": "Weddings",
+            "social": "Social Events",
+            "board": "Board Meetings",
+            "executive": "Executive Retreats",
+            "congresses": "Conferences & Conferences",
+            "incentive": "Incentive Programs",
+            "president": "President's Club",
+            "family": "Family Reunions",
+            "special": "Special Celebrations"
+        },
+        "title": "Our clients",
+        "baseMessage": "Hello, I am interested in your services for",
+        "imageAlt": "Our clients enjoying a great time in Cancun"
     }
 }

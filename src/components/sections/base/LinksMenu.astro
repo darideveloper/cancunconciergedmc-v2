@@ -6,13 +6,8 @@ import { clsx } from 'clsx'
 import { titleClasses, getMenuLinksClasses } from '../../../styles/classes'
 
 // Get props
-interface MenuItem {
-  key: string
-  text: string
-}
-
 interface Props {
-  menuItems: MenuItem[]
+  menuItems: string[]
   title: string
   baseMessage: string
   imageSrc: string
@@ -45,10 +40,10 @@ const baseUrl = 'https://api.whatsapp.com/send?phone='
     <!-- Links -->
     <ul>
       {
-        menuItems.map(({ key, text }: MenuItem) => (
+        menuItems.map((text: string) => (
           <li>
             <a
-              href={`${baseUrl}${phoneNumber}&text=${baseMessage}${text}`}
+              href={`${baseUrl}${phoneNumber}&text=${baseMessage} ${text}`}
               target='_blank'
               class={getMenuLinksClasses(false)}
             >

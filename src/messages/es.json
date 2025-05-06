@@ -70,5 +70,21 @@
                 }
             }
         }
+    },
+    "clients": {
+        "menuItems": {
+            "weddings": "Bodas",
+            "social": "Eventos Sociales",
+            "board": "Reuniones de Consejo",
+            "executive": "Retiros Ejecutivos",
+            "congresses": "Congresos y Conferencias",
+            "incentive": "Programas Incentivos",
+            "president": "Clubs Presidenciales",
+            "family": "Reuniones Familiares",
+            "special": "Celebraciones Especiales"
+        },
+        "title": "Nuestros clientes",
+        "baseMessage": "Hola, estoy interesado en sus servicios para",
+        "imageAlt": "Nuestros clientes disfrutando de un gran momento en Cancún"
     }
 }
