@@ -5,27 +5,26 @@ import { clsx } from 'clsx'
 // Styles
 import { titleClasses, getMenuLinksClasses } from '../../../styles/classes'
 
-// Data
-const menuItems = [
-  'Weddings',
-  'Social Events',
-  'Board Meetings',
-  'Executive Retreats',
-  'Congresses &',
-  'Conferences',
-  'Incentive Programs',
-  "President's Club",
-  'Family Reunions',
-  'Special Celebrations',
-]
+// Get props
+interface MenuItem {
+  key: string
+  text: string
+}
 
-const title = 'Our Clients'
-const baseMessage = 'Hola, me interesa su servicio de '
+interface Props {
+  menuItems: MenuItem[]
+  title: string
+  baseMessage: string
+  imageSrc: string
+  imageAlt: string
+  id: string
+}
+
+const { menuItems, title, baseMessage, imageSrc, imageAlt, id } = Astro.props
+
+// Fixed data
 const phoneNumber = '5219982391978'
 const baseUrl = 'https://api.whatsapp.com/send?phone='
-const imageSrc = '/clients.webp'
-const imageAlt = 'Nuestros clientes en Cancun Concierge DMC'
-const id = 'team'
 ---
 
 <section
@@ -34,7 +33,8 @@ const id = 'team'
     'team',
     'flex',
     'flex-col md:flex-row',
-    'gap-8'
+    'gap-8 md:gap-0',
+    'justify-between'
   )}
   id={id}
 >
@@ -44,21 +44,23 @@ const id = 'team'
 
     <!-- Links -->
     <ul>
-      {menuItems.map((item) => (
-        <li>
-          <a
-            href={`${baseUrl}${phoneNumber}&text=${baseMessage}${item}`}
-            target="_blank"
-            class={getMenuLinksClasses(false)}
-          >
-            {item}
-          </a>
-        </li>
-      ))}
+      {
+        menuItems.map(({ key, text }: MenuItem) => (
+          <li>
+            <a
+              href={`${baseUrl}${phoneNumber}&text=${baseMessage}${text}`}
+              target='_blank'
+              class={getMenuLinksClasses(false)}
+            >
+              {text}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 
-  <div class={clsx('content', 'w-full md:w-7/12 lg:w-3/4')}>
+  <div class={clsx('content', 'w-full md:w-8/12 lg:w-3/4', 'justify-self-end')}>
     <img
       src={imageSrc}
       alt={imageAlt}

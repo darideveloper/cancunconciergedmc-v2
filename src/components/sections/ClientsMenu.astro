@@ -1,5 +1,76 @@
 ---
-import LinksMenu from "./base/LinksMenu.astro"
+import LinksMenu from './base/LinksMenu.astro'
+
+// const menuItems = [
+//   'Weddings',
+//   'Social Events',
+//   'Board Meetings',
+//   'Executive Retreats',
+//   'Congresses &',
+//   'Conferences',
+//   'Incentive Programs',
+//   "President's Club",
+//   'Family Reunions',
+//   'Special Celebrations',
+// ]
+
+// const menuItems = {
+//   weddings: 'Weddings',
+//   social: 'Social Events',
+//   board: 'Board Meetings',
+//   executive: 'Executive Retreats',
+//   congresses: 'Congresses & Conferences',
+//   incentive: 'Incentive Programs',
+//   president: "President's Club",
+//   family: 'Family Reunions',
+//   special: 'Special Celebrations',
+// }
+
+const menuItems = [
+    {
+        key: 'weddings',
+        text: 'Weddings',
+    },
+    {
+        key: 'social',
+        text: 'Social Events',
+    },
+    {
+        key: 'board',
+        text: 'Board Meetings',
+    },
+    {
+        key: 'executive',
+        text: 'Executive Retreats',
+    },
+    {
+        key: 'congresses',
+        text: 'Congresses & Conferences',
+    },
+    {
+        key: 'incentive',
+        text: 'Incentive Programs',
+    },
+    {
+        key: 'president',
+        text: "President's Club",
+    },
+    {
+        key: 'family',
+        text: 'Family Reunions',
+    },
+    {
+        key: 'special',
+        text: 'Special Celebrations',
+    }
+]
 ---
 
-<LinksMenu />
+<LinksMenu 
+    menuItems={menuItems}
+    title='Our Clients'
+    baseMessage='Hola, me interesan sus servicios para '
+    imageSrc='/clients.webp'
+    imageAlt='Nuestros clientes en Cancun Concierge DMC'
+    id='clients'
+/>
