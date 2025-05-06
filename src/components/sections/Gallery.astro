@@ -1,0 +1,28 @@
+---
+import clsx from "clsx";
+
+const images = import.meta.glob('/public/galery/*.{jpg,jpeg,png,webp}', {
+  eager: true,
+  as: 'url',
+});
+
+const imageUrls = Object.values(images);
+const { altName = "personalizado", title = "Galería de imágenes" } = Astro.props;
+---
+
+<section id="gallery" class="container !max-w-none w-full px-0">
+  <h2 class="text-2xl">{title}</h2>
+  <div class={clsx(
+    "columns-[320px]",
+    "gap-2", 
+    "space-y-3"
+  )}>
+    {imageUrls.map((url) => (
+      <img
+        src={url}
+        alt={`Foto de nuestro transporte ${altName}`}
+        class={clsx("w-full", "rounded-lg", "break-inside-avoid")}
+      />
+    ))}
+  </div>
+</section>
