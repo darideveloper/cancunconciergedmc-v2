@@ -1,0 +1,69 @@
+---
+// Libs
+import { clsx } from 'clsx'
+
+// Data
+import { navLinks } from '../../data/nav'
+import { socialLinks } from '../../data/social'
+
+// Components
+import List from '../ui/List.astro'
+---
+
+<footer
+  class={clsx(
+    'footer',
+    'gap-8 md:gap-0',
+    'justify-between',
+    'bg-black',
+    'text-white',
+    'pt-12'
+  )}
+>
+  <small class={clsx('container', 'flex', 'flex-col', '!my-0')}>
+    <!--footer nav links -->
+    <List links={navLinks} />
+
+    <!-- Text -->
+    <p
+      class={clsx(
+        'text-center',
+        'text-sm',
+        '!my-16',
+        'opacity-60',
+        'max-w-[800px]',
+        'mx-auto',
+        'inline-block'
+      )}
+    >
+      At Cancun Concierge, we plan and execute airport transportation services,
+      water activities, tours, golf, restaurant reservations, and virtually any
+      need you may have during your stay in Cancun and the Riviera Maya.
+    </p>
+
+    <!-- Socials -->
+    <List links={socialLinks} />
+
+    <!-- Copyright -->
+    <p
+      class={clsx(
+        'text-center',
+        'w-full',
+        'opacity-60',
+        'mt-8',
+        '!mb-0',
+      )}
+    >
+      Powered by <a
+        href='https://www.astro.build/'
+        target='_blank'
+        class={clsx(
+          'hover:text-gold',
+          'duration-300',
+          'cursor-pointer'
+        )}
+        >Dari Dev's Team</a
+      > &copy; {new Date().getFullYear()}
+    </p>
+  </small>
+</footer>

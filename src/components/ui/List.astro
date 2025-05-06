@@ -1,0 +1,43 @@
+---
+import { clsx } from 'clsx'
+
+interface Props {
+  links: Array<{ text: string; url: string }>
+}
+
+const { links } = Astro.props
+---
+
+<ul
+  class={clsx(
+    'list',
+    'flex',
+    'flex-col md:flex-row',
+    'gap-4 md:gap-12',
+    'text-center md:text-left',
+    'justify-center',
+    'w-full'
+  )}
+>
+  {
+    links.map((link) => {
+      return (
+        <li>
+          <a
+            href={link.url}
+            target='_blank'
+            class={clsx(
+              'text-lg',
+              'opacity-60 hover:opacity-100',
+              'uppercase',
+              'duration-300',
+              'text-white hover:text-gold',
+            )}
+          >
+            {link.text}
+          </a>
+        </li>
+      )
+    })
+  }
+</ul>
