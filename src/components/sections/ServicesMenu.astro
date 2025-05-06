@@ -1,0 +1,33 @@
+---
+import LinksMenu from './base/LinksMenu.astro'
+
+// Libs
+import { useTranslations } from '../../i18n/utils'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+const menuItems = [
+    'transfers',
+    'yacht',
+    'golf',
+    'teambuilding',
+    'desk',
+    'entertainment',
+    'photography',
+]
+
+const menuItemsLang = menuItems.map((item) => {
+    return t(`services.menuItems.${item}`)
+})
+---
+
+<LinksMenu 
+    menuItems={menuItemsLang}
+    title={t('services.title')}
+    baseMessage={t('services.baseMessage')}
+    imageSrc='/services.webp'
+    imageAlt={t('services.imageAlt')}
+    id='services'
+/>

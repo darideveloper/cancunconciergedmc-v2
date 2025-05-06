@@ -1,0 +1,22 @@
+---
+// Layout
+import Layout from '../../layouts/Layout.astro'
+
+// Sections
+import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'; 
+import ServicesMenu from '../../components/sections/ServicesMenu.astro';
+
+// Libs
+import { useTranslations } from '../../i18n/utils'
+import { getStaticPathsLangs } from '../../libs/getStaticPaths';
+
+// i18n
+export const getStaticPaths = getStaticPathsLangs
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+---
+
+<Layout>
+    <FullWidthMedia src='/videos/services.mp4' isVideo={true} />
+    <ServicesMenu client:load />
+</Layout>

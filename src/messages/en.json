@@ -84,5 +84,19 @@
         "title": "Our clients",
         "baseMessage": "Hello, I am interested in your services for",
         "imageAlt": "Our clients enjoying a great time in Cancun"
+    },
+    "services": {
+        "menuItems": {
+            "transfers": "Airport Transfers & VIP Transportation",
+            "yacht": "Yacht Rentals & Water Activities",
+            "golf": "Golf & Group Excursions",
+            "teambuilding": "Teambuilding Experiences",
+            "desk": "Hospitality Desk Services",
+            "entertainment": "Décor & Entertainment",
+            "photography": "Photography Services"
+        },
+        "title": "Our Services",
+        "baseMessage": "Hello, I am interested in your service:",
+        "imageAlt": "Explore Cancun Concierge DMC amazing and customized services"
     }
 }

@@ -86,5 +86,19 @@
         "title": "Nuestros clientes",
         "baseMessage": "Hola, estoy interesado en sus servicios para",
         "imageAlt": "Nuestros clientes disfrutando de un gran momento en Cancún"
+    },
+    "services": {
+        "menuItems": {
+            "transfers": "Traslados al Aeropuerto & Transporte VIP",
+            "yacht": "Renta de Yates & Actividades Acuáticas",
+            "golf": "Golf & Excursiones Grupales",
+            "teambuilding": "Experiencias de Team Building",
+            "desk": "Servicios de Mesa de Hospitalidad",
+            "entertainment": "Decoración & Entretenimiento",
+            "photography": "Servicios de Fotografía"
+        },
+        "title": "Nuestros Servicios",
+        "baseMessage": "Hola, estoy interesado en su servicio:",
+        "imageAlt": "Explora los increíbles y personalizados servicios de Cancun Concierge DMC"
     }
 }
