@@ -7,10 +7,15 @@ const images = import.meta.glob('/public/galery/*.{jpg,jpeg,png,webp}', {
 });
 
 const imageUrls = Object.values(images);
-const { altName = "personalizado", title = "Galería de imágenes" } = Astro.props;
+const { title = "Galería de imágenes" } = Astro.props;
 ---
 
-<section id="gallery" class="container w-full px-0">
+<title>{title}</title>
+<section id="gallery" class={clsx(
+  "container", 
+  "w-full",
+  "px-0"
+)}>
   <h2 class="text-2xl">{title}</h2>
   <div class={clsx(
     "columns-[280px]",
@@ -20,8 +25,12 @@ const { altName = "personalizado", title = "Galería de imágenes" } = Astro.pro
     {imageUrls.map((url) => (
       <img
         src={url}
-        alt={`Foto de nuestro transporte ${altName}`}
-        class={clsx("w-full", "rounded-lg", "break-inside-avoid")}
+        alt={`Foto de nuestro transporte ${url.split('/').pop()?.split('.')[0].replace(/-/g, ' ')}`}
+        class={clsx(
+          "w-full", 
+          "rounded-lg", 
+          "break-inside-avoid"
+        )}
       />
     ))}
   </div>
