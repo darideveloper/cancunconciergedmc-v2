@@ -40,17 +40,23 @@ const baseUrl = 'https://api.whatsapp.com/send?phone='
     <!-- Links -->
     <ul>
       {
-        menuItems.map((text: string) => (
-          <li>
-            <a
-              href={`${baseUrl}${phoneNumber}&text=${baseMessage} ${text}`}
-              target='_blank'
-              class={getMenuLinksClasses(false)}
-            >
-              {text}
-            </a>
-          </li>
-        ))
+        menuItems.map((text: string) => {
+
+          // Scape '&' in the text
+          const textClean = text.replace(/&/g, '%26')
+
+          return (
+            <li>
+              <a
+                href={`${baseUrl}${phoneNumber}&text=${baseMessage} ${textClean}`}
+                target='_blank'
+                class={getMenuLinksClasses(false)}
+              >
+                {text}
+              </a>
+            </li>
+          )
+        })
       }
     </ul>
   </div>
