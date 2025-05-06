@@ -18,7 +18,7 @@ const t = useTranslations(lang)
 ---
 
 <Layout>
-    <FullWidthMedia src='/videos/about.mp4' isVideo={true} />
+    <FullWidthMedia src='/videos/about.mp4' isVideo={true} client:load />
     <WhatWeDo />
     <Team client:load lang={lang} />
 </Layout>
