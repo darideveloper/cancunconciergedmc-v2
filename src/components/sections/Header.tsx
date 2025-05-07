@@ -9,9 +9,6 @@ export default function Header() {
     <header className="w-full flex items-center justify-between py-6 px-8 bg-white relative">
       <a href="/" className="flex flex-col items-center no-underline z-20">
         <img src="/logo.webp" alt="Logo" className="h-[71px] mb-1" />
-        <span className="text-[0.75rem] tracking-[0.15em] font-medium text-blue font-title text-center">
-          CUSTOM IRELAND<br />LUXURY DMC
-        </span>
       </a>
 
       {/* Navigation */}
@@ -46,9 +43,6 @@ export default function Header() {
             <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
               <div className="flex flex-col items-center">
                 <img src="/logo.webp" alt="Logo" className="h-[71px] mb-1" />
-                <span className="text-[0.75rem] tracking-[0.15em] font-medium text-blue font-title text-center">
-                  CUSTOM IRELAND<br />LUXURY DMC
-                </span>
               </div>
             </div>
           )}
