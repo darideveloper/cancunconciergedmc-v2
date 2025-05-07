@@ -14,6 +14,7 @@ import '@fontsource-variable/urbanist';
 // Sections
 import WhyUs from '../components/sections/WhyUs.astro';
 import Footer from '../components/sections/Footer.astro';
+import Header from '../components/sections/Header';
 
 ---
 
@@ -38,7 +39,7 @@ import Footer from '../components/sections/Footer.astro';
   </head>
   <body>
     <!-- Header -->
-
+    <Header client:load/>
     <!-- Body -->
     <main class="font-sans">
       <slot />

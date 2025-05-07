@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.7",
+    "@astrojs/starlight": "^0.34.2",
     "@astrojs/starlight-tailwind": "^4.0.1",
     "@fontsource-variable/montserrat": "^5.2.5",
     "@fontsource-variable/oswald": "^5.2.5",
