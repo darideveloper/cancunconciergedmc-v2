@@ -98,5 +98,9 @@
         "title": "Our Services",
         "baseMessage": "Hello, I am interested in your service:",
         "imageAlt": "Explore Cancun Concierge DMC amazing and customized services"
+    },
+    "gallery": {
+        "title": "Image Gallery",
+        "photoAlt": "photo of our transport"
     }
 }

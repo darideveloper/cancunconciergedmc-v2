@@ -1,22 +1,25 @@
 ---
 import clsx from "clsx";
 
+import { useTranslations } from "../../i18n/utils";
+
+const { lang } = Astro.params as any;
+const t = useTranslations(lang);
+
 const images = import.meta.glob('/public/galery/*.{jpg,jpeg,png,webp}', {
   eager: true,
   as: 'url',
 });
 
 const imageUrls = Object.values(images);
-const { title = "Galería de imágenes" } = Astro.props;
 ---
 
-<title>{title}</title>
+<title>{t('gallery.title')}</title>
 <section id="gallery" class={clsx(
   "container", 
   "w-full",
   "px-0"
 )}>
-  <h2 class="text-2xl">{title}</h2>
   <div class={clsx(
     "columns-[280px]",
     "gap-2", 
@@ -25,7 +28,7 @@ const { title = "Galería de imágenes" } = Astro.props;
     {imageUrls.map((url) => (
       <img
         src={url}
-        alt={`Foto de nuestro transporte ${url.split('/').pop()?.split('.')[0].replace(/-/g, ' ')}`}
+        alt={`${t('gallery.photoAlt')} ${url.split('/').pop()?.split('.')[0].replace(/-/g, ' ')}`}
         class={clsx(
           "w-full", 
           "rounded-lg", 

@@ -100,5 +100,9 @@
         "title": "Nuestros Servicios",
         "baseMessage": "Hola, estoy interesado en su servicio:",
         "imageAlt": "Explora los increíbles y personalizados servicios de Cancun Concierge DMC"
+    },
+    "gallery": {
+        "title": "Galeria De Imagenes",
+        "photoAlt": "Foto de nuestro transporte"
     }
 }
