@@ -108,5 +108,9 @@
     "footer": {
         "text": "En Cancún Concierge, planeamos y ejecutamos servicios de transportación al aeropuerto, actividades acuáticas, tours, golf, reservas en restaurantes y prácticamente cualquier necesidad que pueda tener durante su estancia en Cancún y la Riviera Maya.",
         "rights": "Todos los derechos reservados."
+    },
+    "gallery": {
+        "title": "Galeria De Imagenes",
+        "photoAlt": "Foto de nuestro transporte"
     }
 }
