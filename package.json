@@ -27,7 +27,8 @@
     "motion": "^12.9.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "toastify-js": "^1.12.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

@@ -4,10 +4,10 @@ import { clsx } from 'clsx'
 
 // Data
 import { navLinks } from '../../data/nav'
-import { socialLinks } from '../../data/social'
+import { socialLinks, contactClassicLinks } from '../../data/contact'
 
 // Components
-import List from '../ui/List.astro'
+import LinksList from '../ui/LinksList.astro'
 ---
 
 <footer
@@ -22,16 +22,16 @@ import List from '../ui/List.astro'
 >
   <small class={clsx('container', 'flex', 'flex-col', '!my-0')}>
     <!--footer nav links -->
-    <List links={navLinks} />
+    <LinksList links={navLinks} />
 
     <!-- Text -->
     <p
       class={clsx(
         'text-center',
         'text-sm',
-        '!my-16',
+        '!my-12',
         'opacity-60',
-        'max-w-[800px]',
+        'max-w-[750px]',
         'mx-auto',
         'inline-block'
       )}
@@ -42,7 +42,9 @@ import List from '../ui/List.astro'
     </p>
 
     <!-- Socials -->
-    <List links={socialLinks} />
+    <LinksList links={contactClassicLinks} />
+    <br>
+    <LinksList links={socialLinks} />
 
     <!-- Copyright -->
     <p
