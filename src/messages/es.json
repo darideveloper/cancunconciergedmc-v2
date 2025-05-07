@@ -2,11 +2,6 @@
     "general": {
         "photoAlt": "Foto de"
     },
-    "nav": {
-        "home": "Inicio",
-        "about": "Acerca de",
-        "twitter": "Twitter"
-    },
     "contact": {
         "title": "Contáctame"
     },
@@ -100,5 +95,18 @@
         "title": "Nuestros Servicios",
         "baseMessage": "Hola, estoy interesado en su servicio:",
         "imageAlt": "Explora los increíbles y personalizados servicios de Cancun Concierge DMC"
+    },
+    "nav": {
+        "links": {
+            "home": "Inicio",
+            "about": "Acerca de",
+            "testimonials": "Testimonios",
+            "services": "Servicios",
+            "transportation": "Transportación"
+        }
+    },
+    "footer": {
+        "text": "En Cancún Concierge, planeamos y ejecutamos servicios de transportación al aeropuerto, actividades acuáticas, tours, golf, reservas en restaurantes y prácticamente cualquier necesidad que pueda tener durante su estancia en Cancún y la Riviera Maya.",
+        "rights": "Todos los derechos reservados."
     }
 }

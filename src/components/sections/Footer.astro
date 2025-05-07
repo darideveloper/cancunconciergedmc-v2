@@ -1,6 +1,8 @@
 ---
 // Libs
 import { clsx } from 'clsx'
+import { useTranslations } from '../../i18n/utils'
+
 
 // Data
 import { navLinks } from '../../data/nav'
@@ -8,6 +10,17 @@ import { socialLinks, contactClassicLinks } from '../../data/contact'
 
 // Components
 import LinksList from '../ui/LinksList.astro'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+const navLinksLang = navLinks.map((item) => {
+  return {
+    ...item,
+    text: t(`nav.links.${item.text}`),
+  }
+})
 ---
 
 <footer
@@ -22,7 +35,7 @@ import LinksList from '../ui/LinksList.astro'
 >
   <small class={clsx('container', 'flex', 'flex-col', '!my-0')}>
     <!--footer nav links -->
-    <LinksList links={navLinks} />
+    <LinksList links={navLinksLang} />
 
     <!-- Text -->
     <p
@@ -36,9 +49,7 @@ import LinksList from '../ui/LinksList.astro'
         'inline-block'
       )}
     >
-      At Cancun Concierge, we plan and execute airport transportation services,
-      water activities, tours, golf, restaurant reservations, and virtually any
-      need you may have during your stay in Cancun and the Riviera Maya.
+      {t("footer.text")}
     </p>
 
     <!-- Socials -->
@@ -56,7 +67,8 @@ import LinksList from '../ui/LinksList.astro'
         '!mb-0',
       )}
     >
-      Powered by <a
+      Powered by 
+      <a
         href='https://www.astro.build/'
         target='_blank'
         class={clsx(
@@ -64,8 +76,10 @@ import LinksList from '../ui/LinksList.astro'
           'duration-300',
           'cursor-pointer'
         )}
-        >Dari Dev's Team</a
-      > &copy; {new Date().getFullYear()}
+        >
+        Dari Dev's Team 
+      </a> 
+        &copy; {new Date().getFullYear()} | Cancun Concierge DMC {t("footer.rights")}
     </p>
   </small>
 </footer>
