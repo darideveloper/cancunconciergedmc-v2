@@ -28,6 +28,8 @@ const { href, target = '_self', class: className = '' }: Props = Astro.props
     'inline-block',
     className
   )}
+  data-aos="fade-up"
+  data-aos-delay="300"
 >
   <slot/>
 </a>
