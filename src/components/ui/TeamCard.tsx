@@ -31,7 +31,7 @@ export default function TeamCard({ id, name, bio, className = "" }: Props) {
         src={`/team/${id}.webp`}
         alt={`${name}'s photo`}
         className={clsx('w-full', "mx-auto md:mx-0", 'max-w-xl', 'my-6')}
-        data-aos="zoom-in"
+        loading='lazy'
       />
     </article>
   )

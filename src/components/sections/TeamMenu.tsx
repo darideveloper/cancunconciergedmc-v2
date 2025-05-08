@@ -52,7 +52,6 @@ export default function Team({ lang }: TeamProps) {
                   setActiveOption(teamKey)
                 }}
                 className={getMenuLinksClasses(activeOption == teamKey)}
-                data-aos="zoom-in"
               >
                 {teamData[teamKey].name}
               </button>
