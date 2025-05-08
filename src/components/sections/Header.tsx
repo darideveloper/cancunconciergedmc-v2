@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { navLinks } from '../../data/nav';
+import { Menu } from 'lucide-react';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,13 +21,11 @@ export default function Header() {
         
         {/* Hamburger menu for mobile */}
         <button
-          className="flex flex-col justify-center w-8 h-8 cursor-pointer z-50 xl:hidden ml-4"
+          className="flex items-center justify-center w-8 h-8 cursor-pointer z-50 xl:hidden ml-4"
           aria-label="Toggle menu"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className={`block h-1 w-full bg-blue rounded transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`block h-1 w-full bg-blue rounded transition-all duration-300 my-1 ${menuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block h-1 w-full bg-blue rounded transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          <Menu className={`w-6 h-6 text-blue transition-transform duration-300 ${menuOpen ? 'rotate-90' : ''}`} />
         </button>
 
         {/* Navigation links - conditional styling for mobile/desktop */}
