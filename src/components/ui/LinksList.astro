@@ -1,11 +1,14 @@
 ---
+// Libs
 import { clsx } from 'clsx';
 
+// Props
 interface Props {
   links: Array<{ text: string; url: string; copy?: boolean }>;
+  target?: string;
 }
 
-const { links } = Astro.props;
+const { links, target = "_blank" } = Astro.props;
 ---
 
 <ul
@@ -25,7 +28,7 @@ const { links } = Astro.props;
         <li>
           <a
             href={link.url}
-            target='_blank'
+            target={target}
             class={clsx(
               'text-lg',
               'opacity-60 hover:opacity-100',
