@@ -33,37 +33,47 @@ const features = [
 
 
 ---
-
 <section
-    id="infoCircleCard"
-    class={clsx("container", "flex", "flex-col", "gap-10")}
+  id="infoCircleCard"
+  class={clsx("container", "flex", "flex-col", "gap-10")}
 >
-    {
-        features.map((circle, index) => (
-            <div
-                class={clsx(
-                    "flex",
-                    "w-full",
-                    "mb-2",
-                    index % 2 === 1
-                        ? "justify-center md:justify-start"
-                        : "justify-center md:justify-end",
-                )}
-            >
-                <InfoCircleCard
-                    imageBgSrc={`/infoCircle/${circle.title} bg.webp`}
-                    imageTopSrc={`/infoCircle/${circle.title}.webp`}
-                    imageAlt={`${circle.imageAlt}${circle.title}`}
-                    title={circle.title}
-                    text={circle.text}
-                    class={clsx(
-                        "h-72 w-72",
-                        index % 2 === 0
-                            ? "md:mr-40 md:scale-120 md:origin-right"
-                            : "md:ml-40 md:origin-left",
-                    )}
-                />
-            </div>
-        ))
-    }
+  {
+    features.map((circle, index) => (
+      <div
+        class={clsx(
+          "flex",
+          "flex-col md:flex-row",
+          "items-center",
+          "gap-4",
+          "mx-30", // Añadido margen en los lados para centrar más los elementos
+          index % 2 === 1 ? "md:flex-row" : "md:flex-row-reverse scale-110"
+        )}
+      >
+        <InfoCircleCard
+          imageBgSrc={`/infoCircle/${circle.title} bg.webp`}
+          imageTopSrc={`/infoCircle/${circle.title}.webp`}
+          imageAlt={`${circle.imageAlt}${circle.title}`}
+          title={circle.title}
+          text={circle.text}
+          class="h-72 w-72"
+        />
+
+        <p 
+          class={clsx(
+            "w-full", 
+            index === 1 ? "md:w-1/2" : "md:w-1/3", // Ancho según el índice
+            "max-w-md text-sm text-gray-700 px-4",
+            "text-center", // Asegura que el texto esté centrado por defecto
+            index === 0 || index === 2 ? "md:text-center" : "md:text-left" // Solo alinear a la izquierda el texto en los extremos
+          )}
+        >
+          {circle.descripcion}
+        </p>
+      </div>
+    ))
+  }
 </section>
+
+
+
+
