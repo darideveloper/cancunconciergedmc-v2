@@ -5,6 +5,7 @@ import Layout from '../../layouts/Layout.astro'
 // Sections
 import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'; 
 import ServicesMenu from '../../components/sections/ServicesMenu.astro';
+import Gallery from '../../components/sections/Gallery.astro';
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
@@ -19,4 +20,5 @@ const t = useTranslations(lang)
 <Layout>
     <FullWidthMedia src='/videos/services.mp4' isVideo={true} />
     <ServicesMenu client:load />
+    <Gallery />
 </Layout>
