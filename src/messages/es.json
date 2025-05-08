@@ -112,5 +112,27 @@
     "gallery": {
         "title": "Nuestros Transportes",
         "photoAlt": "Foto de nuestro transporte"
+    },
+    "meta": {
+        "home": {
+            "page": "Inicio",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "about": {
+            "page": "Acerca de",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "services": {
+            "page": "Servicios",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "testimonials": {
+            "page": "Testimonios",
+            "description": "test description",
+            "keywords": "some, keywords"
+        }
     }
 }

@@ -3,13 +3,14 @@
 import Layout from '../../layouts/Layout.astro'
 
 // Sections
-import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'; 
-import ServicesMenu from '../../components/sections/ServicesMenu.astro';
-import Gallery from '../../components/sections/Gallery.astro';
+import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'
+import ServicesMenu from '../../components/sections/ServicesMenu.astro'
+import Gallery from '../../components/sections/Gallery.astro'
+import SEO from '../../components/utils/SEO.astro'
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
-import { getStaticPathsLangs } from '../../libs/getStaticPaths';
+import { getStaticPathsLangs } from '../../libs/getStaticPaths'
 
 // i18n
 export const getStaticPaths = getStaticPathsLangs
@@ -18,7 +19,11 @@ const t = useTranslations(lang)
 ---
 
 <Layout>
-    <FullWidthMedia src='/videos/services.mp4' isVideo={true} />
-    <ServicesMenu client:load />
-    <Gallery />
+  <SEO currentPage='services' />
+  <FullWidthMedia
+    src='/videos/services.mp4'
+    isVideo={true}
+  />
+  <ServicesMenu client:load />
+  <Gallery />
 </Layout>

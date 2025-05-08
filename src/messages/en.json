@@ -110,5 +110,27 @@
     "gallery": {
         "title": "Our Transportations",
         "photoAlt": "photo of our transport"
+    },
+    "meta": {
+        "home": {
+            "page": "Home",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "about": {
+            "page": "About Us",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "services": {
+            "page": "Services",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "testimonials": {
+            "page": "Testimonials",
+            "description": "test description",
+            "keywords": "some, keywords"
+        }
     }
 }
