@@ -6,6 +6,9 @@ const config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'nav': '1150px',
+      },
     },
   },
   plugins: [],

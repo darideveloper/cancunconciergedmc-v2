@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.7",
+    "@astrojs/starlight": "^0.34.2",
     "@astrojs/starlight-tailwind": "^4.0.1",
     "@fontsource-variable/montserrat": "^5.2.5",
     "@fontsource-variable/oswald": "^5.2.5",
@@ -22,6 +23,7 @@
     "astro": "^5.7.5",
     "clsx": "^2.1.1",
     "framer-motion": "^12.9.4",
+    "lucide-react": "^0.508.0",
     "marked": "^15.0.11",
     "masonry-layout": "^4.2.2",
     "motion": "^12.9.4",
