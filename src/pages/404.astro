@@ -1,0 +1,22 @@
+---
+// Components
+import Layout from '../layouts/Layout.astro'
+import Title from '../components/ui/Title.astro'
+
+// Libs
+import { clsx } from 'clsx'
+---
+
+<Layout>
+  <div class='container'>
+    <Title>Page Not Found</Title>
+    <p>
+      The page you are looking for does not exist. You can go back to the
+      <a
+        href='/'
+        class={clsx('text-blue')}
+        >home page</a
+      >.
+    </p>
+  </div>
+</Layout>
