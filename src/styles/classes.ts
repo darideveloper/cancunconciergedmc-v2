@@ -21,7 +21,7 @@ export const getMenuLinksClasses = (active: boolean): string => {
     active ? 'text-blue' : 'text-black',
     active ? 'pl-2' : 'pl-0',
     active ? 'cursor-default' : 'cursor-pointer',
-    !active && 'hover:pl-4',
+    !active && 'hover:pl-2',
     'inline-block',
   )
 }
