@@ -1,4 +1,5 @@
 ---
+import clsx from "clsx";
 import InfoCircleCard from "../ui/InfoCircleCard.astro";
 
 //i18n
@@ -6,92 +7,67 @@ import { useTranslations } from "../../i18n/utils";
 
 const { lang } = Astro.params as any;
 const t = useTranslations(lang);
-
-import clsx from "clsx";
-
-//datos
-const features = [
-    {
-        title: "Excelencia en el servicio",
-        imageAlt: "info de ",
-        text: "Inspirados por una trayectoria de más de dos décadas en hospitalidad de lujo, en Cancun Concierge nos comprometemos a anticipar necesidades, cuidar cada detalle y superar expectativas en cada experiencia.",
-        descripcion: "Servicio Personalizado: Cada detalle se adapta a tus necesidades. Flexibilidad Inigualable: Nos ajustamos fácilmente a cambios de último momento."
-    },
-    {
-        title: "Personalización Auténtica",
-        imageAlt: "info de ",
-        text: "Cada cliente es único. Por eso, diseñamos programas completamente a la medida, asegurándonos de que cada momento esté alineado con los deseos, prioridades y estilo de cada huésped.",
-        descripcion: "Anticipación de Necesidades: Superamos expectativas para crear experiencias sin contratiempos."
-    },
-    {
-        title: "Pasión por Crear Experiencias Memorables",
-        imageAlt: "info de ",
-        text: "Nuestra colaboración con startups tecnológicas y proyectos turísticos innovadores nos impulsa a mantenernos a la vanguardia en soluciones personalizadas y experiencias únicas.",
-        descripcion: "Precios Justos y Transparentes: Calidad premium a tarifas competitivas. Gestión Integral de Eventos: Desde el concepto hasta la ejecución, nos encargamos de todo."
-    },
-];
 ---
 
 <section
   id="infoCircleCard"
-  class={clsx(
-    "container",
-    "flex flex-col gap-y-4 md:gap-10"
-  )}
+  class={clsx("container", "flex flex-col gap-y-4 md:gap-10")}
 >
   {
-    features.map((circle, index) => (
-      <div
-        class={clsx(
-          "flex", 
-          "flex-col", 
-          "items-center", 
-          "gap-4", 
-          "mx-auto", 
-          "w-full",
-          "md:flex-row md:items-center",
-          index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row",
-        )}
-      >
+    [0, 1, 2].map((index) => {
+      const title = t(`features.quotes.${index}.title`);
+      const imageAlt = t(`features.quotes.${index}.imageAlt`);
+      const text = t(`features.quotes.${index}.text`);
+      const descripcion = t(`features.quotes.${index}.descripcion`);
+
+      return (
         <div
           class={clsx(
-            "flex", 
-            "justify-center", 
-            "w-full", 
-            "md:w-auto",
-            index % 2 === 0 && "scale-90 md:scale-110"
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-4",
+            "mx-auto",
+            "w-full",
+            "md:flex-row md:items-center",
+            index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row",
           )}
         >
-          <InfoCircleCard
-            imageBgSrc={`/infoCircle/${circle.title} bg.webp`}
-            imageTopSrc={`/infoCircle/${circle.title}.webp`}
-            imageAlt={`${circle.imageAlt}${circle.title}`}
-            title={circle.title}
-            text={circle.text}
+          <div
             class={clsx(
-            "h-28", 
-            "w-28", 
-            "md:h-100", 
-            "md:w-100", 
-            "shrink-0")}
-          />
-        </div>
+              "flex",
+              "justify-center",
+              "w-full",
+              "md:w-auto",
+              index % 2 === 0 && "scale-90 md:scale-110",
+            )}
+          >
+            <InfoCircleCard
+              imageBgSrc={`/infoCircle/${title}.webp`}
+              imageTopSrc={`/infoCircle/${title}.webp`}
+              imageAlt={`${imageAlt}${title}`}
+              title={title}
+              text={text}
+              class={clsx("h-28", "w-28", "md:h-100", "md:w-100", "shrink-0")}
+            />
+          </div>
 
-        <p
-          class={clsx(
-            "text-sm", 
-            "text-gray-700", 
-            "text-center", 
-            "px-4", 
-            "max-w-full", 
-            "md:max-w-md",
-            index === 1 ? "md:w-1/2" : "md:w-1/3",
-            (index === 0 || index === 2) ? "md:text-center" : "md:text-left",
-          )}
-        >
-          {circle.descripcion}
-        </p>
-      </div>
-    ))
+          <p
+            class={clsx(
+              "text-sm",
+              "text-gray-700",
+              "text-center",
+              "px-4",
+              "max-w-full",
+              "md:max-w-md",
+              index === 1 ? "md:w-1/3" : "md:w-1/3",
+              index === 0 || index === 2 ? "md:text-center" : "md:text-center",
+            )}
+          >
+            {descripcion}
+          </p>
+        </div>
+      );
+    })
   }
 </section>
