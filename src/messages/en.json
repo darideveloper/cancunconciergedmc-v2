@@ -111,26 +111,26 @@
         "title": "Our Transportations",
         "photoAlt": "photo of our transport"
     },
-    "meta": {
-        "home": {
-            "page": "Home",
-            "description": "test description",
-            "keywords": "some, keywords"
-        },
-        "about": {
-            "page": "About Us",
-            "description": "test description",
-            "keywords": "some, keywords"
-        },
-        "services": {
-            "page": "Services",
-            "description": "test description",
-            "keywords": "some, keywords"
-        },
-        "testimonials": {
-            "page": "Testimonials",
-            "description": "test description",
-            "keywords": "some, keywords"
-        }
+    "features": {
+        "quotes": [
+            {
+                "title": "Excellence in Service",
+                "imageAlt": "info about ",
+                "text": "Inspired by over two decades of experience in luxury hospitality, at Cancun Concierge we are committed to anticipating needs, attending to every detail, and exceeding expectations in every experience.",
+                "descripcion": "**Personalized Service:** Every detail is tailored to your needs. **Unmatched Flexibility:** We easily adapt to last-minute changes."
+            },
+            {
+                "title": "Authentic Personalization",
+                "imageAlt": "info about ",
+                "text": "Every client is unique. That's why we design fully tailored programs, ensuring that every moment aligns with each guest's desires, priorities, and personal style.",
+                "descripcion": "**Anticipation of Needs:** We go beyond expectations to deliver seamless experiences."
+            },
+            {
+                "title": "Passion for Creating Memorable Experiences",
+                "imageAlt": "info about ",
+                "text": "Guided by Omar's vision, every experience we offer is more than just a service — it's an opportunity to make a lasting impression. We turn every visit into an unforgettable memory, whether in Cancún or Los Cabos.",
+                "descripcion": "**Fair and Transparent Pricing:** Premium quality at competitive rates. Full Event Management: From concept to execution, we handle it all."
+            }
+        ]
     }
 }
