@@ -30,41 +30,63 @@ const features = [
         descripcion: "Precios Justos y Transparentes: Calidad premium a tarifas competitivas. Gestión Integral de Eventos: Desde el concepto hasta la ejecución, nos encargamos de todo."
     },
 ];
-
-
 ---
+
 <section
   id="infoCircleCard"
-  class={clsx("container", "flex", "flex-col", "gap-10")}
+  class={clsx(
+    "container",
+    "flex flex-col gap-y-4 md:gap-10"
+  )}
 >
   {
     features.map((circle, index) => (
       <div
         class={clsx(
-          "flex",
-          "flex-col md:flex-row",
-          "items-center",
-          "gap-4",
-          "mx-30", // Añadido margen en los lados para centrar más los elementos
-          index % 2 === 1 ? "md:flex-row" : "md:flex-row-reverse scale-110"
+          "flex", 
+          "flex-col", 
+          "items-center", 
+          "gap-4", 
+          "mx-auto", 
+          "w-full",
+          "md:flex-row md:items-center",
+          index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row",
         )}
       >
-        <InfoCircleCard
-          imageBgSrc={`/infoCircle/${circle.title} bg.webp`}
-          imageTopSrc={`/infoCircle/${circle.title}.webp`}
-          imageAlt={`${circle.imageAlt}${circle.title}`}
-          title={circle.title}
-          text={circle.text}
-          class="h-72 w-72"
-        />
-
-        <p 
+        <div
           class={clsx(
+            "flex", 
+            "justify-center", 
             "w-full", 
-            index === 1 ? "md:w-1/2" : "md:w-1/3", // Ancho según el índice
-            "max-w-md text-sm text-gray-700 px-4",
-            "text-center", // Asegura que el texto esté centrado por defecto
-            index === 0 || index === 2 ? "md:text-center" : "md:text-left" // Solo alinear a la izquierda el texto en los extremos
+            "md:w-auto",
+            index % 2 === 0 && "scale-90 md:scale-110"
+          )}
+        >
+          <InfoCircleCard
+            imageBgSrc={`/infoCircle/${circle.title} bg.webp`}
+            imageTopSrc={`/infoCircle/${circle.title}.webp`}
+            imageAlt={`${circle.imageAlt}${circle.title}`}
+            title={circle.title}
+            text={circle.text}
+            class={clsx(
+            "h-28", 
+            "w-28", 
+            "md:h-100", 
+            "md:w-100", 
+            "shrink-0")}
+          />
+        </div>
+
+        <p
+          class={clsx(
+            "text-sm", 
+            "text-gray-700", 
+            "text-center", 
+            "px-4", 
+            "max-w-full", 
+            "md:max-w-md",
+            index === 1 ? "md:w-1/2" : "md:w-1/3",
+            (index === 0 || index === 2) ? "md:text-center" : "md:text-left",
           )}
         >
           {circle.descripcion}
@@ -73,7 +95,3 @@ const features = [
     ))
   }
 </section>
-
-
-
-
