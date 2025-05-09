@@ -134,5 +134,27 @@
                 "descripcion": "**Precios Justos y Transparentes:** Calidad premium a tarifas competitivas. Gestión Integral de Eventos: Desde el concepto hasta la ejecución, nos encargamos de todo."
             }
         ]
+    },
+    "meta": {
+        "home": {
+            "page": "Inicio",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "about": {
+            "page": "Acerca de",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "services": {
+            "page": "Servicios",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "testimonials": {
+            "page": "Testimonios",
+            "description": "test description",
+            "keywords": "some, keywords"
+        }
     }
 }

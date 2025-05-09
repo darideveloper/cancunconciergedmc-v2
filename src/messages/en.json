@@ -132,5 +132,27 @@
                 "descripcion": "**Fair and Transparent Pricing:** Premium quality at competitive rates. Full Event Management: From concept to execution, we handle it all."
             }
         ]
+    },
+    "meta": {
+        "home": {
+            "page": "Home",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "about": {
+            "page": "About Us",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "services": {
+            "page": "Services",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "testimonials": {
+            "page": "Testimonials",
+            "description": "test description",
+            "keywords": "some, keywords"
+        }
     }
 }
