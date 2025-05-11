@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import react from '@astrojs/react';
 
+import showTailwindcssBreakpoint from 'astro-show-tailwindcss-breakpoint';
+
 export default defineConfig({
   integrations: [starlight({
     title: 'Docs with Tailwind',
@@ -11,7 +13,7 @@ export default defineConfig({
       // Path to your Tailwind base styles:
       './src/styles/global.css',
     ],
-  }), react()],
+  }), react(), showTailwindcssBreakpoint()],
   vite: { plugins: [tailwindcss()] },
   i18n: {
     locales: ["es", "en"],

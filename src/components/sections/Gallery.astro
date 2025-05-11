@@ -28,9 +28,10 @@ const imageUrls = Object.values(images)
     {
       imageUrls.map((url) => (
         <img
-          src={url}
+          src={url.replace('/public', '')}
           alt={`${t('gallery.photoAlt')} ${url.split('/').pop()?.split('.')[0].replace(/-/g, ' ')}`}
           class={clsx('w-full', 'rounded-lg', 'break-inside-avoid')}
+          data-aos="fade-up"
         />
       ))
     }

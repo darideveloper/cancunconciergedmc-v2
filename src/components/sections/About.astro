@@ -24,6 +24,7 @@ const text = marked(t('about.text'))
   <div
     class={clsx('md-content')}
     set:html={text}
+    data-aos="fade-down"
   />
   <div class={clsx('text-center', 'mt-8')}>
     <Link href=`/${lang}/about`>{t('about.cta')}</Link>

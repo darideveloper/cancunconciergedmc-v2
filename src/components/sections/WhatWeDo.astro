@@ -19,11 +19,15 @@ const text2 = marked(t('whatWeDo.text2'))
 <section class={clsx('container')} id="what-we-do">
   <Title isH1={true}>{t('whatWeDo.title')}</Title>
   <div
-    class={clsx('md-content')}
-    set:html={text1}
-  />
-  <div
-    class={clsx('md-content')}
-    set:html={text2}
-  />
+    data-aos="fade-down"
+  >
+    <div
+      class={clsx('md-content')}
+      set:html={text1}
+    />
+    <div
+      class={clsx('md-content')}
+      set:html={text2}
+    />
+  </div>
 </section>

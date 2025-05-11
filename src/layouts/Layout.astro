@@ -14,6 +14,10 @@ import '@fontsource-variable/urbanist';
 // Sections
 import WhyUs from '../components/sections/WhyUs.astro';
 import Footer from '../components/sections/Footer.astro';
+import Header from '../components/sections/Header';
+
+// Components
+import AOSInit from '../components/utils/AOSInit';
 
 ---
 
@@ -34,18 +38,23 @@ import Footer from '../components/sections/Footer.astro';
       name='generator'
       content={Astro.generator}
     />
-    <title>Astro Basics</title>
   </head>
   <body>
-    <!-- Header -->
 
+
+    <!-- Start aos -->
+    <AOSInit client:load />
+    
+    <!-- Header -->
+    <Header client:load/>
+    
     <!-- Body -->
     <main class="font-sans">
       <slot />
     </main>
 
     <!-- Footer -->
-    <WhyUs client:load />
+    <WhyUs />
     <Footer />
   </body>
 </html>

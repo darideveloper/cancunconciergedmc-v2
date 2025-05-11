@@ -1,12 +1,15 @@
 ---
+// Libs
 import { clsx } from 'clsx';
-import 'toastify-js/src/toastify.css';
 
+// Props
 interface Props {
   links: Array<{ text: string; url: string; copy?: boolean }>;
+  target?: string;
+  aos?: string;
 }
 
-const { links } = Astro.props;
+const { links, target = "_blank", aos = "" } = Astro.props as Props;
 ---
 
 <ul
@@ -19,6 +22,7 @@ const { links } = Astro.props;
     'justify-center',
     'w-full'
   )}
+  data-aos={aos}
 >
   {
     links.map((link) => {
@@ -26,7 +30,7 @@ const { links } = Astro.props;
         <li>
           <a
             href={link.url}
-            target='_blank'
+            target={target}
             class={clsx(
               'text-lg',
               'opacity-60 hover:opacity-100',

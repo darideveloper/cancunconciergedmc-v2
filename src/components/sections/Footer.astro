@@ -17,8 +17,8 @@ const t = useTranslations(lang)
 
 const navLinksLang = navLinks.map((item) => {
   return {
-    ...item,
     text: t(`nav.links.${item.text}`),
+    url: `/${lang}${item.url}`,
   }
 })
 ---
@@ -35,7 +35,7 @@ const navLinksLang = navLinks.map((item) => {
 >
   <small class={clsx('container', 'flex', 'flex-col', '!my-0')}>
     <!--footer nav links -->
-    <LinksList links={navLinksLang} />
+    <LinksList links={navLinksLang} target='_self' aos='fade-up' />
 
     <!-- Text -->
     <p
@@ -69,7 +69,7 @@ const navLinksLang = navLinks.map((item) => {
     >
       Powered by 
       <a
-        href='https://www.astro.build/'
+        href='https://api.whatsapp.com/send?phone=5214493402622'
         target='_blank'
         class={clsx(
           'hover:text-gold',

@@ -3,13 +3,14 @@
 import Layout from '../../layouts/Layout.astro'
 
 // Sections
-import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'; 
-import TestimonialsSection from '../../components/sections/Testimonials.astro';
-import ClientsMenu from '../../components/sections/ClientsMenu.astro';
+import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'
+import TestimonialsSection from '../../components/sections/Testimonials.astro'
+import ClientsMenu from '../../components/sections/ClientsMenu.astro'
+import SEO from '../../components/utils/SEO.astro'
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
-import { getStaticPathsLangs } from '../../libs/getStaticPaths';
+import { getStaticPathsLangs } from '../../libs/getStaticPaths'
 
 // i18n
 export const getStaticPaths = getStaticPathsLangs
@@ -18,7 +19,11 @@ const t = useTranslations(lang)
 ---
 
 <Layout>
-    <FullWidthMedia src='/videos/testimonials.mp4' isVideo={true} />
-    <TestimonialsSection />
-    <ClientsMenu client:load />
+  <SEO currentPage='testimonials' />
+  <FullWidthMedia
+    src='/videos/testimonials.mp4'
+    isVideo={true}
+  />
+  <TestimonialsSection />
+  <ClientsMenu client:load />
 </Layout>

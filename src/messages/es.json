@@ -113,6 +113,7 @@
         "title": "Nuestros Transportes",
         "photoAlt": "Foto de nuestro transporte"
     },
+<<<<<<< HEAD
     "features": {
     "quotes": [
       {
@@ -138,3 +139,28 @@
 }
 
 
+=======
+    "meta": {
+        "home": {
+            "page": "Inicio",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "about": {
+            "page": "Acerca de",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "services": {
+            "page": "Servicios",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "testimonials": {
+            "page": "Testimonios",
+            "description": "test description",
+            "keywords": "some, keywords"
+        }
+    }
+}
+>>>>>>> 1a0d634056e6add8e7d900e8848712b9b62032e1

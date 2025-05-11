@@ -111,6 +111,7 @@
         "title": "Our Transportations",
         "photoAlt": "photo of our transport"
     },
+<<<<<<< HEAD
     "features": {
     "quotes": [
   {
@@ -130,6 +131,29 @@
     "imageAlt": "info about ",
     "text": "Guided by Omar’s vision, every experience we offer is more than just a service — it’s an opportunity to make a lasting impression. We turn every visit into an unforgettable memory, whether in Cancún or Los Cabos.",
     "descripcion": "**Fair and Transparent Pricing:** Premium quality at competitive rates. Full Event Management: From concept to execution, we handle it all."
+=======
+    "meta": {
+        "home": {
+            "page": "Home",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "about": {
+            "page": "About Us",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "services": {
+            "page": "Services",
+            "description": "test description",
+            "keywords": "some, keywords"
+        },
+        "testimonials": {
+            "page": "Testimonials",
+            "description": "test description",
+            "keywords": "some, keywords"
+        }
+>>>>>>> 1a0d634056e6add8e7d900e8848712b9b62032e1
     }
     ]
 }
