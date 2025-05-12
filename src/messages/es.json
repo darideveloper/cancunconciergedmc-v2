@@ -114,26 +114,26 @@
         "photoAlt": "Foto de nuestro transporte"
     },
     "features": {
-        "quotes": [
-            {
+        "quotes": {
+            "excellence":{
                 "title": "Excelencia en el servicio",
                 "imageAlt": "info de ",
                 "text": "Inspirados por una trayectoria de más de dos décadas en hospitalidad de lujo, en Cancun Concierge nos comprometemos a anticipar necesidades, cuidar cada detalle y superar expectativas en cada experiencia.",
                 "descripcion": "**Servicio Personalizado:** Cada detalle se adapta a tus necesidades. **Flexibilidad Inigualable:** Nos ajustamos fácilmente a cambios de último momento."
             },
-            {
+            "authenticity":{
                 "title": "Personalización Auténtica",
                 "imageAlt": "info de ",
                 "text": "Cada cliente es único. Por eso, diseñamos programas completamente a la medida, asegurándonos de que cada momento esté alineado con los deseos, prioridades y estilo de cada huésped.",
                 "descripcion": "**Anticipación de Necesidades:** Superamos expectativas para crear experiencias sin contratiempos."
             },
-            {
+            "passion":{
                 "title": "Pasión por Crear Experiencias Memorables",
                 "imageAlt": "info de ",
                 "text": "Nuestra colaboración con startups tecnológicas y proyectos turísticos innovadores nos impulsa a mantenernos a la vanguardia en soluciones personalizadas y experiencias únicas.",
                 "descripcion": "**Precios Justos y Transparentes:** Calidad premium a tarifas competitivas. Gestión Integral de Eventos: Desde el concepto hasta la ejecución, nos encargamos de todo."
             }
-        ]
+        }
     },
     "meta": {
         "home": {

@@ -2,12 +2,12 @@
 import clsx from "clsx";
 import { marked } from "marked";
 import InfoCircleCard from "../ui/InfoCircleCard.astro";
-
-// i18n
 import { useTranslations } from "../../i18n/utils";
 
 const { lang } = Astro.params as any;
 const t = useTranslations(lang);
+
+const titulosKeys = ["excellence", "authenticity", "passion"];
 ---
 
 <section
@@ -15,11 +15,11 @@ const t = useTranslations(lang);
   class={clsx("container", "flex", "flex-col", "gap-y-4", "md:gap-10", "!max-w-4xl")}
 >
   {
-    [0, 1, 2].map((index) => {
-      const title = t(`features.quotes.${index}.title`);
-      const imageAlt = t(`features.quotes.${index}.imageAlt`);
-      const text = t(`features.quotes.${index}.text`);
-      const descripcion = marked(t(`features.quotes.${index}.descripcion`));
+    titulosKeys.map((key, index) => {
+      const title = t(`features.quotes.${key}.title`);
+      const imageAlt = t(`features.quotes.${key}.imageAlt`);
+      const text = t(`features.quotes.${key}.text`);
+      const descripcion = marked(t(`features.quotes.${key}.descripcion`));
 
       return (
         <div
@@ -31,6 +31,7 @@ const t = useTranslations(lang);
             "mx-auto",
             "w-full",
             "md:flex-row md:items-center",
+            "gap-x-18",
             index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row",
           )}
         >
@@ -40,13 +41,13 @@ const t = useTranslations(lang);
               "justify-center",
               "w-full",
               "md:w-auto",
-              index % 2 === 0 && "scale-90 md:scale-110",
+              index % 2 === 0 ? "md:scale-110" : "md:scale-100",
             )}
           >
             <InfoCircleCard
-              imageBgSrc={`/infoCircle/${title}.webp`}
-              imageTopSrc={`/infoCircle/${title}.webp`}
-              imageAlt={`${imageAlt}${title}`}
+              imageBgSrc={`/features/${key}.webp`}
+              imageTopSrc={`/features/${key}.webp`}
+              imageAlt={`${imageAlt} ${title}`}
               title={title}
               text={text}
               class={clsx("h-28", "w-28", "md:h-100", "md:w-100", "shrink-0")}
@@ -54,18 +55,22 @@ const t = useTranslations(lang);
           </div>
 
           <div
-            class={clsx(
-              "text-sm",
-              "text-gray-700",
-              "text-center",
-              "px-4",
-              "max-w-full",
-              "md:max-w-md",
-              "md:w-5/12",
-              "md:text-center"
-            )}
-            set:html={descripcion}
-          />
+  class={clsx(
+        "text-sm",
+        "text-gray-700",
+        "px-2",
+        "max-w-full",
+        "md:max-w-2xl",
+        "md:w-3/7",
+        "w-8/3",
+        key === "authenticity"
+          ? "text-center md:text-center"
+          : "text-center md:text-center",
+
+          index % 2 === 0 ? "md:mr-14" : "md:ml-14"
+      )}  
+  set:html={descripcion}
+/>
         </div>
       );
     })
