@@ -11,6 +11,7 @@ import SEO from '../../components/utils/SEO.astro'
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { getStaticPathsLangs } from '../../libs/getStaticPaths'
+import Features from '../../components/sections/Features.astro'
 
 // i18n
 export const getStaticPaths = getStaticPathsLangs
@@ -18,14 +19,15 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 ---
 
-<Layout page="about">
+<Layout>
   <SEO currentPage='about' />
   <FullWidthMedia
     src='/videos/about.mp4'
     isVideo={true}
-    client:load
   />
   <WhatWeDo />
+
+  <Features/>
   <Team
     client:load
     lang={lang}

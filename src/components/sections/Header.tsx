@@ -1,14 +1,32 @@
 import { useState } from 'react';
 import { navLinks } from '../../data/nav';
 import { Menu } from 'lucide-react';
+import { useTranslations } from '../../i18n/utils';
+import LanguageSelector from '../ui/LanguageSelector';
 
-export default function Header() {
+interface HeaderProps {
+  lang: 'en' | 'es';
+}
+
+export default function Header({ lang }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [locale, setLocale] = useState('en');
+  const t = useTranslations(lang);
+
+  // Get current path for language switching
+  let currentPath = '';
+  if (typeof window !== 'undefined') {
+    currentPath = window.location.pathname.replace(/^\/(en|es)/, '');
+  }
+
+  // Prepare nav links with translation and lang prefix
+  const navLinksLang = navLinks.map((item) => ({
+    text: t(`nav.links.${item.text}`),
+    url: `/${lang}${item.url}`,
+  }));
 
   return (
     <header className="w-full flex items-center justify-between py-6 px-8 bg-white relative">
-      <a href="/" className="flex flex-col items-center no-underline z-20">
+      <a href={`/${lang}/`} className="flex flex-col items-center no-underline z-20">
         <img src="/logo.webp" alt="Logo" className="h-[71px] mb-1" />
       </a>
 
@@ -16,7 +34,7 @@ export default function Header() {
       <nav className="flex items-center">
         {/* Language selector for desktop */}
         <div className="hidden xl:flex items-center gap-2 mr-6">
-          <LanguageSelector locale={locale} setLocale={setLocale} />
+          <LanguageSelector lang={lang} currentPath={currentPath} />
         </div>
         
         {/* Hamburger menu for mobile */}
@@ -47,7 +65,7 @@ export default function Header() {
           )}
           
           {/* Navigation links */}
-          {navLinks.map(link => (
+          {navLinksLang.map(link => (
             <li key={link.text}>
               <a
                 href={link.url}
@@ -62,7 +80,7 @@ export default function Header() {
           {/* Language selector for mobile */}
           {menuOpen && (
             <li className="mt-4">
-              <LanguageSelector locale={locale} setLocale={setLocale} />
+              <LanguageSelector lang={lang} currentPath={currentPath} />
             </li>
           )}
         </ul>
@@ -70,24 +88,3 @@ export default function Header() {
     </header>
   );
 }
-
-// Separate component for language selector to avoid duplication
-const LanguageSelector = ({ locale, setLocale }: { locale: string; setLocale: (locale: string) => void }) => {
-  return (
-    <div className="flex items-center gap-2">
-      <button 
-        className={`text-xs tracking-wider ${locale === 'en' ? 'text-gold font-bold' : 'text-blue'}`}
-        onClick={() => setLocale('en')}
-      >
-        EN
-      </button>
-      <span className="text-blue">|</span>
-      <button 
-        className={`text-xs tracking-wider ${locale === 'es' ? 'text-gold font-bold' : 'text-blue'}`}
-        onClick={() => setLocale('es')}
-      >
-        ES
-      </button>
-    </div>
-  );
-};

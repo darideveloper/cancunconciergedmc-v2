@@ -1,26 +1,12 @@
 ---
-<<<<<<< HEAD
-import Layout from "../../layouts/Layout.astro";
-import "../../styles/global.css";
-import Gallery from "../../components/sections/Gallery.astro";
-import InfoCircle from "../../components/sections/Features.astro";
-import { getStaticPathsLangs } from "../../libs/getStaticPaths";
-import Features from "../../components/sections/Features.astro";
-export const getStaticPaths = getStaticPathsLangs;
----
-
-<Layout>
-  <Features />
-=======
 import Layout from '../../layouts/Layout.astro'
 import '../../styles/global.css'
 import Gallery from '../../components/sections/Gallery.astro'
-import InfoCircle from '../../components/sections/InfoCircle.astro'
+import Features from '../../components/sections/Features.astro'
 import { getStaticPathsLangs } from '../../libs/getStaticPaths'
 export const getStaticPaths = getStaticPathsLangs
 ---
 
 <Layout>
-  <InfoCircle />
->>>>>>> 1a0d634056e6add8e7d900e8848712b9b62032e1
+  <Features />
 </Layout>
