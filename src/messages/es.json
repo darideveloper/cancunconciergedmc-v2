@@ -57,7 +57,7 @@
                 },
                 "claudia": {
                     "name": "Claudia Rueda, Gerente de Operaciones",
-                    "bio": "Claudia Rueda, nacida en Monterrey, México, es una experimentada Gerente de Operaciones con más de 20 años de trayectoria en la industria del turismo, especializada en Empresas de Gestión de Destinos (DMCs). Su carrera ha estado marcada por importantes cargos en prestigiosas marcas de hospitalidad, incluyendo The Ritz-Carlton, y destacadas DMCs en las Islas Vírgenes de EE. UU. y México.;En 1994, Claudia se mudó por primera vez a Cancún, donde desde entonces ha desempeñado un papel clave en la configuración de experiencias de viaje de lujo. Cuenta con un título de Técnico Superior en Hospitalidad y Turismo por el Instituto Regiomontano de Hotelería, que sentó las bases para su amplia carrera.;Claudia es reconocida no solo por su enfoque entusiasta y orientado al detalle, sino también por sus excepcionales habilidades de liderazgo que inspiran trabajo en equipo y una actitud de “hacer que las cosas sucedan”. Honesta y atenta, sobresale en la gestión operativa, asegurando que cada aspecto del servicio supere las expectativas.;Fuera de su trabajo, Claudia disfruta del yoga, la lectura, ver películas de misterio y cocinar. También le encanta pasar tiempo en la playa con sus dos hijos y sus dos perros. Habla inglés y español con fluidez, lo que fortalece su capacidad para liderar equipos diversos y conectar con clientes en la industria global de hospitalidad."
+                    "bio": "Claudia Rueda, nacida en Monterrey, México, es una experimentada Gerente de Operaciones con más de 20 años de trayectoria en la industria del turismo, especializada en Empresas de Gestión de Destinos (DMCs). Su carrera ha estado marcada por importantes cargos en prestigiosas marcas de hospitalidad, incluyendo The Ritz-Carlton, y destacadas DMCs en las Islas Vírgenes de EE. UU. y México.;En 1994, Claudia se mudó por primera vez a Cancún, donde desde entonces ha desempeñado un papel clave en la configuración de experiencias de viaje de lujo. Cuenta con un título de Técnico Superior en Hospitalidad y Turismo por el Instituto Regiomontano de Hotelería, que sentó las bases para su amplia carrera.;Claudia es reconocida no solo por su enfoque entusiasta y orientado al detalle, sino también por sus excepcionales habilidades de liderazgo que inspiran trabajo en equipo y una actitud de \"hacer que las cosas sucedan\". Honesta y atenta, sobresale en la gestión operativa, asegurando que cada aspecto del servicio supere las expectativas.;Fuera de su trabajo, Claudia disfruta del yoga, la lectura, ver películas de misterio y cocinar. También le encanta pasar tiempo en la playa con sus dos hijos y sus dos perros. Habla inglés y español con fluidez, lo que fortalece su capacidad para liderar equipos diversos y conectar con clientes en la industria global de hospitalidad."
                 },
                 "luis": {
                     "name": "Luis Canché, Coordinador de Operaciones",
@@ -159,5 +159,39 @@
     },
     "riviera": {
         "hero": "¡RESERVE AHORA Y ASEGURE SU TRANSPORTE DESDE; EL AEROPUERTO A SU HOTEL O AIRBNB!"
+    },
+    "transportation": {
+        "title": "Transportación",
+        "description": "Reserva tu traslado al aeropuerto o transporte privado en Cancún y Riviera Maya."
+    },
+    "form": {
+        "transportationOptions": "Opciones de transportación",
+        "personalInfo": "Información personal",
+        "name": "Nombre",
+        "namePlaceholder": "Ingresa tu nombre",
+        "lastName": "Apellido",
+        "lastNamePlaceholder": "Ingresa tu apellido",
+        "passengers": "Número de pasajeros",
+        "hotelOrAirbnb": "Hotel o Airbnb",
+        "resortDestination": "Destino del resort",
+        "airbnbAddress": "Dirección de Airbnb",
+        "airbnbAddressPlaceholder": "Ingresa la dirección de tu Airbnb",
+        "arriving": "Llegada",
+        "arrivingDate": "Fecha de llegada",
+        "arrivingTime": "Hora de llegada a Cancún",
+        "departing": "Salida",
+        "departingDate": "Fecha de salida",
+        "departingTime": "Hora de salida de Cancún",
+        "airline": "Aerolínea",
+        "airlinePlaceholder": "Ingresa tu aerolínea",
+        "flightNumber": "Número de vuelo",
+        "flightNumberPlaceholder": "Ingresa tu número de vuelo",
+        "maxPassengers": "Máximo ocho pasajeros por van",
+        "buyNow": "Comprar ahora",
+        "processing": "Procesando...",
+        "total": "Total",
+        "in": "en",
+        "from": "de",
+        "flightInfoNote": "*En caso de tener vuelos de conexión, por favor proporciona la información de tu vuelo real {prefix} {direction} Cancún"
     }
 }

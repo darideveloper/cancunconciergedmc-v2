@@ -157,5 +157,39 @@
     },
     "riviera": {
         "hero": "PLEASE BOOK NOW AND SECURE AIRPORT;TRANSPORTATION TO YOUR HOTEL OR AIRBNB"
+    },
+    "transportation": {
+        "title": "Transportation",
+        "description": "Book your airport transfer or private transportation in Cancun and Riviera Maya."
+    },
+    "form": {
+        "transportationOptions": "Transportation Options",
+        "personalInfo": "Personal Information",
+        "name": "Name",
+        "namePlaceholder": "Enter your name",
+        "lastName": "Last name",
+        "lastNamePlaceholder": "Enter your last name",
+        "passengers": "Number of passengers",
+        "hotelOrAirbnb": "Hotel or Airbnb",
+        "resortDestination": "Resort destination",
+        "airbnbAddress": "Airbnb address",
+        "airbnbAddressPlaceholder": "Enter your Airbnb address",
+        "arriving": "Arriving",
+        "arrivingDate": "Arriving date",
+        "arrivingTime": "Arriving time in Cancun",
+        "departing": "Departing",
+        "departingDate": "Departing date",
+        "departingTime": "Departing time from Cancun",
+        "airline": "Airline",
+        "airlinePlaceholder": "Enter your airline",
+        "flightNumber": "Flight number",
+        "flightNumberPlaceholder": "Enter your flight number",
+        "maxPassengers": "Maximum eight passengers per van",
+        "buyNow": "Buy Now",
+        "processing": "Processing...",
+        "total": "Total",
+        "in": "in",
+        "from": "from",
+        "flightInfoNote": "*In case you have connecting flights, please make sure you provide the info for your actual flight {prefix} {direction} Cancun"
     }
 }

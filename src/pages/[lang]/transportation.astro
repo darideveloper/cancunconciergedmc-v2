@@ -11,6 +11,7 @@ import Hero from '../../components/sections/riviera/Hero.astro'
 import { useTranslations } from '../../i18n/utils'
 import { getStaticPathsLangs } from '../../libs/getStaticPaths'
 
+import Form from '../../components/sections/form'
 
 // i18n
 export const getStaticPaths = getStaticPathsLangs
@@ -21,5 +22,6 @@ const t = useTranslations(lang)
 <Layout>
   <SEO currentPage='home' />
   <Hero />
+  <Form client:load lang={lang} />
   <Services />
 </Layout>
