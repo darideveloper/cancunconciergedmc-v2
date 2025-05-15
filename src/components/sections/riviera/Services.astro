@@ -1,0 +1,15 @@
+---
+import Title from "../../ui/Title.astro";
+import ServiceCards from "../../ui/riviera/ServicesCards.astro";
+
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section class:list={["services container", className]} id="services">
+  <Title> Our services include </Title>
+  <ServiceCards />
+</section>
