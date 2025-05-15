@@ -1,0 +1,24 @@
+---
+// Layout
+import Layout from '../../layouts/Layout.astro'
+
+// Sections
+import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'
+import TestimonialsSection from '../../components/sections/Testimonials.astro'
+import ClientsMenu from '../../components/sections/ClientsMenu.astro'
+import SEO from '../../components/utils/SEO.astro'
+
+// Libs
+import { useTranslations } from '../../i18n/utils'
+import { getStaticPathsLangs } from '../../libs/getStaticPaths'
+import Form from '../../components/sections/form'
+
+// i18n
+export const getStaticPaths = getStaticPathsLangs
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+---
+
+<Layout>
+  <Form client:load lang={lang} />
+</Layout>

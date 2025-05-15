@@ -7,7 +7,7 @@ export function getLangFromUrl(url: URL) {
 }
 
 export function useTranslations(lang: keyof typeof ui) {
-  return function t(key: string) {
+  return function t(key: string, vars?: Record<string, string>) {
     const keys = key.split('.'); // Split the key by dots for nested access
     let value: any = ui[lang];
 
@@ -23,6 +23,13 @@ export function useTranslations(lang: keyof typeof ui) {
         value = value?.[k];
         if (value === undefined) break;
       }
+    }
+
+    // Interpolate variables if provided
+    if (typeof value === 'string' && vars) {
+      Object.entries(vars).forEach(([k, v]) => {
+        value = value.replace(new RegExp(`{${k}}`, 'g'), v);
+      });
     }
 
     return value;
