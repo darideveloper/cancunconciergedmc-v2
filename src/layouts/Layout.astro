@@ -46,7 +46,7 @@ import AOSInit from '../components/utils/AOSInit';
     <AOSInit client:load />
     
     <!-- Header -->
-    <Header client:load lang={lang}/>
+    <Header client:load lang={lang} serverPathname={Astro.url.pathname}/>
     
     <!-- Body -->
     <main class="font-sans">
