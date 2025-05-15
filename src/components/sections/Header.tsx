@@ -7,16 +7,27 @@ import clsx from 'clsx';
 
 interface HeaderProps {
   lang: 'en' | 'es';
+  serverPathname?: string;
 }
 
-export default function Header({ lang }: HeaderProps) {
+export default function Header({ lang, serverPathname }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const t = useTranslations(lang);
 
   // Get current path for language switching
-  let currentPath = '';
-  if (typeof window !== 'undefined') {
-    currentPath = window.location.pathname.replace(/^\/(en|es)/, '');
+  let currentPath: string;
+  const pathOnClient = typeof window !== 'undefined' ? window.location.pathname : null;
+  const authoritativePath = pathOnClient || serverPathname;
+
+  if (authoritativePath) {
+    currentPath = authoritativePath.replace(/^\/(en|es)/, '');
+    // If after removing lang prefix, path is empty (e.g. original /en or /es), default to '/'
+    if (currentPath === '') {
+      currentPath = '/';
+    }
+  } else {
+    // Fallback if no path information is available (should be rare)
+    currentPath = '/';
   }
 
   // Prepare nav links with translation and lang prefix
