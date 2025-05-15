@@ -10,7 +10,9 @@ import SEO from '../../components/utils/SEO.astro'
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { getStaticPathsLangs } from '../../libs/getStaticPaths'
-import {Services} from '../../../src/components/sections/riviera/Services.astro'
+
+// Section
+import Services from '../../components/sections/riviera/Services.astro'
 
 // i18n
 export const getStaticPaths = getStaticPathsLangs
@@ -20,7 +22,5 @@ const t = useTranslations(lang)
 
 <Layout>
   <SEO currentPage='home' />
-    <services
-
-    />
+  <Services />
 </Layout>
