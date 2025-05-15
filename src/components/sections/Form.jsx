@@ -2,12 +2,12 @@
 import { useState, useEffect, useContext } from "react"
 
 // Components
-import Subtitle from "../ui/form/subtitle"
-import TransportTypes from "../ui/form/transport-types"
-import Input from "../ui/form/input"
-import Select from "../ui/form/select"
-import Fieldset from "../ui/form/fieldset"
-import FormText from "../ui/form/form-text"
+import Subtitle from "../ui/form/Subtitle"
+import TransportTypes from "../ui/form/TransportTypes"
+import Input from "../ui/form/Input"
+import Select from "../ui/form/Select"
+import Fieldset from "../ui/form/Fieldset"
+import FormText from "../ui/form/FormText"
 
 // Api
 import { getHotels } from "../api/hotels"

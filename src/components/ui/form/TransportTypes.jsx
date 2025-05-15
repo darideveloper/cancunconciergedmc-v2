@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import PropTypes from 'prop-types'
-import TransportType from "./transport-type"
+import TransportType from "./TransportType"
 
 export default function TransportTypes({handleUpdateType, activeTransportType, transports}) {
 
