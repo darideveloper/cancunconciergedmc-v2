@@ -156,5 +156,8 @@
             "description": "test description",
             "keywords": "some, keywords"
         }
+    },
+    "riviera": {
+        "hero": "¡RESERVE AHORA Y ASEGURE SU TRANSPORTE DESDE; EL AEROPUERTO A SU HOTEL O AIRBNB!"
     }
 }

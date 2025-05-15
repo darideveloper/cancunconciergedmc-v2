@@ -1,0 +1,83 @@
+---
+// Props
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+
+// Components
+import Title from '../../ui/Title.astro'
+
+// Libs
+import clsx from 'clsx'
+import { useTranslations } from '../../../i18n/utils'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+const heroTexts = t('riviera.hero').split(';')
+---
+
+<section
+  class={clsx('hero', className)}
+  id='hero'
+>
+  <div class={clsx('wrapper-logo', 'mx-auto', 'my-0')}>
+    <div class={clsx('hero-image', 'relative')}>
+      <div
+        class={clsx(
+          'text-wrapper',
+          'mt-16',
+          'mb-10',
+          'sm:m-0',
+          'w-full',
+          'z-10',
+          'text-center',
+          'flex',
+          'flex-col',
+          'items-center',
+          'justify-center',
+          'sm:absolute',
+          'sm:top-1/2',
+          'sm:left-1/2',
+          'sm:-translate-x-1/2',
+          'sm:-translate-y-1/2',
+        )}
+      >
+        <Title
+          class={clsx(
+            'py-2',
+            'px-4',
+            'text-lg',
+            'sm:text-2xl md:text-4xl lg:text-5xl',
+            'leading-snug',
+            'bg-white',
+            'inline-block',
+            'lg:py-5',
+            'lg:px-20',
+            '!text-center',
+          )}
+        >
+          {
+            heroTexts.map((text: string) => (
+              <span
+                class={clsx(
+                  'block'
+                )}
+              >
+                {text}
+              </span>
+            ))
+          }
+        </Title>
+      </div>
+
+      <img
+        src='/riviera/hero.png'
+        alt='transport image'
+        class={clsx('w-full')}
+      />
+    </div>
+  </div>
+</section>

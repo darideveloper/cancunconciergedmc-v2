@@ -154,5 +154,8 @@
             "description": "test description",
             "keywords": "some, keywords"
         }
+    },
+    "riviera": {
+        "hero": "PLEASE BOOK NOW AND SECURE AIRPORT;TRANSPORTATION TO YOUR HOTEL OR AIRBNB"
     }
 }
