@@ -1,197 +1,205 @@
 {
-    "general": {
-        "photoAlt": "Foto de"
-    },
-    "contact": {
-        "title": "Contáctame"
-    },
-    "testimonials": {
-        "title": "Clientes Satisfechos",
-        "quotes": {
-            "ana": {
-                "name": "Anne Carpentier",
-                "quote": "No tenemos palabras para agradecerte todo lo que has hecho por nosotros en los últimos meses… y especialmente esta semana. Sin duda, el mejor DMC con el que hemos trabajado. Realmente no hay palabras para expresar lo increíble que es tu trabajo. De verdad espero que podamos volver a trabajar juntos en un futuro cercano."
-            },
-            "erick": {
-                "name": "Erik Sabato",
-                "quote": "Omar, tu nivel de servicio no se compara con ningún otro. Compartiré tu nombre con todos los que conozco y les hablaré de tu excelente nivel de servicio. ¡Gracias por toda tu ayuda!"
-            },
-            "gabriel": {
-                "name": "Gabriel Suarez",
-                "quote": "Omar, te agradezco muchísimo todo tu esfuerzo y tus excelentes habilidades de comunicación. Realmente me gustó lo que hiciste por nosotros. Fue genial encontrarte, ya que no había oído hablar de ti antes. Te enviaré a todos mis clientes para que tú y yo podamos seguir trabajando juntos."
-            }
+  "general": {
+    "photoAlt": "Foto de"
+  },
+  "contact": {
+    "title": "Contáctame"
+  },
+  "testimonials": {
+    "title": "Clientes Satisfechos",
+    "quotes": {
+      "ana": {
+        "name": "Anne Carpentier",
+        "quote": "No tenemos palabras para agradecerte todo lo que has hecho por nosotros en los últimos meses… y especialmente esta semana. Sin duda, el mejor DMC con el que hemos trabajado. Realmente no hay palabras para expresar lo increíble que es tu trabajo. De verdad espero que podamos volver a trabajar juntos en un futuro cercano."
+      },
+      "erick": {
+        "name": "Erik Sabato",
+        "quote": "Omar, tu nivel de servicio no se compara con ningún otro. Compartiré tu nombre con todos los que conozco y les hablaré de tu excelente nivel de servicio. ¡Gracias por toda tu ayuda!"
+      },
+      "gabriel": {
+        "name": "Gabriel Suarez",
+        "quote": "Omar, te agradezco muchísimo todo tu esfuerzo y tus excelentes habilidades de comunicación. Realmente me gustó lo que hiciste por nosotros. Fue genial encontrarte, ya que no había oído hablar de ti antes. Te enviaré a todos mis clientes para que tú y yo podamos seguir trabajando juntos."
+      }
+    }
+  },
+  "about": {
+    "title": "Cancun Concierge DMC",
+    "text": "En Cancun Concierge DMC, nos especializamos en diseñar **experiencias fluidas e inolvidables** para **viajeros, grupos corporativos y eventos especiales** en **Cancún** y la **Riviera Maya**. Nuestra experiencia va más allá de la logística: anticipamos tus necesidades y **superamos expectativas** con servicios personalizados que hacen que cada momento sea **extraordinario**.",
+    "cta": "Conoce más"
+  },
+  "whatWeDo": {
+    "title": "¿Qué hacemos?",
+    "text1": "En Cancun Concierge DMC, creamos experiencias a la medida que convierten tu visita a Cancún y la **Riviera Maya** en algo verdaderamente inolvidable. Nos especializamos en la **organización integral de eventos, viajes de incentivo, reuniones corporativas y celebraciones privadas**, ocupándonos de cada detalle desde tu llegada hasta el último momento.",
+    "text2": "Ofrecemos una gama completa de servicios premium, que incluyen **traslados VIP, renta de yates, actividades acuáticas, excursiones grupales, experiencias de trabajo en equipo, decoración y entretenimiento, servicios de fotografía**, y mucho más. Ya sea una boda de ensueño, un retiro ejecutivo o un evento social, nuestro equipo se encarga de todo para que tú simplemente **disfrutes.**"
+  },
+  "whyUs": {
+    "slides": {
+      "years": {
+        "text": "Más de 20 años de experiencia en Destination Management.",
+        "alt": "Foto de concierto en Cancún"
+      },
+      "experience": {
+        "text": "Nos enfocamos en ofrecer experiencias extraordinarias e inolvidables a todos nuestros clientes y huéspedes.",
+        "alt": "Foto de experiencias inolvidables en Cancún"
+      },
+      "personalization": {
+        "text": "Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a los detalles.",
+        "alt": "Foto de servicios a la medida y necesidades de nuestros clientes"
+      }
+    }
+  },
+  "teamMenu": {
+    "teamMenu": {
+      "members": {
+        "omar": {
+          "name": "Omar Guzmán, Gerente General",
+          "bio": "Nacido en la pintoresca ciudad de Orizaba, México, Omar Guzmán aporta más de dos décadas de experiencia en hospitalidad de lujo a su rol como Gerente General. Su formación académica en la industria se consolidó en la Universidad de las Américas Puebla (UDLAP), donde obtuvo la Licenciatura en Gestión Turística y posteriormente un Diplomado en Alta Dirección.;La trayectoria de Omar en la hospitalidad de lujo comenzó en 1998, cuando se trasladó por primera vez a Cancún, un centro de experiencias turísticas de primer nivel. Su carrera prosperó en The Ritz-Carlton Hotels, donde dedicó 20 años perfeccionando sus habilidades y liderazgo en diversas ubicaciones prestigiosas de México, el Caribe y Estados Unidos. Su pasión por el servicio de lujo se refleja en su amplia capacitación con todas las marcas hoteleras de lujo.;Reconocido por su compromiso inquebrantable y meticulosa atención al detalle, Omar se destaca por anticiparse a las necesidades de sus clientes y superar expectativas para crear experiencias inolvidables. Su liderazgo se basa en la excelencia y un toque personal en cada aspecto de la gestión hotelera.;Fuera del ámbito profesional, Omar es un hombre de familia devoto, casado y padre de dos maravillosos hijos. Disfruta tocar la guitarra y valora sus caminatas matutinas, que le brindan una oportunidad especial para conectarse con Dios y la naturaleza. Habla con fluidez español, inglés e italiano, lo que le permite conectar con una clientela diversa y mejorar su experiencia mediante una comunicación personalizada.;Omar continúa marcando el estándar de un servicio excepcional, haciendo que cada estancia sea memorable con su combinación única de experiencia, pasión y dedicación."
+        },
+        "claudia": {
+          "name": "Claudia Rueda, Gerente de Operaciones",
+          "bio": "Claudia Rueda, nacida en Monterrey, México, es una experimentada Gerente de Operaciones con más de 20 años de trayectoria en la industria del turismo, especializada en Empresas de Gestión de Destinos (DMCs). Su carrera ha estado marcada por importantes cargos en prestigiosas marcas de hospitalidad, incluyendo The Ritz-Carlton, y destacadas DMCs en las Islas Vírgenes de EE. UU. y México.;En 1994, Claudia se mudó por primera vez a Cancún, donde desde entonces ha desempeñado un papel clave en la configuración de experiencias de viaje de lujo. Cuenta con un título de Técnico Superior en Hospitalidad y Turismo por el Instituto Regiomontano de Hotelería, que sentó las bases para su amplia carrera.;Claudia es reconocida no solo por su enfoque entusiasta y orientado al detalle, sino también por sus excepcionales habilidades de liderazgo que inspiran trabajo en equipo y una actitud de \"hacer que las cosas sucedan\". Honesta y atenta, sobresale en la gestión operativa, asegurando que cada aspecto del servicio supere las expectativas.;Fuera de su trabajo, Claudia disfruta del yoga, la lectura, ver películas de misterio y cocinar. También le encanta pasar tiempo en la playa con sus dos hijos y sus dos perros. Habla inglés y español con fluidez, lo que fortalece su capacidad para liderar equipos diversos y conectar con clientes en la industria global de hospitalidad."
+        },
+        "luis": {
+          "name": "Luis Canché, Coordinador de Operaciones",
+          "bio": "Luis Antonio Canché, originario de Cancún, Quintana Roo, es un profesional experimentado en el sector de agencias de viajes y Empresas de Gestión de Destinos (DMC), con una impresionante trayectoria de 18 años. Luis aporta una gran experiencia y profundo conocimiento en gestión empresarial, especialmente en los ámbitos del turismo y la organización de eventos, respaldado por su título de Técnico en Administración de Empresas.;A lo largo de su carrera, Luis se ha destacado por su eficaz coordinación y gestión de experiencias turísticas únicas tanto a nivel local como internacional. Su inquebrantable pasión por ofrecer un servicio de calidad ha marcado su trayectoria profesional y le ha permitido forjar relaciones duraderas con colegas en toda la industria.;Padre dedicado de un niño y una niña, Luis equilibra sus compromisos profesionales con su realización personal. Es un apasionado de la pesca, un pasatiempo que refleja su amor por la naturaleza y su carácter sereno y paciente. Habla con fluidez español e inglés, lo que le permite facilitar la comunicación con clientes internacionales, mejorando la calidad del servicio y la satisfacción del cliente.;Siempre en busca de nuevas oportunidades de crecimiento, Luis mantiene su compromiso con el enriquecimiento del sector turístico de la región, aprovechando su amplia experiencia y pasión por el turismo junto con sus sólidas habilidades administrativas."
         }
+      }
+    }
+  },
+  "clients": {
+    "menuItems": {
+      "weddings": "Bodas",
+      "social": "Eventos Sociales",
+      "board": "Reuniones de Consejo",
+      "executive": "Retiros Ejecutivos",
+      "congresses": "Congresos y Conferencias",
+      "incentive": "Programas Incentivos",
+      "president": "Clubs Presidenciales",
+      "family": "Reuniones Familiares",
+      "special": "Celebraciones Especiales"
+    },
+    "title": "Nuestros clientes",
+    "baseMessage": "Hola, estoy interesado en sus servicios para",
+    "imageAlt": "Nuestros clientes disfrutando de un gran momento en Cancún"
+  },
+  "services": {
+    "menuItems": {
+      "transfers": "Traslados al Aeropuerto & Transporte VIP",
+      "yacht": "Renta de Yates & Actividades Acuáticas",
+      "golf": "Golf & Excursiones Grupales",
+      "teambuilding": "Experiencias de Team Building",
+      "desk": "Servicios de Mesa de Hospitalidad",
+      "entertainment": "Decoración & Entretenimiento",
+      "photography": "Servicios de Fotografía"
+    },
+    "title": "Nuestros Servicios",
+    "baseMessage": "Hola, estoy interesado en su servicio:",
+    "imageAlt": "Explora los increíbles y personalizados servicios de Cancun Concierge DMC"
+  },
+  "nav": {
+    "links": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "testimonials": "Testimonios",
+      "services": "Servicios",
+      "transportation": "Transportación"
+    }
+  },
+  "footer": {
+    "text": "En Cancún Concierge, planeamos y ejecutamos servicios de transportación al aeropuerto, actividades acuáticas, tours, golf, reservas en restaurantes y prácticamente cualquier necesidad que pueda tener durante su estancia en Cancún y la Riviera Maya.",
+    "rights": "Todos los derechos reservados."
+  },
+  "gallery": {
+    "title": "Nuestros Transportes",
+    "photoAlt": "Foto de nuestro transporte"
+  },
+  "features": {
+    "quotes": {
+      "excellence": {
+        "title": "Excelencia en el servicio",
+        "imageAlt": "info de ",
+        "text": "Inspirados por una trayectoria de más de dos décadas en hospitalidad de lujo, en Cancun Concierge nos comprometemos a anticipar necesidades, cuidar cada detalle y superar expectativas en cada experiencia.",
+        "descripcion": "**Servicio Personalizado:** Cada detalle se adapta a tus necesidades. **Flexibilidad Inigualable:** Nos ajustamos fácilmente a cambios de último momento."
+      },
+      "authenticity": {
+        "title": "Personalización Auténtica",
+        "imageAlt": "info de ",
+        "text": "Cada cliente es único. Por eso, diseñamos programas completamente a la medida, asegurándonos de que cada momento esté alineado con los deseos, prioridades y estilo de cada huésped.",
+        "descripcion": "**Anticipación de Necesidades:** Superamos expectativas para crear experiencias sin contratiempos."
+      },
+      "passion": {
+        "title": "Pasión por Crear Experiencias Memorables",
+        "imageAlt": "info de ",
+        "text": "Nuestra colaboración con startups tecnológicas y proyectos turísticos innovadores nos impulsa a mantenernos a la vanguardia en soluciones personalizadas y experiencias únicas.",
+        "descripcion": "**Precios Justos y Transparentes:** Calidad premium a tarifas competitivas. Gestión Integral de Eventos: Desde el concepto hasta la ejecución, nos encargamos de todo."
+      }
+    }
+  },
+  "meta": {
+    "home": {
+      "page": "Inicio",
+      "description": "test description",
+      "keywords": "some, keywords"
     },
     "about": {
-        "title": "Cancun Concierge DMC",
-        "text": "En Cancun Concierge DMC, nos especializamos en diseñar **experiencias fluidas e inolvidables** para **viajeros, grupos corporativos y eventos especiales** en **Cancún** y la **Riviera Maya**. Nuestra experiencia va más allá de la logística: anticipamos tus necesidades y **superamos expectativas** con servicios personalizados que hacen que cada momento sea **extraordinario**.",
-        "cta": "Conoce más"
-    },
-    "whatWeDo": {
-        "title": "¿Qué hacemos?",
-        "text1": "En Cancun Concierge DMC, creamos experiencias a la medida que convierten tu visita a Cancún y la **Riviera Maya** en algo verdaderamente inolvidable. Nos especializamos en la **organización integral de eventos, viajes de incentivo, reuniones corporativas y celebraciones privadas**, ocupándonos de cada detalle desde tu llegada hasta el último momento.",
-        "text2": "Ofrecemos una gama completa de servicios premium, que incluyen **traslados VIP, renta de yates, actividades acuáticas, excursiones grupales, experiencias de trabajo en equipo, decoración y entretenimiento, servicios de fotografía**, y mucho más. Ya sea una boda de ensueño, un retiro ejecutivo o un evento social, nuestro equipo se encarga de todo para que tú simplemente **disfrutes.**"
-    },
-    "whyUs": {
-        "slides": {
-            "years": {
-                "text": "Más de 20 años de experiencia en Destination Management.",
-                "alt": "Foto de concierto en Cancún"
-            },
-            "experience": {
-                "text": "Nos enfocamos en ofrecer experiencias extraordinarias e inolvidables a todos nuestros clientes y huéspedes.",
-                "alt": "Foto de experiencias inolvidables en Cancún"
-            },
-            "personalization": {
-                "text": "Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a los detalles.",
-                "alt": "Foto de servicios a la medida y necesidades de nuestros clientes"
-            }
-        }
-    },
-    "teamMenu": {
-        "teamMenu": {
-            "members": {
-                "omar": {
-                    "name": "Omar Guzmán, Gerente General",
-                    "bio": "Nacido en la pintoresca ciudad de Orizaba, México, Omar Guzmán aporta más de dos décadas de experiencia en hospitalidad de lujo a su rol como Gerente General. Su formación académica en la industria se consolidó en la Universidad de las Américas Puebla (UDLAP), donde obtuvo la Licenciatura en Gestión Turística y posteriormente un Diplomado en Alta Dirección.;La trayectoria de Omar en la hospitalidad de lujo comenzó en 1998, cuando se trasladó por primera vez a Cancún, un centro de experiencias turísticas de primer nivel. Su carrera prosperó en The Ritz-Carlton Hotels, donde dedicó 20 años perfeccionando sus habilidades y liderazgo en diversas ubicaciones prestigiosas de México, el Caribe y Estados Unidos. Su pasión por el servicio de lujo se refleja en su amplia capacitación con todas las marcas hoteleras de lujo.;Reconocido por su compromiso inquebrantable y meticulosa atención al detalle, Omar se destaca por anticiparse a las necesidades de sus clientes y superar expectativas para crear experiencias inolvidables. Su liderazgo se basa en la excelencia y un toque personal en cada aspecto de la gestión hotelera.;Fuera del ámbito profesional, Omar es un hombre de familia devoto, casado y padre de dos maravillosos hijos. Disfruta tocar la guitarra y valora sus caminatas matutinas, que le brindan una oportunidad especial para conectarse con Dios y la naturaleza. Habla con fluidez español, inglés e italiano, lo que le permite conectar con una clientela diversa y mejorar su experiencia mediante una comunicación personalizada.;Omar continúa marcando el estándar de un servicio excepcional, haciendo que cada estancia sea memorable con su combinación única de experiencia, pasión y dedicación."
-                },
-                "claudia": {
-                    "name": "Claudia Rueda, Gerente de Operaciones",
-                    "bio": "Claudia Rueda, nacida en Monterrey, México, es una experimentada Gerente de Operaciones con más de 20 años de trayectoria en la industria del turismo, especializada en Empresas de Gestión de Destinos (DMCs). Su carrera ha estado marcada por importantes cargos en prestigiosas marcas de hospitalidad, incluyendo The Ritz-Carlton, y destacadas DMCs en las Islas Vírgenes de EE. UU. y México.;En 1994, Claudia se mudó por primera vez a Cancún, donde desde entonces ha desempeñado un papel clave en la configuración de experiencias de viaje de lujo. Cuenta con un título de Técnico Superior en Hospitalidad y Turismo por el Instituto Regiomontano de Hotelería, que sentó las bases para su amplia carrera.;Claudia es reconocida no solo por su enfoque entusiasta y orientado al detalle, sino también por sus excepcionales habilidades de liderazgo que inspiran trabajo en equipo y una actitud de \"hacer que las cosas sucedan\". Honesta y atenta, sobresale en la gestión operativa, asegurando que cada aspecto del servicio supere las expectativas.;Fuera de su trabajo, Claudia disfruta del yoga, la lectura, ver películas de misterio y cocinar. También le encanta pasar tiempo en la playa con sus dos hijos y sus dos perros. Habla inglés y español con fluidez, lo que fortalece su capacidad para liderar equipos diversos y conectar con clientes en la industria global de hospitalidad."
-                },
-                "luis": {
-                    "name": "Luis Canché, Coordinador de Operaciones",
-                    "bio": "Luis Antonio Canché, originario de Cancún, Quintana Roo, es un profesional experimentado en el sector de agencias de viajes y Empresas de Gestión de Destinos (DMC), con una impresionante trayectoria de 18 años. Luis aporta una gran experiencia y profundo conocimiento en gestión empresarial, especialmente en los ámbitos del turismo y la organización de eventos, respaldado por su título de Técnico en Administración de Empresas.;A lo largo de su carrera, Luis se ha destacado por su eficaz coordinación y gestión de experiencias turísticas únicas tanto a nivel local como internacional. Su inquebrantable pasión por ofrecer un servicio de calidad ha marcado su trayectoria profesional y le ha permitido forjar relaciones duraderas con colegas en toda la industria.;Padre dedicado de un niño y una niña, Luis equilibra sus compromisos profesionales con su realización personal. Es un apasionado de la pesca, un pasatiempo que refleja su amor por la naturaleza y su carácter sereno y paciente. Habla con fluidez español e inglés, lo que le permite facilitar la comunicación con clientes internacionales, mejorando la calidad del servicio y la satisfacción del cliente.;Siempre en busca de nuevas oportunidades de crecimiento, Luis mantiene su compromiso con el enriquecimiento del sector turístico de la región, aprovechando su amplia experiencia y pasión por el turismo junto con sus sólidas habilidades administrativas."
-                }
-            }
-        }
-    },
-    "clients": {
-        "menuItems": {
-            "weddings": "Bodas",
-            "social": "Eventos Sociales",
-            "board": "Reuniones de Consejo",
-            "executive": "Retiros Ejecutivos",
-            "congresses": "Congresos y Conferencias",
-            "incentive": "Programas Incentivos",
-            "president": "Clubs Presidenciales",
-            "family": "Reuniones Familiares",
-            "special": "Celebraciones Especiales"
-        },
-        "title": "Nuestros clientes",
-        "baseMessage": "Hola, estoy interesado en sus servicios para",
-        "imageAlt": "Nuestros clientes disfrutando de un gran momento en Cancún"
+      "page": "Acerca de",
+      "description": "test description",
+      "keywords": "some, keywords"
     },
     "services": {
-        "menuItems": {
-            "transfers": "Traslados al Aeropuerto & Transporte VIP",
-            "yacht": "Renta de Yates & Actividades Acuáticas",
-            "golf": "Golf & Excursiones Grupales",
-            "teambuilding": "Experiencias de Team Building",
-            "desk": "Servicios de Mesa de Hospitalidad",
-            "entertainment": "Decoración & Entretenimiento",
-            "photography": "Servicios de Fotografía"
-        },
-        "title": "Nuestros Servicios",
-        "baseMessage": "Hola, estoy interesado en su servicio:",
-        "imageAlt": "Explora los increíbles y personalizados servicios de Cancun Concierge DMC"
+      "page": "Servicios",
+      "description": "test description",
+      "keywords": "some, keywords"
     },
-    "nav": {
-        "links": {
-            "home": "Inicio",
-            "about": "Acerca de",
-            "testimonials": "Testimonios",
-            "services": "Servicios",
-            "transportation": "Transportación"
-        }
-    },
-    "footer": {
-        "text": "En Cancún Concierge, planeamos y ejecutamos servicios de transportación al aeropuerto, actividades acuáticas, tours, golf, reservas en restaurantes y prácticamente cualquier necesidad que pueda tener durante su estancia en Cancún y la Riviera Maya.",
-        "rights": "Todos los derechos reservados."
-    },
-    "gallery": {
-        "title": "Nuestros Transportes",
-        "photoAlt": "Foto de nuestro transporte"
-    },
-    "features": {
-        "quotes": {
-            "excellence":{
-                "title": "Excelencia en el servicio",
-                "imageAlt": "info de ",
-                "text": "Inspirados por una trayectoria de más de dos décadas en hospitalidad de lujo, en Cancun Concierge nos comprometemos a anticipar necesidades, cuidar cada detalle y superar expectativas en cada experiencia.",
-                "descripcion": "**Servicio Personalizado:** Cada detalle se adapta a tus necesidades. **Flexibilidad Inigualable:** Nos ajustamos fácilmente a cambios de último momento."
-            },
-            "authenticity":{
-                "title": "Personalización Auténtica",
-                "imageAlt": "info de ",
-                "text": "Cada cliente es único. Por eso, diseñamos programas completamente a la medida, asegurándonos de que cada momento esté alineado con los deseos, prioridades y estilo de cada huésped.",
-                "descripcion": "**Anticipación de Necesidades:** Superamos expectativas para crear experiencias sin contratiempos."
-            },
-            "passion":{
-                "title": "Pasión por Crear Experiencias Memorables",
-                "imageAlt": "info de ",
-                "text": "Nuestra colaboración con startups tecnológicas y proyectos turísticos innovadores nos impulsa a mantenernos a la vanguardia en soluciones personalizadas y experiencias únicas.",
-                "descripcion": "**Precios Justos y Transparentes:** Calidad premium a tarifas competitivas. Gestión Integral de Eventos: Desde el concepto hasta la ejecución, nos encargamos de todo."
-            }
-        }
-    },
-    "meta": {
-        "home": {
-            "page": "Inicio",
-            "description": "test description",
-            "keywords": "some, keywords"
-        },
-        "about": {
-            "page": "Acerca de",
-            "description": "test description",
-            "keywords": "some, keywords"
-        },
-        "services": {
-            "page": "Servicios",
-            "description": "test description",
-            "keywords": "some, keywords"
-        },
-        "testimonials": {
-            "page": "Testimonios",
-            "description": "test description",
-            "keywords": "some, keywords"
-        }
-    },
-    "riviera": {
-        "hero": "¡RESERVE AHORA Y ASEGURE SU TRANSPORTE DESDE; EL AEROPUERTO A SU HOTEL O AIRBNB!"
-    },
-    "transportation": {
-        "title": "Transportación",
-        "description": "Reserva tu traslado al aeropuerto o transporte privado en Cancún y Riviera Maya."
-    },
-    "form": {
-        "transportationOptions": "Opciones de transportación",
-        "personalInfo": "Información personal",
-        "name": "Nombre",
-        "namePlaceholder": "Ingresa tu nombre",
-        "lastName": "Apellido",
-        "lastNamePlaceholder": "Ingresa tu apellido",
-        "passengers": "Número de pasajeros",
-        "hotelOrAirbnb": "Hotel o Airbnb",
-        "resortDestination": "Destino del resort",
-        "airbnbAddress": "Dirección de Airbnb",
-        "airbnbAddressPlaceholder": "Ingresa la dirección de tu Airbnb",
-        "arriving": "Llegada",
-        "arrivingDate": "Fecha de llegada",
-        "arrivingTime": "Hora de llegada a Cancún",
-        "departing": "Salida",
-        "departingDate": "Fecha de salida",
-        "departingTime": "Hora de salida de Cancún",
-        "airline": "Aerolínea",
-        "airlinePlaceholder": "Ingresa tu aerolínea",
-        "flightNumber": "Número de vuelo",
-        "flightNumberPlaceholder": "Ingresa tu número de vuelo",
-        "maxPassengers": "Máximo ocho pasajeros por van",
-        "buyNow": "Comprar ahora",
-        "processing": "Procesando...",
-        "total": "Total",
-        "in": "en",
-        "from": "de",
-        "flightInfoNote": "*En caso de tener vuelos de conexión, por favor proporciona la información de tu vuelo real {prefix} {direction} Cancún"
+    "testimonials": {
+      "page": "Testimonios",
+      "description": "test description",
+      "keywords": "some, keywords"
     }
+  },
+  "riviera": {
+    "hero": "¡RESERVE AHORA Y ASEGURE SU TRANSPORTE DESDE; EL AEROPUERTO A SU HOTEL O AIRBNB!",
+    "servicesCards": {
+      "private": "Transporte Privado",
+      "welcome": "Bienvenidos visitantes",
+      "water": "Agua embotellada",
+      "travel": "Seguro de viaje",
+      "gratuities": "Propinas",
+      "taxes": "Impuestos federales"
+    }
+  },
+  "transportation": {
+    "title": "Transportación",
+    "description": "Reserva tu traslado al aeropuerto o transporte privado en Cancún y Riviera Maya."
+  },
+  "form": {
+    "transportationOptions": "Opciones de transportación",
+    "personalInfo": "Información personal",
+    "name": "Nombre",
+    "namePlaceholder": "Ingresa tu nombre",
+    "lastName": "Apellido",
+    "lastNamePlaceholder": "Ingresa tu apellido",
+    "passengers": "Número de pasajeros",
+    "hotelOrAirbnb": "Hotel o Airbnb",
+    "resortDestination": "Destino del resort",
+    "airbnbAddress": "Dirección de Airbnb",
+    "airbnbAddressPlaceholder": "Ingresa la dirección de tu Airbnb",
+    "arriving": "Llegada",
+    "arrivingDate": "Fecha de llegada",
+    "arrivingTime": "Hora de llegada a Cancún",
+    "departing": "Salida",
+    "departingDate": "Fecha de salida",
+    "departingTime": "Hora de salida de Cancún",
+    "airline": "Aerolínea",
+    "airlinePlaceholder": "Ingresa tu aerolínea",
+    "flightNumber": "Número de vuelo",
+    "flightNumberPlaceholder": "Ingresa tu número de vuelo",
+    "maxPassengers": "Máximo ocho pasajeros por van",
+    "buyNow": "Comprar ahora",
+    "processing": "Procesando...",
+    "total": "Total",
+    "in": "en",
+    "from": "de",
+    "flightInfoNote": "*En caso de tener vuelos de conexión, por favor proporciona la información de tu vuelo real {prefix} {direction} Cancún"
+  }
 }

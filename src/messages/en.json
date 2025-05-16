@@ -156,7 +156,16 @@
         }
     },
     "riviera": {
-        "hero": "PLEASE BOOK NOW AND SECURE AIRPORT;TRANSPORTATION TO YOUR HOTEL OR AIRBNB"
+        "hero": "PLEASE BOOK NOW AND SECURE AIRPORT;TRANSPORTATION TO YOUR HOTEL OR AIRBNB",
+        "servicesCards":{
+            "private":"Private Transfers",
+            "welcome":"Welcome Greeters",         
+            "water":"Bottled water",
+            "travel":"Travel insurance" ,
+            "gratuities": "Gratuities",
+            "taxes":"Federal Taxes"
+        },
+        "services": ""
     },
     "transportation": {
         "title": "Transportation",
