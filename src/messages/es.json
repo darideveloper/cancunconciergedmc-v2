@@ -155,51 +155,55 @@
       "page": "Testimonios",
       "description": "test description",
       "keywords": "some, keywords"
-    }
-  },
-  "riviera": {
-    "hero": "¡RESERVE AHORA Y ASEGURE SU TRANSPORTE DESDE; EL AEROPUERTO A SU HOTEL O AIRBNB!",
-    "servicesCards": {
-      "private": "Transporte Privado",
-      "welcome": "Bienvenidos visitantes",
-      "water": "Agua embotellada",
-      "travel": "Seguro de viaje",
-      "gratuities": "Propinas",
-      "taxes": "Impuestos federales"
+    },
+    "transportation": {
+      "page": "Transportation",
+      "description": "test description",
+      "keywords": "some, keywords"
     }
   },
   "transportation": {
-    "title": "Transportación",
-    "description": "Reserva tu traslado al aeropuerto o transporte privado en Cancún y Riviera Maya."
-  },
-  "form": {
-    "transportationOptions": "Opciones de transportación",
-    "personalInfo": "Información personal",
-    "name": "Nombre",
-    "namePlaceholder": "Ingresa tu nombre",
-    "lastName": "Apellido",
-    "lastNamePlaceholder": "Ingresa tu apellido",
-    "passengers": "Número de pasajeros",
-    "hotelOrAirbnb": "Hotel o Airbnb",
-    "resortDestination": "Destino del resort",
-    "airbnbAddress": "Dirección de Airbnb",
-    "airbnbAddressPlaceholder": "Ingresa la dirección de tu Airbnb",
-    "arriving": "Llegada",
-    "arrivingDate": "Fecha de llegada",
-    "arrivingTime": "Hora de llegada a Cancún",
-    "departing": "Salida",
-    "departingDate": "Fecha de salida",
-    "departingTime": "Hora de salida de Cancún",
-    "airline": "Aerolínea",
-    "airlinePlaceholder": "Ingresa tu aerolínea",
-    "flightNumber": "Número de vuelo",
-    "flightNumberPlaceholder": "Ingresa tu número de vuelo",
-    "maxPassengers": "Máximo ocho pasajeros por van",
-    "buyNow": "Comprar ahora",
-    "processing": "Procesando...",
-    "total": "Total",
-    "in": "en",
-    "from": "de",
-    "flightInfoNote": "*En caso de tener vuelos de conexión, por favor proporciona la información de tu vuelo real {prefix} {direction} Cancún"
+    "hero": "POR FAVOR, RESERVE AHORA Y ASEGURE SU TRASLADO;DESDE EL AEROPUERTO A SU HOTEL O AIRBNB",
+    "servcies": {
+      "title": "Nuestros Servicios Incluyen",
+      "cards": {
+        "private": "Traslados Privados",
+        "welcome": "Recibimiento",
+        "water": "Agua Embotellada",
+        "travel": "Seguro de Viaje",
+        "gratuities": "Propinas",
+        "taxes": "Impuestos Federales"
+      }
+    },
+    "form": {
+      "transportationOptions": "Opciones de Transporte",
+      "personalInfo": "Información Personal",
+      "name": "Nombre",
+      "namePlaceholder": "Ingrese su nombre",
+      "lastName": "Apellido",
+      "lastNamePlaceholder": "Ingrese su apellido",
+      "passengers": "Número de pasajeros",
+      "hotelOrAirbnb": "Hotel o Airbnb",
+      "resortDestination": "Destino del resort",
+      "airbnbAddress": "Dirección del Airbnb",
+      "airbnbAddressPlaceholder": "Ingrese su dirección de Airbnb",
+      "arriving": "Llegada",
+      "arrivingDate": "Fecha de llegada",
+      "arrivingTime": "Hora de llegada a Cancún",
+      "departing": "Salida",
+      "departingDate": "Fecha de salida",
+      "departingTime": "Hora de salida desde Cancún",
+      "airline": "Aerolínea",
+      "airlinePlaceholder": "Ingrese su aerolínea",
+      "flightNumber": "Número de vuelo",
+      "flightNumberPlaceholder": "Ingrese su número de vuelo",
+      "maxPassengers": "Máximo ocho pasajeros por camioneta",
+      "buyNow": "Comprar Ahora",
+      "processing": "Procesando...",
+      "total": "Total",
+      "in": "en",
+      "from": "desde",
+      "flightInfoNote": "*En caso de tener vuelos de conexión, por favor asegúrese de proporcionar la información de su vuelo real {prefix} {direction} Cancún"
+    }
   }
 }

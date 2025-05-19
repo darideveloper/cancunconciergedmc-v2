@@ -194,7 +194,7 @@ export default function Form({ lang }) {
     const fieldsets = []
 
     for (let title of activeForms) {
-      const direction = title === "Departing" ? t('form.from') : t('form.in')
+      const direction = title === "Departing" ? t('transportation.form.from') : t('transportation.form.in')
       const prefix = title.toLowerCase()
 
       fieldsets.push(
@@ -217,25 +217,25 @@ export default function Form({ lang }) {
             error={errors[`${prefix}Time`]}
           />
           <Input
-            label={t('form.airline')}
+            label={t('transportation.form.airline')}
             type='text'
             name={`${prefix}Airline`}
-            placeholder={t('form.airlinePlaceholder')}
+            placeholder={t('transportation.form.airlinePlaceholder')}
             handleUpdate={handleInputChange}
             value={formData[`${prefix}Airline`]}
             error={errors[`${prefix}Airline`]}
           />
           <Input
-            label={t('form.flightNumber')}
+            label={t('transportation.form.flightNumber')}
             type='text'
             name={`${prefix}Flight`}
-            placeholder={t('form.flightNumberPlaceholder')}
+            placeholder={t('transportation.form.flightNumberPlaceholder')}
             handleUpdate={handleInputChange}
             value={formData[`${prefix}Flight`]}
             error={errors[`${prefix}Flight`]}
           />
           <FormText
-            text={t('form.flightInfoNote', { prefix, direction })}
+            text={t('transportation.form.flightInfoNote', { prefix, direction })}
           />
         </Fieldset>
       )
@@ -256,7 +256,7 @@ export default function Form({ lang }) {
 
   return (
     <section className="buy-form container" id="buy">
-      <Subtitle text={t('form.transportationOptions')} />
+      <Subtitle text={t('transportation.form.transportationOptions')} />
 
       <form onSubmit={handleSubmit} className="mx-auto">
         <TransportTypes
@@ -269,10 +269,10 @@ export default function Form({ lang }) {
           gridTemplateColumns: mediaQuery ? "repeat(1, 1fr)" : 
             activeTransportType === "Arriving,Departing" ? "repeat(3, 1fr)" : "repeat(2, 1fr)" 
         }}>
-          <Fieldset title={t('form.personalInfo')}>
+          <Fieldset title={t('transportation.form.personalInfo')}>
             <Input
-              label={t('form.name')}
-              placeholder={t('form.namePlaceholder')}
+              label={t('transportation.form.name')}
+              placeholder={t('transportation.form.namePlaceholder')}
               type='text'
               name='name'
               handleUpdate={handleInputChange}
@@ -280,8 +280,8 @@ export default function Form({ lang }) {
               error={errors.name}
             />
             <Input
-              label={t('form.lastName')}
-              placeholder={t('form.lastNamePlaceholder')}
+              label={t('transportation.form.lastName')}
+              placeholder={t('transportation.form.lastNamePlaceholder')}
               type='text'
               name='lastName'
               handleUpdate={handleInputChange}
@@ -289,15 +289,15 @@ export default function Form({ lang }) {
               error={errors.lastName}
             />
             <Select
-              label={t('form.passengers')}
+              label={t('transportation.form.passengers')}
               name='passengers'
               handleUpdate={handleInputChange}
               options={passengersData}
               activeOption={formData.passengers}
             />
-            <FormText text={t('form.maxPassengers')} />
+            <FormText text={t('transportation.form.maxPassengers')} />
             <Select
-              label={t('form.hotelOrAirbnb')}
+              label={t('transportation.form.hotelOrAirbnb')}
               name='hotel'
               handleUpdate={handleInputChange}
               options={hotels}
@@ -307,7 +307,7 @@ export default function Form({ lang }) {
             {formData.hotel === 'Airbnb' && (
               <>
                 <Select
-                  label={t('form.resortDestination')}
+                  label={t('transportation.form.resortDestination')}
                   name='airbnbMunicipality'
                   handleUpdate={handleInputChange}
                   options={airbnbMunicipalities}
@@ -315,8 +315,8 @@ export default function Form({ lang }) {
                   error={errors.airbnbMunicipality}
                 />
                 <Input
-                  label={t('form.airbnbAddress')}
-                  placeholder={t('form.airbnbAddressPlaceholder')}
+                  label={t('transportation.form.airbnbAddress')}
+                  placeholder={t('transportation.form.airbnbAddressPlaceholder')}
                   type='text'
                   name='airbnbAddress'
                   handleUpdate={handleInputChange}
@@ -331,7 +331,7 @@ export default function Form({ lang }) {
         </div>
 
         <p className="total text-center text-2xl w-full block mt-10">
-          {t('form.total')}
+          {t('transportation.form.total')}
           <span className="px-2 font-bold">
             {total}.00 USD
           </span>
@@ -341,7 +341,7 @@ export default function Form({ lang }) {
           disabled={loading}
           className="no-collect w-48 mx-auto mt-10 block bg-blue border-blue border-2 text-gold py-3 text-2xl font-bold cursor-pointer rounded-xl transition-all duration-300 hover:rounded-3xl hover:bg-white hover:text-blue disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {loading ? t('form.processing') : t('form.buyNow')}
+          {loading ? t('transportation.form.processing') : t('transportation.form.buyNow')}
         </button>
       </form>
     </section>
