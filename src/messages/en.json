@@ -136,28 +136,28 @@
     "meta": {
         "home": {
             "page": "Home",
-            "description": "test description",
-            "keywords": "some, keywords"
+            "description": "Cancun Concierge DMC specializes in seamless and memorable experiences for travelers, corporate groups, and special events in Cancun and the Riviera Maya. With over 20 years of experience, we offer personalized service for airport transportation, tours, water activities, and more. Contact us for extraordinary experiences.",
+            "keywords": "Cancun, Riviera Maya, DMC, Destination Management Company, concierge services, travel, corporate events, special events, airport transportation, tours, water activities, personalized service, Mexico, vacation, holidays"
         },
         "about": {
             "page": "About Us",
-            "description": "test description",
-            "keywords": "some, keywords"
+            "description": "Discover Cancun Concierge DMC: crafting tailor-made, unforgettable experiences in Cancun and the Riviera Maya for events, incentives, and celebrations. With over 20 years of luxury hospitality expertise, we offer personalized VIP services, from transfers to yacht rentals. Let us exceed your expectations.",
+            "keywords": "Cancun Concierge DMC, About Us, Cancun, Riviera Maya, event planning, incentive trips, corporate meetings, private celebrations, VIP transfers, yacht rentals, water activities, group excursions, teambuilding, personalized service, luxury hospitality, Omar Guzman"
         },
         "services": {
-            "page": "Services",
-            "description": "test description",
-            "keywords": "some, keywords"
+            "page": "Our Services",
+            "description": "Explore Cancun Concierge DMC's premium services in Cancun and Riviera Maya: VIP airport transfers, yacht rentals, water activities, golf excursions, teambuilding, hospitality desk, decor, entertainment, and photography. Let us handle every detail for an unforgettable experience.",
+            "keywords": "Cancun Concierge DMC, services, Cancun, Riviera Maya, airport transfers, VIP transportation, yacht rentals, water activities, golf, group excursions, teambuilding, hospitality desk, decor, entertainment, photography"
         },
         "testimonials": {
-            "page": "Testimonials",
-            "description": "test description",
-            "keywords": "some, keywords"
+            "page": "Satisfied Customers",
+            "description": "Read what our satisfied clients say about Cancun Concierge DMC's exceptional service in Cancun and the Riviera Maya. Discover how we create unforgettable experiences for weddings, corporate events, and more.",
+            "keywords": "Cancun Concierge DMC, testimonials, customer reviews, satisfied clients, Cancun, Riviera Maya, event feedback, wedding testimonials, corporate event reviews, service quality"
         },
         "transportation": {
             "page": "Transportation",
-            "description": "test description",
-            "keywords": "some, keywords"
+            "description": "Book your seamless airport transportation in Cancun and Riviera Maya with Cancun Concierge DMC. Secure reliable transfers to your hotel or Airbnb. Choose from private options with meet & greet services. Reserve now!",
+            "keywords": "Cancun transportation, airport transfer Cancun, hotel transfer Cancun, Airbnb transfer Cancun, private transportation Cancun, Riviera Maya transportation, Cancun shuttle, transportation services Cancun, book transportation Cancun"
         }
     },
     "riviera": {
