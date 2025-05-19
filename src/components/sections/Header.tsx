@@ -8,9 +8,10 @@ import clsx from 'clsx';
 interface HeaderProps {
   lang: 'en' | 'es';
   serverPathname?: string;
+  currentPage?: string;
 }
 
-export default function Header({ lang, serverPathname }: HeaderProps) {
+export default function Header({ lang, serverPathname, currentPage }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const t = useTranslations(lang);
 
@@ -34,6 +35,7 @@ export default function Header({ lang, serverPathname }: HeaderProps) {
   const navLinksLang = navLinks.map((item) => ({
     text: t(`nav.links.${item.text}`),
     url: `/${lang}${item.url}`,
+    active: currentPath === item.url,
   }));
 
   return (
@@ -147,7 +149,8 @@ export default function Header({ lang, serverPathname }: HeaderProps) {
                   'hover:text-gold',
                   'transition-colors',
                   'duration-200',
-                  'no-underline'
+                  'no-underline',
+                  link.active && 'text-gold'
                 )}
                 onClick={menuOpen ? () => setMenuOpen(false) : undefined}
               >

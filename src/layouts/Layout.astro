@@ -1,24 +1,27 @@
 ---
-
-// Styles 
+// Styles
 import '../styles/global.css'
 
 // i18n
-import { getLangFromUrl } from '../i18n/utils';
-const lang = getLangFromUrl(Astro.url);
+import { getLangFromUrl } from '../i18n/utils'
+const lang = getLangFromUrl(Astro.url)
 
 // Fonts
-import '@fontsource-variable/oswald';
-import '@fontsource-variable/urbanist';
+import '@fontsource-variable/oswald'
+import '@fontsource-variable/urbanist'
 
 // Sections
-import WhyUs from '../components/sections/WhyUs.astro';
-import Footer from '../components/sections/Footer.astro';
-import Header from '../components/sections/Header';
+import WhyUs from '../components/sections/WhyUs.astro'
+import Footer from '../components/sections/Footer.astro'
+import Header from '../components/sections/Header'
 
 // Components
-import AOSInit from '../components/utils/AOSInit';
+import AOSInit from '../components/utils/AOSInit'
 
+// Get current page
+const currentUrl = Astro.request.url
+const currentPage = currentUrl.split('/').pop()
+console.log({currentPage})
 ---
 
 <!doctype html>
@@ -40,16 +43,19 @@ import AOSInit from '../components/utils/AOSInit';
     />
   </head>
   <body>
-
-
     <!-- Start aos -->
     <AOSInit client:load />
-    
+
     <!-- Header -->
-    <Header client:load lang={lang} serverPathname={Astro.url.pathname}/>
-    
+    <Header
+      client:load
+      lang={lang}
+      serverPathname={Astro.url.pathname}
+      currentPage={currentPage}
+    />
+
     <!-- Body -->
-    <main class="font-sans">
+    <main class='font-sans'>
       <slot />
     </main>
 

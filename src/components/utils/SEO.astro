@@ -11,7 +11,6 @@ import { getStaticPathsLangs } from '../../libs/getStaticPaths';
 // i18n
 export const getStaticPaths = getStaticPathsLangs
 const { lang } = Astro.params as any
-console.log({lang})
 const t = useTranslations(lang)
 
 // Get page metadata from i18n
@@ -22,7 +21,6 @@ const url = 'https://cancunconciergedmc.com/'
 const image = '/imgs/logo.webp'
 const type = 'website'
 const twitterHandle = '@DeveloperDari'
-console.log({currentPage, description, pageName})
 const keywords = t(`meta.${currentPage}.keywords`).split(',')
 
 // Split keywords into an array if it's a string
