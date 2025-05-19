@@ -2,22 +2,22 @@
 import { useState, useEffect, useContext } from "react"
 
 // Components
-import Subtitle from "../ui/form/Subtitle"
-import TransportTypes from "../ui/form/TransportTypes"
-import Input from "../ui/form/Input"
-import Select from "../ui/form/Select"
-import Fieldset from "../ui/form/Fieldset"
-import FormText from "../ui/form/FormText"
+import Subtitle from "../../ui/form/Subtitle"
+import TransportTypes from "../../ui/form/TransportTypes"
+import Input from "../../ui/form/Input"
+import Select from "../../ui/form/Select"
+import Fieldset from "../../ui/form/Fieldset"
+import FormText from "../../ui/form/FormText"
 
 // Api
-import { getHotels } from "../api/hotels"
-import { submitStripe } from "../api/stripe"
-import { getTransports } from "../api/transports"
-import { getAirbnbMunicipalities } from "../api/airbnb-municipality"
+import { getHotels } from "../../api/hotels"
+import { submitStripe } from "../../api/stripe"
+import { getTransports } from "../../api/transports"
+import { getAirbnbMunicipalities } from "../../api/airbnb-municipality"
 
 // Context
-import LoadContext from '../context/load'
-import { useTranslations } from '../../i18n/utils'
+import LoadContext from '../../context/load'
+import { useTranslations } from '../../../i18n/utils'
 
 export default function Form({ lang }) {
   const t = useTranslations(lang)
