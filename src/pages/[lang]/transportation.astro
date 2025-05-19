@@ -3,7 +3,6 @@
 import Layout from '../../layouts/Layout.astro'
 
 // Sections
-import SEO from '../../components/utils/SEO.astro'
 import Services from '../../components/sections/riviera/Services.astro'
 import Hero from '../../components/sections/riviera/Hero.astro'
 
@@ -20,7 +19,6 @@ const t = useTranslations(lang)
 ---
 
 <Layout>
-  <SEO currentPage='transportation' />
   <Hero />
   <Form client:load lang={lang} />
   <Services />

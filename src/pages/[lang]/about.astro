@@ -6,7 +6,6 @@ import Layout from '../../layouts/Layout.astro'
 import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'
 import WhatWeDo from '../../components/sections/WhatWeDo.astro'
 import Team from '../../components/sections/TeamMenu'
-import SEO from '../../components/utils/SEO.astro'
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
@@ -20,13 +19,11 @@ const t = useTranslations(lang)
 ---
 
 <Layout>
-  <SEO currentPage='about' />
   <FullWidthMedia
     src='/videos/about.mp4'
     isVideo={true}
   />
   <WhatWeDo />
-
   <Features/>
   <Team
     client:load

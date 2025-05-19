@@ -15,13 +15,18 @@ import WhyUs from '../components/sections/WhyUs.astro'
 import Footer from '../components/sections/Footer.astro'
 import Header from '../components/sections/Header'
 
+// Utils
+import SEO from '../components/utils/SEO.astro'
+
 // Components
 import AOSInit from '../components/utils/AOSInit'
 
 // Get current page
 const currentUrl = Astro.request.url
-const currentPage = currentUrl.split('/').pop()
-console.log({currentPage})
+let currentPage = currentUrl.split('/').pop()
+if (currentPage === '') {
+  currentPage = 'home'
+}
 ---
 
 <!doctype html>
@@ -40,6 +45,9 @@ console.log({currentPage})
     <meta
       name='generator'
       content={Astro.generator}
+    />
+    <SEO
+      currentPage={currentPage}
     />
   </head>
   <body>

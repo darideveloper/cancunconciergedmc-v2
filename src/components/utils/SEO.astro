@@ -1,6 +1,6 @@
 ---
 interface Props {
-  currentPage: string; // Current page
+  currentPage?: string; // Current page
 }
 const { currentPage } = Astro.props as Props;
 
@@ -21,7 +21,10 @@ const url = 'https://cancunconciergedmc.com/'
 const image = '/imgs/logo.webp'
 const type = 'website'
 const twitterHandle = '@DeveloperDari'
-const keywords = t(`meta.${currentPage}.keywords`).split(',')
+let keywords = t(`meta.${currentPage}.keywords`)
+if (typeof keywords === 'string') {
+  keywords = keywords.split(',').map((keyword) => keyword.trim());
+}
 
 // Split keywords into an array if it's a string
 const keywordsContent = Array.isArray(keywords) ? keywords.join(', ') : keywords;
