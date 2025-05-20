@@ -24,7 +24,7 @@ import AOSInit from '../components/utils/AOSInit'
 // Get current page
 const currentUrl = Astro.request.url
 let currentPage = currentUrl.split('/').pop()
-if (currentPage === '') {
+if (currentPage === '' || currentPage === 'en' || currentPage === 'es') {
   currentPage = 'home'
 }
 ---
