@@ -96,6 +96,7 @@ const jsonLd = {
 ---
 
 <head>
+  <!-- Html tags -->
   <title>{pageName} | {title}</title>
   <meta
     name='description'
@@ -118,6 +119,7 @@ const jsonLd = {
     content="Dari Dev's Team"
   />
 
+  <!-- Open Graph tags -->
   <meta
     property='og:type'
     content={type}
@@ -139,6 +141,7 @@ const jsonLd = {
     content={image}
   />
 
+  <!-- Twitter tags -->
   <meta
     name='twitter:card'
     content='summary_large_image'
@@ -160,8 +163,12 @@ const jsonLd = {
     content={image}
   />
 
+  <!-- Json Ld -->
   <script
     type='application/ld+json'
     set:html={JSON.stringify(jsonLd)}
   />
+
+  <!-- Sitemap -->
+  <link rel="sitemap" href="/sitemap-index.xml" />
 </head>
