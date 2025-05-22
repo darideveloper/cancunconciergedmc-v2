@@ -2,7 +2,7 @@ import Swal from 'sweetalert2'
 import 'sweetalert2/src/sweetalert2.scss'
 
 const stripeApi = "https://services.darideveloper.com/stripe-api/"
-const stripeUser = "rivieramayaairporttransfers"
+const stripeUser = "cancunconcier"
 
 function alertError() {
   // Alert error for api call
@@ -21,7 +21,7 @@ export async function submitStripe(activeTransportType, serviceName, servicePric
 
   // Get service data
   const serviceAmount = 1
-  const serviceImage = "https://github.com/darideveloper/rivieramayaairporttransfers/blob/master/public/imgs/page-logo.png?raw=true"
+  const serviceImage = "https://raw.githubusercontent.com/darideveloper/cancunconciergedmc-v2/refs/heads/main/public/logo.webp"
   const inputsData = []
   const inputs = document.querySelectorAll("input:not(.no-collect), select:not(.no-collect)")
   inputs.forEach(input => {
