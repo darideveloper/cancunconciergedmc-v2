@@ -201,7 +201,7 @@ export default function Form({ lang }) {
         <Fieldset title={t(`form.${prefix}`)} key={title}>
           <legend className="title text-xl uppercase mb-3"></legend>
           <Input
-            label={t(`form.${prefix}Date`)}
+            label={t(`transportation.form.${prefix}Date`)}
             type='date'
             name={`${prefix}Date`}
             handleUpdate={handleInputChange}
@@ -209,7 +209,7 @@ export default function Form({ lang }) {
             error={errors[`${prefix}Date`]}
           />
           <Input
-            label={t(`form.${prefix}Time`, { direction })}
+            label={t(`transportation.form.${prefix}Time`, { direction })}
             type='time'
             name={`${prefix}Time`}
             handleUpdate={handleInputChange}
