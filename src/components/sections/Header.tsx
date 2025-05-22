@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navLinks } from '../../data/nav';
 import { Menu } from 'lucide-react';
 import { useTranslations } from '../../i18n/utils';
@@ -12,7 +12,12 @@ interface HeaderProps {
 }
 
 export default function Header({ lang, serverPathname, currentPage }: HeaderProps) {
+
+  // States
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navLinksLang, setNavLinksLang] = useState(navLinks);
+
+  // Translations
   const t = useTranslations(lang);
 
   // Get current path for language switching
@@ -31,12 +36,17 @@ export default function Header({ lang, serverPathname, currentPage }: HeaderProp
     currentPath = '/';
   }
 
+  useEffect(() => {
+    const navLinksLang = navLinks.map((item) => ({
+      text: t(`nav.links.${item.text}`),
+      url: item.url,
+      urlLang: `/${lang}${item.url}`,
+      active: item.url === currentPath,
+    }));
+    setNavLinksLang(navLinksLang);
+  }, [currentPath]);
+
   // Prepare nav links with translation and lang prefix
-  const navLinksLang = navLinks.map((item) => ({
-    text: t(`nav.links.${item.text}`),
-    url: `/${lang}${item.url}`,
-    active: currentPath === item.url,
-  }));
 
   return (
     <header className={clsx(
@@ -144,7 +154,7 @@ export default function Header({ lang, serverPathname, currentPage }: HeaderProp
           {navLinksLang.map(link => (
             <li key={link.text}>
               <a
-                href={link.url}
+                href={link.urlLang}
                 className={clsx(
                   'hover:text-gold',
                   'transition-colors',
