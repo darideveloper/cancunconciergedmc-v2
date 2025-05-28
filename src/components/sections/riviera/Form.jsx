@@ -1,5 +1,5 @@
 // react
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 
 // Components
 import Subtitle from "../../ui/form/Subtitle"
@@ -16,12 +16,19 @@ import { getTransports } from "../../api/transports"
 import { getAirbnbMunicipalities } from "../../api/airbnb-municipality"
 
 // Context
-import LoadContext from '../../context/load'
 import { useTranslations } from '../../../i18n/utils'
 
 export default function Form({ lang }) {
+
   const t = useTranslations(lang)
-  const { loading, setLoading } = useContext(LoadContext)
+
+  // Loading state
+  const [loading, setLoading] = useState(false)
+
+  // Monitor loading state
+  useEffect(() => {
+    console.log('Loading state:', loading)
+  }, [loading])
 
   // Form state
   const [formData, setFormData] = useState({
@@ -112,23 +119,30 @@ export default function Form({ lang }) {
     }
   }
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
+
     e.preventDefault()
     
+    // No submission if errors
     if (!validateForm()) {
       return
     }
 
     try {
+
+      // Update loading state
+      setLoading(true)
+
       // Get current service price and name
       const currentService = transports.find(transport => transport.id === activeTransportType)
       const serviceName = currentService.text
 
       // Submit to stripe
-      await submitStripe(activeTransportType, serviceName, total, loading, setLoading)
+      submitStripe(activeTransportType, serviceName, total, loading, setLoading)
     } catch (error) {
       console.error('Form submission error:', error)
       alert('There was an error submitting the form. Please try again.')
+      setLoading(false)
     }
   }
 
