@@ -13,7 +13,8 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Data
-const text = marked(t('about.text'))
+const texts = t('about.text').split(';')
+const textsMd = texts.map((text: string) => marked(text.trim()))
 ---
 
 <section
@@ -23,7 +24,7 @@ const text = marked(t('about.text'))
   <Title isH1={true}>{t('about.title')}</Title>
   <div
     class={clsx('md-content')}
-    set:html={text}
+    set:html={textsMd}
     data-aos="fade-down"
   />
   <div class={clsx('text-center', 'mt-8')}>
