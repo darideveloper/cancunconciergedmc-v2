@@ -10,26 +10,30 @@ interface Props {
 const { href, target = '_self', class: className = '' }: Props = Astro.props
 ---
 
-<a
-  href={href}
-  target={target}
-  class={clsx(
-    'font-title',
-    'no-underline',
-    'border-2',
-    'border-blue',
-    'text-blue hover:text-white',
-    'hover:bg-blue',
-    'duration-300',
-    'cursor-pointer',
-    'px-6',
-    'py-2',
-    'hover:scale-110',
-    'inline-block',
-    className
-  )}
-  data-aos="fade-up"
-  data-aos-delay="300"
+<div
+  class:list={['link-wrapper']}
+  data-aos='fade-up'
+  data-aos-delay='300'
 >
-  <slot/>
-</a>
+  <a
+    href={href}
+    target={target}
+    class={clsx(
+      'font-title',
+      'no-underline',
+      'border-2',
+      'border-blue',
+      'text-blue hover:text-white',
+      'hover:bg-blue',
+      'duration-300',
+      'cursor-pointer',
+      'px-6',
+      'py-2',
+      'hover:scale-110',
+      'inline-block',
+      className
+    )}
+  >
+    <slot />
+  </a>
+</div>
