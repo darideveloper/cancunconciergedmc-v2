@@ -1,0 +1,30 @@
+---
+const logoSrc = '/logo.webp'
+---
+
+<section
+  class:list={['w-full', 'relative', 'overflow-hidden']}
+  id='hero'
+>
+  <div
+    class:list={['relative', 'w-screen', 'mx-auto', 'overflow-hidden']}
+    style='aspect-ratio: 16/9; max-width: 100vw;'
+  >
+    <slot />
+  </div>
+
+  <img
+    src={logoSrc}
+    alt='Logo inferior'
+    class:list={[
+      'absolute',
+      'bottom-5',
+      'right-10',
+      'p-4',
+      'h-auto',
+      'w-[35%] md:w-[25%] lg:w-[15%]',
+      'z-0',
+      'mix-blend-color-dodge',
+    ]}
+  />
+</section>

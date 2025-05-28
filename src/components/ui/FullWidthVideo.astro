@@ -1,0 +1,21 @@
+---
+// props
+interface Props {
+  src: string
+}
+
+const { src } = Astro.props
+
+// Components
+import FullWidthMedia from './base/FullWidthMedia.astro'
+---
+
+<FullWidthMedia>
+  <video
+    src={src}
+    autoplay
+    muted
+    loop
+    class:list={['w-screen', 'h-screen', 'object-cover', 'parallax']}
+  ></video>
+</FullWidthMedia>

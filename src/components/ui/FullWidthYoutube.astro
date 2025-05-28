@@ -1,73 +1,44 @@
 ---
-import clsx from 'clsx'
-
+// props
 interface Props {
   youtubeSrc: string
 }
 
 const { youtubeSrc } = Astro.props
 
-const logoSrc = '/logo.webp'
+// Components
+import FullWidthMedia from './base/FullWidthMedia.astro'
 ---
 
-<section
-  class={clsx('w-full', 'h-screen', 'relative', 'overflow-hidden')}
-  id='hero'
->
-  <div class:list={['w-screen', 'h-screen', 'relative', 'overflow-hidden']}>
+<FullWidthMedia>
+  <div
+    class:list={[
+      'relative',
+      'w-screen',
+      'mx-auto',
+      'overflow-hidden'
+    ]}
+    style="aspect-ratio: 16/9; max-width: 100vw;"
+  >
     <iframe
-      src=`${youtubeSrc}?autoplay=1&controls=0&mute=1&rel=0&modestbranding=1&showinfo=0`
-      title='cancunconciergedmc resdisign promo video no audio'
-      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-      referrerpolicy='strict-origin-when-cross-origin'
+      src={`${youtubeSrc}?autoplay=1&controls=0&mute=1&rel=0&modestbranding=1&showinfo=0`}
+      title="cancunconciergedmc resdisign promo video no audio"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
       class:list={[
         'absolute',
-        'inset-0',
-        // overflow to hide youtube controls
-        'w-[115%]',
-        'h-[115%]',
-        // Paralax effect
+        'w-[125%]',
+        'h-[125%]',
         'object-cover',
         'parallax',
         'pointer-events-none',
-        // Center the video
         'left-1/2',
         'top-1/2',
         'transform',
         '-translate-x-1/2',
-        '-translate-y-1/2',
+        '-translate-y-1/2'
       ]}
     ></iframe>
   </div>
-
-  <img
-    src={logoSrc}
-    alt='Logo inferior'
-    class={clsx(
-      'absolute',
-      'bottom-5',
-      'right-10',
-      'p-4',
-      'w-auto',
-      'h-32',
-      'z-0',
-      'mix-blend-color-dodge'
-    )}
-  />
-</section>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const parallaxMedia = document.querySelector('.parallax')
-
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY
-      const transformValue = `translateY(${scrollPosition * 0.5}px)`
-
-      if (parallaxMedia instanceof HTMLElement) {
-        parallaxMedia.style.transform = transformValue
-      }
-    })
-  })
-</script>
+</FullWidthMedia>

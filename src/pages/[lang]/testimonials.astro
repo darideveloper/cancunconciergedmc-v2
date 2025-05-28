@@ -3,7 +3,7 @@
 import Layout from '../../layouts/Layout.astro'
 
 // Sections
-import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'
+import FullWidthVideo from '../../components/ui/FullWidthVideo.astro'
 import TestimonialsSection from '../../components/sections/Testimonials.astro'
 import ClientsMenu from '../../components/sections/ClientsMenu.astro'
 
@@ -18,9 +18,8 @@ const t = useTranslations(lang)
 ---
 
 <Layout>
-  <FullWidthMedia
+  <FullWidthVideo
     src='/videos/testimonials.mp4'
-    isVideo={true}
   />
   <TestimonialsSection />
   <ClientsMenu />
