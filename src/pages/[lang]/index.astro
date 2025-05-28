@@ -3,7 +3,7 @@
 import Layout from '../../layouts/Layout.astro'
 
 // Sections
-import FullWidthMedia from '../../components/ui/FullWidthMedia.astro'
+import FullWidthYoutube from '../../components/ui/FullWidthYoutube.astro'
 import About from '../../components/sections/About.astro'
 
 // Libs
@@ -17,9 +17,8 @@ const t = useTranslations(lang)
 ---
 
 <Layout>
-  <FullWidthMedia
-    src='/videos/about.mp4'
-    isVideo={true}
+  <FullWidthYoutube
+    youtubeSrc='https://www.youtube.com/embed/0QZESX1aKfg'
   />
   <About />
 </Layout>
