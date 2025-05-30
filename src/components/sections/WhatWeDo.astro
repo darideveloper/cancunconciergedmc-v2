@@ -12,8 +12,7 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Data
-const text1 = marked(t('whatWeDo.text1'))
-const text2 = marked(t('whatWeDo.text2'))
+const text = marked(t('whatWeDo.text'))
 ---
 
 <section class={clsx('container')} id="what-we-do">
@@ -23,11 +22,7 @@ const text2 = marked(t('whatWeDo.text2'))
   >
     <div
       class={clsx('md-content')}
-      set:html={text1}
-    />
-    <div
-      class={clsx('md-content')}
-      set:html={text2}
+      set:html={text}
     />
   </div>
 </section>

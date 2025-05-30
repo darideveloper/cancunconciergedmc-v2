@@ -49,3 +49,12 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-blue);
 }
+
+.md-content ul {
+    margin-bottom: 1.5rem;
+}
+
+.md-content li {
+    list-style-type: square;
+    margin-left: 1.5rem;
+}
