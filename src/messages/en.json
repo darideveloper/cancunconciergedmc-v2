@@ -34,17 +34,9 @@
     },
     "whyUs": {
         "slides": {
-            "years": {
-                "text": "Over 20 years of experience in Destination Management.",
-                "alt": "Photo of a concert in Cancun"
-            },
-            "experience": {
-                "text": "We focus on delivering extraordinary and unforgettable experiences to all our clients and guests.",
-                "alt": "Photo of unforgettable experiences in Cancun"
-            },
-            "personalization": {
-                "text": "Personalized service from start to finish. You have a single point of contact, ensuring no information or attention to detail is lost.",
-                "alt": "Photo of tailor-made services that meet our clients' needs"
+            "sectur": {
+                "text": "Mexico's National Tourism Registry 27230050068",
+                "alt": "Sectur Logo"
             }
         }
     },

@@ -34,17 +34,9 @@
   },
   "whyUs": {
     "slides": {
-      "years": {
-        "text": "Más de 20 años de experiencia en Destination Management.",
-        "alt": "Foto de concierto en Cancún"
-      },
-      "experience": {
-        "text": "Nos enfocamos en ofrecer experiencias extraordinarias e inolvidables a todos nuestros clientes y huéspedes.",
-        "alt": "Foto de experiencias inolvidables en Cancún"
-      },
-      "personalization": {
-        "text": "Servicio personalizado de principio a fin. Tu solo tienes un solo contacto, no se pierde información ni atención a los detalles.",
-        "alt": "Foto de servicios a la medida y necesidades de nuestros clientes"
+      "sectur": {
+        "text": "Registro Nacional de Turismo - RNT  27230050068",
+        "alt": "Logo de Sectur"
       }
     }
   },

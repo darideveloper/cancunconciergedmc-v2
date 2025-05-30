@@ -16,7 +16,7 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Data
-const slidesKeys = ['years', 'experience', 'personalization',]
+const slidesKeys = ['sectur']
 const slides = t('whyUs.slides')
 ---
 
@@ -39,7 +39,7 @@ const slides = t('whyUs.slides')
               'items-center',
               'justify-center',
               'py-12',
-              'cursor-pointer',
+              // 'cursor-pointer',
             )}
           >
             <InfoCard
