@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro'
 
 // Sections
 import FullWidthVideo from '../../components/ui/FullWidthVideo.astro'
+import FullWidthYoutube from '../../components/ui/FullWidthYoutube.astro'
 import WhatWeDo from '../../components/sections/WhatWeDo.astro'
 import Team from '../../components/sections/TeamMenu'
 
@@ -27,5 +28,8 @@ const t = useTranslations(lang)
   <Team
     client:load
     lang={lang}
+  />
+  <FullWidthYoutube
+    youtubeSrc=""  
   />
 </Layout>
