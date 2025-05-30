@@ -1,13 +1,16 @@
 ---
 // props
 interface Props {
-  youtubeSrc: string
+  youtubeSrc: string,
 }
 
 const { youtubeSrc } = Astro.props
 
 // Components
 import FullWidthMedia from './base/FullWidthMedia.astro'
+
+// get video id 
+const videoId = youtubeSrc.split('/').pop()?.split('?')[0] || ''
 ---
 
 <FullWidthMedia>
@@ -21,7 +24,7 @@ import FullWidthMedia from './base/FullWidthMedia.astro'
     style="aspect-ratio: 16/9; max-width: 100vw;"
   >
     <iframe
-      src={`${youtubeSrc}?autoplay=1&controls=0&mute=1&rel=0&modestbranding=1&showinfo=0&loop=1`}
+      src={`${youtubeSrc}?autoplay=1&controls=0&mute=1&rel=0&modestbranding=1&showinfo=0&loop=1&playlist=${videoId}`}
       title="cancunconciergedmc resdisign promo video no audio"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
