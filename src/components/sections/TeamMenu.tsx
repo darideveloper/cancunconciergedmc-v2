@@ -21,7 +21,7 @@ interface TeamProps {
 export default function Team({ lang }: TeamProps) {
   // Translations and data
   const t = useTranslations(lang)
-  const teamKeys = ['omar', 'claudia', 'luis']
+  const teamKeys = ['omar', 'claudia', 'luis', 'monica']
   const teamData = t('teamMenu.members')
 
   // States
