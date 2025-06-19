@@ -12,7 +12,7 @@ export const navLinks: {
   },
   {
     text: 'about',
-    url: '/about',
+    url: '/about-us',
     urlLang: '',
     active: false,
   },
