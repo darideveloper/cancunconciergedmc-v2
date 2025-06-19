@@ -29,11 +29,18 @@ if (typeof keywords === 'string') {
 // Split keywords into an array if it's a string
 const keywordsContent = Array.isArray(keywords) ? keywords.join(', ') : keywords
 
+let pageTitle
+if (currentPage == "home") {
+  pageTitle = pageName
+} else {
+  pageTitle = `${pageName} | ${title}`
+}
+
 // Generate data
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: title,
+  name: pageTitle,
   description: description,
   url: 'https://cancunconciergedmc.com/',
   logo: 'https://cancunconciergedmc.com/imgs/logo.webp',
@@ -97,7 +104,7 @@ const jsonLd = {
 
 <head>
   <!-- Html tags -->
-  <title>{pageName} | {title}</title>
+  <title>{pageTitle}</title>
   <meta
     name='description'
     content={description}
