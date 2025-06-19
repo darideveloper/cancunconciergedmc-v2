@@ -35,3 +35,17 @@ export const navLinks: {
     active: false,
   },
 ]
+
+export const footerLinks: {
+  text: string
+  url: string
+  active: boolean
+  urlLang: string
+}[] = [
+  {
+    text: 'menuOfServices',
+    url: 'https://cancunconciergedmc.com/menu-de-servicios/',
+    urlLang: '',
+    active: false,
+  }
+]

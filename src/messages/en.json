@@ -102,7 +102,10 @@
     },
     "footer": {
         "text": "At Cancun Concierge, we plan and execute airport transportation services, water activities, tours, golf, restaurant reservations, and virtually any need you may have during your stay in Cancun and the Riviera Maya.",
-        "rights": "All rights reserved."
+        "rights": "All rights reserved.",
+        "links": {
+            "menuOfServices": "Menu of Services"
+        }
     },
     "gallery": {
         "title": "Our Transportations",

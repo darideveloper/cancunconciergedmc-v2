@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { navLinks } from '../../data/nav';
+import { navLinks } from '../../data/links';
 import { Menu } from 'lucide-react';
 import { useTranslations } from '../../i18n/utils';
 import LanguageSelector from '../ui/LanguageSelector';

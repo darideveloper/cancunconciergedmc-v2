@@ -5,7 +5,7 @@ import { useTranslations } from '../../i18n/utils'
 
 
 // Data
-import { navLinks } from '../../data/nav'
+import { navLinks, footerLinks } from '../../data/links'
 import { socialLinks, contactClassicLinks } from '../../data/contact'
 
 // Components
@@ -15,10 +15,18 @@ import LinksList from '../ui/LinksList.astro'
 const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
+// Format links
 const navLinksLang = navLinks.map((item) => {
   return {
     text: t(`nav.links.${item.text}`),
     url: `/${lang}${item.url}`,
+  }
+})
+
+const footerLinksLang = footerLinks.map((item) => {
+  return {
+    text: t(`footer.links.${item.text}`),
+    url: item.url
   }
 })
 ---
@@ -34,7 +42,9 @@ const navLinksLang = navLinks.map((item) => {
   )}
 >
   <small class={clsx('container', 'flex', 'flex-col', '!my-0')}>
-    <!--footer nav links -->
+    <!--links -->
+    <LinksList links={footerLinksLang} target='_blank' aos='fade-up' />
+    <br>
     <LinksList links={navLinksLang} target='_self' aos='fade-up' />
 
     <!-- Text -->
