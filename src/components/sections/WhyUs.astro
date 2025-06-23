@@ -21,7 +21,7 @@ const slides = t('whyUs.slides')
 ---
 
 <section
-  class={clsx('container', '!max-w-xl', '!mb-4')}
+  class={clsx('container', '!max-w-xl', '!mb-4', 'why-us')}
   id='why-us'
 >
   <div class='swiper'>
@@ -61,7 +61,7 @@ const slides = t('whyUs.slides')
   import { Autoplay, EffectFade } from 'swiper/modules'
 
   // Initialize Swiper with required modules
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.why-us', {
     modules: [Autoplay, EffectFade],
     loop: true,
     autoplay: {
@@ -76,7 +76,7 @@ const slides = t('whyUs.slides')
   })
 
   // Add click event listener to each slide
-  document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+  document.querySelectorAll('.why-us .swiper-slide').forEach((slide, index) => {
     slide.addEventListener('click', () => {
       // Check if it's the last slide
       if (index === swiper.slides.length - 1) {
