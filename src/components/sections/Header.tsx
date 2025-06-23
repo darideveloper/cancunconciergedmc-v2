@@ -57,7 +57,9 @@ export default function Header({ lang, serverPathname, currentPage }: HeaderProp
       'py-6',
       'px-8',
       'bg-white',
-      'relative'
+      'relative',
+      'container',
+      '!my-0',
     )}>
       <a href={`/${lang}/`} className={clsx(
         'flex',
