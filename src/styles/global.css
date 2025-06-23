@@ -58,3 +58,30 @@ p {
     list-style-type: square;
     margin-left: 1.5rem;
 }
+
+/* Swiper styles */
+
+.swiper-button-next, 
+.swiper-button-prev {
+    color: var(--color-white) !important;
+    background-color: var(--color-gold) !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    transition-duration: 0.2s !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--color-blue) !important;
+    color: var(--color-white) !important;
+}
+
+.swiper-button-next::after, 
+.swiper-button-prev::after {
+    font-size: 15px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--color-gold) !important;
+}

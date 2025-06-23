@@ -1,0 +1,32 @@
+---
+// Layout
+import Layout from '../../layouts/Layout.astro'
+
+// Sections
+import GallerySwipper from '../../components/sections/base/GallerySwipper.tsx'
+
+// Libs
+import { useTranslations } from '../../i18n/utils'
+import { getStaticPathsLangs } from '../../libs/getStaticPaths'
+
+// i18n
+export const getStaticPaths = getStaticPathsLangs
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+// Get images from folder
+const images = import.meta.glob('/public/galery/*.{jpg,jpeg,png,webp}', {
+  eager: true,
+  as: 'url',
+})
+
+const imageUrls = Object.values(images)
+---
+
+<Layout>
+  <GallerySwipper 
+    client:load
+    title={t('gallery.title')}
+    images={imageUrls}
+  />
+</Layout>
