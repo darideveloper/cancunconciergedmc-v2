@@ -71,6 +71,7 @@ export default function Team({ lang }: TeamProps) {
             return (
               activeOption === teamKey && (
                 <TeamCard
+                  key={teamKey}
                   id={teamKey}
                   name={member.name}
                   bio={member.bio}
