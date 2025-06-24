@@ -1,13 +1,16 @@
 ---
+import type { IconType } from 'react-icons/lib';
+
+
 interface Props {
-  icon: string
+  icon: IconType
   title: string
   text: string
   href: string
   class?: string
 }
 
-const { icon, title, text, href, class: className = '' } = Astro.props as Props
+const { icon: Icon, title, text, href, class: className = '' } = Astro.props as Props
 ---
 
 <article
@@ -59,7 +62,9 @@ const { icon, title, text, href, class: className = '' } = Astro.props as Props
         'duration-300'
       ]}
     >
-      <i class:list={[icon, 'text-2xl', 'text-white']}></i>
+      <p class:list={['text-4xl', 'text-white', 'flex', 'items-center', 'justify-center', '!mb-0']}>
+        <Icon />
+      </p>
     </div>
 
     <!-- Content -->
