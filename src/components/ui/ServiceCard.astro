@@ -1,6 +1,5 @@
 ---
-import type { IconType } from 'react-icons/lib';
-
+import type { IconType } from 'react-icons/lib'
 
 interface Props {
   icon: IconType
@@ -10,7 +9,13 @@ interface Props {
   class?: string
 }
 
-const { icon: Icon, title, text, href, class: className = '' } = Astro.props as Props
+const {
+  icon: Icon,
+  title,
+  text,
+  href,
+  class: className = '',
+} = Astro.props as Props
 ---
 
 <article
@@ -18,7 +23,7 @@ const { icon: Icon, title, text, href, class: className = '' } = Astro.props as 
     'service-card-wrapper',
     'hover:scale-105',
     'duration-300',
-    className
+    className,
   ]}
 >
   <a
@@ -42,7 +47,7 @@ const { icon: Icon, title, text, href, class: className = '' } = Astro.props as 
       'mx-auto',
       'block',
       'no-underline',
-      'hover:no-underline'
+      'hover:no-underline',
     ]}
   >
     <!-- Icon Container -->
@@ -59,10 +64,19 @@ const { icon: Icon, title, text, href, class: className = '' } = Astro.props as 
         'justify-center',
         'group-hover:bg-gold',
         'transition-colors',
-        'duration-300'
+        'duration-300',
       ]}
     >
-      <p class:list={['text-4xl', 'text-white', 'flex', 'items-center', 'justify-center', '!mb-0']}>
+      <p
+        class:list={[
+          'text-4xl',
+          'text-white',
+          'flex',
+          'items-center',
+          'justify-center',
+          '!mb-0',
+        ]}
+      >
         <Icon />
       </p>
     </div>
@@ -79,7 +93,7 @@ const { icon: Icon, title, text, href, class: className = '' } = Astro.props as 
           'font-title',
           'group-hover:text-gold',
           'transition-colors',
-          'duration-300'
+          'duration-300',
         ]}
       >
         {title}
@@ -90,4 +104,3 @@ const { icon: Icon, title, text, href, class: className = '' } = Astro.props as 
     </div>
   </a>
 </article>
-
