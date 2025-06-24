@@ -1,0 +1,93 @@
+---
+// Icons
+import { FaPlay } from 'react-icons/fa6'
+
+// props
+interface Props {
+  src: string
+  bgPlay?: boolean
+  overlaySrc: string
+}
+
+const { src, bgPlay = true, overlaySrc } = Astro.props as Props
+---
+
+<div class:list={['video-wrapper', 'relative']}>
+  <!-- Video overlay with logo and play icon -->
+  <div
+    class:list={[
+      'video-overlay',
+      'absolute',
+      'inset-0',
+      'bg-blue',
+      'opacity-100',
+      'z-10',
+      'flex',
+      'flex-col',
+      'items-center',
+      'justify-center',
+      'gap-4',
+      'group',
+      'cursor-pointer',
+    ]}
+  >
+    <!-- Play icon -->
+    <div
+      class:list={[
+        'icon-wrapper',
+        'text-7xl group-hover:text-8xl',
+        'text-gold',
+        'duration-300',
+        'absolute',
+        'top-1/2',
+        'left-1/2',
+        'transform',
+        '-translate-x-1/2',
+        '-translate-y-1/2',
+      ]}
+    >
+      <FaPlay />
+    </div>
+
+    <!-- Logo -->
+    <img
+      src='/logo.webp'
+      alt='Cancun Concierge DMC Logo'
+      class:list={['w-56', 'opacity-30']}
+    />
+
+    <!-- Overlay image -->
+    <img
+      src={overlaySrc}
+      alt='Overlay image'
+      class:list={[
+        'w-full',
+        'h-full',
+        'object-cover',
+        'absolute',
+        'inset-0',
+        '-z-10',
+        'opacity-20',
+      ]}
+    />
+  </div>
+
+  <!-- Video -->
+  <video
+    src={src}
+    {...bgPlay
+      ? { autoplay: true, muted: true, loop: true }
+      : { controls: true }}
+    class:list={['video', 'w-full', 'object-cover', 'parallax']}
+  ></video>
+</div>
+
+<script>
+  // Hide overlay on click and play video
+  const videoOverlay = document.querySelector('.video-overlay')
+  const video = document.querySelector('.video') as HTMLVideoElement
+  videoOverlay?.addEventListener('click', () => {
+    videoOverlay?.classList.add('hidden')
+    video?.play()
+  })
+</script>

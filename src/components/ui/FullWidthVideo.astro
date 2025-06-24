@@ -2,9 +2,10 @@
 // props
 interface Props {
   src: string
+  bgPlay?: boolean
 }
 
-const { src } = Astro.props
+const { src, bgPlay = true } = Astro.props as Props
 
 // Components
 import FullWidthMedia from './base/FullWidthMedia.astro'
@@ -13,9 +14,9 @@ import FullWidthMedia from './base/FullWidthMedia.astro'
 <FullWidthMedia>
   <video
     src={src}
-    autoplay
-    muted
-    loop
+    {...bgPlay
+      ? { autoplay: true, muted: true, loop: true }
+      : { controls: true }}
     class:list={['w-screen', 'h-screen', 'object-cover', 'parallax']}
   ></video>
 </FullWidthMedia>
