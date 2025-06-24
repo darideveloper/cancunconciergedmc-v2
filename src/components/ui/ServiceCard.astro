@@ -1,0 +1,88 @@
+---
+interface Props {
+  icon: string
+  title: string
+  text: string
+  href: string
+  class?: string
+}
+
+const { icon, title, text, href, class: className = '' } = Astro.props as Props
+---
+
+<article
+  class:list={[
+    'service-card-wrapper',
+    'hover:scale-105',
+    'duration-300',
+    className
+  ]}
+>
+  <a
+    href={href}
+    class:list={[
+      'service-card',
+      'flex',
+      'items-center',
+      'gap-6',
+      'p-6',
+      'bg-white',
+      'rounded-lg',
+      'shadow-lg',
+      'hover:shadow-xl',
+      'transition-all',
+      'duration-300',
+      'border-l-4',
+      'border-gold hover:border-blue',
+      'group',
+      'max-w-2xl',
+      'mx-auto',
+      'block',
+      'no-underline',
+      'hover:no-underline'
+    ]}
+  >
+    <!-- Icon Container -->
+    <div
+      class:list={[
+        'icon-container',
+        'flex-shrink-0',
+        'w-16',
+        'h-16',
+        'bg-blue',
+        'rounded-full',
+        'flex',
+        'items-center',
+        'justify-center',
+        'group-hover:bg-gold',
+        'transition-colors',
+        'duration-300'
+      ]}
+    >
+      <i class:list={[icon, 'text-2xl', 'text-white']}></i>
+    </div>
+
+    <!-- Content -->
+    <div class:list={['content', 'flex-1']}>
+      <h3
+        class:list={[
+          'title',
+          'text-xl',
+          'font-bold',
+          'text-blue',
+          'mb-2',
+          'font-title',
+          'group-hover:text-gold',
+          'transition-colors',
+          'duration-300'
+        ]}
+      >
+        {title}
+      </h3>
+      <p class:list={['text', 'text-gray-700', 'font-sans', 'leading-relaxed']}>
+        {text}
+      </p>
+    </div>
+  </a>
+</article>
+

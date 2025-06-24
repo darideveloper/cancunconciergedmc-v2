@@ -7,6 +7,9 @@ import FullWidthVideo from '../../components/ui/FullWidthVideo.astro'
 import ServicesMenu from '../../components/sections/ServicesMenu.astro'
 import Gallery from '../../components/sections/Gallery.astro'
 
+// Components
+import ServiceCard from '../../components/ui/ServiceCard.astro'
+
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { getStaticPathsLangs } from '../../libs/getStaticPaths'
@@ -23,4 +26,37 @@ const t = useTranslations(lang)
   />
   <ServicesMenu />
   <Gallery />
+  
+  <!-- Service Cards Section -->
+  <section class="container py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-[var(--color-blue)] font-title mb-4">Our Premium Services</h2>
+      <p class="text-gray-600 font-sans max-w-2xl mx-auto">
+        Discover our exceptional service approach, designed to provide unforgettable experiences tailored to your needs.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <ServiceCard
+        icon="fas fa-plane"
+        title="Airport Transfers"
+        text="Professional and reliable airport transportation services with meet & greet, ensuring a seamless arrival experience in Cancun and the Riviera Maya."
+        href="/contact"
+      />
+      
+      <ServiceCard
+        icon="fas fa-ship"
+        title="Yacht Experiences"
+        text="Luxury yacht charters and water activities for unforgettable moments on the Caribbean Sea, perfect for special occasions and corporate events."
+        href="/contact"
+      />
+      
+      <ServiceCard
+        icon="fas fa-golf-ball"
+        title="Golf & Excursions"
+        text="Premium golf experiences and curated group excursions showcasing the best of the region's natural beauty and cultural attractions."
+        href="/contact"
+      />
+    </div>
+  </section>
 </Layout>
