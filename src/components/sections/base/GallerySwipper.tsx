@@ -77,7 +77,7 @@ export default function GallerySwipper({
                 <div
                   className={clsx(
                     'relative',
-                    'aspect-[16/9]',
+                    'aspect-square',
                     'overflow-hidden',
                     'rounded-lg'
                   )}
