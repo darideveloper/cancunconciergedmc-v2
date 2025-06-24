@@ -12,6 +12,52 @@ import {
   MdOutlineStarPurple500,
   MdCameraAlt,
 } from 'react-icons/md'
+
+// Services data
+const services = [
+  {
+    icon: MdAirplanemodeActive,
+    title: 'Airport Transfers & VIP Transportation',
+    text: 'Make every arrival and departure effortless. Our luxury airport transfers include executive SUVs, deluxe vans, and Mercedes-Benz Sprinters, operated by bilingual drivers trained in five-star service. We also offer on-demand private chauffeurs and VIP transportation for any group size.',
+    href: '/contact'
+  },
+  {
+    icon: MdDirectionsBoat,
+    title: 'Yacht Rentals & Water Activities',
+    text: 'Enjoy the turquoise Caribbean waters with private catamaran charters, yachts, and water experiences. From snorkeling and paddleboarding to sunset cruises with onboard catering, we create unforgettable moments on the sea.',
+    href: '/contact'
+  },
+  {
+    icon: MdGolfCourse,
+    title: 'Golf & Group Excursions',
+    text: 'We organize exclusive tee times at top golf courses and offer private excursions to cultural sites, eco-parks, and hidden gems across the Yucatan Peninsula. All activities are customized based on your group\'s interests and energy level.',
+    href: '/contact'
+  },
+  {
+    icon: MdGroups2,
+    title: 'Teambuilding Experiences',
+    text: 'Strengthen your team through immersive activities designed to promote collaboration and creativity. From beach Olympics and treasure hunts to culinary challenges and CSR experiences, our programs inspire connection and motivation.',
+    href: '/contact'
+  },
+  {
+    icon: MdLocalHospital,
+    title: 'Hospitality Desk Services',
+    text: 'Our on-site hospitality staff provide concierge-level service at your hotel or event venue. We manage schedules, answer questions, coordinate transportation, and ensure every detail runs smoothly for your attendees.',
+    href: '/contact'
+  },
+  {
+    icon: MdOutlineStarPurple500,
+    title: 'Décor & Entertainment',
+    text: 'From elegant gala dinners to themed welcome parties, we provide custom decor, lighting, staging, and entertainment to match your vision. DJs, live bands, Mayan rituals, fire shows, and more.',
+    href: '/contact'
+  },
+  {
+    icon: MdCameraAlt,
+    title: 'Photography Services',
+    text: 'Capture every moment with professional photography and video coverage. Perfect for incentive trips, corporate events, or personal milestones. We also offer drone footage, highlight reels, and on-site printing options.',
+    href: '/contact'
+  }
+]
 ---
 
 <!-- Service Cards Section -->
@@ -26,26 +72,14 @@ import {
     </p>
   </div>
 
-  <div class='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto'>
-    <ServiceCard
-      icon={MdAirplanemodeActive}
-      title='Airport Transfers'
-      text='Professional and reliable airport transportation services with meet & greet, ensuring a seamless arrival experience in Cancun and the Riviera Maya.'
-      href='/contact'
-    />
-
-    <ServiceCard
-      icon={MdDirectionsBoat}
-      title='Yacht Experiences'
-      text='Luxury yacht charters and water activities for unforgettable moments on the Caribbean Sea, perfect for special occasions and corporate events.'
-      href='/contact'
-    />
-
-    <ServiceCard
-      icon={MdGolfCourse}
-      title='Golf & Excursions'
-      text="Premium golf experiences and curated group excursions showcasing the best of the region's natural beauty and cultural attractions."
-      href='/contact'
-    />
+  <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
+    {services.map((service) => (
+      <ServiceCard
+        icon={service.icon}
+        title={service.title}
+        text={service.text}
+        href={service.href}
+      />
+    ))}
   </div>
 </section> 
