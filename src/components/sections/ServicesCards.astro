@@ -19,7 +19,7 @@ const services = [
     icon: MdAirplanemodeActive,
     title: 'Airport Transfers & VIP Transportation',
     text: 'Make every arrival and departure effortless. Our luxury airport transfers include executive SUVs, deluxe vans, and Mercedes-Benz Sprinters, operated by bilingual drivers trained in five-star service. We also offer on-demand private chauffeurs and VIP transportation for any group size.',
-    href: '/contact'
+    href: '/contact',
   },
   {
     icon: MdDirectionsBoat,
@@ -55,7 +55,7 @@ const services = [
     icon: MdCameraAlt,
     title: 'Photography Services',
     text: 'Capture every moment with professional photography and video coverage. Perfect for incentive trips, corporate events, or personal milestones. We also offer drone footage, highlight reels, and on-site printing options.',
-    href: '/contact'
+    href: '/contact',
   }
 ]
 ---
@@ -63,7 +63,7 @@ const services = [
 <!-- Service Cards Section -->
 <section class='container py-16'>
   <div class='text-center mb-12'>
-    <h2 class='text-4xl font-bold text-[var(--color-blue)] font-title mb-4'>
+    <h2 class='text-4xl font-bold text-blue font-title mb-4'>
       Our Premium Services
     </h2>
     <p class='text-gray-600 font-sans max-w-2xl mx-auto'>
@@ -79,7 +79,7 @@ const services = [
         title={service.title}
         text={service.text}
         href={service.href}
-        class:list={['h-full']}
+        class:list={['h-full', 'last:lg:col-span-2 first:lg:col-span-2']}
       />
     ))}
   </div>
