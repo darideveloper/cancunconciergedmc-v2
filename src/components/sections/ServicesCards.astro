@@ -16,6 +16,7 @@ import {
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
+import { marked } from 'marked'
 
 // i18n
 const { lang } = Astro.params as any
@@ -40,22 +41,19 @@ const services = serviceKeys.map((key) => ({
   text: t(`services.menuCards.${key}.text`),
   href: '/contact',
 }))
+
+// Parse services description as markdown
+const servicesDescription = marked(t('services.description'))
 ---
 
 <!-- Service Cards Section -->
 <section class:list={['container']}>
   <div class:list={['text-center', 'mb-12']}>
     <Title class:list={['!text-center']}>{t('services.title')}</Title>
-    <p class:list={['text-gray-600', 'font-sans', 'max-w-4xl', 'mx-auto']}>
-      At Cancun Concierge DMC, we offer a curated selection of premium services
-      designed to elevate your group's experience in Cancun and the Riviera
-      Maya. From seamless airport arrivals to one-of-a-kind private events, our
-      team delivers tailor-made solutions with precision, creativity, and a
-      Ritz-Carlton-level commitment to hospitality. Whether you are planning a
-      corporate incentive trip, an executive retreat, or a special celebration,
-      we bring over 20 years of experience, insider knowledge, and a highly
-      personalized approach to everything we do.
-    </p>
+    <div 
+      class:list={['text-gray-600', 'font-sans', 'max-w-4xl', 'mx-auto']}
+      set:html={servicesDescription}
+    />
   </div>
 
   <div
