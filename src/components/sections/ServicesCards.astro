@@ -1,5 +1,6 @@
 ---
 // Components
+import Title from '../ui/Title.astro'
 import ServiceCard from '../ui/ServiceCard.astro'
 
 // Icons
@@ -25,62 +26,77 @@ const services = [
     icon: MdDirectionsBoat,
     title: 'Yacht Rentals & Water Activities',
     text: 'Enjoy the turquoise Caribbean waters with private catamaran charters, yachts, and water experiences. From snorkeling and paddleboarding to sunset cruises with onboard catering, we create unforgettable moments on the sea.',
-    href: '/contact'
+    href: '/contact',
   },
   {
     icon: MdGolfCourse,
     title: 'Golf & Group Excursions',
-    text: 'We organize exclusive tee times at top golf courses and offer private excursions to cultural sites, eco-parks, and hidden gems across the Yucatan Peninsula. All activities are customized based on your group\'s interests and energy level.',
-    href: '/contact'
+    text: "We organize exclusive tee times at top golf courses and offer private excursions to cultural sites, eco-parks, and hidden gems across the Yucatan Peninsula. All activities are customized based on your group's interests and energy level.",
+    href: '/contact',
   },
   {
     icon: MdGroups2,
     title: 'Teambuilding Experiences',
     text: 'Strengthen your team through immersive activities designed to promote collaboration and creativity. From beach Olympics and treasure hunts to culinary challenges and CSR experiences, our programs inspire connection and motivation.',
-    href: '/contact'
+    href: '/contact',
   },
   {
     icon: MdLocalHospital,
     title: 'Hospitality Desk Services',
     text: 'Our on-site hospitality staff provide concierge-level service at your hotel or event venue. We manage schedules, answer questions, coordinate transportation, and ensure every detail runs smoothly for your attendees.',
-    href: '/contact'
+    href: '/contact',
   },
   {
     icon: MdOutlineStarPurple500,
     title: 'Décor & Entertainment',
     text: 'From elegant gala dinners to themed welcome parties, we provide custom decor, lighting, staging, and entertainment to match your vision. DJs, live bands, Mayan rituals, fire shows, and more.',
-    href: '/contact'
+    href: '/contact',
   },
   {
     icon: MdCameraAlt,
     title: 'Photography Services',
     text: 'Capture every moment with professional photography and video coverage. Perfect for incentive trips, corporate events, or personal milestones. We also offer drone footage, highlight reels, and on-site printing options.',
     href: '/contact',
-  }
+  },
 ]
 ---
 
 <!-- Service Cards Section -->
-<section class='container py-16'>
-  <div class='text-center mb-12'>
-    <h2 class='text-4xl font-bold text-blue font-title mb-4'>
-      Our Premium Services
-    </h2>
-    <p class='text-gray-600 font-sans max-w-2xl mx-auto'>
-      Discover our exceptional service approach, designed to provide
-      unforgettable experiences tailored to your needs.
+<section class:list={['container']}>
+  <div class:list={['text-center', 'mb-12']}>
+    <Title class:list={['!text-center']}>Our Services</Title>
+    <p class:list={['text-gray-600', 'font-sans', 'max-w-4xl', 'mx-auto']}>
+      At Cancun Concierge DMC, we offer a curated selection of premium services
+      designed to elevate your group's experience in Cancun and the Riviera
+      Maya. From seamless airport arrivals to one-of-a-kind private events, our
+      team delivers tailor-made solutions with precision, creativity, and a
+      Ritz-Carlton-level commitment to hospitality. Whether you are planning a
+      corporate incentive trip, an executive retreat, or a special celebration,
+      we bring over 20 years of experience, insider knowledge, and a highly
+      personalized approach to everything we do.
     </p>
   </div>
 
-  <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
-    {services.map((service) => (
-      <ServiceCard
-        icon={service.icon}
-        title={service.title}
-        text={service.text}
-        href={service.href}
-        class:list={['h-full', 'last:lg:col-span-2 first:lg:col-span-2']}
-      />
-    ))}
+  <div
+    class:list={[
+      'grid',
+      'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+      'gap-8',
+      'max-w-7xl',
+      'mx-auto',
+    ]}
+  >
+    {
+      services.map((service) => (
+        <ServiceCard
+          icon={service.icon}
+          title={service.title}
+          text={service.text}
+          href={service.href}
+          class:list={['h-full', 'last:lg:col-span-2 first:lg:col-span-2']}
+        />
+      ))
+    }
   </div>
-</section> 
+</section>
+
