@@ -1,0 +1,260 @@
+---
+import type { IconType } from 'react-icons/lib'
+
+interface Props {
+  icon: IconType
+  title: string
+  items: string[]
+  class?: string
+}
+
+const {
+  icon: Icon,
+  title,
+  items,
+  class: className = '',
+} = Astro.props as Props
+---
+
+<article
+  class:list={[
+    'serve-card-b',
+    'bg-white',
+    'rounded-3xl',
+    'shadow-xl',
+    'hover:shadow-2xl',
+    'transition-all',
+    'duration-500',
+    'border',
+    'border-gray-200',
+    'hover:border-gold',
+    'group',
+    'h-full',
+    'overflow-hidden',
+    'relative',
+    className,
+  ]}
+>
+  <!-- Hero Section -->
+  <div
+    class:list={[
+      'hero-section',
+      'relative',
+      'bg-gradient-to-br',
+      'from-blue',
+      'via-blue/90',
+      'to-gold/80',
+      'group-hover:from-gold',
+      'group-hover:via-gold/90',
+      'group-hover:to-blue/80',
+      'p-8',
+      'text-center',
+      'transition-all',
+      'duration-500',
+    ]}
+  >
+    <!-- Background Pattern -->
+    <div
+      class:list={[
+        'absolute',
+        'inset-0',
+        'opacity-10',
+        'bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.3)_0%,transparent_50%)]',
+      ]}
+    />
+    
+    <!-- Icon Container -->
+    <div
+      class:list={[
+        'icon-container',
+        'relative',
+        'w-24',
+        'h-24',
+        'bg-white/20',
+        'backdrop-blur-sm',
+        'rounded-full',
+        'flex',
+        'items-center',
+        'justify-center',
+        'mx-auto',
+        'mb-6',
+        'shadow-2xl',
+        'transform',
+        'group-hover:scale-110',
+        'transition-all',
+        'duration-500',
+      ]}
+    >
+      <Icon class:list={['text-white', 'text-4xl']} />
+    </div>
+
+    <!-- Title -->
+    <h3
+      class:list={[
+        'title',
+        'text-2xl',
+        'font-bold',
+        'text-white',
+        'font-title',
+        'mb-2',
+        'relative',
+        'z-10',
+      ]}
+    >
+      {title}
+    </h3>
+    
+    <!-- Subtitle -->
+    <p
+      class:list={[
+        'subtitle',
+        'text-white/90',
+        'text-sm',
+        'font-sans',
+        'relative',
+        'z-10',
+      ]}
+    >
+      Comprehensive Solutions
+    </p>
+  </div>
+
+  <!-- Content Section -->
+  <div class:list={['content-section', 'p-8', 'pt-6']}>
+    <!-- Services Grid -->
+    <div class:list={['services-grid', 'grid', 'grid-cols-1', 'gap-4']}>
+      {items.map((item, index) => (
+        <div
+          class:list={[
+            'service-item',
+            'flex',
+            'items-center',
+            'p-3',
+            'rounded-xl',
+            'bg-gray-50',
+            'group-hover:bg-blue/5',
+            'hover:bg-blue/10',
+            'transition-all',
+            'duration-300',
+            'cursor-pointer',
+            'border',
+            'border-transparent',
+            'hover:border-blue/20',
+          ]}
+        >
+          <div
+            class:list={[
+              'item-icon',
+              'w-8',
+              'h-8',
+              'bg-blue/20',
+              'group-hover:bg-gold/20',
+              'rounded-lg',
+              'flex',
+              'items-center',
+              'justify-center',
+              'mr-3',
+              'flex-shrink-0',
+              'transition-all',
+              'duration-300',
+            ]}
+          >
+            <span
+              class:list={[
+                'text-blue',
+                'group-hover:text-gold',
+                'text-xs',
+                'font-bold',
+                'transition-colors',
+                'duration-300',
+              ]}
+            >
+              {index + 1}
+            </span>
+          </div>
+          
+          <span
+            class:list={[
+              'item-text',
+              'text-gray-700',
+              'group-hover:text-gray-800',
+              'font-sans',
+              'text-sm',
+              'font-medium',
+              'transition-colors',
+              'duration-300',
+              'flex-1',
+            ]}
+          >
+            {item}
+          </span>
+          
+          <div
+            class:list={[
+              'arrow',
+              'w-4',
+              'h-4',
+              'text-gray-400',
+              'group-hover:text-blue',
+              'opacity-0',
+              'group-hover:opacity-100',
+              'transition-all',
+              'duration-300',
+              'transform',
+              'translate-x-2',
+              'group-hover:translate-x-0',
+            ]}
+          >
+            →
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div
+    class:list={[
+      'footer-section',
+      'px-8',
+      'pb-6',
+      'pt-4',
+      'border-t',
+      'border-gray-100',
+      'bg-gray-50/50',
+    ]}
+  >
+    <div
+      class:list={[
+        'stats',
+        'flex',
+        'justify-between',
+        'items-center',
+        'text-sm',
+      ]}
+    >
+      <span
+        class:list={[
+          'total-services',
+          'text-gray-600',
+          'font-medium',
+        ]}
+      >
+        {items.length} Services
+      </span>
+      
+      <span
+        class:list={[
+          'experience',
+          'text-blue',
+          'group-hover:text-gold',
+          'font-bold',
+          'transition-colors',
+          'duration-300',
+        ]}
+      >
+        Premium Quality
+      </span>
+    </div>
+  </div>
+</article> 

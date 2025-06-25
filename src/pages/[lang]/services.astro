@@ -7,6 +7,24 @@ import FullWidthVideo from '../../components/ui/FullWidthVideo.astro'
 import ServicesMenu from '../../components/sections/ServicesMenu.astro'
 import ServicesCards from '../../components/sections/ServicesCards.astro'
 
+// New Service Cards
+import ServeCardA from '../../components/ui/ServeCardA.astro'
+import ServeCardB from '../../components/ui/ServeCardB.astro'
+import ServeCardC from '../../components/ui/ServeCardC.astro'
+
+// Icons
+import {
+  MdBusiness,
+  MdEvent,
+  MdGroups,
+  MdDirectionsCar,
+  MdHotel,
+  MdRestaurant,
+  MdSportsSoccer,
+  MdBeachAccess,
+  MdLocalAirport,
+} from 'react-icons/md'
+
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { getStaticPathsLangs } from '../../libs/getStaticPaths'
@@ -15,10 +33,238 @@ import { getStaticPathsLangs } from '../../libs/getStaticPaths'
 export const getStaticPaths = getStaticPathsLangs
 const { lang } = Astro.params as any
 const t = useTranslations(lang)
+
+// Data for ServeCardA components
+const serveCardAData = [
+  {
+    icon: MdBusiness,
+    title: 'Corporate Events',
+    items: [
+      'Board Meetings',
+      'Executive Retreats',
+      'Congresses & Conferences',
+      'Incentive Programs',
+      'President\'s Club',
+      'Product Launches',
+      'Brand Activations',
+      'Site Inspections'
+    ]
+  },
+  {
+    icon: MdDirectionsCar,
+    title: 'Transportation Services',
+    items: [
+      'Airport Transfers',
+      'Corporate Shuttles',
+      'Luxury Vehicle Rentals',
+      'Group Transportation',
+      'VIP Transportation',
+      'Event Transportation',
+      'City Tours',
+      'Intercity Travel'
+    ]
+  },
+  {
+    icon: MdHotel,
+    title: 'Accommodation Solutions',
+    items: [
+      'Hotel Bookings',
+      'Resort Reservations',
+      'Group Accommodations',
+      'VIP Suites',
+      'Extended Stays',
+      'Corporate Housing',
+      'All-Inclusive Packages',
+      'Custom Arrangements'
+    ]
+  }
+]
+
+// Data for ServeCardB components
+const serveCardBData = [
+  {
+    icon: MdEvent,
+    title: 'Special Events',
+    items: [
+      'Wedding Ceremonies',
+      'Anniversary Celebrations',
+      'Birthday Parties',
+      'Graduation Events',
+      'Holiday Gatherings',
+      'Cultural Festivals',
+      'Charity Galas',
+      'Award Ceremonies'
+    ]
+  },
+  {
+    icon: MdRestaurant,
+    title: 'Catering & Dining',
+    items: [
+      'Corporate Catering',
+      'Wedding Receptions',
+      'Private Dining',
+      'Cocktail Parties',
+      'Breakfast Services',
+      'Lunch Catering',
+      'Dinner Events',
+      'Specialty Cuisine'
+    ]
+  },
+  {
+    icon: MdSportsSoccer,
+    title: 'Recreation & Sports',
+    items: [
+      'Golf Packages',
+      'Water Sports',
+      'Adventure Activities',
+      'Fitness Programs',
+      'Team Sports',
+      'Outdoor Activities',
+      'Wellness Retreats',
+      'Recreational Tours'
+    ]
+  }
+]
+
+// Data for ServeCardC components
+const serveCardCData = [
+  {
+    icon: MdGroups,
+    title: 'Group Activities',
+    items: [
+      'Team Building',
+      'Corporate Retreats',
+      'Educational Tours',
+      'Adventure Activities',
+      'Cultural Experiences',
+      'Wellness Programs',
+      'Networking Events',
+      'Leadership Workshops'
+    ]
+  },
+  {
+    icon: MdBeachAccess,
+    title: 'Leisure & Entertainment',
+    items: [
+      'Beach Activities',
+      'Spa Services',
+      'Entertainment Shows',
+      'Nightlife Tours',
+      'Shopping Experiences',
+      'Cultural Tours',
+      'Photography Sessions',
+      'Relaxation Packages'
+    ]
+  },
+  {
+    icon: MdLocalAirport,
+    title: 'Travel & Logistics',
+    items: [
+      'Flight Arrangements',
+      'Travel Planning',
+      'Itinerary Management',
+      'Documentation Support',
+      'Insurance Services',
+      'Emergency Assistance',
+      'Multi-Destination Tours',
+      'Custom Travel Packages'
+    ]
+  }
+]
 ---
 
 <Layout>
   <FullWidthVideo src='/videos/services.mp4' />
   <ServicesMenu />
   <ServicesCards />
+  
+  <!-- ServeCardA Section -->
+  <section class:list={['container', 'mt-16']}>
+    <div class:list={['text-center', 'mb-12']}>
+      <h2 class:list={['text-3xl', 'font-bold', 'text-blue', 'font-title', 'mb-4']}>
+        Professional Services
+      </h2>
+      <p class:list={['text-gray-600', 'font-sans', 'max-w-2xl', 'mx-auto']}>
+        Comprehensive solutions for all your corporate and business needs
+      </p>
+    </div>
+
+    <div
+      class:list={[
+        'grid',
+        'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+        'gap-8',
+        'max-w-7xl',
+        'mx-auto',
+      ]}
+    >
+      {serveCardAData.map((data) => (
+        <ServeCardA
+          icon={data.icon}
+          title={data.title}
+          items={data.items}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- ServeCardB Section -->
+  <section class:list={['container', 'mt-20']}>
+    <div class:list={['text-center', 'mb-12']}>
+      <h2 class:list={['text-3xl', 'font-bold', 'text-blue', 'font-title', 'mb-4']}>
+        Event & Entertainment
+      </h2>
+      <p class:list={['text-gray-600', 'font-sans', 'max-w-2xl', 'mx-auto']}>
+        Create unforgettable experiences with our premium event services
+      </p>
+    </div>
+
+    <div
+      class:list={[
+        'grid',
+        'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+        'gap-8',
+        'max-w-7xl',
+        'mx-auto',
+      ]}
+    >
+      {serveCardBData.map((data) => (
+        <ServeCardB
+          icon={data.icon}
+          title={data.title}
+          items={data.items}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- ServeCardC Section -->
+  <section class:list={['container', 'mt-20', 'mb-16']}>
+    <div class:list={['text-center', 'mb-12']}>
+      <h2 class:list={['text-3xl', 'font-bold', 'text-blue', 'font-title', 'mb-4']}>
+        Activities & Logistics
+      </h2>
+      <p class:list={['text-gray-600', 'font-sans', 'max-w-2xl', 'mx-auto']}>
+        Complete travel and activity solutions for groups and individuals
+      </p>
+    </div>
+
+    <div
+      class:list={[
+        'grid',
+        'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+        'gap-8',
+        'max-w-7xl',
+        'mx-auto',
+      ]}
+    >
+      {serveCardCData.map((data) => (
+        <ServeCardC
+          icon={data.icon}
+          title={data.title}
+          items={data.items}
+        />
+      ))}
+    </div>
+  </section>
 </Layout>
