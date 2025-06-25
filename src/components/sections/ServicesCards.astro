@@ -14,57 +14,38 @@ import {
   MdCameraAlt,
 } from 'react-icons/md'
 
-// Services data
-const services = [
-  {
-    icon: MdAirplanemodeActive,
-    title: 'Airport Transfers & VIP Transportation',
-    text: 'Make every arrival and departure effortless. Our luxury airport transfers include executive SUVs, deluxe vans, and Mercedes-Benz Sprinters, operated by bilingual drivers trained in five-star service. We also offer on-demand private chauffeurs and VIP transportation for any group size.',
-    href: '/contact',
-  },
-  {
-    icon: MdDirectionsBoat,
-    title: 'Yacht Rentals & Water Activities',
-    text: 'Enjoy the turquoise Caribbean waters with private catamaran charters, yachts, and water experiences. From snorkeling and paddleboarding to sunset cruises with onboard catering, we create unforgettable moments on the sea.',
-    href: '/contact',
-  },
-  {
-    icon: MdGolfCourse,
-    title: 'Golf & Group Excursions',
-    text: "We organize exclusive tee times at top golf courses and offer private excursions to cultural sites, eco-parks, and hidden gems across the Yucatan Peninsula. All activities are customized based on your group's interests and energy level.",
-    href: '/contact',
-  },
-  {
-    icon: MdGroups2,
-    title: 'Teambuilding Experiences',
-    text: 'Strengthen your team through immersive activities designed to promote collaboration and creativity. From beach Olympics and treasure hunts to culinary challenges and CSR experiences, our programs inspire connection and motivation.',
-    href: '/contact',
-  },
-  {
-    icon: MdLocalHospital,
-    title: 'Hospitality Desk Services',
-    text: 'Our on-site hospitality staff provide concierge-level service at your hotel or event venue. We manage schedules, answer questions, coordinate transportation, and ensure every detail runs smoothly for your attendees.',
-    href: '/contact',
-  },
-  {
-    icon: MdOutlineStarPurple500,
-    title: 'Décor & Entertainment',
-    text: 'From elegant gala dinners to themed welcome parties, we provide custom decor, lighting, staging, and entertainment to match your vision. DJs, live bands, Mayan rituals, fire shows, and more.',
-    href: '/contact',
-  },
-  {
-    icon: MdCameraAlt,
-    title: 'Photography Services',
-    text: 'Capture every moment with professional photography and video coverage. Perfect for incentive trips, corporate events, or personal milestones. We also offer drone footage, highlight reels, and on-site printing options.',
-    href: '/contact',
-  },
-]
+// Libs
+import { useTranslations } from '../../i18n/utils'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+// Services data with icons mapping
+const serviceIcons = {
+  transfers: MdAirplanemodeActive,
+  yacht: MdDirectionsBoat,
+  golf: MdGolfCourse,
+  teambuilding: MdGroups2,
+  desk: MdLocalHospital,
+  entertainment: MdOutlineStarPurple500,
+  photography: MdCameraAlt,
+}
+
+// Get services from translations
+const serviceKeys = Object.keys(serviceIcons)
+const services = serviceKeys.map((key) => ({
+  icon: serviceIcons[key as keyof typeof serviceIcons],
+  title: t(`services.menuCards.${key}.title`),
+  text: t(`services.menuCards.${key}.text`),
+  href: '/contact',
+}))
 ---
 
 <!-- Service Cards Section -->
 <section class:list={['container']}>
   <div class:list={['text-center', 'mb-12']}>
-    <Title class:list={['!text-center']}>Our Services</Title>
+    <Title class:list={['!text-center']}>{t('services.title')}</Title>
     <p class:list={['text-gray-600', 'font-sans', 'max-w-4xl', 'mx-auto']}>
       At Cancun Concierge DMC, we offer a curated selection of premium services
       designed to elevate your group's experience in Cancun and the Riviera

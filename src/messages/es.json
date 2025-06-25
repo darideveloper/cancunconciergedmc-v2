@@ -87,6 +87,36 @@
       "entertainment": "Decoración & Entretenimiento",
       "photography": "Servicios de Fotografía"
     },
+    "menuCards": {
+      "transfers": {
+        "title": "Traslados Aeropuerto & Transporte VIP",
+        "text": "Haz que cada llegada y salida sea sin esfuerzo. Nuestros traslados de lujo incluyen SUVs ejecutivos, vans de lujo y Mercedes-Benz Sprinters, operados por conductores bilingües entrenados en servicio de cinco estrellas. También ofrecemos chóferes privados bajo demanda y transporte VIP para cualquier tamaño de grupo."
+      },
+      "yacht": {
+        "title": "Renta de Yates & Actividades Acuáticas",
+        "text": "Disfruta de las aguas turquesas del Caribe con charters privados de catamarán, yates y experiencias acuáticas. Desde snorkel y paddleboarding hasta cruceros al atardecer con catering a bordo, creamos momentos inolvidables en el mar."
+      },
+      "golf": {
+        "title": "Golf & Excursiones Grupales",
+        "text": "Organizamos horarios exclusivos en los mejores campos de golf y ofrecemos excursiones privadas a sitios culturales, eco-parques y joyas ocultas en toda la Península de Yucatán. Todas las actividades se personalizan según los intereses y nivel de energía de tu grupo."
+      },
+      "teambuilding": {
+        "title": "Experiencias de Team Building",
+        "text": "Fortalece tu equipo a través de actividades inmersivas diseñadas para promover la colaboración y creatividad. Desde Olimpiadas en la playa y búsquedas del tesoro hasta desafíos culinarios y experiencias de RSE, nuestros programas inspiran conexión y motivación."
+      },
+      "desk": {
+        "title": "Servicios de Mesa de Hospitalidad",
+        "text": "Nuestro personal de hospitalidad en sitio proporciona servicio de nivel concierge en tu hotel o lugar de evento. Gestionamos horarios, respondemos preguntas, coordinamos transporte y aseguramos que cada detalle funcione sin problemas para tus asistentes."
+      },
+      "entertainment": {
+        "title": "Decoración & Entretenimiento",
+        "text": "Desde elegantes cenas de gala hasta fiestas de bienvenida temáticas, proporcionamos decoración personalizada, iluminación, escenografía y entretenimiento que coincida con tu visión. DJs, bandas en vivo, rituales mayas, espectáculos de fuego y más."
+      },
+      "photography": {
+        "title": "Servicios de Fotografía",
+        "text": "Captura cada momento con cobertura profesional de fotografía y video. Perfecto para viajes de incentivos, eventos corporativos o hitos personales. También ofrecemos tomas con dron, videos destacados y opciones de impresión en sitio."
+      }
+    },
     "title": "Nuestros Servicios",
     "baseMessage": "Hola, estoy interesado en su servicio:",
     "imageAlt": "Explora los increíbles y personalizados servicios de Cancun Concierge DMC"

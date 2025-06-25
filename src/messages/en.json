@@ -49,7 +49,7 @@
             },
             "claudia": {
                 "name": "Claudia Rueda, (Operations Manager)",
-                "bio": "**Director of Operations - Cancun Concierge DMC**\n\n*DMC & Hospitality Specialist | 20+ Years of Experience | Detail-Oriented Leadership*\n\nOriginally from **Monterrey, Mexico, Claudia Rueda** brings over **20 years of experience in tourism and destination management** to her role as Director of Operations at Cancun Concierge DMC. Her impressive career includes key leadership roles at **The Ritz-Carlton** and top DMCs in **Mexico and the U.S. Virgin Islands**.\n\nAfter moving to **Cancún in 1994**, Claudia quickly became a driving force behind the delivery of luxury experiences for discerning travelers. She holds an **Associate Degree in Hospitality and Tourism** from Instituto Regiomontano de Hotelería, which laid the foundation for her operational expertise.\n\nClaudia is known for her **meticulous attention to detail**, enthusiastic problem-solving, and inspiring leadership style. With a **“make it happen”** mindset, she ensures flawless execution of every program—from complex corporate incentives to intimate VIP experiences.\n\nBeyond her role, Claudia finds joy in **yoga, cooking, mystery films, and time by the beach\n\n with her two children and two dogs. Fluent in **English and Spanish**, she connects easily with both international clients and multicultural teams, ensuring smooth communication and world-class service.\n\nClaudia's operational leadership is a cornerstone of Cancun Concierge DMC's ability to deliver **seamless, high-end experiences in Cancún and the Riviera Maya**."
+                "bio": "**Director of Operations - Cancun Concierge DMC**\n\n*DMC & Hospitality Specialist | 20+ Years of Experience | Detail-Oriented Leadership*\n\nOriginally from **Monterrey, Mexico, Claudia Rueda** brings over **20 years of experience in tourism and destination management** to her role as Director of Operations at Cancun Concierge DMC. Her impressive career includes key leadership roles at **The Ritz-Carlton** and top DMCs in **Mexico and the U.S. Virgin Islands**.\n\nAfter moving to **Cancún in 1994**, Claudia quickly became a driving force behind the delivery of luxury experiences for discerning travelers. She holds an **Associate Degree in Hospitality and Tourism** from Instituto Regiomontano de Hotelería, which laid the foundation for her operational expertise.\n\nClaudia is known for her **meticulous attention to detail**, enthusiastic problem-solving, and inspiring leadership style. With a **\"make it happen\"** mindset, she ensures flawless execution of every program—from complex corporate incentives to intimate VIP experiences.\n\nBeyond her role, Claudia finds joy in **yoga, cooking, mystery films, and time by the beach\n\nwith her two children and two dogs. Fluent in **English and Spanish**, she connects easily with both international clients and multicultural teams, ensuring smooth communication and world-class service.\n\nClaudia's operational leadership is a cornerstone of Cancun Concierge DMC's ability to deliver **seamless, high-end experiences in Cancún and the Riviera Maya**."
             },
             "luis": {
                 "name": "Luis Canché, (Operations Coordinator)",
@@ -86,6 +86,36 @@
             "desk": "Hospitality Desk Services",
             "entertainment": "Décor & Entertainment",
             "photography": "Photography Services"
+        },
+        "menuCards": {
+            "transfers": {
+                "title": "Airport Transfers & VIP Transportation",
+                "text": "Make every arrival and departure effortless. Our luxury airport transfers include executive SUVs, deluxe vans, and Mercedes-Benz Sprinters, operated by bilingual drivers trained in five-star service. We also offer on-demand private chauffeurs and VIP transportation for any group size."
+            },
+            "yacht": {
+                "title": "Yacht Rentals & Water Activities",
+                "text": "Enjoy the turquoise Caribbean waters with private catamaran charters, yachts, and water experiences. From snorkeling and paddleboarding to sunset cruises with onboard catering, we create unforgettable moments on the sea."
+            },
+            "golf": {
+                "title": "Golf & Group Excursions",
+                "text": "We organize exclusive tee times at top golf courses and offer private excursions to cultural sites, eco-parks, and hidden gems across the Yucatan Peninsula. All activities are customized based on your group's interests and energy level."
+            },
+            "teambuilding": {
+                "title": "Teambuilding Experiences",
+                "text": "Strengthen your team through immersive activities designed to promote collaboration and creativity. From beach Olympics and treasure hunts to culinary challenges and CSR experiences, our programs inspire connection and motivation."
+            },
+            "desk": {
+                "title": "Hospitality Desk Services",
+                "text": "Our on-site hospitality staff provide concierge-level service at your hotel or event venue. We manage schedules, answer questions, coordinate transportation, and ensure every detail runs smoothly for your attendees."
+            },
+            "entertainment": {
+                "title": "Décor & Entertainment",
+                "text": "From elegant gala dinners to themed welcome parties, we provide custom decor, lighting, staging, and entertainment to match your vision. DJs, live bands, Mayan rituals, fire shows, and more."
+            },
+            "photography": {
+                "title": "Photography Services",
+                "text": "Capture every moment with professional photography and video coverage. Perfect for incentive trips, corporate events, or personal milestones. We also offer drone footage, highlight reels, and on-site printing options."
+            }
         },
         "title": "Our Services",
         "baseMessage": "Hello, I am interested in your service:",
