@@ -1,0 +1,118 @@
+---
+import {
+  MdStar,
+  MdPsychology,
+  MdAutorenew,
+  MdAttachMoney,
+  MdEvent,
+  MdLocationOn,
+  MdHotel,
+  MdBusiness,
+  MdVerified,
+} from 'react-icons/md'
+
+const whyWorkWithUsData = [
+  {
+    icon: MdStar,
+    title: 'Personalized Service',
+    description: 'Every detail is tailored to your specific goals, preferences, and guest profile.',
+    category: 'Service'
+  },
+  {
+    icon: MdPsychology,
+    title: 'Anticipation of Needs',
+    description: 'We don\'t just react — we anticipate. Our team ensures every experience is seamless and stress-free.',
+    category: 'Experience'
+  },
+  {
+    icon: MdAutorenew,
+    title: 'Unmatched Flexibility',
+    description: 'Plans change. We adapt quickly and efficiently to last-minute adjustments.',
+    category: 'Flexibility'
+  },
+  {
+    icon: MdAttachMoney,
+    title: 'Fair & Transparent Pricing',
+    description: 'Premium service at competitive rates, with no hidden fees or surprises.',
+    category: 'Value'
+  },
+  {
+    icon: MdEvent,
+    title: 'End-to-End Event Management',
+    description: 'From concept to execution, we manage every detail so you can focus on enjoying the moment.',
+    category: 'Management'
+  },
+  {
+    icon: MdLocationOn,
+    title: '20+ Years of Local Experience',
+    description: 'Deep destination knowledge of Cancun & the Riviera Maya.',
+    category: 'Expertise'
+  },
+  {
+    icon: MdHotel,
+    title: 'Luxury Hospitality DNA',
+    description: 'Led by former Ritz-Carlton executives who live and breathe service excellence.',
+    category: 'Luxury'
+  },
+  {
+    icon: MdBusiness,
+    title: 'Owner-Operated Boutique DMC',
+    description: 'Work directly with our leadership team for fast, thoughtful, and personalized support.',
+    category: 'Leadership'
+  },
+  {
+    icon: MdVerified,
+    title: 'Trusted by Industry Leaders',
+    description: 'We\'ve delivered flawless programs for Fortune 500 companies, top-tier planners, and discerning VIPs.',
+    category: 'Trust'
+  }
+]
+---
+
+<section class="container mt-20 mb-16">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold text-blue font-title mb-6">
+      Why Work With Us
+    </h2>
+    <p class="text-gray-600 font-sans max-w-3xl mx-auto text-lg leading-relaxed">
+      Choosing Cancun Concierge DMC means partnering with a boutique, owner-operated DMC that blends luxury hospitality standards with deep local expertise. Here's what sets us apart:
+    </p>
+  </div>
+
+  <div class="max-w-7xl mx-auto">
+    <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+      {whyWorkWithUsData.map((item) => {
+        const Icon = item.icon;
+        return (
+          <div class="group break-inside-avoid bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gold overflow-hidden">
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue to-blue/80 group-hover:from-gold group-hover:to-gold/80 rounded-2xl flex items-center justify-center transition-all duration-300 transform group-hover:scale-110">
+                  <Icon className="text-white text-2xl" />
+                </div>
+                <span class="px-3 py-1 bg-blue/10 group-hover:bg-gold/10 text-blue group-hover:text-gold text-xs font-medium rounded-full transition-all duration-300">
+                  {item.category}
+                </span>
+              </div>
+              
+              <h3 class="text-xl font-bold text-blue group-hover:text-gold font-title mb-4 transition-colors duration-300">
+                {item.title}
+              </h3>
+              
+              <p class="text-gray-600 font-sans leading-relaxed">
+                {item.description}
+              </p>
+              
+              <div class="mt-6 pt-4 border-t border-gray-100">
+                <div class="flex items-center text-sm text-gray-500">
+                  <div class="w-2 h-2 bg-blue group-hover:bg-gold rounded-full mr-2 transition-colors duration-300"></div>
+                  <span class="font-medium">Premium Service</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section> 

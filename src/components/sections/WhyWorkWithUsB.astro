@@ -1,0 +1,104 @@
+---
+import {
+  MdStar,
+  MdPsychology,
+  MdAutorenew,
+  MdAttachMoney,
+  MdEvent,
+  MdLocationOn,
+  MdHotel,
+  MdBusiness,
+  MdVerified,
+} from 'react-icons/md'
+
+const whyWorkWithUsData = [
+  {
+    icon: MdStar,
+    title: 'Personalized Service',
+    description: 'Every detail is tailored to your specific goals, preferences, and guest profile.'
+  },
+  {
+    icon: MdPsychology,
+    title: 'Anticipation of Needs',
+    description: 'We don\'t just react — we anticipate. Our team ensures every experience is seamless and stress-free.'
+  },
+  {
+    icon: MdAutorenew,
+    title: 'Unmatched Flexibility',
+    description: 'Plans change. We adapt quickly and efficiently to last-minute adjustments.'
+  },
+  {
+    icon: MdAttachMoney,
+    title: 'Fair & Transparent Pricing',
+    description: 'Premium service at competitive rates, with no hidden fees or surprises.'
+  },
+  {
+    icon: MdEvent,
+    title: 'End-to-End Event Management',
+    description: 'From concept to execution, we manage every detail so you can focus on enjoying the moment.'
+  },
+  {
+    icon: MdLocationOn,
+    title: '20+ Years of Local Experience',
+    description: 'Deep destination knowledge of Cancun & the Riviera Maya.'
+  },
+  {
+    icon: MdHotel,
+    title: 'Luxury Hospitality DNA',
+    description: 'Led by former Ritz-Carlton executives who live and breathe service excellence.'
+  },
+  {
+    icon: MdBusiness,
+    title: 'Owner-Operated Boutique DMC',
+    description: 'Work directly with our leadership team for fast, thoughtful, and personalized support.'
+  },
+  {
+    icon: MdVerified,
+    title: 'Trusted by Industry Leaders',
+    description: 'We\'ve delivered flawless programs for Fortune 500 companies, top-tier planners, and discerning VIPs.'
+  }
+]
+---
+
+<section class="container mt-20 mb-16">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold text-blue font-title mb-6">
+      Why Work With Us
+    </h2>
+    <p class="text-gray-600 font-sans max-w-3xl mx-auto text-lg leading-relaxed">
+      Choosing Cancun Concierge DMC means partnering with a boutique, owner-operated DMC that blends luxury hospitality standards with deep local expertise. Here's what sets us apart:
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      {whyWorkWithUsData.map((item, index) => {
+        const Icon = item.icon;
+        return (
+          <div class="group flex items-start space-x-6 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gold">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue to-blue/80 group-hover:from-gold group-hover:to-gold/80 rounded-xl flex items-center justify-center transition-all duration-300 transform group-hover:scale-110">
+                <Icon className="text-white text-xl" />
+              </div>
+            </div>
+            
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-blue group-hover:text-gold font-title mb-2 transition-colors duration-300">
+                {item.title}
+              </h3>
+              <p class="text-gray-600 font-sans leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+            
+            <div class="flex-shrink-0">
+              <div class="w-8 h-8 bg-gray-100 group-hover:bg-blue/20 rounded-full flex items-center justify-center text-gray-400 group-hover:text-blue font-bold text-sm transition-all duration-300">
+                {index + 1}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section> 

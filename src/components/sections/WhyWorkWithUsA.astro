@@ -1,0 +1,161 @@
+---
+import {
+  MdStar,
+  MdPsychology,
+  MdAutorenew,
+  MdAttachMoney,
+  MdEvent,
+  MdLocationOn,
+  MdHotel,
+  MdBusiness,
+  MdVerified,
+} from 'react-icons/md'
+
+const whyWorkWithUsData = [
+  {
+    icon: MdStar,
+    title: 'Personalized Service',
+    description: 'Every detail is tailored to your specific goals, preferences, and guest profile.'
+  },
+  {
+    icon: MdPsychology,
+    title: 'Anticipation of Needs',
+    description: 'We don\'t just react — we anticipate. Our team ensures every experience is seamless and stress-free.'
+  },
+  {
+    icon: MdAutorenew,
+    title: 'Unmatched Flexibility',
+    description: 'Plans change. We adapt quickly and efficiently to last-minute adjustments.'
+  },
+  {
+    icon: MdAttachMoney,
+    title: 'Fair & Transparent Pricing',
+    description: 'Premium service at competitive rates, with no hidden fees or surprises.'
+  },
+  {
+    icon: MdEvent,
+    title: 'End-to-End Event Management',
+    description: 'From concept to execution, we manage every detail so you can focus on enjoying the moment.'
+  },
+  {
+    icon: MdLocationOn,
+    title: '20+ Years of Local Experience',
+    description: 'Deep destination knowledge of Cancun & the Riviera Maya.'
+  },
+  {
+    icon: MdHotel,
+    title: 'Luxury Hospitality DNA',
+    description: 'Led by former Ritz-Carlton executives who live and breathe service excellence.'
+  },
+  {
+    icon: MdBusiness,
+    title: 'Owner-Operated Boutique DMC',
+    description: 'Work directly with our leadership team for fast, thoughtful, and personalized support.'
+  },
+  {
+    icon: MdVerified,
+    title: 'Trusted by Industry Leaders',
+    description: 'We\'ve delivered flawless programs for Fortune 500 companies, top-tier planners, and discerning VIPs.'
+  }
+]
+---
+
+<section class="relative overflow-hidden">
+  <!-- Background Gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-blue/5 via-gold/5 to-blue/10"></div>
+  
+  <!-- Hero Section -->
+  <div class="relative container mt-20 mb-16">
+    <div class="text-center mb-20">
+      <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue to-gold rounded-full text-white font-medium mb-8 shadow-lg">
+        <MdStar className="mr-2 text-xl" />
+        Premium DMC Services
+      </div>
+      
+      <h2 class="text-5xl font-bold text-blue font-title mb-8 leading-tight">
+        Why Work With Us
+      </h2>
+      
+      <div class="max-w-4xl mx-auto">
+        <p class="text-gray-700 font-sans text-xl leading-relaxed mb-8">
+          Choosing Cancun Concierge DMC means partnering with a boutique, owner-operated DMC that blends luxury hospitality standards with deep local expertise.
+        </p>
+        
+        <div class="flex justify-center space-x-8 text-sm text-gray-600">
+          <div class="flex items-center">
+            <div class="w-3 h-3 bg-gold rounded-full mr-2"></div>
+            <span>Boutique Experience</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-3 h-3 bg-blue rounded-full mr-2"></div>
+            <span>Local Expertise</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-3 h-3 bg-gold rounded-full mr-2"></div>
+            <span>Luxury Standards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid with Alternating Layout -->
+    <div class="max-w-7xl mx-auto">
+      <div class="space-y-12">
+        {whyWorkWithUsData.map((item, index) => {
+          const Icon = item.icon;
+          const isEven = index % 2 === 0;
+          
+          return (
+            <div class={`flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'} gap-12 ${index % 3 === 0 ? 'lg:flex-row' : index % 3 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
+              <!-- Icon Section -->
+              <div class="flex-shrink-0 w-1/3">
+                <div class="relative">
+                  <div class="w-32 h-32 bg-gradient-to-br from-blue to-blue/80 group-hover:from-gold group-hover:to-gold/80 rounded-3xl flex items-center justify-center transition-all duration-500 transform group-hover:scale-110 shadow-2xl">
+                    <Icon className="text-white text-4xl" />
+                  </div>
+                  
+                  <!-- Decorative Elements -->
+                  <div class="absolute -top-4 -right-4 w-8 h-8 bg-gold rounded-full opacity-60"></div>
+                  <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-blue rounded-full opacity-40"></div>
+                  
+                  <!-- Number Badge -->
+                  <div class="absolute -top-2 -left-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-gold">
+                    <span class="text-blue font-bold text-sm">{index + 1}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Content Section -->
+              <div class="flex-1 w-2/3">
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:border-gold transition-all duration-300">
+                  <h3 class="text-2xl font-bold text-blue font-title mb-4">
+                    {item.title}
+                  </h3>
+                  
+                  <p class="text-gray-600 font-sans text-lg leading-relaxed">
+                    {item.description}
+                  </p>
+                  
+                  <!-- Feature Highlight -->
+                  <div class="mt-6 flex items-center">
+                    <div class="w-1 h-8 bg-gradient-to-b from-blue to-gold rounded-full mr-4"></div>
+                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">
+                      Premium Feature
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+    
+    <!-- Bottom CTA -->
+    <div class="text-center mt-20">
+      <div class="inline-block bg-gradient-to-r from-blue to-gold text-white px-8 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        Experience the Difference
+      </div>
+    </div>
+  </div>
+</section> 
