@@ -5,6 +5,9 @@ import Layout from '../../layouts/Layout.astro'
 // Sections
 import GallerySwipper from '../../components/sections/base/GallerySwipper.tsx'
 
+// Components
+import Title from '../../components/ui/Title.astro'
+
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { getStaticPathsLangs } from '../../libs/getStaticPaths'
@@ -24,7 +27,7 @@ const allImages = import.meta.glob('/public/gallery/**/*.{jpg,jpeg,png,webp}', {
 // Filter images by categories
 const categories = ['transports', 'events', 'services']
 const categoriesImages = categories.map((category) => {
-  const images = Object.values(allImages).filter(imagePath => {
+  const images = Object.values(allImages).filter((imagePath) => {
     return imagePath.includes(`/gallery/${category}/`)
   })
   return {
@@ -35,6 +38,17 @@ const categoriesImages = categories.map((category) => {
 ---
 
 <Layout>
+  <div class:list={['container', 'text-center']}>
+    <Title
+      isH1={true}
+      client:load
+      class:list={["!text-center"]}
+    >
+      {t('gallery.title')}
+    </Title>
+    <p>{t('gallery.description')}</p>
+  </div>
+
   {
     categoriesImages.map((category) => {
       return (
@@ -42,7 +56,7 @@ const categoriesImages = categories.map((category) => {
           id={category.categoryName}
           class={clsx('container', 'w-full', 'px-0')}
         >
-          <GallerySwipper 
+          <GallerySwipper
             client:load
             title={category.categoryName}
             images={category.images}
