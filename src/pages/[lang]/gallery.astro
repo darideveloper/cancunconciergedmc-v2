@@ -19,7 +19,7 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Get all images from gallery subdirectories
-const allImages = import.meta.glob('/public/gallery/**/*.{jpg,jpeg,png,webp}', {
+const allImages = import.meta.glob('../../assets/gallery/**/*.{jpg,jpeg,png,webp}', {
   eager: true,
   as: 'url',
 })
@@ -27,15 +27,15 @@ const allImages = import.meta.glob('/public/gallery/**/*.{jpg,jpeg,png,webp}', {
 // Filter images by categories
 const categories = ['transports', 'events', 'services']
 const categoriesImages = categories.map((category) => {
-  const images = Object.values(allImages).filter((imagePath) => {
-    return imagePath.includes(`/gallery/${category}/`)
-  })
+  const images = Object.entries(allImages)
+    .filter(([key]) => key.includes(`/gallery/${category}/`))
+    .map(([, url]) => url)
+
   return {
     categoryName: t(`gallery.categories.${category}.title`),
     images,
   }
 })
-console.log({categoriesImages})
 ---
 
 <Layout>
@@ -59,7 +59,7 @@ console.log({categoriesImages})
           <GallerySwipper
             client:load
             title={category.categoryName}
-            images={category.images}
+            images={[...category.images]}
           />
         </section>
       )
