@@ -139,8 +139,17 @@
         }
     },
     "gallery": {
-        "title": "Our Transportations",
-        "photoAlt": "photo of our transport"
+        "categories": {
+            "transports": {
+                "title": "Our Transportations"
+            },
+            "events": {
+                "title": "Cancun Concierge DMC: Your Dream Event Made Reality"
+            },
+            "services": {
+                "title": "Our Services"
+            }
+        }
     },
     "features": {
         "quotes": {

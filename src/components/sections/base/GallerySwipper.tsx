@@ -70,7 +70,7 @@ export default function GallerySwipper({
         >
           {images.map((image, index) => {
             const imageSrc = image.replace('/public', '')
-            const imageAlt = `Gallery image ${imageSrc.split('/').pop()?.split('.')[0].replaceAll(/-/g, ' ').replaceAll('%20', ' ')}`
+            const imageAlt = `${imageSrc.split('/').pop()?.split('.')[0].replaceAll(/-/g, ' ').replaceAll('%20', ' ')}`
 
             return (
               <SwiperSlide key={index}>

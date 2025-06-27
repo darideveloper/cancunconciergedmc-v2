@@ -22,13 +22,13 @@ const allImages = import.meta.glob('/public/gallery/**/*.{jpg,jpeg,png,webp}', {
 })
 
 // Filter images by categories
-const categories = ['transports', 'transports2', 'transports3']
+const categories = ['transports', 'events', 'services']
 const categoriesImages = categories.map((category) => {
   const images = Object.values(allImages).filter(imagePath => {
     return imagePath.includes(`/gallery/${category}/`)
   })
   return {
-    categoryName: category,
+    categoryName: t(`gallery.categories.${category}.title`),
     images,
   }
 })
