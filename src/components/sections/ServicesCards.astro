@@ -6,6 +6,7 @@ import ServiceCard from '../ui/ServiceCard.astro'
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { marked } from 'marked'
+import { getWhatsappMessageUrl } from '../../libs/contact'
 
 // i18n
 const { lang } = Astro.params as any
@@ -16,11 +17,12 @@ import { servicesItemsIcons } from '../../data/servcies'
 
 // Get services from translations
 const serviceKeys = Object.keys(servicesItemsIcons)
+const baseMessage = t('services.baseMessage')
 const services = serviceKeys.map((key) => ({
   icon: servicesItemsIcons[key as keyof typeof servicesItemsIcons],
   title: t(`services.menuCards.${key}.title`),
   text: t(`services.menuCards.${key}.text`),
-  href: '/contact',
+  href: getWhatsappMessageUrl(baseMessage + t(`services.menuCards.${key}.title`)),
   key: key,
 }))
 
@@ -54,8 +56,8 @@ const servicesDescription = marked(t('services.description'))
           title={service.title}
           text={service.text}
           href={service.href}
-          class:list={['h-full', 'last:xl:col-span-2 first:md:col-span-2']}
           id={service.key}
+          class:list={['h-full', 'last:xl:col-span-2 first:md:col-span-2']}
         />
       ))
     }
