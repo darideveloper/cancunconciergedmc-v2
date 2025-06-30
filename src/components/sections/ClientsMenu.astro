@@ -8,22 +8,14 @@ import { useTranslations } from '../../i18n/utils'
 const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
-const menuItems = [
-    'weddings',
-    'social',
-    'board',
-    'executive',
-    'congresses',
-    'incentive',
-    'president',
-    'family',
-    'special',
-]
+// Data
+import { clientsItemsIcons } from '../../data/clients'
 
 // Data
+const menuItems = Object.keys(clientsItemsIcons)
 const menuItemsLang = menuItems.map((item) => {
     return {
-        "text": t(`clients.menuItems.${item}`),
+        "text": t(`clients.cards.${item}.title`),
         "url": `#${item}`
     }
 })

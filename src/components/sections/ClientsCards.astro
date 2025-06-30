@@ -16,8 +16,8 @@ import { clientsItemsIcons } from '../../data/clients'
 const cardKeys = Object.keys(clientsItemsIcons)
 const clientsCardsData = cardKeys.map((key) => ({
   icon: clientsItemsIcons[key as keyof typeof clientsItemsIcons],
-  title: t(`clientsCards.${key}.title`),
-  items: t(`clientsCards.${key}.items`),
+  title: t(`clients.cards.${key}.title`),
+  items: t(`clients.cards.${key}.items`),
   key: key,
 }))
 ---
@@ -34,10 +34,10 @@ const clientsCardsData = cardKeys.map((key) => ({
         'mb-4',
       ]}
     >
-      {t('clientsCards.title')}
+      {t('clients.titleAlternate')}
     </h2>
     <p class:list={['text-gray-600', 'font-sans', 'max-w-2xl', 'mx-auto']}>
-      {t('clientsCards.description')}
+      {t('clients.description')}
     </p>
   </div>
 

@@ -62,67 +62,56 @@
     }
   },
   "clients": {
-    "menuItems": {
-      "weddings": "Bodas",
-      "social": "Eventos Sociales",
-      "board": "Reuniones de Consejo",
-      "executive": "Retiros Ejecutivos",
-      "congresses": "Congresos y Conferencias",
-      "incentive": "Programas Incentivos",
-      "president": "Clubs Presidenciales",
-      "family": "Reuniones Familiares",
-      "special": "Celebraciones Especiales"
-    },
     "title": "Nuestros clientes",
+    "titleAlternate": "A Quiénes Servimos",
+    "description": "En Cancun Concierge DMC, servimos con orgullo a una amplia gama de clientes que buscan experiencias de clase mundial en Cancún y la Riviera Maya. Nuestros programas a la medida están diseñados para cumplir los objetivos de cada grupo, ya sea corporativo, social o personal.",
+    "cards": {
+      "corporate": {
+        "title": "Clientes Corporativos y Empresariales",
+        "items": [
+          "Reuniones de Consejo",
+          "Retiros Ejecutivos",
+          "Congresos y Conferencias",
+          "Programas de Incentivos",
+          "Clubes Presidenciales",
+          "Lanzamientos de Productos",
+          "Activaciones de Marca",
+          "Inspecciones de Sitio"
+        ]
+      },
+      "social": {
+        "title": "Eventos Sociales y Privados",
+        "items": [
+          "Bodas",
+          "Celebraciones Especiales (Aniversarios, Cumpleaños Importantes, Renovación de Votos)",
+          "Reuniones Familiares",
+          "Despedidas de Soltero y Soltera",
+          "Cenas de Destino"
+        ]
+      },
+      "leisure": {
+        "title": "Grupos de Ocio y Estilo de Vida",
+        "items": [
+          "Grupos de Viaje de Lujo",
+          "FITs de Alto Nivel (Viajeros Totalmente Independientes)",
+          "Familias Multigeneracionales Afluentes",
+          "Viajeros de Estilo de Vida en Yate",
+          "Retiros de Bienestar",
+          "Grupos de Golf"
+        ]
+      },
+      "media": {
+        "title": "Medios, VIP y Producción",
+        "items": [
+          "Escapadas de Celebridades",
+          "Equipos de Filmación y Producción",
+          "Viajes de Influencers y Relaciones Públicas",
+          "Sesiones de Moda y Editoriales"
+        ]
+      }
+    },
     "baseMessage": "Hola, estoy interesado en sus servicios para",
     "imageAlt": "Nuestros clientes disfrutando de un gran momento en Cancún"
-  },
-  "clientsCards": {
-    "title": "A Quiénes Servimos",
-    "description": "En Cancun Concierge DMC, servimos con orgullo a una amplia gama de clientes que buscan experiencias de clase mundial en Cancún y la Riviera Maya. Nuestros programas a la medida están diseñados para cumplir los objetivos de cada grupo, ya sea corporativo, social o personal.",
-    "corporate": {
-      "title": "Clientes Corporativos y Empresariales",
-      "items": [
-        "Reuniones de Consejo",
-        "Retiros Ejecutivos",
-        "Congresos y Conferencias",
-        "Programas de Incentivos",
-        "Clubes Presidenciales",
-        "Lanzamientos de Productos",
-        "Activaciones de Marca",
-        "Inspecciones de Sitio"
-      ]
-    },
-    "social": {
-      "title": "Eventos Sociales y Privados",
-      "items": [
-        "Bodas",
-        "Celebraciones Especiales (Aniversarios, Cumpleaños Importantes, Renovación de Votos)",
-        "Reuniones Familiares",
-        "Despedidas de Soltero y Soltera",
-        "Cenas de Destino"
-      ]
-    },
-    "leisure": {
-      "title": "Grupos de Ocio y Estilo de Vida",
-      "items": [
-        "Grupos de Viaje de Lujo",
-        "FITs de Alto Nivel (Viajeros Totalmente Independientes)",
-        "Familias Multigeneracionales Afluentes",
-        "Viajeros de Estilo de Vida en Yate",
-        "Retiros de Bienestar",
-        "Grupos de Golf"
-      ]
-    },
-    "media": {
-      "title": "Medios, VIP y Producción",
-      "items": [
-        "Escapadas de Celebridades",
-        "Equipos de Filmación y Producción",
-        "Viajes de Influencers y Relaciones Públicas",
-        "Sesiones de Moda y Editoriales"
-      ]
-    }
   },
   "services": {
     "cards": {

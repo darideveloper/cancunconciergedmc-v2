@@ -27,7 +27,7 @@ export default function Form({ lang }) {
 
   // Monitor loading state
   useEffect(() => {
-    console.log('Loading state:', loading)
+    // console.log('Loading state:', loading)
   }, [loading])
 
   // Form state

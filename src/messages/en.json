@@ -62,68 +62,57 @@
         }
     },
     "clients": {
-        "menuItems": {
-            "weddings": "Weddings",
-            "social": "Social Events",
-            "board": "Board Meetings",
-            "executive": "Executive Retreats",
-            "congresses": "Conferences & Conferences",
-            "incentive": "Incentive Programs",
-            "president": "President's Club",
-            "family": "Family Reunions",
-            "special": "Special Celebrations"
+        "title": "Our Clients",
+        "titleAlternate": "Who We Serve",
+        "description": "At Cancun Concierge DMC, we proudly serve a wide range of clients seeking world-class experiences in Cancun and the Riviera Maya. Our tailor-made programs are designed to meet the goals of each group—whether corporate, social, or personal.",
+        "cards": {
+            "corporate": {
+                "title": "Corporate & Business Clients",
+                "items": [
+                    "Board Meetings",
+                    "Executive Retreats",
+                    "Congresses & Conferences",
+                    "Incentive Programs",
+                    "President's Club",
+                    "Product Launches",
+                    "Brand Activations",
+                    "Site Inspections"
+                ]
+            },
+            "social": {
+                "title": "Social & Private Events",
+                "items": [
+                    "Weddings",
+                    "Special Celebrations (Anniversaries, Milestone Birthdays, Vow Renewals)",
+                    "Family Reunions",
+                    "Bachelor & Bachelorette Parties",
+                    "Destination Dinners"
+                ]
+            },
+            "leisure": {
+                "title": "Leisure & Lifestyle Groups",
+                "items": [
+                    "Luxury Travel Groups",
+                    "High-End FITs (Fully Independent Travelers)",
+                    "Affluent Multigenerational Families",
+                    "Yacht Lifestyle Travelers",
+                    "Wellness Retreats",
+                    "Golf Groups"
+                ]
+            },
+            "media": {
+                "title": "Media, VIP & Production",
+                "items": [
+                    "Celebrity Getaways",
+                    "Film & Production Crews",
+                    "Influencer & PR Trips",
+                    "Fashion & Editorial Shoots"
+                ]
+            }
         },
-        "title": "Our clients",
         "baseMessage": "Hello, I am interested in your services for",
         "imageAlt": "Our clients enjoying a great time in Cancun"
     },
-      "clientsCards": {
-    "title": "Who We Serve",
-    "description": "At Cancun Concierge DMC, we proudly serve a wide range of clients seeking world-class experiences in Cancun and the Riviera Maya. Our tailor-made programs are designed to meet the goals of each group—whether corporate, social, or personal.",
-    "corporate": {
-      "title": "Corporate & Business Clients",
-      "items": [
-        "Board Meetings",
-        "Executive Retreats",
-        "Congresses & Conferences",
-        "Incentive Programs",
-        "President's Club",
-        "Product Launches",
-        "Brand Activations",
-        "Site Inspections"
-      ]
-    },
-    "social": {
-      "title": "Social & Private Events",
-      "items": [
-        "Weddings",
-        "Special Celebrations (Anniversaries, Milestone Birthdays, Vow Renewals)",
-        "Family Reunions",
-        "Bachelor & Bachelorette Parties",
-        "Destination Dinners"
-      ]
-    },
-    "leisure": {
-      "title": "Leisure & Lifestyle Groups",
-      "items": [
-        "Luxury Travel Groups",
-        "High-End FITs (Fully Independent Travelers)",
-        "Affluent Multigenerational Families",
-        "Yacht Lifestyle Travelers",
-        "Wellness Retreats",
-        "Golf Groups"
-      ]
-    },
-    "media": {
-      "title": "Media, VIP & Production",
-      "items": [
-        "Celebrity Getaways",
-        "Film & Production Crews",
-        "Influencer & PR Trips",
-        "Fashion & Editorial Shoots"
-      ]
-    }
-  },
     "services": {
         "cards": {
             "transfers": {
