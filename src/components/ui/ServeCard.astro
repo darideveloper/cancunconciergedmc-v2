@@ -190,12 +190,15 @@ const baseMessage = t('clients.baseMessage')
                 'hover:bg-gray-50',
                 'rounded-lg',
                 'p-3',
-                'duration-200',
+                'duration-700',
                 'cursor-pointer',
                 isFirst && 'lg:min-w-52 xl:min-w-64 ',
+                '!transition-all'
               ]}
               href={getWhatsappMessageUrl(`${baseMessage}: ${item}`)}
               target='_blank'
+              data-aos='fade-up'
+              data-aos-delay={index * 100}
             >
               <!-- Item Number -->
               <div
