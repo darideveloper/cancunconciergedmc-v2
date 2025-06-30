@@ -8,10 +8,9 @@ import clsx from 'clsx';
 interface HeaderProps {
   lang: 'en' | 'es';
   serverPathname?: string;
-  currentPage?: string;
 }
 
-export default function Header({ lang, serverPathname, currentPage }: HeaderProps) {
+export default function Header({ lang, serverPathname }: HeaderProps) {
 
   // States
   const [menuOpen, setMenuOpen] = useState(false);

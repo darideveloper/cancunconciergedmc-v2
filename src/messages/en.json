@@ -128,7 +128,8 @@
             "about": "About Us",
             "testimonials": "Testimonials",
             "services": "Services",
-            "transportation": "Transportation"
+            "transportation": "Transportation",
+            "gallery": "Gallery"
         }
     },
     "footer": {
