@@ -17,71 +17,35 @@ import FeatureCard from '../ui/FeatureCard.astro'
 // Data 
 import { whatsappBaseUrl } from '../../data/contact'
 
+// Libs
+import { useTranslations } from '../../i18n/utils'
 
-const whyWorkWithUsData = [
-  {
-    icon: MdStar,
-    title: 'Personalized Service',
-    description:
-      'Every detail is tailored to your specific goals, preferences, and guest profile.',
-    category: 'Service',
-  },
-  {
-    icon: MdPsychology,
-    title: 'Anticipation of Needs',
-    description:
-      "We don't just react — we anticipate. Our team ensures every experience is seamless and stress-free.",
-    category: 'Experience',
-  },
-  {
-    icon: MdAutorenew,
-    title: 'Unmatched Flexibility',
-    description:
-      'Plans change. We adapt quickly and efficiently to last-minute adjustments.',
-    category: 'Flexibility',
-  },
-  {
-    icon: MdAttachMoney,
-    title: 'Fair & Transparent Pricing',
-    description:
-      'Premium service at competitive rates, with no hidden fees or surprises.',
-    category: 'Value',
-  },
-  {
-    icon: MdEvent,
-    title: 'End-to-End Event Management',
-    description:
-      'From concept to execution, we manage every detail so you can focus on enjoying the moment.',
-    category: 'Management',
-  },
-  {
-    icon: MdLocationOn,
-    title: '20+ Years of Local Experience',
-    description: 'Deep destination knowledge of Cancun & the Riviera Maya.',
-    category: 'Expertise',
-  },
-  {
-    icon: MdHotel,
-    title: 'Luxury Hospitality DNA',
-    description:
-      'Led by former Ritz-Carlton executives who live and breathe service excellence.',
-    category: 'Luxury',
-  },
-  {
-    icon: MdBusiness,
-    title: 'Owner-Operated Boutique DMC',
-    description:
-      'Work directly with our leadership team for fast, thoughtful, and personalized support.',
-    category: 'Leadership',
-  },
-  {
-    icon: MdVerified,
-    title: 'Trusted by Industry Leaders',
-    description:
-      "We've delivered flawless programs for Fortune 500 companies, top-tier planners, and discerning VIPs.",
-    category: 'Trust',
-  },
-]
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+// Define the icons mapping
+const iconsMapping = {
+  personalized: MdStar,
+  anticipation: MdPsychology,
+  flexibility: MdAutorenew,
+  pricing: MdAttachMoney,
+  management: MdEvent,
+  experience: MdLocationOn,
+  luxury: MdHotel,
+  boutique: MdBusiness,
+  trusted: MdVerified,
+}
+
+// Get cards data from translations
+const cardKeys = Object.keys(iconsMapping)
+const whyWorkWithUsCards = cardKeys.map((key) => ({
+  icon: iconsMapping[key as keyof typeof iconsMapping],
+  title: t(`whyWorkWithUs.cards.${key}.title`),
+  description: t(`whyWorkWithUs.cards.${key}.description`),
+  category: t(`whyWorkWithUs.cards.${key}.category`),
+  href: whatsappBaseUrl,
+}))
 ---
 
 <section class:list={['container', 'mt-20', 'mb-16']}>
@@ -89,7 +53,7 @@ const whyWorkWithUsData = [
     <h2
       class:list={['text-4xl', 'font-bold', 'text-blue', 'font-title', 'mb-6']}
     >
-      Why Work With Us
+      {t('whyWorkWithUs.title')}
     </h2>
     <p
       class:list={[
@@ -100,9 +64,7 @@ const whyWorkWithUsData = [
         'leading-relaxed',
       ]}
     >
-      Choosing Cancun Concierge DMC means partnering with a boutique,
-      owner-operated DMC that blends luxury hospitality standards with deep
-      local expertise. Here's what sets us apart:
+      {t('whyWorkWithUs.description')}
     </p>
   </div>
 
@@ -115,13 +77,13 @@ const whyWorkWithUsData = [
         'space-y-8',
       ]}
     >
-      {whyWorkWithUsData.map((data) => (
+      {whyWorkWithUsCards.map((data) => (
         <FeatureCard
           icon={data.icon}
           title={data.title}
           description={data.description}
           category={data.category}
-          href={whatsappBaseUrl}
+          href={data.href}
         />
       ))}
     </div>

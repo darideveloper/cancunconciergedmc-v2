@@ -176,6 +176,57 @@
       }
     }
   },
+  "whyWorkWithUs": {
+    "title": "Por Qué Trabajar Con Nosotros",
+    "description": "Elegir Cancun Concierge DMC significa asociarse con un DMC boutique operado por sus propietarios que combina estándares de hospitalidad de lujo con profundo conocimiento local. Esto es lo que nos distingue:",
+    "cards": {
+      "personalized": {
+        "title": "Servicio Personalizado",
+        "description": "Cada detalle se adapta a tus objetivos específicos, preferencias y perfil de huéspedes.",
+        "category": "Servicio"
+      },
+      "anticipation": {
+        "title": "Anticipación de Necesidades",
+        "description": "No solo reaccionamos, anticipamos. Nuestro equipo asegura que cada experiencia sea fluida y sin estrés.",
+        "category": "Experiencia"
+      },
+      "flexibility": {
+        "title": "Flexibilidad Inigualable",
+        "description": "Los planes cambian. Nos adaptamos rápida y eficientemente a ajustes de último momento.",
+        "category": "Flexibilidad"
+      },
+      "pricing": {
+        "title": "Precios Justos y Transparentes",
+        "description": "Servicio premium a tarifas competitivas, sin cargos ocultos ni sorpresas.",
+        "category": "Valor"
+      },
+      "management": {
+        "title": "Gestión Integral de Eventos",
+        "description": "Desde el concepto hasta la ejecución, manejamos cada detalle para que puedas enfocarte en disfrutar el momento.",
+        "category": "Gestión"
+      },
+      "experience": {
+        "title": "20+ Años de Experiencia Local",
+        "description": "Profundo conocimiento del destino en Cancún y la Riviera Maya.",
+        "category": "Experiencia"
+      },
+      "luxury": {
+        "title": "ADN de Hospitalidad de Lujo",
+        "description": "Dirigido por ex ejecutivos de Ritz-Carlton que viven y respiran excelencia en el servicio.",
+        "category": "Lujo"
+      },
+      "boutique": {
+        "title": "DMC Boutique Operado por Propietarios",
+        "description": "Trabaja directamente con nuestro equipo directivo para apoyo rápido, reflexivo y personalizado.",
+        "category": "Liderazgo"
+      },
+      "trusted": {
+        "title": "Confiado por Líderes de la Industria",
+        "description": "Hemos entregado programas impecables para empresas Fortune 500, planificadores de primer nivel y VIPs exigentes.",
+        "category": "Confianza"
+      }
+    }
+  },
   "meta": {
     "home": {
       "page": "Cancun Concierge DMC | Eventos y Experiencias de Lujo en Cancún",
