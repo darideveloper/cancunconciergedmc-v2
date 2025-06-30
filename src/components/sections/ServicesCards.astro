@@ -22,7 +22,7 @@ const services = serviceKeys.map((key) => ({
   icon: servicesItemsIcons[key as keyof typeof servicesItemsIcons],
   title: t(`services.cards.${key}.title`),
   text: t(`services.cards.${key}.text`),
-  href: getWhatsappMessageUrl(baseMessage + t(`services.cards.${key}.title`)),
+  href: getWhatsappMessageUrl(`${baseMessage} ${t(`services.cards.${key}.title`)}`),
   key: key,
 }))
 

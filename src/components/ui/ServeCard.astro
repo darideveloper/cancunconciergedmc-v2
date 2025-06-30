@@ -30,7 +30,7 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Data
-const messageBase = t('clients.baseMessage')
+const baseMessage = t('clients.baseMessage')
 ---
 
 <article
@@ -194,7 +194,7 @@ const messageBase = t('clients.baseMessage')
                 'cursor-pointer',
                 isFirst && 'lg:min-w-52 xl:min-w-64 ',
               ]}
-              href={getWhatsappMessageUrl(`${messageBase}: ${item}`)}
+              href={getWhatsappMessageUrl(`${baseMessage}: ${item}`)}
               target='_blank'
             >
               <!-- Item Number -->
