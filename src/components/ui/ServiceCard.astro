@@ -6,6 +6,7 @@ interface Props {
   title: string
   text: string
   href: string
+  id: string
   class?: string
 }
 
@@ -14,6 +15,7 @@ const {
   title,
   text,
   href,
+  id,
   class: className = '',
 } = Astro.props as Props
 ---
@@ -25,6 +27,7 @@ const {
     'duration-300',
     className,
   ]}
+  id={id}
 >
   <a
     href={href}

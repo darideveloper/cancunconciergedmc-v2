@@ -9,8 +9,8 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // data
-import { servicesItems } from '../../data/servcies'
-
+import { servicesItemsIcons } from '../../data/servcies'
+const servicesItems = Object.keys(servicesItemsIcons)
 
 const menuItemsLang = servicesItems.map((item) => {
     return {

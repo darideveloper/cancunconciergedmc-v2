@@ -3,17 +3,6 @@
 import Title from '../ui/Title.astro'
 import ServiceCard from '../ui/ServiceCard.astro'
 
-// Icons
-import {
-  MdAirplanemodeActive,
-  MdDirectionsBoat,
-  MdGolfCourse,
-  MdGroups2,
-  MdLocalHospital,
-  MdOutlineStarPurple500,
-  MdCameraAlt,
-} from 'react-icons/md'
-
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { marked } from 'marked'
@@ -22,24 +11,17 @@ import { marked } from 'marked'
 const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
-// Services data with icons mapping
-const serviceIcons = {
-  transfers: MdAirplanemodeActive,
-  yacht: MdDirectionsBoat,
-  golf: MdGolfCourse,
-  teambuilding: MdGroups2,
-  desk: MdLocalHospital,
-  entertainment: MdOutlineStarPurple500,
-  photography: MdCameraAlt,
-}
+// Data
+import { servicesItemsIcons } from '../../data/servcies'
 
 // Get services from translations
-const serviceKeys = Object.keys(serviceIcons)
+const serviceKeys = Object.keys(servicesItemsIcons)
 const services = serviceKeys.map((key) => ({
-  icon: serviceIcons[key as keyof typeof serviceIcons],
+  icon: servicesItemsIcons[key as keyof typeof servicesItemsIcons],
   title: t(`services.menuCards.${key}.title`),
   text: t(`services.menuCards.${key}.text`),
   href: '/contact',
+  key: key,
 }))
 
 // Parse services description as markdown
@@ -47,7 +29,7 @@ const servicesDescription = marked(t('services.description'))
 ---
 
 <!-- Service Cards Section -->
-<section class:list={['container']}>
+<section class:list={['container']} id="services-cards">
   <div class:list={['text-center', 'mb-12']}>
     <Title class:list={['!text-center']}>{t('services.title')}</Title>
     <div 
@@ -73,6 +55,7 @@ const servicesDescription = marked(t('services.description'))
           text={service.text}
           href={service.href}
           class:list={['h-full', 'last:xl:col-span-2 first:md:col-span-2']}
+          id={service.key}
         />
       ))
     }
