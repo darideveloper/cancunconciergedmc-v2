@@ -6,9 +6,7 @@ import Layout from '../../layouts/Layout.astro'
 import FullWidthVideo from '../../components/ui/FullWidthVideo.astro'
 import ServicesMenu from '../../components/sections/ServicesMenu.astro'
 import ServicesCards from '../../components/sections/ServicesCards.astro'
-
-// New Service Cards
-import ServeCard from '../../components/ui/ServeCard.astro'
+import ClientsCards from '../../components/sections/ClientsCards.astro'
 
 // Why Work With Us Alternatives
 import WhyWorkWithUs from '../../components/sections/WhyWorkWithUs.astro'
@@ -80,46 +78,6 @@ const serveCardData = [
   <FullWidthVideo src='/videos/services.mp4' />
   <ServicesMenu />
   <ServicesCards />
-
-  <!-- ServeCard Section -->
-  <section class:list={['container', 'mt-20', 'mb-16']}>
-    <div class:list={['text-center', 'mb-12']}>
-      <h2
-        class:list={[
-          'text-3xl',
-          'font-bold',
-          'text-blue',
-          'font-title',
-          'mb-4',
-        ]}
-      >
-        Activities & Logistics
-      </h2>
-      <p class:list={['text-gray-600', 'font-sans', 'max-w-2xl', 'mx-auto']}>
-        Complete travel and activity solutions for groups and individuals
-      </p>
-    </div>
-
-    <div
-      class:list={[
-        'grid',
-        'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
-        'gap-8',
-        'max-w-7xl',
-        'mx-auto',
-      ]}
-    >
-      {
-        serveCardData.map((data) => (
-          <ServeCard
-            icon={data.icon}
-            title={data.title}
-            items={data.items}
-          />
-        ))
-      }
-    </div>
-  </section>
-
+  <ClientsCards />
   <WhyWorkWithUs />
 </Layout>

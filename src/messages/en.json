@@ -77,6 +77,49 @@
         "baseMessage": "Hello, I am interested in your services for",
         "imageAlt": "Our clients enjoying a great time in Cancun"
     },
+    "clientsCards": {
+        "title": "Activities & Logistics",
+        "description": "Complete travel and activity solutions for groups and individuals",
+        "group": {
+            "title": "Group Activities",
+            "items": [
+                "Team Building",
+                "Corporate Retreats",
+                "Educational Tours",
+                "Adventure Activities",
+                "Cultural Experiences",
+                "Wellness Programs",
+                "Networking Events",
+                "Leadership Workshops"
+            ]
+        },
+        "leisure": {
+            "title": "Leisure & Entertainment",
+            "items": [
+                "Beach Activities",
+                "Spa Services",
+                "Entertainment Shows",
+                "Nightlife Tours",
+                "Shopping Experiences",
+                "Cultural Tours",
+                "Photography Sessions",
+                "Relaxation Packages"
+            ]
+        },
+        "travel": {
+            "title": "Travel & Logistics",
+            "items": [
+                "Flight Arrangements",
+                "Travel Planning",
+                "Itinerary Management",
+                "Documentation Support",
+                "Insurance Services",
+                "Emergency Assistance",
+                "Multi-Destination Tours",
+                "Custom Travel Packages"
+            ]
+        }
+    },
     "services": {
         "menuItems": {
             "transfers": "Airport Transfers & VIP Transportation",

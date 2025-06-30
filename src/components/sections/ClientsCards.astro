@@ -1,0 +1,73 @@
+---
+// Components
+import ServeCard from '../ui/ServeCard.astro'
+
+// Icons
+import {
+  MdGroups,
+  MdBeachAccess,
+  MdLocalAirport,
+} from 'react-icons/md'
+
+// Libs
+import { useTranslations } from '../../i18n/utils'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+// Define the icons mapping
+const iconsMapping = {
+  group: MdGroups,
+  leisure: MdBeachAccess,
+  travel: MdLocalAirport,
+}
+
+// Get cards data from translations
+const cardKeys = Object.keys(iconsMapping)
+const clientsCardsData = cardKeys.map((key) => ({
+  icon: iconsMapping[key as keyof typeof iconsMapping],
+  title: t(`clientsCards.${key}.title`),
+  items: t(`clientsCards.${key}.items`),
+}))
+---
+
+<!-- Clients Cards Section -->
+<section class:list={['container', 'mt-20', 'mb-16']} id='who-we-serve'>
+  <div class:list={['text-center', 'mb-12']}>
+    <h2
+      class:list={[
+        'text-3xl',
+        'font-bold',
+        'text-blue',
+        'font-title',
+        'mb-4',
+      ]}
+    >
+      {t('clientsCards.title')}
+    </h2>
+    <p class:list={['text-gray-600', 'font-sans', 'max-w-2xl', 'mx-auto']}>
+      {t('clientsCards.description')}
+    </p>
+  </div>
+
+  <div
+    class:list={[
+      'grid',
+      'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+      'gap-8',
+      'max-w-7xl',
+      'mx-auto',
+    ]}
+  >
+    {
+      clientsCardsData.map((data) => (
+        <ServeCard
+          icon={data.icon}
+          title={data.title}
+          items={data.items}
+        />
+      ))
+    }
+  </div>
+</section> 

@@ -77,6 +77,49 @@
     "baseMessage": "Hola, estoy interesado en sus servicios para",
     "imageAlt": "Nuestros clientes disfrutando de un gran momento en Cancún"
   },
+  "clientsCards": {
+    "title": "Actividades y Logística",
+    "description": "Soluciones completas de viaje y actividades para grupos e individuos",
+    "group": {
+      "title": "Actividades Grupales",
+      "items": [
+        "Team Building",
+        "Retiros Corporativos",
+        "Tours Educativos",
+        "Actividades de Aventura",
+        "Experiencias Culturales",
+        "Programas de Bienestar",
+        "Eventos de Networking",
+        "Talleres de Liderazgo"
+      ]
+    },
+    "leisure": {
+      "title": "Ocio y Entretenimiento",
+      "items": [
+        "Actividades de Playa",
+        "Servicios de Spa",
+        "Espectáculos de Entretenimiento",
+        "Tours Nocturnos",
+        "Experiencias de Compras",
+        "Tours Culturales",
+        "Sesiones de Fotografía",
+        "Paquetes de Relajación"
+      ]
+    },
+    "travel": {
+      "title": "Viajes y Logística",
+      "items": [
+        "Arreglos de Vuelos",
+        "Planificación de Viajes",
+        "Gestión de Itinerarios",
+        "Soporte de Documentación",
+        "Servicios de Seguros",
+        "Asistencia de Emergencia",
+        "Tours Multi-Destino",
+        "Paquetes de Viaje Personalizados"
+      ]
+    }
+  },
   "services": {
     "menuItems": {
       "transfers": "Traslados & Transporte VIP",
