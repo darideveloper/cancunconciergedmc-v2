@@ -279,6 +279,11 @@
             "page": "Transportation",
             "description": "Book your seamless airport transportation in Cancun and Riviera Maya with Cancun Concierge DMC. Secure reliable transfers to your hotel or Airbnb. Choose from private options with meet & greet services. Reserve now!",
             "keywords": "Cancun transportation, airport transfer Cancun, hotel transfer Cancun, Airbnb transfer Cancun, private transportation Cancun, Riviera Maya transportation, Cancun shuttle, transportation services Cancun, book transportation Cancun"
+        },
+        "gallery": {
+            "page": "Gallery",
+            "description": "Explore our gallery of events, services, and transportations in Cancun and the Riviera Maya.",
+            "keywords": "Cancun Concierge DMC, gallery, events, services, transportations, Cancun, Riviera Maya"
         }
     },
     "riviera": {
