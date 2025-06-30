@@ -78,45 +78,49 @@
     "imageAlt": "Nuestros clientes disfrutando de un gran momento en Cancún"
   },
   "clientsCards": {
-    "title": "Actividades y Logística",
-    "description": "Soluciones completas de viaje y actividades para grupos e individuos",
-    "group": {
-      "title": "Actividades Grupales",
+    "title": "A Quiénes Servimos",
+    "description": "En Cancun Concierge DMC, servimos con orgullo a una amplia gama de clientes que buscan experiencias de clase mundial en Cancún y la Riviera Maya. Nuestros programas a la medida están diseñados para cumplir los objetivos de cada grupo, ya sea corporativo, social o personal.",
+    "corporate": {
+      "title": "Clientes Corporativos y Empresariales",
       "items": [
-        "Team Building",
-        "Retiros Corporativos",
-        "Tours Educativos",
-        "Actividades de Aventura",
-        "Experiencias Culturales",
-        "Programas de Bienestar",
-        "Eventos de Networking",
-        "Talleres de Liderazgo"
+        "Reuniones de Consejo",
+        "Retiros Ejecutivos",
+        "Congresos y Conferencias",
+        "Programas de Incentivos",
+        "Clubes Presidenciales",
+        "Lanzamientos de Productos",
+        "Activaciones de Marca",
+        "Inspecciones de Sitio"
+      ]
+    },
+    "social": {
+      "title": "Eventos Sociales y Privados",
+      "items": [
+        "Bodas",
+        "Celebraciones Especiales (Aniversarios, Cumpleaños Importantes, Renovación de Votos)",
+        "Reuniones Familiares",
+        "Despedidas de Soltero y Soltera",
+        "Cenas de Destino"
       ]
     },
     "leisure": {
-      "title": "Ocio y Entretenimiento",
+      "title": "Grupos de Ocio y Estilo de Vida",
       "items": [
-        "Actividades de Playa",
-        "Servicios de Spa",
-        "Espectáculos de Entretenimiento",
-        "Tours Nocturnos",
-        "Experiencias de Compras",
-        "Tours Culturales",
-        "Sesiones de Fotografía",
-        "Paquetes de Relajación"
+        "Grupos de Viaje de Lujo",
+        "FITs de Alto Nivel (Viajeros Totalmente Independientes)",
+        "Familias Multigeneracionales Afluentes",
+        "Viajeros de Estilo de Vida en Yate",
+        "Retiros de Bienestar",
+        "Grupos de Golf"
       ]
     },
-    "travel": {
-      "title": "Viajes y Logística",
+    "media": {
+      "title": "Medios, VIP y Producción",
       "items": [
-        "Arreglos de Vuelos",
-        "Planificación de Viajes",
-        "Gestión de Itinerarios",
-        "Soporte de Documentación",
-        "Servicios de Seguros",
-        "Asistencia de Emergencia",
-        "Tours Multi-Destino",
-        "Paquetes de Viaje Personalizados"
+        "Escapadas de Celebridades",
+        "Equipos de Filmación y Producción",
+        "Viajes de Influencers y Relaciones Públicas",
+        "Sesiones de Moda y Editoriales"
       ]
     }
   },

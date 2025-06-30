@@ -5,6 +5,7 @@ interface Props {
   icon: IconType
   title: string
   items: string[]
+  isFirst?: boolean
   class?: string
 }
 
@@ -12,6 +13,7 @@ const {
   icon: Icon,
   title,
   items,
+  isFirst,
   class: className = '',
 } = Astro.props as Props
 ---
@@ -161,7 +163,7 @@ const {
 
       <!-- Services List -->
       <div class:list={['services-list', 'flex-1', 'p-6', 'pt-4']}>
-        <div class:list={['space-y-3']}>
+        <div class:list={['space-y-3', isFirst && 'lg:flex', 'flex-wrap', 'gap-3', 'justify-start', 'items-start']}>
           {items.map((item, index) => (
             <div
               class:list={[
@@ -174,6 +176,7 @@ const {
                 'p-3',
                 'duration-200',
                 'cursor-pointer',
+                isFirst && 'lg:min-w-52 xl:min-w-64 ',
               ]}
             >
               <!-- Item Number -->
@@ -208,6 +211,7 @@ const {
                   'font-medium',
                   'duration-200',
                   'flex-1',
+                  'mr-4',
                 ]}
               >
                 {item}

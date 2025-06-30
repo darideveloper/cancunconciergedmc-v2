@@ -77,49 +77,53 @@
         "baseMessage": "Hello, I am interested in your services for",
         "imageAlt": "Our clients enjoying a great time in Cancun"
     },
-    "clientsCards": {
-        "title": "Activities & Logistics",
-        "description": "Complete travel and activity solutions for groups and individuals",
-        "group": {
-            "title": "Group Activities",
-            "items": [
-                "Team Building",
-                "Corporate Retreats",
-                "Educational Tours",
-                "Adventure Activities",
-                "Cultural Experiences",
-                "Wellness Programs",
-                "Networking Events",
-                "Leadership Workshops"
-            ]
-        },
-        "leisure": {
-            "title": "Leisure & Entertainment",
-            "items": [
-                "Beach Activities",
-                "Spa Services",
-                "Entertainment Shows",
-                "Nightlife Tours",
-                "Shopping Experiences",
-                "Cultural Tours",
-                "Photography Sessions",
-                "Relaxation Packages"
-            ]
-        },
-        "travel": {
-            "title": "Travel & Logistics",
-            "items": [
-                "Flight Arrangements",
-                "Travel Planning",
-                "Itinerary Management",
-                "Documentation Support",
-                "Insurance Services",
-                "Emergency Assistance",
-                "Multi-Destination Tours",
-                "Custom Travel Packages"
-            ]
-        }
+      "clientsCards": {
+    "title": "Who We Serve",
+    "description": "At Cancun Concierge DMC, we proudly serve a wide range of clients seeking world-class experiences in Cancun and the Riviera Maya. Our tailor-made programs are designed to meet the goals of each group—whether corporate, social, or personal.",
+    "corporate": {
+      "title": "Corporate & Business Clients",
+      "items": [
+        "Board Meetings",
+        "Executive Retreats",
+        "Congresses & Conferences",
+        "Incentive Programs",
+        "President's Club",
+        "Product Launches",
+        "Brand Activations",
+        "Site Inspections"
+      ]
     },
+    "social": {
+      "title": "Social & Private Events",
+      "items": [
+        "Weddings",
+        "Special Celebrations (Anniversaries, Milestone Birthdays, Vow Renewals)",
+        "Family Reunions",
+        "Bachelor & Bachelorette Parties",
+        "Destination Dinners"
+      ]
+    },
+    "leisure": {
+      "title": "Leisure & Lifestyle Groups",
+      "items": [
+        "Luxury Travel Groups",
+        "High-End FITs (Fully Independent Travelers)",
+        "Affluent Multigenerational Families",
+        "Yacht Lifestyle Travelers",
+        "Wellness Retreats",
+        "Golf Groups"
+      ]
+    },
+    "media": {
+      "title": "Media, VIP & Production",
+      "items": [
+        "Celebrity Getaways",
+        "Film & Production Crews",
+        "Influencer & PR Trips",
+        "Fashion & Editorial Shoots"
+      ]
+    }
+  },
     "services": {
         "cards": {
             "transfers": {
