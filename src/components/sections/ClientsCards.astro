@@ -2,14 +2,6 @@
 // Components
 import ServeCard from '../ui/ServeCard.astro'
 
-// Icons
-import {
-  MdBusiness,
-  MdCelebration,
-  MdBeachAccess,
-  MdVideocam,
-} from 'react-icons/md'
-
 // Libs
 import { useTranslations } from '../../i18n/utils'
 
@@ -17,20 +9,16 @@ import { useTranslations } from '../../i18n/utils'
 const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
-// Define the icons mapping
-const iconsMapping = {
-  corporate: MdBusiness,
-  social: MdCelebration,
-  leisure: MdBeachAccess,
-  media: MdVideocam,
-}
+// Data
+import { clientsItemsIcons } from '../../data/clients'
 
-// Get cards data from translations
-const cardKeys = Object.keys(iconsMapping)
+// Get cards data from clientsItemsIcons
+const cardKeys = Object.keys(clientsItemsIcons)
 const clientsCardsData = cardKeys.map((key) => ({
-  icon: iconsMapping[key as keyof typeof iconsMapping],
+  icon: clientsItemsIcons[key as keyof typeof clientsItemsIcons],
   title: t(`clientsCards.${key}.title`),
   items: t(`clientsCards.${key}.items`),
+  key: key,
 }))
 ---
 
@@ -69,7 +57,7 @@ const clientsCardsData = cardKeys.map((key) => ({
           title={data.title}
           items={data.items}
           isFirst={index === 0}
-          key={data.title}
+          key={data.key}
           class:list={['lg:first:col-span-3']}
         />
       ))
