@@ -1,6 +1,8 @@
 ---
+// Icons
 import type { IconType } from 'react-icons/lib'
 
+// Props
 interface Props {
   icon: IconType
   title: string
@@ -16,6 +18,17 @@ const {
   isFirst,
   class: className = '',
 } = Astro.props as Props
+
+// Libs
+import { useTranslations } from '../../i18n/utils'
+import { getWhatsappMessageUrl } from '../../data/contact'
+
+// i18n
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
+
+// Data
+const messageBase = t('clients.baseMessage')
 ---
 
 <article
@@ -157,7 +170,7 @@ const {
             'duration-300',
           ]}
         >
-          Professional Services
+          Premium Services
         </div>
       </div>
 
@@ -165,7 +178,7 @@ const {
       <div class:list={['services-list', 'flex-1', 'p-6', 'pt-4']}>
         <div class:list={['space-y-3', isFirst && 'lg:flex', 'flex-wrap', 'gap-3', 'justify-start', 'items-start']}>
           {items.map((item, index) => (
-            <div
+            <a
               class:list={[
                 'service-item',
                 'flex',
@@ -178,6 +191,8 @@ const {
                 'cursor-pointer',
                 isFirst && 'lg:min-w-52 xl:min-w-64 ',
               ]}
+              href={getWhatsappMessageUrl(`${messageBase}: ${item}`)}
+              target='_blank'
             >
               <!-- Item Number -->
               <div
@@ -229,7 +244,7 @@ const {
                   'duration-200',
                 ]}
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>
