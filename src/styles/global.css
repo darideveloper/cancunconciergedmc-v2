@@ -1,31 +1,35 @@
 @layer base, starlight, theme, components, utilities;
-@import "tailwindcss";
+@import 'tailwindcss';
 @import '@astrojs/starlight-tailwind';
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
-    --font-title: 'Oswald Variable', 'sans-serif';
-    --font-sans: 'Urbanist Variable', 'sans-serif';
-    --color-blue: #4f6a9e;
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --color-gold: #c7b66b;
+  --font-title: 'Oswald Variable', 'sans-serif';
+  --font-sans: 'Urbanist Variable', 'sans-serif';
+  --color-blue: #4f6a9e;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gold: #c7b66b;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
-    margin: 8rem auto;
-    max-width: 1350px;
-    padding-right: 1rem;
-    padding-left: 1rem;
+  margin: 8rem auto;
+  max-width: 1350px;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .debug {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Custom scroll bar */
@@ -51,37 +55,37 @@ p {
 }
 
 .md-content ul {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .md-content li {
-    list-style-type: square;
-    margin-left: 1.5rem;
+  list-style-type: square;
+  margin-left: 1.5rem;
 }
 
 /* Swiper styles */
 
-.swiper-button-next, 
+.swiper-button-next,
 .swiper-button-prev {
-    color: var(--color-white) !important;
-    background-color: var(--color-gold) !important;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50%;
-    transition-duration: 0.2s !important;
+  color: var(--color-white) !important;
+  background-color: var(--color-gold) !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  transition-duration: 0.2s !important;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: var(--color-blue) !important;
-    color: var(--color-white) !important;
+  background-color: var(--color-blue) !important;
+  color: var(--color-white) !important;
 }
 
-.swiper-button-next::after, 
+.swiper-button-next::after,
 .swiper-button-prev::after {
-    font-size: 15px !important;
+  font-size: 15px !important;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: var(--color-gold) !important;
+  background-color: var(--color-gold) !important;
 }
