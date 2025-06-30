@@ -8,6 +8,7 @@ interface Props {
   title: string
   items: string[]
   isFirst?: boolean
+  key?: string
   class?: string
 }
 
@@ -16,6 +17,7 @@ const {
   title,
   items,
   isFirst,
+  key,
   class: className = '',
 } = Astro.props as Props
 
@@ -46,6 +48,7 @@ const messageBase = t('clients.baseMessage')
     'relative',
     className,
   ]}
+  id={key}
 >
   <div class:list={['flex', 'h-full']}>
     <!-- Sidebar with Icon -->

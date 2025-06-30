@@ -17,10 +17,10 @@ interface Props {
   imageSrc: string
   imageAlt: string
   id: string
-  target: string
+  target?: string
 }
 
-const { menuItems, title, imageSrc, imageAlt, id, target } = Astro.props
+const { menuItems, title, imageSrc, imageAlt, id, target = '_self' } = Astro.props
 ---
 
 <section

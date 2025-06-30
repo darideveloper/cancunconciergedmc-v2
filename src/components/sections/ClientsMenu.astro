@@ -20,15 +20,18 @@ const menuItems = [
     'special',
 ]
 
+// Data
 const menuItemsLang = menuItems.map((item) => {
-    return t(`clients.menuItems.${item}`)
+    return {
+        "text": t(`clients.menuItems.${item}`),
+        "url": `#${item}`
+    }
 })
 ---
 
 <LinksMenu 
     menuItems={menuItemsLang}
     title={t('clients.title')}
-    baseMessage={t('clients.baseMessage')}
     imageSrc='/clients.webp'
     imageAlt={t('clients.imageAlt')}
     id='clients'

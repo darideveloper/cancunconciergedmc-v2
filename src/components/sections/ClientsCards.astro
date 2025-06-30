@@ -69,6 +69,7 @@ const clientsCardsData = cardKeys.map((key) => ({
           title={data.title}
           items={data.items}
           isFirst={index === 0}
+          key={data.title}
           class:list={['lg:first:col-span-3']}
         />
       ))
