@@ -11,19 +11,11 @@ import ServicesCards from '../../components/sections/ServicesCards.astro'
 import ServeCard from '../../components/ui/ServeCard.astro'
 
 // Why Work With Us Alternatives
-import WhyWorkWithUsA from '../../components/sections/WhyWorkWithUsA.astro'
-import WhyWorkWithUsB from '../../components/sections/WhyWorkWithUsB.astro'
-import WhyWorkWithUsC from '../../components/sections/WhyWorkWithUsC.astro'
+import WhyWorkWithUs from '../../components/sections/WhyWorkWithUs.astro'
 
 // Icons
 import {
-  MdBusiness,
-  MdEvent,
   MdGroups,
-  MdDirectionsCar,
-  MdHotel,
-  MdRestaurant,
-  MdSportsSoccer,
   MdBeachAccess,
   MdLocalAirport,
 } from 'react-icons/md'
@@ -50,8 +42,8 @@ const serveCardData = [
       'Cultural Experiences',
       'Wellness Programs',
       'Networking Events',
-      'Leadership Workshops'
-    ]
+      'Leadership Workshops',
+    ],
   },
   {
     icon: MdBeachAccess,
@@ -64,8 +56,8 @@ const serveCardData = [
       'Shopping Experiences',
       'Cultural Tours',
       'Photography Sessions',
-      'Relaxation Packages'
-    ]
+      'Relaxation Packages',
+    ],
   },
   {
     icon: MdLocalAirport,
@@ -78,9 +70,9 @@ const serveCardData = [
       'Insurance Services',
       'Emergency Assistance',
       'Multi-Destination Tours',
-      'Custom Travel Packages'
-    ]
-  }
+      'Custom Travel Packages',
+    ],
+  },
 ]
 ---
 
@@ -92,7 +84,15 @@ const serveCardData = [
   <!-- ServeCard Section -->
   <section class:list={['container', 'mt-20', 'mb-16']}>
     <div class:list={['text-center', 'mb-12']}>
-      <h2 class:list={['text-3xl', 'font-bold', 'text-blue', 'font-title', 'mb-4']}>
+      <h2
+        class:list={[
+          'text-3xl',
+          'font-bold',
+          'text-blue',
+          'font-title',
+          'mb-4',
+        ]}
+      >
         Activities & Logistics
       </h2>
       <p class:list={['text-gray-600', 'font-sans', 'max-w-2xl', 'mx-auto']}>
@@ -109,22 +109,17 @@ const serveCardData = [
         'mx-auto',
       ]}
     >
-      {serveCardData.map((data) => (
-        <ServeCard
-          icon={data.icon}
-          title={data.title}
-          items={data.items}
-        />
-      ))}
+      {
+        serveCardData.map((data) => (
+          <ServeCard
+            icon={data.icon}
+            title={data.title}
+            items={data.items}
+          />
+        ))
+      }
     </div>
   </section>
 
-  <!-- Why Work With Us - Design Alternative A -->
-  <WhyWorkWithUsA />
-
-  <!-- Why Work With Us - Design Alternative B -->
-  <WhyWorkWithUsB />
-
-  <!-- Why Work With Us - Design Alternative C -->
-  <WhyWorkWithUsC />
+  <WhyWorkWithUs />
 </Layout>
