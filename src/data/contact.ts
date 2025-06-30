@@ -1,3 +1,6 @@
+export const phoneNumber = '5219982391978'
+export const whatsappBaseUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}`
+
 export const socialLinks: { text: string; url: string }[] = [
   {
     text: 'google maps',
@@ -24,3 +27,8 @@ export const contactClassicLinks: { text: string; url: string }[] = [
     url: 'mailto:info@cancunconciergedmc.com',
   }
 ]
+
+export function getWhatsappMessageUrl(message: string): string {
+  const textClean = message.replace(/&/g, '%26')
+  return `${whatsappBaseUrl}&text=${textClean}`
+}
