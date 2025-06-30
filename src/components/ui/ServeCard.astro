@@ -21,13 +21,10 @@ const {
     'serve-card-c',
     'bg-white',
     'rounded-2xl',
-    'shadow-lg',
-    'hover:shadow-2xl',
-    'transition-all',
-    'duration-500',
+    'shadow-lg hover:shadow-2xl',
+    'duration-300',
     'border',
-    'border-gray-100',
-    'hover:border-gold',
+    'border-gray-100  hover:border-gold',
     'group',
     'h-full',
     'overflow-hidden',
@@ -42,18 +39,16 @@ const {
         'sidebar',
         'w-20',
         'bg-gradient-to-b',
-        'from-blue',
-        'to-blue/80',
-        'group-hover:from-gold',
-        'group-hover:to-gold/80',
+        'from-blue group-hover:from-gold',
+        'to-blue/80 group-hover:to-gold/80',
         'flex',
         'flex-col',
         'items-center',
         'justify-center',
-        'transition-all',
-        'duration-500',
+        'duration-300',
         'relative',
         'overflow-hidden',
+        'transition-colors',
       ]}
     >
       <!-- Background Pattern -->
@@ -83,7 +78,6 @@ const {
           'shadow-lg',
           'transform',
           'group-hover:scale-110',
-          'transition-all',
           'duration-300',
         ]}
       >
@@ -137,10 +131,8 @@ const {
             'title',
             'text-xl',
             'font-bold',
-            'text-blue',
-            'group-hover:text-gold',
+            'text-blue group-hover:text-gold',
             'font-title',
-            'transition-colors',
             'duration-300',
             'mb-2',
           ]}
@@ -155,14 +147,11 @@ const {
             'items-center',
             'px-2',
             'py-1',
-            'bg-blue/10',
-            'group-hover:bg-gold/10',
-            'text-blue',
-            'group-hover:text-gold',
+            'bg-blue/10 group-hover:bg-gold/10',
+            'text-blue group-hover:text-gold',
             'rounded-md',
             'text-xs',
             'font-medium',
-            'transition-all',
             'duration-300',
           ]}
         >
@@ -183,7 +172,6 @@ const {
                 'hover:bg-gray-50',
                 'rounded-lg',
                 'p-3',
-                'transition-all',
                 'duration-200',
                 'cursor-pointer',
               ]}
@@ -194,10 +182,8 @@ const {
                   'item-number',
                   'w-6',
                   'h-6',
-                  'bg-gray-100',
-                  'group-hover/item:bg-blue/20',
-                  'text-gray-500',
-                  'group-hover/item:text-blue',
+                  'bg-gray-100 group-hover/item:bg-blue/20',
+                  'text-gray-500 group-hover/item:text-blue',
                   'rounded-full',
                   'flex',
                   'items-center',
@@ -206,7 +192,6 @@ const {
                   'font-medium',
                   'mr-3',
                   'flex-shrink-0',
-                  'transition-all',
                   'duration-200',
                 ]}
               >
@@ -217,12 +202,10 @@ const {
               <span
                 class:list={[
                   'item-text',
-                  'text-gray-700',
-                  'group-hover/item:text-gray-900',
+                  'text-gray-700 group-hover/item:text-gray-900',
                   'font-sans',
                   'text-sm',
                   'font-medium',
-                  'transition-colors',
                   'duration-200',
                   'flex-1',
                 ]}
@@ -236,12 +219,9 @@ const {
                   'hover-indicator',
                   'w-2',
                   'h-2',
-                  'bg-gray-300',
-                  'group-hover/item:bg-blue',
+                  'bg-gray-300 group-hover/item:bg-blue',
                   'rounded-full',
-                  'opacity-0',
-                  'group-hover/item:opacity-100',
-                  'transition-all',
+                  'opacity-0 group-hover/item:opacity-100',
                   'duration-200',
                 ]}
               />
@@ -273,10 +253,8 @@ const {
             class:list={[
               'cta-text',
               'text-xs',
-              'text-gray-500',
-              'group-hover:text-blue',
+              'text-gray-500 group-hover:text-blue',
               'font-medium',
-              'transition-colors',
               'duration-300',
             ]}
           >
@@ -288,11 +266,9 @@ const {
               'cta-arrow',
               'w-5',
               'h-5',
-              'text-gray-400',
-              'group-hover:text-blue',
+              'text-gray-400 group-hover:text-blue',
               'transform',
               'group-hover:translate-x-1',
-              'transition-all',
               'duration-300',
             ]}
           >
