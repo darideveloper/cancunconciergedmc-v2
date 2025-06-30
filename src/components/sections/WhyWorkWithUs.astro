@@ -11,6 +11,13 @@ import {
   MdVerified,
 } from 'react-icons/md'
 
+// Components
+import FeatureCard from '../ui/FeatureCard.astro'
+
+// Data 
+import { whatsappBaseUrl } from '../../libs/contact'
+
+
 const whyWorkWithUsData = [
   {
     icon: MdStar,
@@ -108,117 +115,15 @@ const whyWorkWithUsData = [
         'space-y-8',
       ]}
     >
-      {
-        whyWorkWithUsData.map((item) => {
-          const Icon = item.icon
-          return (
-            <div
-              class:list={[
-                'group',
-                'break-inside-avoid',
-                'bg-white',
-                'rounded-2xl',
-                'shadow-lg hover:shadow-2xl',
-                'transition-all',
-                'duration-500',
-                'border',
-                'border-gray-100 hover:border-gold',
-                'overflow-hidden',
-              ]}
-            >
-              <div class:list={['p-8']}>
-                <div
-                  class:list={[
-                    'flex',
-                    'items-center',
-                    'justify-between',
-                    'mb-6',
-                  ]}
-                >
-                  <div
-                    class:list={[
-                      'w-16',
-                      'h-16',
-                      'bg-gradient-to-br',
-                      'from-blue group-hover:from-gold',
-                      'to-blue/80 group-hover:to-gold/80',
-                      'rounded-2xl',
-                      'flex',
-                      'items-center',
-                      'justify-center',
-                      'transition-all',
-                      'duration-300',
-                      'transform',
-                      'group-hover:scale-110',
-                    ]}
-                  >
-                    <Icon className='text-white text-2xl' />
-                  </div>
-                  <span
-                    class:list={[
-                      'px-3',
-                      'py-1',
-                      'bg-blue/10 group-hover:bg-gold/10',
-                      'text-blue group-hover:text-gold',
-                      'text-xs',
-                      'font-medium',
-                      'rounded-full',
-                      'transition-all',
-                      'duration-300',
-                    ]}
-                  >
-                    {item.category}
-                  </span>
-                </div>
-
-                <h3
-                  class:list={[
-                    'text-xl',
-                    'font-bold',
-                    'text-blue group-hover:text-gold',
-                    'font-title',
-                    'mb-4',
-                    'transition-colors',
-                    'duration-300',
-                  ]}
-                >
-                  {item.title}
-                </h3>
-
-                <p class:list={['text-gray-600', 'leading-relaxed']}>
-                  {item.description}
-                </p>
-
-                <div
-                  class:list={['mt-6', 'pt-4', 'border-t', 'border-gray-100']}
-                >
-                  <div
-                    class:list={[
-                      'flex',
-                      'items-center',
-                      'text-sm',
-                      'text-gray-500',
-                    ]}
-                  >
-                    <div
-                      class:list={[
-                        'w-2',
-                        'h-2',
-                        'bg-blue group-hover:bg-gold',
-                        'rounded-full',
-                        'mr-2',
-                        'transition-colors',
-                        'duration-300',
-                      ]}
-                    />
-                    <span class:list={['font-medium']}>Premium Service</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
-        })
-      }
+      {whyWorkWithUsData.map((data) => (
+        <FeatureCard
+          icon={data.icon}
+          title={data.title}
+          description={data.description}
+          category={data.category}
+          href={whatsappBaseUrl}
+        />
+      ))}
     </div>
   </div>
 </section>
