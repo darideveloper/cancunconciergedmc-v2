@@ -102,7 +102,8 @@ const whyWorkWithUsData = [
   <div class:list={['max-w-7xl', 'mx-auto']}>
     <div
       class:list={[
-        'columns-1 md:columns-2 lg:columns-3',
+        'grid',
+        'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
         'gap-8',
         'space-y-8',
       ]}
@@ -184,9 +185,7 @@ const whyWorkWithUsData = [
                   {item.title}
                 </h3>
 
-                <p
-                  class:list={['text-gray-600', 'leading-relaxed']}
-                >
+                <p class:list={['text-gray-600', 'leading-relaxed']}>
                   {item.description}
                 </p>
 
@@ -223,4 +222,3 @@ const whyWorkWithUsData = [
     </div>
   </div>
 </section>
-
