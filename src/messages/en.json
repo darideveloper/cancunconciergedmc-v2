@@ -121,16 +121,7 @@
         }
     },
     "services": {
-        "menuItems": {
-            "transfers": "Airport Transfers & VIP Transportation",
-            "yacht": "Yacht Rentals & Water Activities",
-            "golf": "Golf & Group Excursions",
-            "teambuilding": "Teambuilding Experiences",
-            "desk": "Hospitality Desk Services",
-            "entertainment": "Décor & Entertainment",
-            "photography": "Photography Services"
-        },
-        "menuCards": {
+        "cards": {
             "transfers": {
                 "title": "Airport Transfers & VIP Transportation",
                 "text": "Make every arrival and departure effortless. Our luxury airport transfers include executive SUVs, deluxe vans, and Mercedes-Benz Sprinters, operated by bilingual drivers trained in five-star service. We also offer on-demand private chauffeurs and VIP transportation for any group size."
