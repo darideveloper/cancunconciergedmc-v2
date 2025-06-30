@@ -5,21 +5,22 @@ import { clsx } from 'clsx'
 // Styles
 import { titleClasses, getMenuLinksClasses } from '../../../styles/classes'
 
+interface MenuItem {
+  text: string
+  url: string
+}
+
 // Get props
 interface Props {
-  menuItems: string[]
+  menuItems: MenuItem[]
   title: string
-  baseMessage: string
   imageSrc: string
   imageAlt: string
   id: string
+  target: string
 }
 
-const { menuItems, title, baseMessage, imageSrc, imageAlt, id } = Astro.props
-
-// Fixed data
-const phoneNumber = '5219982391978'
-const baseUrl = 'https://api.whatsapp.com/send?phone='
+const { menuItems, title, imageSrc, imageAlt, id, target } = Astro.props
 ---
 
 <section
@@ -40,19 +41,15 @@ const baseUrl = 'https://api.whatsapp.com/send?phone='
     <!-- Links -->
     <ul>
       {
-        menuItems.map((text: string) => {
-
-          // Scape '&' in the text
-          const textClean = text.replace(/&/g, '%26')
-
+        menuItems.map((item: MenuItem) => {
           return (
             <li>
               <a
-                href={`${baseUrl}${phoneNumber}&text=${baseMessage} ${textClean}`}
-                target='_blank'
+                href={item.url}
+                target={target}
                 class={getMenuLinksClasses(false)}
               >
-                {text}
+                {item.text}
               </a>
             </li>
           )
