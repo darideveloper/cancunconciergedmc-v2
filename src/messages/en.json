@@ -143,13 +143,13 @@
         "description": "Explore our gallery of events, services, and transportations in Cancun and the Riviera Maya.",
         "categories": {
             "transports": {
-                "title": "Our Transportations"
+                "title": "Vehicles"
             },
             "events": {
-                "title": "Cancun Concierge DMC: Your Dream Event Made Reality"
+                "title": "Decor"
             },
             "services": {
-                "title": "Our Services"
+                "title": "Activities"
             }
         }
     },
