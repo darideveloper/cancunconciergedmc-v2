@@ -11,20 +11,8 @@ export const navLinks: {
     active: false,
   },
   {
-    text: 'testimonials',
-    url: '/testimonials',
-    urlLang: '',
-    active: false,
-  },
-  {
     text: 'services',
     url: '/services',
-    urlLang: '',
-    active: false,
-  },
-  {
-    text: 'transportation',
-    url: '/transportation',
     urlLang: '',
     active: false,
   },
@@ -34,6 +22,19 @@ export const navLinks: {
     urlLang: '',
     active: false,
   },
+  {
+    text: 'testimonials',
+    url: '/testimonials',
+    urlLang: '',
+    active: false,
+  },
+
+    {
+    text: 'transportation',
+    url: '/transportation',
+    urlLang: '',
+    active: false,
+  }
 ]
 
 export const footerLinks: {
