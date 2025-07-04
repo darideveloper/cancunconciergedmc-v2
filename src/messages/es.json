@@ -9,16 +9,32 @@
     "title": "Clientes Satisfechos",
     "quotes": {
       "ana": {
-        "name": "Anne Carpentier",
-        "quote": "No tenemos palabras para agradecerte todo lo que has hecho por nosotros en los últimos meses… y especialmente esta semana. Sin duda, el mejor DMC con el que hemos trabajado. Realmente no hay palabras para expresar lo increíble que es tu trabajo. De verdad espero que podamos volver a trabajar juntos en un futuro cercano."
+        "name": "Anne Carpenter - Jackson Dawson Communications",
+        "quote": "No tenemos palabras para agradecer todo lo que hicieron por nosotros. Por lejos, el mejor Destination Management Company con el que hemos trabajado — servicio realmente excepcional en Cancún y Riviera Maya. Su dedicación hizo que toda nuestra experiencia fuera impecable y especial. Esperamos volver a trabajar juntos muy pronto. ¡Su equipo fue más allá — simplemente sobresaliente!"
       },
       "erick": {
-        "name": "Erik Sabato",
-        "quote": "Omar, tu nivel de servicio no se compara con ningún otro. Compartiré tu nombre con todos los que conozco y les hablaré de tu excelente nivel de servicio. ¡Gracias por toda tu ayuda!"
+        "name": "Erick Sabato - Wyndham Hotels & Resorts, Inc",
+        "quote": "Omar, tu nivel de servicio es realmente incomparable. Estoy muy agradecido por toda tu ayuda y dedicación. Tu profesionalismo y cuidado marcan la diferencia. Compartiré tu nombre con todos los que conozco. La gente debe saber de tu excelente servicio para grupos de incentivos y eventos de lujo. ¡Gracias por siempre ir más allá!"
       },
       "gabriel": {
-        "name": "Gabriel Suarez",
-        "quote": "Omar, te agradezco muchísimo todo tu esfuerzo y tus excelentes habilidades de comunicación. Realmente me gustó lo que hiciste por nosotros. Fue genial encontrarte, ya que no había oído hablar de ti antes. Te enviaré a todos mis clientes para que tú y yo podamos seguir trabajando juntos."
+        "name": "Gabriel Suarez - Barea Solutions",
+        "quote": "Gracias Omar por todo tu esfuerzo y excelente comunicación. Me encantó todo lo que hiciste por nosotros — fue excepcional. Fue maravilloso encontrarte, aunque no te conocía antes. Tu dedicación y servicio concierge me impresionaron mucho. Te enviaré a todos mis clientes de ahora en adelante. ¡Espero seguir trabajando contigo!"
+      },
+      "rocco": {
+        "name": "Rocco Cironi - ServiceMaster Restore",
+        "quote": "Cancun Concierge DMC hizo un trabajo increíble con nuestro viaje de incentivos. Se encargaron de nuestros traslados de aeropuerto, excursiones y regalos de bienvenida de forma impecable. Omar y su equipo superaron todas nuestras expectativas. También tuvimos gran éxito con ellos en San José del Cabo. Altamente recomendados para viajes grupales, familiares o personales. ¡Déjalos ayudarte a planear una experiencia inolvidable!"
+      },
+      "magaly": {
+        "name": "Magaly Casadoumecq - Prior Events",
+        "quote": "Tuvimos una gran experiencia con Cancun Concierge para nuestro grupo de 160 personas. Sus servicios de transportación y concierge fueron impecables y confiables. Omar fue servicial, atento y siempre fue más allá desde el primer día. Todo el equipo fue profesional, amable y siempre dispuesto a ayudar. Realmente cumplieron nuestras expectativas y facilitaron toda la planeación. No dudaría en volver a trabajar con ellos en el futuro."
+      },
+      "alex": {
+        "name": "Alex Clatterbuck - Ready Go",
+        "quote": "Omar y Cancun Concierge son realmente excepcionales y siempre superan lo esperado. Organizaron la logística de 84 viajeros en 70 vuelos con transportación perfecta y puntual. Los cambios de último momento se manejaron de inmediato y sin fallos. En todos los eventos nunca tuvimos un solo problema: increíble confiabilidad. Omar siempre aporta ideas creativas y tiene grandes conexiones locales. Si buscas un DMC en Cancún o Riviera Maya, no busques más: ¡son los mejores!"
+      },
+      "naomi": {
+        "name": "Naomi Guridy - Premini Evets",
+        "quote": "Omar realmente ofrece una experiencia de hospitalidad que va más allá. Su dedicación y confianza lo distinguen en la industria de eventos de lujo. Siempre mantiene los mejores intereses de sus clientes, haciéndolos sentir como familia. Siempre recurrimos primero a Omar para viajes grupales de lujo y programas de incentivos en México. Su equipo refleja sus altos estándares y compromiso con un servicio impecable. Trabajar con Omar es tener tranquilidad: ¡siempre encuentra la solución!"
       }
     }
   },

@@ -1,344 +1,360 @@
 {
-    "general": {
-        "photoAlt": "Photo of"
+  "general": {
+    "photoAlt": "Photo of"
+  },
+  "contact": {
+    "title": "Contact me"
+  },
+  "testimonials": {
+    "title": "Satisfied Customers",
+    "quotes": {
+      "ana": {
+        "name": "Anne Carpenter - Jackson Dawson Communications",
+        "quote": "We can’t thank you enough for everything you’ve done for us. By far the best DMC we’ve ever worked with — truly exceptional service in Cancun and Riviera Maya. There are no words to express how amazing your work is. Your dedication made our entire experience seamless and special. We truly hope to work together again very soon. Your team went above and beyond — simply outstanding!"
+      },
+      "erick": {
+        "name": "Erick Sabato - Wyndham Hotels & Resorts, Inc",
+        "quote": "Omar, your level of service is truly unmatched. I’m so grateful for all your assistance and dedication. Your professionalism and care make all the difference. I will share your name with everyone I know. People need to know about your excellent service for incentive groups and luxury events. Thank you for going above and beyond every time!"
+      },
+      "gabriel": {
+        "name": "Gabriel Suarez - Barea Solutions",
+        "quote": "Thank you, Omar, for all your hard work and great communication. I really liked everything you did for us — it was exceptional. It was wonderful to find you, even though I hadn’t heard of you before. Your dedication and concierge service truly impressed me. I will send you all my clients moving forward. Looking forward to continuing our work together!"
+      },
+      "rocco": {
+        "name": "Rocco Cironi - ServiceMaster Restore",
+        "quote": "Cancun Concierge DMC did an amazing job with our incentive trip. They managed our airport transfers, excursions, and welcome gifts flawlessly. Omar and his team went above and beyond for our group. We also had great success with them in San Jose del Cabo. Highly recommended for group, family, or personal travel. Let them assist you in planning an unforgettable experience!"
+      },
+      "magaly": {
+        "name": "Magaly Casadoumecq - Prior Events",
+        "quote": "We had a great experience with Cancun Concierge for our 160-person group. Their transportation and concierge services were seamless and reliable. Omar was helpful, responsive, and went above and beyond from day one. The whole team was professional, friendly, and always eager to assist. They truly met our expectations and made planning much easier. I wouldn’t hesitate to work with them again in the future."
+      },
+      "alex": {
+        "name": "Alex Clatterbuck - Ready Go",
+        "quote": "Omar and Cancun Concierge are truly exceptional and over-deliver. They managed 84 travelers on 70 flights with perfect on-time transportation. Frequent last-minute changes were handled instantly, always flawlessly. In all events, we’ve never had a single issue — incredible reliability. Omar goes above and beyond with creative ideas and local connections. If you’re looking for a Destination Management Company in Cancun or Riviera Maya, look no further — they’re the best!"
+      },
+      "naomi": {
+        "name": "Naomi Guridy - Premini Evets",
+        "quote": "Omar truly provides an above-and-beyond hospitality experience. His dedication and trustworthiness set him apart in the luxury event industry. He always keeps his clients’ best interests at heart, making them feel like family. We always call Omar first when planning luxury group travel and incentive trips in Mexico. His team reflects his high standards and commitment to seamless service. Working with Omar means peace of mind — he always finds a way!"
+      }
+    }
+  },
+  "about": {
+    "title": "At Cancun Concierge DMC, Excellence is Personal",
+    "text": "At **Cancun Concierge DMC**, we specialize in designing **seamless, tailor-made experiences** for travelers, corporate groups, and special events across **Cancún and the Riviera Maya**;As a **boutique, owner-operated DMC** with over **20 years of experience**, we are more than local experts—we are passionate hosts who anticipate your needs and exceed expectations at every step.;Our founder, a former **Ritz-Carlton professional**, brings the brand's legendary philosophy of service to everything we do: thoughtful attention, unwavering standards, and warm, genuine care.;From luxury airport transfers to incentive programs and bespoke events, we combine insider knowledge with flawless execution to transform your visit into something truly extraordinary.;**Let us craft your next experience with the insight, dedication, and hospitality that define Cancun Concierge DMC**.",
+    "cta": "Learn more"
+  },
+  "whatWeDo": {
+    "title": "About Cancun Concierge DMC",
+    "text": "Crafting Exceptional Experiences in Cancun and the Riviera Maya\n\n At **Cancun Concierge DMC**, we are passionate about creating **tailor-made experiences that go far beyond logistics**—we design moments that feel effortless, personal, and unforgettable.\n\nWith **over 20 years of hands-on experience**, we specialize in the **comprehensive planning and flawless execution** of incentive programs, corporate meetings, private celebrations, and social events throughout **Cancun and the Riviera Maya**.\n\nAs a **boutique DMC operated by its founder**, a former **Ritz-Carlton professional**, we bring a rare blend of **luxury-level service, local insight, and genuine hospitality** to everything we do. Our clients don't just receive services—they enjoy a curated experience built with precision, creativity, and care.\n\nWe offer a full suite of **premium DMC services**, including:\n* Private and VIP airport transfers\n* Yacht charters and water activities\n* Group tours and cultural excursions\n* Teambuilding programs and CSR activities\n* Event production, décor, and entertainment\n* Photography and videography services\n* On-site coordination and 24/7 support\n\nWhether you're planning a **destination wedding**, a **presidential retreat**, or an **incentive trip to reward your top performers**, our team is here to make it happen—beautifully, efficiently, and stress-free.\n**Choose Cancun Concierge DMC and discover how our boutique approach and Ritz-Carlton-inspired service philosophy set us apart in Mexico's most iconic destinations**."
+  },
+  "whyUs": {
+    "slides": {
+      "sectur": {
+        "text": "Mexico's National Tourism Registry 27230050068",
+        "alt": "Sectur Logo"
+      }
+    }
+  },
+  "teamMenu": {
+    "title": "Meet Our Team",
+    "text": "At Cancun Concierge DMC, our team is more than a group of professionals—it's the heart of everything we do. With decades of combined experience in luxury hospitality, destination management, and high-end event planning, each member brings unmatched passion, precision, and local expertise to the table.\n\nTrained in world-class service standards and committed to excellence, we work together to create seamless and unforgettable experiences in Cancún and the Riviera Maya. Get to know the people who turn your vision into reality—with warmth, integrity, and a deep love for hospitality.",
+    "members": {
+      "omar": {
+        "name": "Omar Guzman, (General Manager)",
+        "bio": "**Founder & General Manager - Cancun Concierge DMC**\n\n*Luxury Hospitality Expert | 20+ Years of Experience | Ritz-Carlton Trained*\n\nBorn in the picturesque city of Orizaba, Mexico, **Omar Guzman** brings over **20 years of luxury hospitality experience** to his role as General Manager and founder of **Cancun Concierge DMC**. A graduate of **UDLAP University**, he holds a Bachelor's degree in Tourism Management and a Postgraduate Certificate in Executive Management.\n\nOmar's career began in 1998 when he moved to Cancún and joined **The Ritz-Carlton Hotels**, where he spent two decades mastering the **art of luxury service**. He worked across leading destinations in **Mexico, the Caribbean, and the United States**, becoming a true expert in creating elevated guest experiences.\n\nHis service philosophy—rooted in the **Ritz-Carlton gold standards**—is built on anticipating needs, exceeding expectations, and delivering warm, personalized attention. Today, he leads Cancun Concierge DMC with the same vision: to provide **flawless DMC services** with a boutique, hands-on approach.\n\nFluent in **Spanish, English, and Italian**, Omar connects effortlessly with international clients, offering a personal and multilingual approach to communication. Whether he's organizing an incentive trip, a CEO-level retreat, or a dream wedding, he ensures that every moment reflects **excellence, integrity, and thoughtful care**.\n\nOutside of work, Omar is a proud husband and father of two. He enjoys playing the guitar and early morning walks that allow him to reconnect with nature and faith."
+      },
+      "claudia": {
+        "name": "Claudia Rueda, (Operations Manager)",
+        "bio": "**Director of Operations - Cancun Concierge DMC**\n\n*DMC & Hospitality Specialist | 20+ Years of Experience | Detail-Oriented Leadership*\n\nOriginally from **Monterrey, Mexico, Claudia Rueda** brings over **20 years of experience in tourism and destination management** to her role as Director of Operations at Cancun Concierge DMC. Her impressive career includes key leadership roles at **The Ritz-Carlton** and top DMCs in **Mexico and the U.S. Virgin Islands**.\n\nAfter moving to **Cancún in 1994**, Claudia quickly became a driving force behind the delivery of luxury experiences for discerning travelers. She holds an **Associate Degree in Hospitality and Tourism** from Instituto Regiomontano de Hotelería, which laid the foundation for her operational expertise.\n\nClaudia is known for her **meticulous attention to detail**, enthusiastic problem-solving, and inspiring leadership style. With a **\"make it happen\"** mindset, she ensures flawless execution of every program—from complex corporate incentives to intimate VIP experiences.\n\nBeyond her role, Claudia finds joy in **yoga, cooking, mystery films, and time by the beach\n\nwith her two children and two dogs. Fluent in **English and Spanish**, she connects easily with both international clients and multicultural teams, ensuring smooth communication and world-class service.\n\nClaudia's operational leadership is a cornerstone of Cancun Concierge DMC's ability to deliver **seamless, high-end experiences in Cancún and the Riviera Maya**."
+      },
+      "luis": {
+        "name": "Luis Canché, (Operations Coordinator)",
+        "bio": "**Operations Coordinator - Cancun Concierge DMC**\n\n18 Years in Tourism & Event Logistics | Local Expertise | Client-Focused Coordination\n\nA native of **Cancún, Quintana Roo, Luis Antonio Canché** is an experienced tourism and event logistics professional with over **18 years of expertise** in the travel and DMC industry. He holds an **Associate Degree in Business Administration**, a foundation that supports his efficient and results-driven approach to managing operations.\n\nLuis has spent nearly two decades **coordinating high-quality travel experiences** both in Mexico and abroad.\n\nHis strength lies in delivering **flawless execution** of programs, building trusted relationships with clients and suppliers, and providing **bilingual support** to ensure a smooth, enjoyable experience for international travelers.\n\nAt Cancun Concierge DMC, Luis plays a key role in orchestrating **on-the-ground logistics**, supporting everything from airport operations to VIP events with **calm precision and a solutions-oriented** mindset. His passion for hospitality is matched by his **commitment to excellence**, always going the extra mile to exceed expectations.\n\nOutside of work, Luis is a **devoted father of two** and an avid fisherman. His love for nature and his calm demeanor make him a thoughtful and grounded team player who thrives under pressure.\n\nWith deep **local knowledge of Cancún and the Riviera Maya**, Luis is a vital asset to the Cancun Concierge DMC team, helping ensure that every guest experience is not just memorable—but exceptional."
+      },
+      "monica": {
+        "name": "Monica Figueroa (Office Manager)",
+        "bio": "With a solid background in luxury hospitality, Monica began her career in Cancun in 1994 after graduating from the Instituto Regiomontano de Hotelería. In 1996, she spent six months in Canada to improve her English, enriching both her language skills and cultural awareness. She later joined The Ritz-Carlton, where she spent over eight years leading operations in Destination Services.\n\nToday, Monica serves as Office Manager at Cancun Concierge DMC, where she brings structure, efficiency, and warmth to the heart of the operation. Her experience in guest services, group logistics, and event coordination allows her to oversee the day-to-day processes with precision and care, ensuring that every detail runs smoothly behind the scenes.\n\nKnown for her dedication, organizational skills, and service-driven mindset, Monica plays a key role in maintaining the high standards that define the Cancun Concierge experience.\n\nFluent in both Spanish and English, she values clear communication and enjoys building strong working relationships with clients, partners, and her team. Outside of work, she finds joy in cooking, staying active, and spending quality time with her husband and two children."
+      }
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "titleAlternate": "Who We Serve",
+    "description": "At Cancun Concierge DMC, we proudly serve a wide range of clients seeking world-class experiences in Cancun and the Riviera Maya. Our tailor-made programs are designed to meet the goals of each group—whether corporate, social, or personal.",
+    "cards": {
+      "corporate": {
+        "title": "Corporate & Business Clients",
+        "items": [
+          "Board Meetings",
+          "Executive Retreats",
+          "Congresses & Conferences",
+          "Incentive Programs",
+          "President's Club",
+          "Product Launches",
+          "Brand Activations",
+          "Site Inspections"
+        ]
+      },
+      "social": {
+        "title": "Social & Private Events",
+        "items": [
+          "Weddings",
+          "Special Celebrations (Anniversaries, Milestone Birthdays, Vow Renewals)",
+          "Family Reunions",
+          "Bachelor & Bachelorette Parties",
+          "Destination Dinners"
+        ]
+      },
+      "leisure": {
+        "title": "Leisure & Lifestyle Groups",
+        "items": [
+          "Luxury Travel Groups",
+          "High-End FITs (Fully Independent Travelers)",
+          "Affluent Multigenerational Families",
+          "Yacht Lifestyle Travelers",
+          "Wellness Retreats",
+          "Golf Groups"
+        ]
+      },
+      "media": {
+        "title": "Media, VIP & Production",
+        "items": [
+          "Celebrity Getaways",
+          "Film & Production Crews",
+          "Influencer & PR Trips",
+          "Fashion & Editorial Shoots"
+        ]
+      }
     },
-    "contact": {
-        "title": "Contact me"
+    "baseMessage": "Hello, I am interested in your services for",
+    "imageAlt": "Our clients enjoying a great time in Cancun"
+  },
+  "services": {
+    "cards": {
+      "transfers": {
+        "title": "Airport Transfers & VIP Transportation",
+        "text": "Make every arrival and departure effortless. Our luxury airport transfers include executive SUVs, deluxe vans, and Mercedes-Benz Sprinters, operated by bilingual drivers trained in five-star service. We also offer on-demand private chauffeurs and VIP transportation for any group size."
+      },
+      "yacht": {
+        "title": "Yacht Rentals & Water Activities",
+        "text": "Enjoy the turquoise Caribbean waters with private catamaran charters, yachts, and water experiences. From snorkeling and paddleboarding to sunset cruises with onboard catering, we create unforgettable moments on the sea."
+      },
+      "golf": {
+        "title": "Golf & Group Excursions",
+        "text": "We organize exclusive tee times at top golf courses and offer private excursions to cultural sites, eco-parks, and hidden gems across the Yucatan Peninsula. All activities are customized based on your group's interests and energy level."
+      },
+      "teambuilding": {
+        "title": "Teambuilding Experiences",
+        "text": "Strengthen your team through immersive activities designed to promote collaboration and creativity. From beach Olympics and treasure hunts to culinary challenges and CSR experiences, our programs inspire connection and motivation."
+      },
+      "desk": {
+        "title": "Hospitality Desk Services",
+        "text": "Our on-site hospitality staff provide concierge-level service at your hotel or event venue. We manage schedules, answer questions, coordinate transportation, and ensure every detail runs smoothly for your attendees."
+      },
+      "entertainment": {
+        "title": "Décor & Entertainment",
+        "text": "From elegant gala dinners to themed welcome parties, we provide custom decor, lighting, staging, and entertainment to match your vision. DJs, live bands, Mayan rituals, fire shows, and more."
+      },
+      "photography": {
+        "title": "Photography Services",
+        "text": "Capture every moment with professional photography and video coverage. Perfect for incentive trips, corporate events, or personal milestones. We also offer drone footage, highlight reels, and on-site printing options."
+      }
     },
-    "testimonials": {
-        "title": "Satisfied Customers",
-        "quotes": {
-            "ana": {
-                "name": "Anne Carpentier",
-                "quote": "Omar, I thank you so much for all your hard work and great communication skills, I really liked what you did for us. It was great to find you because I haven't heard from you before. I will send you all my clients so that you and I can continue working together."
-            },
-            "erick": {
-                "name": "Erik Sabato",
-                "quote": "Omar, your level of service is unlike any other. I will share your name with everyone I know and tell them about your excellent level of service. Thank you for all your assistance!"
-            },
-            "gabriel": {
-                "name": "Gabriel Suarez",
-                "quote": "Omar, I thank you so much for all your hard work and great communication skills, I really liked what you did for us. It was great to find you because I have't heard from you before. I will send you all my clients so that you and I can continue working together"
-            }
-        }
+    "title": "Our Services",
+    "description": "At **Cancun Concierge DMC**, we offer a **curated selection of premium services** designed to **elevate your group's experience** in **Cancun and the Riviera Maya**. From **seamless airport arrivals** to **unique private events**, our team delivers **tailor-made solutions** with **precision**, **creativity**, and a **Ritz-Carlton level commitment to hospitality**. Whether you're planning a **corporate incentive trip**, an **executive retreat**, or a **special celebration**, we bring **over 20 years of experience**, **insider knowledge**, Let me know if you want this adapted for SEO or any specific target audience.",
+    "baseMessage": "Hello, I am interested in your service:",
+    "imageAlt": "Explore Cancun Concierge DMC amazing and customized services"
+  },
+  "nav": {
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "testimonials": "Testimonials",
+      "services": "Services",
+      "transportation": "Transportation",
+      "gallery": "Gallery"
+    }
+  },
+  "footer": {
+    "text": "At Cancun Concierge, we plan and execute airport transportation services, water activities, tours, golf, restaurant reservations, and virtually any need you may have during your stay in Cancun and the Riviera Maya.",
+    "rights": "All rights reserved.",
+    "links": {
+      "menuOfServices": "Menu of Services"
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "Explore our gallery of events, services, and transportations in Cancun and the Riviera Maya.",
+    "categories": {
+      "transports": {
+        "title": "Vehicles"
+      },
+      "events": {
+        "title": "Decor"
+      },
+      "services": {
+        "title": "Activities"
+      }
+    }
+  },
+  "features": {
+    "quotes": {
+      "excellence": {
+        "title": "Excellence in Service",
+        "imageAlt": "info about ",
+        "text": "Inspired by over two decades of experience in luxury hospitality, at Cancun Concierge we are committed to anticipating needs, attending to every detail, and exceeding expectations in every experience.",
+        "descripcion": "**Personalized Service:** Every detail is tailored to your needs. **Unmatched Flexibility:** We easily adapt to last-minute changes."
+      },
+      "authenticity": {
+        "title": "Authentic Personalization",
+        "imageAlt": "info about ",
+        "text": "Every client is unique. That's why we design fully tailored programs, ensuring that every moment aligns with each guest's desires, priorities, and personal style.",
+        "descripcion": "**Anticipation of Needs:** We go beyond expectations to deliver seamless experiences."
+      },
+      "passion": {
+        "title": "Passion for Creating Memorable Experiences",
+        "imageAlt": "info about ",
+        "text": "Guided by Omar's vision, every experience we offer is more than just a service — it's an opportunity to make a lasting impression. We turn every visit into an unforgettable memory, whether in Cancún or Los Cabos.",
+        "descripcion": "**Fair and Transparent Pricing:** Premium quality at competitive rates. Full Event Management: From concept to execution, we handle it all."
+      }
+    }
+  },
+  "whyWorkWithUs": {
+    "title": "Why Work With Us",
+    "description": "Choosing Cancun Concierge DMC means partnering with a boutique, owner-operated DMC that blends luxury hospitality standards with deep local expertise. Here's what sets us apart:",
+    "cards": {
+      "personalized": {
+        "title": "Personalized Service",
+        "description": "Every detail is tailored to your specific goals, preferences, and guest profile.",
+        "category": "Service"
+      },
+      "anticipation": {
+        "title": "Anticipation of Needs",
+        "description": "We don't just react — we anticipate. Our team ensures every experience is seamless and stress-free.",
+        "category": "Experience"
+      },
+      "flexibility": {
+        "title": "Unmatched Flexibility",
+        "description": "Plans change. We adapt quickly and efficiently to last-minute adjustments.",
+        "category": "Flexibility"
+      },
+      "pricing": {
+        "title": "Fair & Transparent Pricing",
+        "description": "Premium service at competitive rates, with no hidden fees or surprises.",
+        "category": "Value"
+      },
+      "management": {
+        "title": "End-to-End Event Management",
+        "description": "From concept to execution, we manage every detail so you can focus on enjoying the moment.",
+        "category": "Management"
+      },
+      "experience": {
+        "title": "20+ Years of Local Experience",
+        "description": "Deep destination knowledge of Cancun & the Riviera Maya.",
+        "category": "Expertise"
+      },
+      "luxury": {
+        "title": "Luxury Hospitality DNA",
+        "description": "Led by former Ritz-Carlton executives who live and breathe service excellence.",
+        "category": "Luxury"
+      },
+      "boutique": {
+        "title": "Owner-Operated Boutique DMC",
+        "description": "Work directly with our leadership team for fast, thoughtful, and personalized support.",
+        "category": "Leadership"
+      },
+      "trusted": {
+        "title": "Trusted by Industry Leaders",
+        "description": "We've delivered flawless programs for Fortune 500 companies, top-tier planners, and discerning VIPs.",
+        "category": "Trust"
+      }
+    }
+  },
+  "meta": {
+    "home": {
+      "page": "Cancun Concierge DMC | Boutique DMC in Cancún and Riviera Maya",
+      "description": "DMC boutique, owner-operated with over 20 years of experience. Experts in Cancun and the Riviera Maya. Ritz-Carlton style service. Destination Management Company with flawless logistics, personalized attention, and genuine hospitality in Cancun and the Riviera Maya. Premium DMC in Cancun & Riviera Maya. Owner-operated, Ritz-Carlton service philosophy, over 20 years crafting extraordinary programs.",
+      "keywords": "Cancun, Riviera Maya, DMC, Destination Management Company, concierge services, travel, corporate events, special events, airport transportation, tours, water activities, personalized service, Mexico, vacation, holidays"
     },
     "about": {
-        "title": "At Cancun Concierge DMC, Excellence is Personal",
-        "text": "At **Cancun Concierge DMC**, we specialize in designing **seamless, tailor-made experiences** for travelers, corporate groups, and special events across **Cancún and the Riviera Maya**;As a **boutique, owner-operated DMC** with over **20 years of experience**, we are more than local experts—we are passionate hosts who anticipate your needs and exceed expectations at every step.;Our founder, a former **Ritz-Carlton professional**, brings the brand's legendary philosophy of service to everything we do: thoughtful attention, unwavering standards, and warm, genuine care.;From luxury airport transfers to incentive programs and bespoke events, we combine insider knowledge with flawless execution to transform your visit into something truly extraordinary.;**Let us craft your next experience with the insight, dedication, and hospitality that define Cancun Concierge DMC**.",
-        "cta": "Learn more"
-    },
-    "whatWeDo": {
-        "title": "About Cancun Concierge DMC",
-        "text": "Crafting Exceptional Experiences in Cancun and the Riviera Maya\n\n At **Cancun Concierge DMC**, we are passionate about creating **tailor-made experiences that go far beyond logistics**—we design moments that feel effortless, personal, and unforgettable.\n\nWith **over 20 years of hands-on experience**, we specialize in the **comprehensive planning and flawless execution** of incentive programs, corporate meetings, private celebrations, and social events throughout **Cancun and the Riviera Maya**.\n\nAs a **boutique DMC operated by its founder**, a former **Ritz-Carlton professional**, we bring a rare blend of **luxury-level service, local insight, and genuine hospitality** to everything we do. Our clients don't just receive services—they enjoy a curated experience built with precision, creativity, and care.\n\nWe offer a full suite of **premium DMC services**, including:\n* Private and VIP airport transfers\n* Yacht charters and water activities\n* Group tours and cultural excursions\n* Teambuilding programs and CSR activities\n* Event production, décor, and entertainment\n* Photography and videography services\n* On-site coordination and 24/7 support\n\nWhether you're planning a **destination wedding**, a **presidential retreat**, or an **incentive trip to reward your top performers**, our team is here to make it happen—beautifully, efficiently, and stress-free.\n**Choose Cancun Concierge DMC and discover how our boutique approach and Ritz-Carlton-inspired service philosophy set us apart in Mexico's most iconic destinations**."
-    },
-    "whyUs": {
-        "slides": {
-            "sectur": {
-                "text": "Mexico's National Tourism Registry 27230050068",
-                "alt": "Sectur Logo"
-            }
-        }
-    },
-    "teamMenu": {
-        "title": "Meet Our Team",
-        "text": "At Cancun Concierge DMC, our team is more than a group of professionals—it's the heart of everything we do. With decades of combined experience in luxury hospitality, destination management, and high-end event planning, each member brings unmatched passion, precision, and local expertise to the table.\n\nTrained in world-class service standards and committed to excellence, we work together to create seamless and unforgettable experiences in Cancún and the Riviera Maya. Get to know the people who turn your vision into reality—with warmth, integrity, and a deep love for hospitality.",
-        "members": {
-            "omar": {
-                "name": "Omar Guzman, (General Manager)",
-                "bio": "**Founder & General Manager - Cancun Concierge DMC**\n\n*Luxury Hospitality Expert | 20+ Years of Experience | Ritz-Carlton Trained*\n\nBorn in the picturesque city of Orizaba, Mexico, **Omar Guzman** brings over **20 years of luxury hospitality experience** to his role as General Manager and founder of **Cancun Concierge DMC**. A graduate of **UDLAP University**, he holds a Bachelor's degree in Tourism Management and a Postgraduate Certificate in Executive Management.\n\nOmar's career began in 1998 when he moved to Cancún and joined **The Ritz-Carlton Hotels**, where he spent two decades mastering the **art of luxury service**. He worked across leading destinations in **Mexico, the Caribbean, and the United States**, becoming a true expert in creating elevated guest experiences.\n\nHis service philosophy—rooted in the **Ritz-Carlton gold standards**—is built on anticipating needs, exceeding expectations, and delivering warm, personalized attention. Today, he leads Cancun Concierge DMC with the same vision: to provide **flawless DMC services** with a boutique, hands-on approach.\n\nFluent in **Spanish, English, and Italian**, Omar connects effortlessly with international clients, offering a personal and multilingual approach to communication. Whether he's organizing an incentive trip, a CEO-level retreat, or a dream wedding, he ensures that every moment reflects **excellence, integrity, and thoughtful care**.\n\nOutside of work, Omar is a proud husband and father of two. He enjoys playing the guitar and early morning walks that allow him to reconnect with nature and faith."
-            },
-            "claudia": {
-                "name": "Claudia Rueda, (Operations Manager)",
-                "bio": "**Director of Operations - Cancun Concierge DMC**\n\n*DMC & Hospitality Specialist | 20+ Years of Experience | Detail-Oriented Leadership*\n\nOriginally from **Monterrey, Mexico, Claudia Rueda** brings over **20 years of experience in tourism and destination management** to her role as Director of Operations at Cancun Concierge DMC. Her impressive career includes key leadership roles at **The Ritz-Carlton** and top DMCs in **Mexico and the U.S. Virgin Islands**.\n\nAfter moving to **Cancún in 1994**, Claudia quickly became a driving force behind the delivery of luxury experiences for discerning travelers. She holds an **Associate Degree in Hospitality and Tourism** from Instituto Regiomontano de Hotelería, which laid the foundation for her operational expertise.\n\nClaudia is known for her **meticulous attention to detail**, enthusiastic problem-solving, and inspiring leadership style. With a **\"make it happen\"** mindset, she ensures flawless execution of every program—from complex corporate incentives to intimate VIP experiences.\n\nBeyond her role, Claudia finds joy in **yoga, cooking, mystery films, and time by the beach\n\nwith her two children and two dogs. Fluent in **English and Spanish**, she connects easily with both international clients and multicultural teams, ensuring smooth communication and world-class service.\n\nClaudia's operational leadership is a cornerstone of Cancun Concierge DMC's ability to deliver **seamless, high-end experiences in Cancún and the Riviera Maya**."
-            },
-            "luis": {
-                "name": "Luis Canché, (Operations Coordinator)",
-                "bio": "**Operations Coordinator - Cancun Concierge DMC**\n\n18 Years in Tourism & Event Logistics | Local Expertise | Client-Focused Coordination\n\nA native of **Cancún, Quintana Roo, Luis Antonio Canché** is an experienced tourism and event logistics professional with over **18 years of expertise** in the travel and DMC industry. He holds an **Associate Degree in Business Administration**, a foundation that supports his efficient and results-driven approach to managing operations.\n\nLuis has spent nearly two decades **coordinating high-quality travel experiences** both in Mexico and abroad.\n\nHis strength lies in delivering **flawless execution** of programs, building trusted relationships with clients and suppliers, and providing **bilingual support** to ensure a smooth, enjoyable experience for international travelers.\n\nAt Cancun Concierge DMC, Luis plays a key role in orchestrating **on-the-ground logistics**, supporting everything from airport operations to VIP events with **calm precision and a solutions-oriented** mindset. His passion for hospitality is matched by his **commitment to excellence**, always going the extra mile to exceed expectations.\n\nOutside of work, Luis is a **devoted father of two** and an avid fisherman. His love for nature and his calm demeanor make him a thoughtful and grounded team player who thrives under pressure.\n\nWith deep **local knowledge of Cancún and the Riviera Maya**, Luis is a vital asset to the Cancun Concierge DMC team, helping ensure that every guest experience is not just memorable—but exceptional."
-            },
-            "monica": {
-                "name": "Monica Figueroa (Office Manager)",
-                "bio": "With a solid background in luxury hospitality, Monica began her career in Cancun in 1994 after graduating from the Instituto Regiomontano de Hotelería. In 1996, she spent six months in Canada to improve her English, enriching both her language skills and cultural awareness. She later joined The Ritz-Carlton, where she spent over eight years leading operations in Destination Services.\n\nToday, Monica serves as Office Manager at Cancun Concierge DMC, where she brings structure, efficiency, and warmth to the heart of the operation. Her experience in guest services, group logistics, and event coordination allows her to oversee the day-to-day processes with precision and care, ensuring that every detail runs smoothly behind the scenes.\n\nKnown for her dedication, organizational skills, and service-driven mindset, Monica plays a key role in maintaining the high standards that define the Cancun Concierge experience.\n\nFluent in both Spanish and English, she values clear communication and enjoys building strong working relationships with clients, partners, and her team. Outside of work, she finds joy in cooking, staying active, and spending quality time with her husband and two children."
-            }
-        }
-    },
-    "clients": {
-        "title": "Our Clients",
-        "titleAlternate": "Who We Serve",
-        "description": "At Cancun Concierge DMC, we proudly serve a wide range of clients seeking world-class experiences in Cancun and the Riviera Maya. Our tailor-made programs are designed to meet the goals of each group—whether corporate, social, or personal.",
-        "cards": {
-            "corporate": {
-                "title": "Corporate & Business Clients",
-                "items": [
-                    "Board Meetings",
-                    "Executive Retreats",
-                    "Congresses & Conferences",
-                    "Incentive Programs",
-                    "President's Club",
-                    "Product Launches",
-                    "Brand Activations",
-                    "Site Inspections"
-                ]
-            },
-            "social": {
-                "title": "Social & Private Events",
-                "items": [
-                    "Weddings",
-                    "Special Celebrations (Anniversaries, Milestone Birthdays, Vow Renewals)",
-                    "Family Reunions",
-                    "Bachelor & Bachelorette Parties",
-                    "Destination Dinners"
-                ]
-            },
-            "leisure": {
-                "title": "Leisure & Lifestyle Groups",
-                "items": [
-                    "Luxury Travel Groups",
-                    "High-End FITs (Fully Independent Travelers)",
-                    "Affluent Multigenerational Families",
-                    "Yacht Lifestyle Travelers",
-                    "Wellness Retreats",
-                    "Golf Groups"
-                ]
-            },
-            "media": {
-                "title": "Media, VIP & Production",
-                "items": [
-                    "Celebrity Getaways",
-                    "Film & Production Crews",
-                    "Influencer & PR Trips",
-                    "Fashion & Editorial Shoots"
-                ]
-            }
-        },
-        "baseMessage": "Hello, I am interested in your services for",
-        "imageAlt": "Our clients enjoying a great time in Cancun"
+      "page": "About Us",
+      "description": "Discover Cancun Concierge DMC: crafting tailor-made, unforgettable experiences in Cancun and the Riviera Maya for events, incentives, and celebrations. With over 20 years of luxury hospitality expertise, we offer personalized VIP services, from transfers to yacht rentals. Let us exceed your expectations.",
+      "keywords": "Cancun Concierge DMC, About Us, Cancun, Riviera Maya, event planning, incentive trips, corporate meetings, private celebrations, VIP transfers, yacht rentals, water activities, group excursions, teambuilding, personalized service, luxury hospitality, Omar Guzman"
     },
     "services": {
-        "cards": {
-            "transfers": {
-                "title": "Airport Transfers & VIP Transportation",
-                "text": "Make every arrival and departure effortless. Our luxury airport transfers include executive SUVs, deluxe vans, and Mercedes-Benz Sprinters, operated by bilingual drivers trained in five-star service. We also offer on-demand private chauffeurs and VIP transportation for any group size."
-            },
-            "yacht": {
-                "title": "Yacht Rentals & Water Activities",
-                "text": "Enjoy the turquoise Caribbean waters with private catamaran charters, yachts, and water experiences. From snorkeling and paddleboarding to sunset cruises with onboard catering, we create unforgettable moments on the sea."
-            },
-            "golf": {
-                "title": "Golf & Group Excursions",
-                "text": "We organize exclusive tee times at top golf courses and offer private excursions to cultural sites, eco-parks, and hidden gems across the Yucatan Peninsula. All activities are customized based on your group's interests and energy level."
-            },
-            "teambuilding": {
-                "title": "Teambuilding Experiences",
-                "text": "Strengthen your team through immersive activities designed to promote collaboration and creativity. From beach Olympics and treasure hunts to culinary challenges and CSR experiences, our programs inspire connection and motivation."
-            },
-            "desk": {
-                "title": "Hospitality Desk Services",
-                "text": "Our on-site hospitality staff provide concierge-level service at your hotel or event venue. We manage schedules, answer questions, coordinate transportation, and ensure every detail runs smoothly for your attendees."
-            },
-            "entertainment": {
-                "title": "Décor & Entertainment",
-                "text": "From elegant gala dinners to themed welcome parties, we provide custom decor, lighting, staging, and entertainment to match your vision. DJs, live bands, Mayan rituals, fire shows, and more."
-            },
-            "photography": {
-                "title": "Photography Services",
-                "text": "Capture every moment with professional photography and video coverage. Perfect for incentive trips, corporate events, or personal milestones. We also offer drone footage, highlight reels, and on-site printing options."
-            }
-        },
-        "title": "Our Services",
-        "description": "At **Cancun Concierge DMC**, we offer a **curated selection of premium services** designed to **elevate your group's experience** in **Cancun and the Riviera Maya**. From **seamless airport arrivals** to **unique private events**, our team delivers **tailor-made solutions** with **precision**, **creativity**, and a **Ritz-Carlton level commitment to hospitality**. Whether you're planning a **corporate incentive trip**, an **executive retreat**, or a **special celebration**, we bring **over 20 years of experience**, **insider knowledge**, Let me know if you want this adapted for SEO or any specific target audience.",
-        "baseMessage": "Hello, I am interested in your service:",
-        "imageAlt": "Explore Cancun Concierge DMC amazing and customized services"
+      "page": "Our Services",
+      "description": "Explore Cancun Concierge DMC's premium services in Cancun and Riviera Maya: VIP airport transfers, yacht rentals, water activities, golf excursions, teambuilding, hospitality desk, decor, entertainment, and photography. Let us handle every detail for an unforgettable experience.",
+      "keywords": "Cancun Concierge DMC, services, Cancun, Riviera Maya, airport transfers, VIP transportation, yacht rentals, water activities, golf, group excursions, teambuilding, hospitality desk, decor, entertainment, photography"
     },
-    "nav": {
-        "links": {
-            "home": "Home",
-            "about": "About Us",
-            "testimonials": "Testimonials",
-            "services": "Services",
-            "transportation": "Transportation",
-            "gallery": "Gallery"
-        }
-    },
-    "footer": {
-        "text": "At Cancun Concierge, we plan and execute airport transportation services, water activities, tours, golf, restaurant reservations, and virtually any need you may have during your stay in Cancun and the Riviera Maya.",
-        "rights": "All rights reserved.",
-        "links": {
-            "menuOfServices": "Menu of Services"
-        }
-    },
-    "gallery": {
-        "title": "Gallery",
-        "description": "Explore our gallery of events, services, and transportations in Cancun and the Riviera Maya.",
-        "categories": {
-            "transports": {
-                "title": "Vehicles"
-            },
-            "events": {
-                "title": "Decor"
-            },
-            "services": {
-                "title": "Activities"
-            }
-        }
-    },
-    "features": {
-        "quotes": {
-            "excellence": {
-                "title": "Excellence in Service",
-                "imageAlt": "info about ",
-                "text": "Inspired by over two decades of experience in luxury hospitality, at Cancun Concierge we are committed to anticipating needs, attending to every detail, and exceeding expectations in every experience.",
-                "descripcion": "**Personalized Service:** Every detail is tailored to your needs. **Unmatched Flexibility:** We easily adapt to last-minute changes."
-            },
-            "authenticity": {
-                "title": "Authentic Personalization",
-                "imageAlt": "info about ",
-                "text": "Every client is unique. That's why we design fully tailored programs, ensuring that every moment aligns with each guest's desires, priorities, and personal style.",
-                "descripcion": "**Anticipation of Needs:** We go beyond expectations to deliver seamless experiences."
-            },
-            "passion": {
-                "title": "Passion for Creating Memorable Experiences",
-                "imageAlt": "info about ",
-                "text": "Guided by Omar's vision, every experience we offer is more than just a service — it's an opportunity to make a lasting impression. We turn every visit into an unforgettable memory, whether in Cancún or Los Cabos.",
-                "descripcion": "**Fair and Transparent Pricing:** Premium quality at competitive rates. Full Event Management: From concept to execution, we handle it all."
-            }
-        }
-    },
-    "whyWorkWithUs": {
-        "title": "Why Work With Us",
-        "description": "Choosing Cancun Concierge DMC means partnering with a boutique, owner-operated DMC that blends luxury hospitality standards with deep local expertise. Here's what sets us apart:",
-        "cards": {
-            "personalized": {
-                "title": "Personalized Service",
-                "description": "Every detail is tailored to your specific goals, preferences, and guest profile.",
-                "category": "Service"
-            },
-            "anticipation": {
-                "title": "Anticipation of Needs",
-                "description": "We don't just react — we anticipate. Our team ensures every experience is seamless and stress-free.",
-                "category": "Experience"
-            },
-            "flexibility": {
-                "title": "Unmatched Flexibility",
-                "description": "Plans change. We adapt quickly and efficiently to last-minute adjustments.",
-                "category": "Flexibility"
-            },
-            "pricing": {
-                "title": "Fair & Transparent Pricing",
-                "description": "Premium service at competitive rates, with no hidden fees or surprises.",
-                "category": "Value"
-            },
-            "management": {
-                "title": "End-to-End Event Management",
-                "description": "From concept to execution, we manage every detail so you can focus on enjoying the moment.",
-                "category": "Management"
-            },
-            "experience": {
-                "title": "20+ Years of Local Experience",
-                "description": "Deep destination knowledge of Cancun & the Riviera Maya.",
-                "category": "Expertise"
-            },
-            "luxury": {
-                "title": "Luxury Hospitality DNA",
-                "description": "Led by former Ritz-Carlton executives who live and breathe service excellence.",
-                "category": "Luxury"
-            },
-            "boutique": {
-                "title": "Owner-Operated Boutique DMC",
-                "description": "Work directly with our leadership team for fast, thoughtful, and personalized support.",
-                "category": "Leadership"
-            },
-            "trusted": {
-                "title": "Trusted by Industry Leaders",
-                "description": "We've delivered flawless programs for Fortune 500 companies, top-tier planners, and discerning VIPs.",
-                "category": "Trust"
-            }
-        }
-    },
-    "meta": {
-        "home": {
-            "page": "Cancun Concierge DMC | Boutique DMC in Cancún and Riviera Maya",
-            "description": "DMC boutique, owner-operated with over 20 years of experience. Experts in Cancun and the Riviera Maya. Ritz-Carlton style service. Destination Management Company with flawless logistics, personalized attention, and genuine hospitality in Cancun and the Riviera Maya. Premium DMC in Cancun & Riviera Maya. Owner-operated, Ritz-Carlton service philosophy, over 20 years crafting extraordinary programs.",
-            "keywords": "Cancun, Riviera Maya, DMC, Destination Management Company, concierge services, travel, corporate events, special events, airport transportation, tours, water activities, personalized service, Mexico, vacation, holidays"
-        },
-        "about": {
-            "page": "About Us",
-            "description": "Discover Cancun Concierge DMC: crafting tailor-made, unforgettable experiences in Cancun and the Riviera Maya for events, incentives, and celebrations. With over 20 years of luxury hospitality expertise, we offer personalized VIP services, from transfers to yacht rentals. Let us exceed your expectations.",
-            "keywords": "Cancun Concierge DMC, About Us, Cancun, Riviera Maya, event planning, incentive trips, corporate meetings, private celebrations, VIP transfers, yacht rentals, water activities, group excursions, teambuilding, personalized service, luxury hospitality, Omar Guzman"
-        },
-        "services": {
-            "page": "Our Services",
-            "description": "Explore Cancun Concierge DMC's premium services in Cancun and Riviera Maya: VIP airport transfers, yacht rentals, water activities, golf excursions, teambuilding, hospitality desk, decor, entertainment, and photography. Let us handle every detail for an unforgettable experience.",
-            "keywords": "Cancun Concierge DMC, services, Cancun, Riviera Maya, airport transfers, VIP transportation, yacht rentals, water activities, golf, group excursions, teambuilding, hospitality desk, decor, entertainment, photography"
-        },
-        "testimonials": {
-            "page": "Satisfied Customers",
-            "description": "Read what our satisfied clients say about Cancun Concierge DMC's exceptional service in Cancun and the Riviera Maya. Discover how we create unforgettable experiences for weddings, corporate events, and more.",
-            "keywords": "Cancun Concierge DMC, testimonials, customer reviews, satisfied clients, Cancun, Riviera Maya, event feedback, wedding testimonials, corporate event reviews, service quality"
-        },
-        "transportation": {
-            "page": "Transportation",
-            "description": "Book your seamless airport transportation in Cancun and Riviera Maya with Cancun Concierge DMC. Secure reliable transfers to your hotel or Airbnb. Choose from private options with meet & greet services. Reserve now!",
-            "keywords": "Cancun transportation, airport transfer Cancun, hotel transfer Cancun, Airbnb transfer Cancun, private transportation Cancun, Riviera Maya transportation, Cancun shuttle, transportation services Cancun, book transportation Cancun"
-        },
-        "gallery": {
-            "page": "Gallery",
-            "description": "Explore our gallery of events, services, and transportations in Cancun and the Riviera Maya.",
-            "keywords": "Cancun Concierge DMC, gallery, events, services, transportations, Cancun, Riviera Maya"
-        }
-    },
-    "riviera": {
-        "servicesCards": {
-            "private": "Private Transfers",
-            "welcome": "Welcome Greeters",
-            "water": "Bottled water",
-            "travel": "Travel insurance",
-            "gratuities": "Gratuities",
-            "taxes": "Federal Taxes"
-        },
-        "servicesTitle": "Our Services Include"
+    "testimonials": {
+      "page": "Satisfied Customers",
+      "description": "Read what our satisfied clients say about Cancun Concierge DMC's exceptional service in Cancun and the Riviera Maya. Discover how we create unforgettable experiences for weddings, corporate events, and more.",
+      "keywords": "Cancun Concierge DMC, testimonials, customer reviews, satisfied clients, Cancun, Riviera Maya, event feedback, wedding testimonials, corporate event reviews, service quality"
     },
     "transportation": {
-        "hero": "PLEASE BOOK NOW AND SECURE AIRPORT;TRANSPORTATION TO YOUR HOTEL OR AIRBNB",
-        "services": {
-            "title": "Our Services Include",
-            "cards": {
-                "private": "Private Transfers",
-                "welcome": "Welcome Greeters",
-                "water": "Bottled water",
-                "travel": "Travel insurance",
-                "gratuities": "Gratuities",
-                "taxes": "Federal Taxes"
-            }
-        },
-        "form": {
-            "transportationOptions": "Transportation Options",
-            "personalInfo": "Personal Information",
-            "name": "Name",
-            "namePlaceholder": "Enter your name",
-            "lastName": "Last name",
-            "lastNamePlaceholder": "Enter your last name",
-            "passengers": "Number of passengers",
-            "hotelOrAirbnb": "Hotel or Airbnb",
-            "resortDestination": "Resort destination",
-            "airbnbAddress": "Airbnb address",
-            "airbnbAddressPlaceholder": "Enter your Airbnb address",
-            "arriving": "Arriving",
-            "arrivingDate": "Arriving date",
-            "arrivingTime": "Arriving time in Cancun",
-            "departing": "Departing",
-            "departingDate": "Departing date",
-            "departingTime": "Departing time from Cancun",
-            "airline": "Airline",
-            "airlinePlaceholder": "Enter your airline",
-            "flightNumber": "Flight number",
-            "flightNumberPlaceholder": "Enter your flight number",
-            "maxPassengers": "Maximum eight passengers per van",
-            "buyNow": "Buy Now",
-            "processing": "Processing...",
-            "total": "Total",
-            "in": "in",
-            "from": "from",
-            "flightInfoNote": "*In case you have connecting flights, please make sure you provide the info for your actual flight {prefix} {direction} Cancun"
-        }
+      "page": "Transportation",
+      "description": "Book your seamless airport transportation in Cancun and Riviera Maya with Cancun Concierge DMC. Secure reliable transfers to your hotel or Airbnb. Choose from private options with meet & greet services. Reserve now!",
+      "keywords": "Cancun transportation, airport transfer Cancun, hotel transfer Cancun, Airbnb transfer Cancun, private transportation Cancun, Riviera Maya transportation, Cancun shuttle, transportation services Cancun, book transportation Cancun"
+    },
+    "gallery": {
+      "page": "Gallery",
+      "description": "Explore our gallery of events, services, and transportations in Cancun and the Riviera Maya.",
+      "keywords": "Cancun Concierge DMC, gallery, events, services, transportations, Cancun, Riviera Maya"
     }
+  },
+  "riviera": {
+    "servicesCards": {
+      "private": "Private Transfers",
+      "welcome": "Welcome Greeters",
+      "water": "Bottled water",
+      "travel": "Travel insurance",
+      "gratuities": "Gratuities",
+      "taxes": "Federal Taxes"
+    },
+    "servicesTitle": "Our Services Include"
+  },
+  "transportation": {
+    "hero": "PLEASE BOOK NOW AND SECURE AIRPORT;TRANSPORTATION TO YOUR HOTEL OR AIRBNB",
+    "services": {
+      "title": "Our Services Include",
+      "cards": {
+        "private": "Private Transfers",
+        "welcome": "Welcome Greeters",
+        "water": "Bottled water",
+        "travel": "Travel insurance",
+        "gratuities": "Gratuities",
+        "taxes": "Federal Taxes"
+      }
+    },
+    "form": {
+      "transportationOptions": "Transportation Options",
+      "personalInfo": "Personal Information",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "lastName": "Last name",
+      "lastNamePlaceholder": "Enter your last name",
+      "passengers": "Number of passengers",
+      "hotelOrAirbnb": "Hotel or Airbnb",
+      "resortDestination": "Resort destination",
+      "airbnbAddress": "Airbnb address",
+      "airbnbAddressPlaceholder": "Enter your Airbnb address",
+      "arriving": "Arriving",
+      "arrivingDate": "Arriving date",
+      "arrivingTime": "Arriving time in Cancun",
+      "departing": "Departing",
+      "departingDate": "Departing date",
+      "departingTime": "Departing time from Cancun",
+      "airline": "Airline",
+      "airlinePlaceholder": "Enter your airline",
+      "flightNumber": "Flight number",
+      "flightNumberPlaceholder": "Enter your flight number",
+      "maxPassengers": "Maximum eight passengers per van",
+      "buyNow": "Buy Now",
+      "processing": "Processing...",
+      "total": "Total",
+      "in": "in",
+      "from": "from",
+      "flightInfoNote": "*In case you have connecting flights, please make sure you provide the info for your actual flight {prefix} {direction} Cancun"
+    }
+  }
 }
