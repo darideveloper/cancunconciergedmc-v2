@@ -12,7 +12,15 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Data and translations
-const testimonialsKeys = ['ana', 'erick', 'gabriel', 'rocco', 'magaly', 'alex', 'naomi',]
+const testimonialsKeys = [
+  'rocco',
+  'magaly',
+  'alex',
+  'naomi',
+  'ana',
+  'gabriel',
+  'erick',
+]
 const testimonials = t('testimonials.quotes')
 ---
 
@@ -23,13 +31,13 @@ const testimonials = t('testimonials.quotes')
     'flex',
     'flex-col',
     'items-center',
-    'justify-center',
+    'justify-center'
   )}
 >
   <Title>
     {t('testimonials.title')}
   </Title>
-  
+
   <div
     class={clsx(
       'grid',
@@ -55,7 +63,7 @@ const testimonials = t('testimonials.quotes')
               'items-cebter',
               'justify-start'
             )}
-            data-aos="fade-down"
+            data-aos='fade-down'
           >
             <TestimonialCard
               imageSrc={`/testimonials/${testimonial.name}.webp`}
