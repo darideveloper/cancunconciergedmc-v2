@@ -5,6 +5,12 @@ export const navLinks: {
   urlLang: string
 }[] = [
   {
+    text: 'home',
+    url: '/',
+    urlLang: '',
+    active: false,
+  },
+  {
     text: 'about',
     url: '/about',
     urlLang: '',
