@@ -100,6 +100,22 @@ const jsonLd = {
     },
   ],
 }
+
+// Base domain
+const baseUrl = 'https://cancunconciergedmc.com'
+
+// Page slug — we assume `currentPage` is the slug, e.g., 'gallery'
+const pageSlug = currentPage === 'home' ? '' : `/${currentPage}`
+
+// Canonical URL for this language
+const canonicalUrl = `${baseUrl}/${lang}${pageSlug}`
+
+// Alternate URLs
+const alternateUrls = {
+  en: `${baseUrl}/en${pageSlug}`,
+  es: `${baseUrl}/es${pageSlug}`,
+}
+
 ---
 
 <!-- Html tags -->
@@ -179,4 +195,20 @@ const jsonLd = {
 <link
   rel='sitemap'
   href='/sitemap-index.xml'
+/>
+
+<!-- Lang -->
+<link
+  rel='canonical'
+  href={canonicalUrl}
+/>
+<link
+  rel='alternate'
+  hreflang='en'
+  href={alternateUrls.en}
+/>
+<link
+  rel='alternate'
+  hreflang='es'
+  href={alternateUrls.es}
 />

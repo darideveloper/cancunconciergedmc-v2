@@ -8,7 +8,7 @@ const lang = getLangFromUrl(Astro.url)
 
 // Fonts
 import '@fontsource-variable/oswald'
-import "@fontsource/roboto"
+import '@fontsource/roboto'
 
 // Sections
 import WhyUs from '../components/sections/WhyUs.astro'
@@ -31,8 +31,7 @@ if (!currentPage || currentPage === 'en' || currentPage === 'es') {
 }
 
 // Animations / Transitions
-import { ClientRouter } from "astro:transitions";
-
+import { ClientRouter } from 'astro:transitions'
 ---
 
 <!doctype html>
@@ -52,9 +51,11 @@ import { ClientRouter } from "astro:transitions";
       name='generator'
       content={Astro.generator}
     />
-    <SEO
-      currentPage={currentPage}
+    <meta
+      name='robots'
+      content='index, follow'
     />
+    <SEO currentPage={currentPage} />
     <ClientRouter />
   </head>
   <body>
