@@ -1,17 +1,15 @@
 ---
 interface Props {
   currentPage?: string // Current page
+  lang?: string // Language parameter
 }
-const { currentPage } = Astro.props as Props
+const { currentPage, lang } = Astro.props as Props
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
-import { getStaticPathsLangs } from '../../libs/getStaticPaths'
 
 // i18n
-export const getStaticPaths = getStaticPathsLangs
-const { lang } = Astro.params as any
-const t = useTranslations(lang)
+const t = useTranslations((lang as 'en' | 'es') || 'en')
 
 // Get page metadata from i18n
 const title = 'Cancun Concierge DMC'
