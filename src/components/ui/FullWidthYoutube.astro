@@ -6,6 +6,16 @@ interface Props {
 
 const { youtubeSrc } = Astro.props
 
+// Extract video ID from YouTube URL for looping
+const getVideoId = (url: string) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+};
+
+const videoId = getVideoId(youtubeSrc);
+const loopUrl = videoId ? `${youtubeSrc}?autoplay=1&controls=0&mute=1&rel=0&modestbranding=1&showinfo=0&loop=1&playlist=${videoId}` : `${youtubeSrc}?autoplay=1&controls=0&mute=1&rel=0&modestbranding=1&showinfo=0`;
+
 // Components
 import FullWidthMedia from './base/FullWidthMedia.astro'
 ---
@@ -21,7 +31,7 @@ import FullWidthMedia from './base/FullWidthMedia.astro'
     style="aspect-ratio: 16/9; max-width: 100vw;"
   >
     <iframe
-      src={`${youtubeSrc}?autoplay=1&controls=0&mute=1&rel=0&modestbranding=1&showinfo=0&loop=1`}
+      src={loopUrl}
       title="cancunconciergedmc resdisign promo video no audio"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
