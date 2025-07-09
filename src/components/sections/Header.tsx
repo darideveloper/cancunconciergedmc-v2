@@ -1,9 +1,16 @@
+// Libs
 import { useEffect, useState } from 'react';
-import { navLinks } from '../../data/links';
-import { Menu } from 'lucide-react';
 import { useTranslations } from '../../i18n/utils';
-import LanguageSelector from '../ui/LanguageSelector';
 import clsx from 'clsx';
+
+// Icons
+import { Menu } from 'lucide-react';
+
+// Components
+import LanguageSelector from '../ui/LanguageSelector';
+
+// Data
+import { navLinks } from '../../data/links';
 
 interface HeaderProps {
   lang: 'en' | 'es';
@@ -161,7 +168,8 @@ export default function Header({ lang, serverPathname }: HeaderProps) {
                   'transition-colors',
                   'duration-200',
                   'no-underline',
-                  link.active && 'text-gold'
+                  link.active && 'text-gold',
+                  'text-sm'
                 )}
                 onClick={menuOpen ? () => setMenuOpen(false) : undefined}
               >
