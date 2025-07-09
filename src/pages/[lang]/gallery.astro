@@ -25,7 +25,7 @@ const allImages = import.meta.glob('../../assets/gallery/**/*.{jpg,jpeg,png,webp
 })
 
 // Filter images by categories
-const categories = ['transports', 'events', 'services']
+const categories = ['vehicles', 'decoration', 'activities']
 const categoriesImages = categories.map((category) => {
   const images = Object.entries(allImages)
     .filter(([key]) => key.includes(`/gallery/${category}/`))

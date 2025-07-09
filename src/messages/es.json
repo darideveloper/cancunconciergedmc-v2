@@ -187,14 +187,14 @@
     "title": "Galería",
     "description": "Explora nuestra galería de eventos, servicios y transportaciones en Cancún y la Riviera Maya.",
     "categories": {
-      "transports": {
-        "title": "Vehículos"
+      "vehicles": {
+        "title": "vehicles"
       },
-      "events": {
-        "title": "Decoración"
+      "decoration": {
+        "title": "decoration"
       },
-      "services": {
-        "title": "Actividades"
+      "activities": {
+        "title": "activities"
       }
     }
   },
