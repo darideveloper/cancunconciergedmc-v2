@@ -22,9 +22,11 @@ import SEO from '../components/utils/SEO.astro'
 import AOSInit from '../components/utils/AOSInit'
 
 // Get current page
-const currentUrl = Astro.request.url
-let currentPage = currentUrl.split('/').pop()
-if (currentPage === '' || currentPage === 'en' || currentPage === 'es') {
+const segments = Astro.url.pathname.split('/').filter(Boolean)
+const last = segments.at(-1)
+
+let currentPage = last
+if (!currentPage || currentPage === 'en' || currentPage === 'es') {
   currentPage = 'home'
 }
 
