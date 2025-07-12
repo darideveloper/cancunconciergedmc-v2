@@ -21,6 +21,9 @@ import SEO from '../components/utils/SEO.astro'
 // Components
 import AOSInit from '../components/utils/AOSInit'
 
+// Animations / Transitions
+import { ClientRouter } from 'astro:transitions'
+
 // Get current page
 const segments = Astro.url.pathname.split('/').filter(Boolean)
 const last = segments.at(-1)
@@ -29,9 +32,6 @@ let currentPage = last
 if (!currentPage || currentPage === 'en' || currentPage === 'es') {
   currentPage = 'home'
 }
-
-// Animations / Transitions
-import { ClientRouter } from 'astro:transitions'
 ---
 
 <!doctype html>
@@ -57,7 +57,6 @@ import { ClientRouter } from 'astro:transitions'
     />
     <SEO currentPage={currentPage} lang={lang} />
     <ClientRouter />
-    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
     <!-- Start aos -->
