@@ -1,79 +1,138 @@
 ---
 // Components
-import TestimonialCard from '../ui/TestimonialCard.astro'
-import Title from '../ui/Title.astro'
+import TestimonialCard from "../ui/TestimonialCard.astro";
+import Title from "../ui/Title.astro";
 
 // Libs
-import { useTranslations } from '../../i18n/utils'
-import { clsx } from 'clsx'
+import { useTranslations } from "../../i18n/utils";
+import { clsx } from "clsx";
 
 // i18n
-const { lang } = Astro.params as any
-const t = useTranslations(lang)
+const { lang } = Astro.params as any;
+const t = useTranslations(lang);
 
 // Data and translations
 const testimonialsKeys = [
-  'rocco',
-  'magaly',
-  'alex',
-  'naomi',
-  'ana',
-  'gabriel',
-  'erick',
-]
-const testimonials = t('testimonials.quotes')
+  "rocco",
+  "magaly",
+  "alex",
+  "naomi",
+  "ana",
+  "gabriel",
+  "erick",
+];
+const testimonials = t("testimonials.quotes");
 ---
 
 <section
-  id='testimonials'
+  id="testimonials"
   class={clsx(
-    'container',
-    'flex',
-    'flex-col',
-    'items-center',
-    'justify-center'
+    "container",
+    "flex",
+    "flex-col",
+    "items-center",
+    "justify-center"
   )}
 >
   <Title>
-    {t('testimonials.title')}
+    {t("testimonials.title")}
   </Title>
 
-  <div
-    class={clsx(
-      'grid',
-      'grid-cols-1 md:grid-cols-2',
-      'w-auto',
-      'max-w-5xl',
-      'gap-8 md:gap-20',
-      'align-center',
-      'justify-center',
-      'align-center'
-    )}
-  >
-    {
-      testimonialsKeys.map((testimonialsKey) => {
-        const testimonial = testimonials[testimonialsKey]
+  <div class={clsx("w-full", "max-w-5xl", "relative", "py-8")}>
+    <!-- Swiper container -->
+    <div class={clsx("swiper", "testimonials-swiper")}>
+      <div class={clsx("swiper-wrapper")}>
+        {
+          testimonialsKeys.map((testimonialsKey) => {
+            const testimonial = testimonials[testimonialsKey];
 
-        return (
-          <div
-            class={clsx(
-              'card-wrapper',
-              'flex',
-              'flex-col',
-              'items-cebter',
-              'justify-start'
-            )}
-            data-aos='fade-down'
-          >
-            <TestimonialCard
-              imageSrc={`/testimonials/${testimonial.name}.webp`}
-              imageAlt={`${t('general.photoAlt')} ${testimonial.name}`}
-              name={testimonial.name}
-              quote={testimonial.quote}
-            />
-          </div>
-        )
-      })
-    }
+            return (
+              <div
+                class={clsx("swiper-slide", "h-auto", "flex", "items-stretch")}
+              >
+                <div
+                  class={clsx(
+                    "card-wrapper",
+                    "flex",
+                    "flex-col",
+                    "items-center",
+                    "justify-start",
+                    "p-4",
+                    "h-full",
+                    "w-full"
+                  )}
+                  data-aos="fade-down"
+                >
+                  <TestimonialCard
+                    imageSrc={`/testimonials/${testimonial.name}.webp`}
+                    imageAlt={`${t("general.photoAlt")} ${testimonial.name}`}
+                    name={testimonial.name}
+                    quote={testimonial.quote}
+                  />
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+
+      <!-- Navigation buttons -->
+      <div
+        class={clsx("swiper-button-next", "testimonials-next", "text-blue-600")}
+      >
+      </div>
+      <div
+        class={clsx("swiper-button-prev", "testimonials-prev", "text-blue-600")}
+      >
+      </div>
+
+      <!-- Pagination -->
+      <div
+        class={clsx(
+          "swiper-pagination",
+          "testimonials-pagination",
+          "!bottom-0"
+        )}
+      >
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  import { Swiper } from "swiper";
+  import { Navigation, Pagination, Autoplay } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+
+  // Initialize testimonials swiper
+  new Swiper(".testimonials-swiper", {
+    modules: [Navigation, Pagination, Autoplay],
+    slidesPerView: 2,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+    },
+    navigation: {
+      nextEl: ".testimonials-next",
+      prevEl: ".testimonials-prev",
+    },
+    pagination: {
+      el: ".testimonials-pagination",
+      clickable: true,
+    },
+  });
+</script>
