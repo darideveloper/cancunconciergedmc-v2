@@ -33,7 +33,7 @@ const servicesDescription = marked(t('services.description'))
 <!-- Service Cards Section -->
 <section class:list={['container']} id="services-cards">
   <div class:list={['text-center', 'mb-12']}>
-    <Title class:list={['!text-center']}>{t('services.titleAlternate')}</Title>
+    <Title class:list={['!text-center']} isH1={true}>{t('services.title')}</Title>
     <div 
       class:list={['text-gray-600', 'font-sans', 'max-w-4xl', 'mx-auto']}
       set:html={servicesDescription}
