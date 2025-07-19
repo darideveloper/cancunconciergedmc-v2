@@ -55,6 +55,7 @@ const {
           'text-blue',
           'font-title',
           'mb-2',
+          "text-center"
         ]}
       >
         {title}
@@ -63,7 +64,7 @@ const {
 
     <!-- Services List -->
     <div class:list={['services-list', 'flex-1', 'p-6', 'pt-4']}>
-      <div class:list={['space-y-3', isFirst && 'lg:flex', 'flex-wrap', 'gap-3', 'justify-start', 'items-start']}>
+      <div class:list={['space-y-3', 'grid', 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4', 'gap-3']}>
         {items.map((item, index) => (
           <div
             class:list={[
@@ -72,7 +73,7 @@ const {
               'items-center',
               'rounded-lg',
               'p-3',
-              isFirst && 'lg:min-w-52 xl:min-w-64 ',
+              'lg:min-w-52 xl:min-w-64 ',
             ]}
             data-aos='fade-up'
             data-aos-delay={index * 100}
