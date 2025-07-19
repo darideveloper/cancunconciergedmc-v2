@@ -14,11 +14,10 @@ import '@fontsource/roboto'
 import WhyUs from '../components/sections/WhyUs.astro'
 import Footer from '../components/sections/Footer.astro'
 import Header from '../components/sections/Header'
+import WhatsappButton from '../components/ui/WhatsappButton.astro'
 
 // Utils
 import SEO from '../components/utils/SEO.astro'
-
-// Components
 import AOSInit from '../components/utils/AOSInit'
 
 // Animations / Transitions
@@ -77,5 +76,6 @@ if (!currentPage || currentPage === 'en' || currentPage === 'es') {
     <!-- Footer -->
     <WhyUs />
     <Footer />
+    <WhatsappButton lang={lang} />
   </body>
 </html>
