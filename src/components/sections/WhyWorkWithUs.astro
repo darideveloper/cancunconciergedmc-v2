@@ -1,21 +1,6 @@
 ---
-import {
-  MdStar,
-  MdPsychology,
-  MdAutorenew,
-  MdAttachMoney,
-  MdEvent,
-  MdLocationOn,
-  MdHotel,
-  MdBusiness,
-  MdVerified,
-} from 'react-icons/md'
-
 // Components
-import FeatureCard from '../ui/FeatureCard.astro'
-
-// Data 
-import { whatsappBaseUrl } from '../../data/contact'
+import BasicInfoCard from '../ui/BasicInfoCard.astro'
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
@@ -24,27 +9,21 @@ import { useTranslations } from '../../i18n/utils'
 const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
-// Define the icons mapping
-const iconsMapping = {
-  personalized: MdStar,
-  anticipation: MdPsychology,
-  flexibility: MdAutorenew,
-  pricing: MdAttachMoney,
-  management: MdEvent,
-  experience: MdLocationOn,
-  luxury: MdHotel,
-  boutique: MdBusiness,
-  trusted: MdVerified,
-}
-
 // Get cards data from translations
-const cardKeys = Object.keys(iconsMapping)
+const cardKeys = [
+  'personalized',
+  'anticipation',
+  'flexibility',
+  'pricing',
+  'management',
+  'experience',
+  'luxury',
+  'boutique',
+  'trusted',
+]
 const whyWorkWithUsCards = cardKeys.map((key) => ({
-  icon: iconsMapping[key as keyof typeof iconsMapping],
   title: t(`whyWorkWithUs.cards.${key}.title`),
   description: t(`whyWorkWithUs.cards.${key}.description`),
-  category: t(`whyWorkWithUs.cards.${key}.category`),
-  href: whatsappBaseUrl,
 }))
 ---
 
@@ -71,19 +50,15 @@ const whyWorkWithUsCards = cardKeys.map((key) => ({
   <div class:list={['max-w-7xl', 'mx-auto']}>
     <div
       class:list={[
-        'grid',
-        'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+        'flex',
+        'flex-col',
         'gap-8',
-        'space-y-8',
       ]}
     >
       {whyWorkWithUsCards.map((data) => (
-        <FeatureCard
-          icon={data.icon}
+        <BasicInfoCard
           title={data.title}
-          description={data.description}
-          category={data.category}
-          href={data.href}
+          text={data.description}
         />
       ))}
     </div>
