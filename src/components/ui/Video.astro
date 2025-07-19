@@ -30,6 +30,7 @@ const { src, bgPlay = true, overlaySrc } = Astro.props as Props
       'group',
       'cursor-pointer',
     ]}
+    onclick={`playVideo()`}
   >
     <!-- Play icon -->
     <div
@@ -81,13 +82,22 @@ const { src, bgPlay = true, overlaySrc } = Astro.props as Props
     class:list={['video', 'w-full', 'object-cover', 'parallax']}
   ></video>
 </div>
-
 <script>
-  // Hide overlay on click and play video
-  const videoOverlay = document.querySelector('.video-overlay')
-  const video = document.querySelector('.video') as HTMLVideoElement
-  videoOverlay?.addEventListener('click', () => {
-    videoOverlay?.classList.add('hidden')
-    video?.play()
-  })
+  // Extend Window interface to include playVideo
+  declare global {
+    interface Window {
+      playVideo: () => void
+    }
+  }
+  
+  // Add playVideo function to window
+  window.playVideo = () => {
+    const videoOverlay = document.querySelector('.video-overlay')
+    const video = document.querySelector('.video') as HTMLVideoElement
+    if (videoOverlay) videoOverlay.classList.add('hidden')
+    if (video) {
+      video.play()
+      video.muted = false
+    }
+  }
 </script>
