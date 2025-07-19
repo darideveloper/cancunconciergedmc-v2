@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string
+  text: string
+  class?: string
+}
+
+const { title, text, class: className = '' } = Astro.props as Props
+---
+
+<article
+  class:list={[
+    'basic-info-card-wrapper',
+    'hover:scale-105',
+    'duration-300',
+    'shadow-lg',
+    'rounded-lg',
+    'p-6',
+    'bg-white',
+    'h-full',
+    'flex',
+    'flex-col',
+    'items-center',
+    'justify-center',
+    'gap-6',
+    className,
+  ]}
+>
+  <h3
+    class:list={[
+      'title',
+      'text-2xl',
+      'font-bold',
+      'text-blue group-hover:text-gold',
+      'mb-2',
+      'font-title',
+      'transition-colors',
+      'duration-300',
+    ]}
+  >
+    {title}
+  </h3>
+  <p
+    class:list={[
+      'text',
+      'text-gray-700',
+      'font-sans',
+      'leading-relaxed',
+      'text-lg',
+      'text-center',
+    ]}
+  >
+    {text}
+  </p>
+</article>

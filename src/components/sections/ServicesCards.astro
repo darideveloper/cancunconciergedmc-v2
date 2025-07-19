@@ -1,12 +1,11 @@
 ---
 // Components
 import Title from '../ui/Title.astro'
-import ServiceCard from '../ui/ServiceCard.astro'
+import BasicInfoCard from '../ui/BasicInfoCard.astro'
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
 import { marked } from 'marked'
-import { getWhatsappMessageUrl } from '../../data/contact'
 
 // i18n
 const { lang } = Astro.params as any
@@ -17,13 +16,10 @@ import { servicesItemsIcons } from '../../data/servcies'
 
 // Get services from translations
 const serviceKeys = Object.keys(servicesItemsIcons)
-const baseMessage = t('services.baseMessage')
 const services = serviceKeys.map((key) => ({
   icon: servicesItemsIcons[key as keyof typeof servicesItemsIcons],
   title: t(`services.cards.${key}.title`),
   text: t(`services.cards.${key}.text`),
-  href: getWhatsappMessageUrl(`${baseMessage} ${t(`services.cards.${key}.title`)}`),
-  key: key,
 }))
 
 // Parse services description as markdown
@@ -42,22 +38,16 @@ const servicesDescription = marked(t('services.description'))
 
   <div
     class:list={[
-      'grid',
-      'grid-cols-1 md:grid-cols-2 xl:grid-cols-3',
+      'flex',
+      'flex-col',
       'gap-8',
-      'max-w-7xl',
-      'mx-auto',
     ]}
   >
     {
       services.map((service) => (
-        <ServiceCard
-          icon={service.icon}
+        <BasicInfoCard
           title={service.title}
           text={service.text}
-          href={service.href}
-          id={service.key}
-          class:list={['h-full', 'last:xl:col-span-2 first:md:col-span-2']}
         />
       ))
     }
