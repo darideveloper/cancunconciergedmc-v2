@@ -2,10 +2,23 @@
 interface Props {
   title: string
   text: string
+  titleH2?: boolean
   class?: string
 }
 
-const { title, text, class: className = '' } = Astro.props as Props
+const { title, text, titleH2 = false, class: className = '' } = Astro.props as Props
+
+const titleClasses = [
+  'title',
+  'text-2xl',
+  'font-bold',
+  'text-blue group-hover:text-gold',
+  'mb-2',
+  'font-title',
+  'transition-colors',
+  'duration-300',
+]
+
 ---
 
 <article
@@ -27,20 +40,11 @@ const { title, text, class: className = '' } = Astro.props as Props
   data-aos='fade-up'
   data-aos-delay='100'
 >
-  <h3
-    class:list={[
-      'title',
-      'text-2xl',
-      'font-bold',
-      'text-blue group-hover:text-gold',
-      'mb-2',
-      'font-title',
-      'transition-colors',
-      'duration-300',
-    ]}
-  >
-    {title}
-  </h3>
+  {titleH2 ? (
+    <h2 class:list={titleClasses}>{title}</h2>
+  ) : (
+    <h3 class:list={titleClasses}>{title}</h3>
+  )}
   <p
     class:list={[
       'text',
