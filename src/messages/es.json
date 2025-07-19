@@ -190,13 +190,13 @@
     "description": "Explora nuestra galería de Actividades, Decor y Transportación en Cancún y la Riviera Maya.",
     "categories": {
       "vehicles": {
-        "title": "vehicles"
+        "title": "Vehículos"
       },
       "decoration": {
-        "title": "decor"
+        "title": "Decoración"
       },
       "activities": {
-        "title": "activities"
+        "title": "Actividades"
       }
     }
   },
