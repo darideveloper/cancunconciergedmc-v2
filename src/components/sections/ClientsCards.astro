@@ -1,6 +1,7 @@
 ---
 // Components
 import ServeCard from '../ui/ServeCard.astro'
+import Title from '../ui/Title.astro'
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
@@ -25,17 +26,9 @@ const clientsCardsData = cardKeys.map((key) => ({
 <!-- Clients Cards Section -->
 <section class:list={['container', 'mt-20', 'mb-16']} id='who-we-serve'>
   <div class:list={['text-center', 'mb-12']}>
-    <h2
-      class:list={[
-        'text-3xl',
-        'font-bold',
-        'text-blue',
-        'font-title',
-        'mb-4',
-      ]}
-    >
+    <Title class:list={["!text-center"]}>
       {t('clients.titleAlternate')}
-    </h2>
+    </Title>
     <p class:list={['text-gray-600', 'font-sans', 'max-w-2xl', 'mx-auto']}>
       {t('clients.description')}
     </p>
