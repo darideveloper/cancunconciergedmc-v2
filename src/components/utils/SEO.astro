@@ -11,12 +11,22 @@ import { useTranslations } from '../../i18n/utils'
 // i18n
 const t = useTranslations((lang as 'en' | 'es') || 'en')
 
+// Data
+import { domain } from '../../data/setup'
+import {
+  phoneUnformatted,
+  email,
+  addressElems,
+  socialNetworks,
+} from '../../data/contact'
+import { servicesItemsIcons } from '../../data/servcies'
+
 // Get page metadata from i18n
 const title = 'Cancun Concierge DMC'
 const pageName = t(`meta.${currentPage}.page`)
 const description = t(`meta.${currentPage}.description`)
-const url = 'https://cancunconciergedmc.com/' // Make sure this is dynamic if needed
-const image = '/imgs/logo.webp' // Make sure this is the full URL if needed
+const url = domain // Make sure this is dynamic if needed
+const image = '/logo.webp' // Make sure this is the full URL if needed
 const type = 'website'
 const twitterHandle = '@DeveloperDari'
 let keywords = t(`meta.${currentPage}.keywords`)
@@ -34,29 +44,28 @@ if (currentPage == 'home') {
   pageTitle = `${pageName} | ${title}`
 }
 
+// Get services data from translations
+const serviceKeys = Object.keys(servicesItemsIcons)
+
 // Generate data
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: pageTitle,
   description: description,
-  url: 'https://cancunconciergedmc.com/',
-  logo: 'https://cancunconciergedmc.com/imgs/logo.webp',
-  image: 'https://cancunconciergedmc.com/imgs/services.webp',
-  telephone: '+52 998 23 91 978',
-  email: 'info@cancunconciergedmc.com',
+  url: domain,
+  logo: `${domain}/logo.webp`,
+  image: `${domain}/services.webp`,
+  telephone: phoneUnformatted,
+  email: email,
   priceRange: '$$',
   serviceArea: ['Cancun', 'Riviera Maya'],
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Cancun',
-    addressRegion: 'Quintana Roo',
-    addressCountry: 'Mexico',
+    ...addressElems,
   },
   sameAs: [
-    'https://www.facebook.com/cancunconciergemx',
-    'https://www.instagram.com/cancunconcierge/',
-    'https://www.google.com.mx/maps/place/Canc%C3%BAn,+Q.R./@21.1214334,-87.1682536,11z/data=!4m6!3m5!1s0x8f4c2b05aef653db:0xce32b73c625fcd8a!8m2!3d21.161908!4d-86.8515279!16zL20vMDFxOTht?entry=tts&g_ep=EgoyMDI1MDUwNS4wIPu8ASoASAFQAw%3D%3D&skid=1ed7bde6-ff37-492f-90a0-2add32d28ada',
+    ...socialNetworks.map((social) => social.link),
   ],
   openingHoursSpecification: [
     {
@@ -75,45 +84,26 @@ const jsonLd = {
     },
   ],
   makesOffer: [
-    {
+    ...serviceKeys.map((serviceKey) => ({
       '@type': 'Offer',
-      name: 'Airport Transportation',
-      description:
-        'Reliable and comfortable airport transportation services in Cancun and Riviera Maya.',
-      url: 'https://cancunconciergedmc.com/transportation',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Tours and Excursions',
-      description:
-        'Discover the best tours and water activities in Cancun and Riviera Maya.',
-      url: 'https://cancunconciergedmc.com/services',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Event Planning',
-      description:
-        'Tailor-made event planning services for corporate groups and special occasions.',
-      url: 'https://cancunconciergedmc.com/services',
-    },
+      name: t(`services.cards.${serviceKey}.title`)?.replaceAll('*', ''),
+      description: t(`services.cards.${serviceKey}.text`)?.replaceAll('*', ''),
+      url: `${domain}/${lang}/services`,
+    })),
   ],
 }
-
-// Base domain
-const baseUrl = 'https://cancunconciergedmc.com'
 
 // Page slug — we assume `currentPage` is the slug, e.g., 'gallery'
 const pageSlug = currentPage === 'home' ? '' : `/${currentPage}`
 
 // Canonical URL for this language
-const canonicalUrl = `${baseUrl}/${lang}${pageSlug}`
+const canonicalUrl = `${domain}/${lang}${pageSlug}`
 
 // Alternate URLs
 const alternateUrls = {
-  en: `${baseUrl}/en${pageSlug}`,
-  es: `${baseUrl}/es${pageSlug}`,
+  en: `${domain}/en${pageSlug}`,
+  es: `${domain}/es${pageSlug}`,
 }
-
 ---
 
 <!-- Html tags -->
