@@ -1,83 +1,81 @@
 ---
 // Layout
-import Layout from '../../layouts/Layout.astro'
+import Layout from "../../layouts/Layout.astro";
 
 // Sections
-import FullWidthVideo from '../../components/ui/FullWidthVideo.astro'
-import ServicesMenu from '../../components/sections/ServicesMenu.astro'
-import ServicesCards from '../../components/sections/ServicesCards.astro'
-import ClientsCards from '../../components/sections/ClientsCards.astro'
+import FullWidthVideo from "../../components/ui/FullWidthVideo.astro";
+import ServicesMenu from "../../components/sections/ServicesMenu.astro";
+import ServicesCards from "../../components/sections/ServicesCards.astro";
+import ClientsCards from "../../components/sections/ClientsCards.astro";
+import Testimonials from "../../components/sections/Testimonials.astro";
 
 // Why Work With Us Alternatives
-import WhyWorkWithUs from '../../components/sections/WhyWorkWithUs.astro'
+import WhyWorkWithUs from "../../components/sections/WhyWorkWithUs.astro";
 
 // Icons
-import {
-  MdGroups,
-  MdBeachAccess,
-  MdLocalAirport,
-} from 'react-icons/md'
+import { MdGroups, MdBeachAccess, MdLocalAirport } from "react-icons/md";
 
 // Libs
-import { useTranslations } from '../../i18n/utils'
-import { getStaticPathsLangs } from '../../libs/getStaticPaths'
+import { useTranslations } from "../../i18n/utils";
+import { getStaticPathsLangs } from "../../libs/getStaticPaths";
 
 // i18n
-export const getStaticPaths = getStaticPathsLangs
-const { lang } = Astro.params as any
-const t = useTranslations(lang)
+export const getStaticPaths = getStaticPathsLangs;
+const { lang } = Astro.params as any;
+const t = useTranslations(lang);
 
 // Data for ServeCard components
 const serveCardData = [
   {
     icon: MdGroups,
-    title: 'Group Activities',
+    title: "Group Activities",
     items: [
-      'Team Building',
-      'Corporate Retreats',
-      'Educational Tours',
-      'Adventure Activities',
-      'Cultural Experiences',
-      'Wellness Programs',
-      'Networking Events',
-      'Leadership Workshops',
+      "Team Building",
+      "Corporate Retreats",
+      "Educational Tours",
+      "Adventure Activities",
+      "Cultural Experiences",
+      "Wellness Programs",
+      "Networking Events",
+      "Leadership Workshops",
     ],
   },
   {
     icon: MdBeachAccess,
-    title: 'Leisure & Entertainment',
+    title: "Leisure & Entertainment",
     items: [
-      'Beach Activities',
-      'Spa Services',
-      'Entertainment Shows',
-      'Nightlife Tours',
-      'Shopping Experiences',
-      'Cultural Tours',
-      'Photography Sessions',
-      'Relaxation Packages',
+      "Beach Activities",
+      "Spa Services",
+      "Entertainment Shows",
+      "Nightlife Tours",
+      "Shopping Experiences",
+      "Cultural Tours",
+      "Photography Sessions",
+      "Relaxation Packages",
     ],
   },
   {
     icon: MdLocalAirport,
-    title: 'Travel & Logistics',
+    title: "Travel & Logistics",
     items: [
-      'Flight Arrangements',
-      'Travel Planning',
-      'Itinerary Management',
-      'Documentation Support',
-      'Insurance Services',
-      'Emergency Assistance',
-      'Multi-Destination Tours',
-      'Custom Travel Packages',
+      "Flight Arrangements",
+      "Travel Planning",
+      "Itinerary Management",
+      "Documentation Support",
+      "Insurance Services",
+      "Emergency Assistance",
+      "Multi-Destination Tours",
+      "Custom Travel Packages",
     ],
   },
-]
+];
 ---
 
 <Layout>
-  <FullWidthVideo src='/videos/services.mp4' />
+  <FullWidthVideo src="/videos/services.mp4" />
   <ServicesMenu />
   <ServicesCards />
   <ClientsCards />
   <WhyWorkWithUs />
+  <Testimonials/>
 </Layout>
