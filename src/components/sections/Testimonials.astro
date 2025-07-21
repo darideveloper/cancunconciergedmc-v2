@@ -1,11 +1,14 @@
 ---
+// Styles
+import 'swiper/css'
+import 'swiper/css/autoplay'
+
 // Components
 import TestimonialCard from "../ui/TestimonialCard.astro";
 import Title from "../ui/Title.astro";
 
 // Libs
 import { useTranslations } from "../../i18n/utils";
-import { clsx } from "clsx";
 
 // i18n
 const { lang } = Astro.params as any;
@@ -26,32 +29,33 @@ const testimonials = t("testimonials.quotes");
 
 <section
   id="testimonials"
-  class={clsx(
+  class:list={[
     "container",
     "flex",
     "flex-col",
     "items-center",
-    "justify-center"
-  )}
+    "justify-center",
+    "testimonials"
+  ]}
 >
   <Title>
     {t("testimonials.title")}
   </Title>
 
-  <div class={clsx("w-full", "max-w-5xl", "relative", "py-8")}>
+  <div class:list={["w-full", "relative", "py-8"]}>
     <!-- Swiper container -->
-    <div class={clsx("swiper", "testimonials-swiper")}>
-      <div class={clsx("swiper-wrapper")}>
+    <div class:list={["swiper"]}>
+      <div class:list={["swiper-wrapper"]}>
         {
           testimonialsKeys.map((testimonialsKey) => {
             const testimonial = testimonials[testimonialsKey];
 
             return (
               <div
-                class={clsx("swiper-slide", "h-auto", "flex", "items-stretch")}
+                class:list={["swiper-slide", "h-auto", "flex", "items-stretch"]}
               >
                 <div
-                  class={clsx(
+                  class:list={[
                     "card-wrapper",
                     "flex",
                     "flex-col",
@@ -59,8 +63,8 @@ const testimonials = t("testimonials.quotes");
                     "justify-start",
                     "p-4",
                     "h-full",
-                    "w-full"
-                  )}
+                    "w-full",
+                  ]}
                   data-aos="fade-down"
                 >
                   <TestimonialCard
@@ -75,64 +79,63 @@ const testimonials = t("testimonials.quotes");
           })
         }
       </div>
-
-      <!-- Navigation buttons -->
-      <div
-        class={clsx("swiper-button-next", "testimonials-next", "text-blue-600")}
-      >
-      </div>
-      <div
-        class={clsx("swiper-button-prev", "testimonials-prev", "text-blue-600")}
-      >
-      </div>
-
-      <!-- Pagination -->
-      <div
-        class={clsx(
-          "swiper-pagination",
-          "testimonials-pagination",
-          "!bottom-0"
-        )}
-      >
-      </div>
     </div>
   </div>
 </section>
 
 <script>
-  import { Swiper } from "swiper";
-  import { Navigation, Pagination, Autoplay } from "swiper/modules";
-  import "swiper/css";
-  import "swiper/css/navigation";
-  import "swiper/css/pagination";
+  import Swiper from 'swiper'
+  import { Autoplay } from 'swiper/modules'
 
-  // Initialize testimonials swiper
-  new Swiper(".testimonials-swiper", {
-    modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: 2,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30,
+  function initTestimonialsSwiper() {
+    // Destroy existing swiper if it exists
+    const swiperElement = document.querySelector('.testimonials .swiper') as any
+    if (swiperElement?.swiper) {
+      swiperElement.swiper.destroy(true, true)
+    }
+
+    // Initialize Swiper with required modules
+    const swiper = new Swiper('.testimonials .swiper', {
+      modules: [Autoplay],
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
       },
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: 10,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
       },
-    },
-    navigation: {
-      nextEl: ".testimonials-next",
-      prevEl: ".testimonials-prev",
-    },
-    pagination: {
-      el: ".testimonials-pagination",
-      clickable: true,
-    },
-  });
+    })
+
+    // Add click event listener to each slide
+    document.querySelectorAll('.testimonials .swiper-slide').forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        // Check if it's the last slide
+        if (index === swiper.slides.length - 1) {
+          swiper.slideTo(0) // Go to the first slide
+        } else {
+          swiper.slideTo(index + 1) // Go to the next slide
+        }
+      })
+    })
+  }
+
+  // Initialize on DOM ready and also on page transitions
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTestimonialsSwiper)
+  } else {
+    initTestimonialsSwiper()
+  }
+
+  // Reinitialize on view transitions (for modern navigation)
+  document.addEventListener('astro:page-load', initTestimonialsSwiper)
 </script>
