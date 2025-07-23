@@ -24,12 +24,12 @@ const heroTexts = t('transportation.hero').split(';')
   id='hero'
 >
   <div class={clsx('wrapper-logo', 'mx-auto', 'my-0')}>
-    <div class={clsx('hero-image', 'relative')}>
+    <div class={clsx('hero-image', 'relative', 'flex', 'flex-col-reverse')}>
       <div
         class={clsx(
           'text-wrapper',
-          'mt-16',
-          'mb-10',
+          'mt-0 sm:mt-16',
+          'mb-0 sm:mb-10',
           'sm:m-0',
           'w-full',
           'z-10',
@@ -37,12 +37,7 @@ const heroTexts = t('transportation.hero').split(';')
           'flex',
           'flex-col',
           'items-center',
-          'justify-center',
-          'sm:absolute',
-          'sm:top-1/2',
-          'sm:left-1/2',
-          'sm:-translate-x-1/2',
-          'sm:-translate-y-1/2',
+          'justify-center'
         )}
       >
         <Title
@@ -56,18 +51,12 @@ const heroTexts = t('transportation.hero').split(';')
             'inline-block',
             'lg:py-5',
             'lg:px-20',
-            '!text-center',
+            '!text-center'
           )}
         >
           {
             heroTexts.map((text: string) => (
-              <span
-                class={clsx(
-                  'block'
-                )}
-              >
-                {text}
-              </span>
+              <span class={clsx('block')}>{text}</span>
             ))
           }
         </Title>
