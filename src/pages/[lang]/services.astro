@@ -1,19 +1,19 @@
 ---
 // Layout
-import Layout from "../../layouts/Layout.astro";
+import Layout from '../../layouts/Layout.astro'
 
 // Sections
-import FullWidthVideo from '../../components/ui/FullWidthVideo.astro'
+import FullWidthYoutube from '../../components/ui/FullWidthYoutube.astro'
 import ServicesCards from '../../components/sections/ServicesCards.astro'
 import ClientsCards from '../../components/sections/ClientsCards.astro'
 import Testimonials from '../../components/sections/Testimonials.astro'
 
 // Why Work With Us Alternatives
-import WhyWorkWithUs from "../../components/sections/WhyWorkWithUs.astro";
+import WhyWorkWithUs from '../../components/sections/WhyWorkWithUs.astro'
 
 // Libs
-import { useTranslations } from "../../i18n/utils";
-import { getStaticPathsLangs } from "../../libs/getStaticPaths";
+import { useTranslations } from '../../i18n/utils'
+import { getStaticPathsLangs } from '../../libs/getStaticPaths'
 
 // i18n
 export const getStaticPaths = getStaticPathsLangs
@@ -22,9 +22,9 @@ const t = useTranslations(lang)
 ---
 
 <Layout>
-  <FullWidthVideo src='/videos/services.mp4' />
+  <FullWidthYoutube youtubeSrc='https://www.youtube.com/embed/OAIGoxHJ7bk' />
   <ServicesCards />
   <ClientsCards />
   <WhyWorkWithUs />
-  <Testimonials/>
+  <Testimonials />
 </Layout>
