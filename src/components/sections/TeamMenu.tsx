@@ -56,7 +56,10 @@ export default function Team({ lang }: TeamProps) {
                   onClick={() => {
                     setActiveOption(teamKey)
                   }}
-                  className={getMenuLinksClasses(activeOption == teamKey)}
+                  className={clsx(
+                    getMenuLinksClasses(activeOption == teamKey),
+                    'transition-all duration-300 ease-in-out'
+                  )}
                 >
                   {teamData[teamKey].name}
                 </button>
@@ -65,20 +68,36 @@ export default function Team({ lang }: TeamProps) {
           </ul>
         </div>
 
-        <div className={clsx('content', 'w-full md:w-7/12 lg:w-3/4')}>
+        <div className={clsx('content', 'w-full md:w-7/12 lg:w-3/4', 'relative')}>
           {teamKeys.map((teamKey) => {
             const member = teamData[teamKey]
             return (
-              activeOption === teamKey && (
+              <div
+                key={teamKey}
+                className={clsx(
+                  'absolute inset-0',
+                  'transition-all duration-500 ease-in-out',
+                  activeOption === teamKey 
+                    ? 'opacity-100 visible translate-x-0' 
+                    : 'opacity-0 invisible translate-x-4 pointer-events-none'
+                )}
+              >
                 <TeamCard
-                  key={teamKey}
                   id={teamKey}
                   name={member.name}
                   bio={member.bio}
                 />
-              )
+              </div>
             )
           })}
+          {/* Spacer to maintain layout height */}
+          <div className="invisible">
+            <TeamCard
+              id={teamKeys[0]}
+              name={teamData[teamKeys[0]].name}
+              bio={teamData[teamKeys[0]].bio}
+            />
+          </div>
         </div>
       </div>
     </section>
