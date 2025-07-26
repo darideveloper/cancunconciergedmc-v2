@@ -25,8 +25,8 @@ const navLinksLang = navLinks.map((item) => {
 
 const footerLinksLang = footerLinks.map((item) => {
   return {
-    text: t(`footer.links.${item.text}`),
-    url: item.url
+    text: t(`footer.links.${item.text}.title`),
+    url: t(`footer.links.${item.text}.url`)
   }
 })
 ---

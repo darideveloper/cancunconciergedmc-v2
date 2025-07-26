@@ -51,7 +51,7 @@ export const footerLinks: {
 }[] = [
   {
     text: 'menuOfServices',
-    url: 'https://cancunconciergedmc.com/menu-de-servicios/',
+    url: '',
     urlLang: '',
     active: false,
   }
