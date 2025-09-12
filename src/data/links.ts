@@ -34,13 +34,12 @@ export const navLinks: {
     urlLang: '',
     active: false,
   },
-
-    {
-    text: 'transportation',
-    url: '/transportation',
-    urlLang: '',
-    active: false,
-  }
+  // {
+  //   text: 'transportation',
+  //   url: '/transportation',
+  //   urlLang: '',
+  //   active: false,
+  // },
 ]
 
 export const footerLinks: {
@@ -54,5 +53,5 @@ export const footerLinks: {
     url: '',
     urlLang: '',
     active: false,
-  }
+  },
 ]
