@@ -30,7 +30,7 @@ export const navLinks: {
   },
   {
     text: 'testimonials',
-    url: '/services#testimonials',
+    url: '/services/#testimonials',
     urlLang: '',
     active: false,
   },
