@@ -18,41 +18,72 @@ interface HeaderProps {
 }
 
 export default function Header({ lang, serverPathname }: HeaderProps) {
-
   // States
   const [menuOpen, setMenuOpen] = useState(false);
   const [navLinksLang, setNavLinksLang] = useState(navLinks);
+  const [currentPath, setCurrentPath] = useState('/');
 
   // Translations
   const t = useTranslations(lang);
 
-  // Get current path for language switching
-  let currentPath: string;
-  const pathOnClient = typeof window !== 'undefined' ? window.location.pathname : null;
-  const authoritativePath = pathOnClient || serverPathname;
+  // Helper function to normalize paths (remove trailing slashes and hash fragments)
+  const normalizePath = (path: string): string => {
+    return path
+      .replace(/\/$/, '') // Remove trailing slash
+      .replace(/#.*$/, '') // Remove hash fragment
+      || '/'; // If empty after normalization, return '/'
+  };
 
-  if (authoritativePath) {
-    currentPath = authoritativePath.replace(/^\/(en|es)/, '');
-    // If after removing lang prefix, path is empty (e.g. original /en or /es), default to '/'
-    if (currentPath === '') {
-      currentPath = '/';
+  // Calculate current path
+  useEffect(() => {
+    const pathOnClient = typeof window !== 'undefined' ? window.location.pathname : null;
+    const authoritativePath = pathOnClient || serverPathname;
+
+    let newCurrentPath: string;
+    if (authoritativePath) {
+      newCurrentPath = authoritativePath.replace(/^\/(en|es)/, '');
+      // If after removing lang prefix, path is empty (e.g. original /en or /es), default to '/'
+      if (newCurrentPath === '') {
+        newCurrentPath = '/';
+      }
+    } else {
+      // Fallback if no path information is available (should be rare)
+      newCurrentPath = '/';
     }
-  } else {
-    // Fallback if no path information is available (should be rare)
-    currentPath = '/';
-  }
+    
+    setCurrentPath(normalizePath(newCurrentPath));
+  }, [serverPathname]);
+
+  // Listen for Astro page transitions to update active state
+  useEffect(() => {
+    const handlePageLoad = () => {
+      if (typeof window !== 'undefined') {
+        const newPath = window.location.pathname.replace(/^\/(en|es)/, '') || '/';
+        setCurrentPath(normalizePath(newPath));
+      }
+    };
+
+    // Listen for Astro page transitions
+    document.addEventListener('astro:page-load', handlePageLoad);
+    
+    // Also listen for regular navigation
+    window.addEventListener('popstate', handlePageLoad);
+
+    return () => {
+      document.removeEventListener('astro:page-load', handlePageLoad);
+      window.removeEventListener('popstate', handlePageLoad);
+    };
+  }, []);
 
   useEffect(() => {
     const navLinksLang = navLinks.map((item) => ({
       text: t(`nav.links.${item.text}`),
       url: item.url,
       urlLang: `/${lang}${item.url}`,
-      active: item.url === currentPath,
+      active: normalizePath(item.url) === currentPath, // Normalize both paths for comparison
     }));
     setNavLinksLang(navLinksLang);
-  }, [currentPath]);
-
-  // Prepare nav links with translation and lang prefix
+  }, [currentPath, t, lang]);
 
   return (
     <header className={clsx(
