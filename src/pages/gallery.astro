@@ -1,0 +1,13 @@
+---
+// This page serves the English version at /gallery
+// We dynamically import and render the [lang]/gallery.astro content with lang='en'
+
+// Import the [lang]/gallery.astro component
+import LangGallery from './[lang]/gallery.astro'
+
+// Set language to English for root page
+const lang = 'en'
+---
+
+<!-- Render the [lang]/gallery.astro component with English language -->
+<LangGallery lang={lang} />

@@ -1,0 +1,13 @@
+---
+// This page serves the English version at /services
+// We dynamically import and render the [lang]/services.astro content with lang='en'
+
+// Import the [lang]/services.astro component
+import LangServices from './[lang]/services.astro'
+
+// Set language to English for root page
+const lang = 'en'
+---
+
+<!-- Render the [lang]/services.astro component with English language -->
+<LangServices lang={lang} />

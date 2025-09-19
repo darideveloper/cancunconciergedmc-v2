@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="refresh" content="0; url=/en" />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>If you are not redirected automatically, <a href="/en/">click here</a>.</p>
-  </body>
-</html>
+---
+// This page serves the English version at the root path
+// We dynamically import and render the [lang]/index.astro content with lang='en'
+
+// Import the [lang]/index.astro component
+import LangIndex from './[lang]/index.astro'
+
+// Set language to English for root page
+const lang = 'en'
+---
+
+<!-- Render the [lang]/index.astro component with English language -->
+<LangIndex lang={lang} />

@@ -1,0 +1,13 @@
+---
+// This page serves the English version at /transportation
+// We dynamically import and render the [lang]/transportation.astro content with lang='en'
+
+// Import the [lang]/transportation.astro component
+import LangTransportation from './[lang]/transportation.astro'
+
+// Set language to English for root page
+const lang = 'en'
+---
+
+<!-- Render the [lang]/transportation.astro component with English language -->
+<LangTransportation lang={lang} />

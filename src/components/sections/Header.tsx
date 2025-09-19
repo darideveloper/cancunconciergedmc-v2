@@ -22,68 +22,147 @@ export default function Header({ lang, serverPathname }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navLinksLang, setNavLinksLang] = useState(navLinks);
   const [currentPath, setCurrentPath] = useState('/');
+  const [isHydrated, setIsHydrated] = useState(false);
 
   // Translations
   const t = useTranslations(lang);
 
-  // Helper function to normalize paths (remove trailing slashes and hash fragments)
+  // Helper function to normalize paths (remove trailing slashes, hash fragments, and index.html)
   const normalizePath = (path: string): string => {
     return path
       .replace(/\/$/, '') // Remove trailing slash
       .replace(/#.*$/, '') // Remove hash fragment
+      .replace(/\/index\.html$/, '') // Remove index.html
       || '/'; // If empty after normalization, return '/'
   };
 
-  // Calculate current path
-  useEffect(() => {
-    const pathOnClient = typeof window !== 'undefined' ? window.location.pathname : null;
-    const authoritativePath = pathOnClient || serverPathname;
-
-    let newCurrentPath: string;
-    if (authoritativePath) {
-      newCurrentPath = authoritativePath.replace(/^\/(en|es)/, '');
-      // If after removing lang prefix, path is empty (e.g. original /en or /es), default to '/'
-      if (newCurrentPath === '') {
-        newCurrentPath = '/';
+  // Function to get current path from URL
+  const getCurrentPath = (): string => {
+    if (typeof window !== 'undefined') {
+      // Client-side: use window.location
+      const path = window.location.pathname;
+      // Handle root path as English
+      if (path === '/') {
+        return '/';
       }
-    } else {
-      // Fallback if no path information is available (should be rare)
-      newCurrentPath = '/';
+      const normalized = path.replace(/^\/(en|es)/, '') || '/';
+      return normalizePath(normalized);
+    } else if (serverPathname) {
+      // Server-side: use serverPathname
+      // Handle root path as English
+      if (serverPathname === '/') {
+        return '/';
+      }
+      const normalized = serverPathname.replace(/^\/(en|es)/, '') || '/';
+      return normalizePath(normalized);
     }
+    return '/';
+  };
+
+  // Function to handle anchor link scrolling
+  const scrollToAnchor = (hash: string) => {
+    if (!hash) return;
     
-    setCurrentPath(normalizePath(newCurrentPath));
+    // Remove the # from the hash
+    const elementId = hash.replace('#', '');
+    const element = document.getElementById(elementId);
+    
+    if (element) {
+      // Wait a bit for any animations or content to load
+      setTimeout(() => {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 200);
+    }
+  };
+
+  // Initialize current path
+  useEffect(() => {
+    const initialPath = getCurrentPath();
+    setCurrentPath(initialPath);
+    setIsHydrated(true);
+
+    // Handle initial anchor link if present
+    if (typeof window !== 'undefined' && window.location.hash) {
+      scrollToAnchor(window.location.hash);
+    }
   }, [serverPathname]);
 
-  // Listen for Astro page transitions to update active state
+  // Listen for Astro page transitions and navigation changes
   useEffect(() => {
-    const handlePageLoad = () => {
-      if (typeof window !== 'undefined') {
-        const newPath = window.location.pathname.replace(/^\/(en|es)/, '') || '/';
-        setCurrentPath(normalizePath(newPath));
+    if (!isHydrated) return;
+
+    const handleNavigation = () => {
+      const newPath = getCurrentPath();
+      setCurrentPath(newPath);
+      
+      // Handle anchor link after navigation
+      if (window.location.hash) {
+        scrollToAnchor(window.location.hash);
       }
     };
 
     // Listen for Astro page transitions
-    document.addEventListener('astro:page-load', handlePageLoad);
+    document.addEventListener('astro:page-load', handleNavigation);
     
-    // Also listen for regular navigation
-    window.addEventListener('popstate', handlePageLoad);
+    // Listen for browser navigation
+    window.addEventListener('popstate', handleNavigation);
+    
+    // Listen for hash changes (for anchor links)
+    window.addEventListener('hashchange', (e) => {
+      handleNavigation();
+      // Also scroll to the new hash
+      if (window.location.hash) {
+        scrollToAnchor(window.location.hash);
+      }
+    });
 
     return () => {
-      document.removeEventListener('astro:page-load', handlePageLoad);
-      window.removeEventListener('popstate', handlePageLoad);
+      document.removeEventListener('astro:page-load', handleNavigation);
+      window.removeEventListener('popstate', handleNavigation);
+      window.removeEventListener('hashchange', handleNavigation);
     };
-  }, []);
+  }, [isHydrated]);
 
+  // Update navigation links when current path changes
   useEffect(() => {
-    const navLinksLang = navLinks.map((item) => ({
-      text: t(`nav.links.${item.text}`),
-      url: item.url,
-      urlLang: `/${lang}${item.url}`,
-      active: normalizePath(item.url) === currentPath, // Normalize both paths for comparison
-    }));
+    if (!isHydrated) return;
+
+    const navLinksLang = navLinks.map((item) => {
+      // Handle URL generation based on current language
+      let urlLang: string;
+      if (lang === 'en') {
+        // For English, use root path for home, others as-is
+        urlLang = item.url === '/' ? '/' : item.url;
+      } else {
+        // For other languages, add language prefix
+        urlLang = `/${lang}${item.url}`;
+      }
+
+      return {
+        text: t(`nav.links.${item.text}`),
+        url: item.url,
+        urlLang,
+        active: normalizePath(item.url) === currentPath,
+      };
+    });
     setNavLinksLang(navLinksLang);
-  }, [currentPath, t, lang]);
+  }, [currentPath, t, lang, isHydrated]);
+
+  // Debug logging (remove in production)
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Header Debug:', {
+        serverPathname,
+        currentPath,
+        isHydrated,
+        windowPath: typeof window !== 'undefined' ? window.location.pathname : 'N/A',
+        hash: typeof window !== 'undefined' ? window.location.hash : 'N/A'
+      });
+    }
+  }, [currentPath, serverPathname, isHydrated]);
 
   return (
     <header className={clsx(
@@ -98,7 +177,7 @@ export default function Header({ lang, serverPathname }: HeaderProps) {
       'container',
       '!my-0',
     )}>
-      <a href={`/${lang}/`} className={clsx(
+      <a href={lang === 'en' ? '/' : `/${lang}/`} className={clsx(
         'flex',
         'flex-col',
         'items-center',

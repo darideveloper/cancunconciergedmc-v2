@@ -15,7 +15,9 @@ import clsx from 'clsx'
 
 // i18n
 export const getStaticPaths = getStaticPathsLangs
-const { lang } = Astro.params as any
+
+// Get language from params or props
+const { lang } = Astro.params as any || Astro.props as any
 const t = useTranslations(lang)
 
 // Get all images from gallery subdirectories

@@ -1,0 +1,13 @@
+---
+// This page serves the English version at /about
+// We dynamically import and render the [lang]/about.astro content with lang='en'
+
+// Import the [lang]/about.astro component
+import LangAbout from './[lang]/about.astro'
+
+// Set language to English for root page
+const lang = 'en'
+---
+
+<!-- Render the [lang]/about.astro component with English language -->
+<LangAbout lang={lang} />
