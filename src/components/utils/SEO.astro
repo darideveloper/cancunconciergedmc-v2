@@ -25,7 +25,13 @@ import { servicesItemsIcons } from '../../data/servcies'
 const title = 'Cancun Concierge DMC'
 const pageName = t(`meta.${currentPage}.page`)
 const description = t(`meta.${currentPage}.description`)
-const url = domain // Make sure this is dynamic if needed
+
+// Page slug for URL generation
+const pageSlugForUrl = currentPage === 'home' ? '' : `/${currentPage}`
+const url = lang === 'en' 
+  ? `${domain}${pageSlugForUrl}` 
+  : `${domain}/${lang}${pageSlugForUrl}`
+
 const image = '/logo.webp' // Make sure this is the full URL if needed
 const type = 'website'
 const twitterHandle = '@DeveloperDari'
@@ -88,7 +94,7 @@ const jsonLd = {
       '@type': 'Offer',
       name: t(`services.cards.${serviceKey}.title`)?.replaceAll('*', ''),
       description: t(`services.cards.${serviceKey}.text`)?.replaceAll('*', ''),
-      url: `${domain}/${lang}/services`,
+      url: lang === 'en' ? `${domain}/services` : `${domain}/${lang}/services`,
     })),
   ],
 }
@@ -97,11 +103,15 @@ const jsonLd = {
 const pageSlug = currentPage === 'home' ? '' : `/${currentPage}`
 
 // Canonical URL for this language
-const canonicalUrl = `${domain}/${lang}${pageSlug}`
+// English uses root paths, Spanish uses /es/ prefix
+const canonicalUrl = lang === 'en' 
+  ? `${domain}${pageSlug}` 
+  : `${domain}/${lang}${pageSlug}`
 
 // Alternate URLs
+// English uses root paths, Spanish uses /es/ prefix
 const alternateUrls = {
-  en: `${domain}/en${pageSlug}`,
+  en: `${domain}${pageSlug}`,
   es: `${domain}/es${pageSlug}`,
 }
 ---
@@ -122,7 +132,7 @@ const alternateUrls = {
 }
 <link
   rel='canonical'
-  href={url}
+  href={canonicalUrl}
 />
 <meta
   name='author'
