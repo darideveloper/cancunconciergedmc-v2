@@ -28,6 +28,6 @@ const textsMd = texts.map((text: string) => marked(text.trim()))
     data-aos="fade-down"
   />
   <div class={clsx('text-center', 'mt-8')}>
-    <Link href=`/${lang}/about`>{t('about.cta')}</Link>
+    <Link href=`/${lang ? lang : 'en'}/about`>{t('about.cta')}</Link>
   </div>
 </section>

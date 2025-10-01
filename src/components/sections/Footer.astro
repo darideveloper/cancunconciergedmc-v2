@@ -19,7 +19,7 @@ const t = useTranslations(lang)
 const navLinksLang = navLinks.map((item) => {
   return {
     text: t(`nav.links.${item.text}`),
-    url: `/${lang}${item.url}`,
+    url: `/${lang ? lang : 'en'}${item.url}`,
   }
 })
 

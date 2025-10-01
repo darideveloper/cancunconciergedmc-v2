@@ -1,9 +1,9 @@
 ---
 interface Props {
   currentPage?: string // Current page
-  lang?: string // Language parameter
+  lang: string // Language parameter
 }
-const { currentPage, lang } = Astro.props as Props
+const { currentPage, lang = 'en' } = Astro.props as Props
 
 // Libs
 import { useTranslations } from '../../i18n/utils'
@@ -94,7 +94,7 @@ const jsonLd = {
       '@type': 'Offer',
       name: t(`services.cards.${serviceKey}.title`)?.replaceAll('*', ''),
       description: t(`services.cards.${serviceKey}.text`)?.replaceAll('*', ''),
-      url: lang === 'en' ? `${domain}/services` : `${domain}/${lang}/services`,
+      url: lang === 'en' ? `${domain}/services` : `${domain}/${lang}${pageSlugForUrl}`,
     })),
   ],
 }

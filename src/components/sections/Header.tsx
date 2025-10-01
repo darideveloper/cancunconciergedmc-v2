@@ -17,7 +17,7 @@ interface HeaderProps {
   serverPathname?: string;
 }
 
-export default function Header({ lang, serverPathname }: HeaderProps) {
+export default function Header({ lang = 'en', serverPathname }: HeaderProps) {
   // States
   const [menuOpen, setMenuOpen] = useState(false);
   const [navLinksLang, setNavLinksLang] = useState(navLinks);

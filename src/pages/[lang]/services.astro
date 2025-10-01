@@ -18,6 +18,11 @@ import { getStaticPathsLangs } from '../../libs/getStaticPaths'
 // i18n
 export const getStaticPaths = getStaticPathsLangs
 
+// Props interface
+interface Props {
+  lang: string
+}
+
 // Get language from params or props
 const { lang } = Astro.params as any || Astro.props as any
 const t = useTranslations(lang)
