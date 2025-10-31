@@ -52,6 +52,11 @@
   },
   "whyUs": {
     "slides": {
+      "dmc": {
+        "alt": "Miembro de DMC Finder",
+        "text": "Miembro oficial de DMC Finder, conectando planificadores con empresas de gestión de destinos confiables y verificadas en todo el mundo"
+      },
+
       "sectur": {
         "text": "Registro Nacional de Turismo - RNT 27230050068",
         "alt": "Logo de Sectur"
