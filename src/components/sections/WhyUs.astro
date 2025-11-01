@@ -40,10 +40,19 @@ const slides = t("whyUs.slides");
             ? "https://dmcfinder.com/listing/cancun-concierge-dmc/"
             : null;
 
-        return (
+        const content = (
+          <InfoCard
+            imageSrc={`/why-us/${slideKey}.webp`}
+            imageAlt={slide.alt}
+            text={slide.text}
+            class="mx-auto"
+          />
+        );
+
+        return link ? (
           <a
-            href={link ?? "#"}
-            target={link ? "_blank" : "_self"}
+            href={link}
+            target="_blank"
             rel="noopener noreferrer"
             class={clsx(
               "flex flex-col",
@@ -55,13 +64,22 @@ const slides = t("whyUs.slides");
               "duration-300"
             )}
           >
-            <InfoCard
-              imageSrc={`/why-us/${slideKey}.webp`}
-              imageAlt={slide.alt}
-              text={slide.text}
-              class="mx-auto"
-            />
+            {content}
           </a>
+        ) : (
+          <div
+            class={clsx(
+              "flex flex-col",
+              "items-center",
+              "justify-start",
+              "text-center",
+              "hover:scale-105",
+              "transition-transform",
+              "duration-300"
+            )}
+          >
+            {content}
+          </div>
         );
       })
     }
