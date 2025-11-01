@@ -1,9 +1,4 @@
 ---
-// Styles
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/autoplay";
-
 // Libs
 import { clsx } from "clsx";
 import { useTranslations } from "../../i18n/utils";
@@ -20,87 +15,55 @@ const slidesKeys = ["dmc", "sectur"];
 const slides = t("whyUs.slides");
 ---
 
-<section class={clsx("container", "!max-w-xl", "!mb-4", "why-us")} id="why-us">
-  <div class="swiper">
-    <div class="swiper-wrapper group">
-      {
-        slidesKeys.map((slideKey) => {
-          const slide = slides[slideKey];
+<section
+  class={clsx(
+    "container",
+    "!max-w-xl",
+    "!mb-8",
+    "why-us",
+    "flex flex-col items-center justify-center"
+  )}
+  id="why-us"
+  data-aos="fade-up"
+  data-aos-duration="800"
+>
+  <h2 class={clsx("text-2xl", "font-semibold", "text-center", "mb-6")}>
+    {t("whyUs.title")}
+  </h2>
 
-          return (
-            <div
-              class={clsx(
-                "swiper-slide",
-                "flex flex-col",
-                "items-center",
-                "justify-center",
-                "py-12"
-                // 'cursor-pointer',
-              )}
-              data-link={
-                slideKey === "dmc"
-                  ? "https://dmcfinder.com/listing/cancun-concierge-dmc/"
-                  : ""
-              }
-            >
-              <InfoCard
-                imageSrc={`/why-us/${slideKey}.webp`}
-                imageAlt={slide.alt}
-                text={slide.text}
-                class={clsx("mx-auto")}
-              />
-            </div>
-          );
-        })
-      }
-    </div>
+  <div class={clsx("grid grid-cols-1 md:grid-cols-2", "gap-8 w-full")}>
+    {
+      slidesKeys.map((slideKey) => {
+        const slide = slides[slideKey];
+        const link =
+          slideKey === "dmc"
+            ? "https://dmcfinder.com/listing/cancun-concierge-dmc/"
+            : null;
+
+        return (
+          <a
+            href={link ?? "#"}
+            target={link ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+            class={clsx(
+              "flex flex-col",
+              "items-center",
+              "justify-start",
+              "text-center",
+              "hover:scale-105",
+              "transition-transform",
+              "duration-300"
+            )}
+          >
+            <InfoCard
+              imageSrc={`/why-us/${slideKey}.webp`}
+              imageAlt={slide.alt}
+              text={slide.text}
+              class="mx-auto"
+            />
+          </a>
+        );
+      })
+    }
   </div>
 </section>
-
-<script>
-  import Swiper from "swiper";
-  import { Autoplay, EffectFade } from "swiper/modules";
-
-  // Initialize Swiper with required modules
-  const swiper = new Swiper(".why-us .swiper", {
-    modules: [Autoplay, EffectFade],
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 2,
-    spaceBetween: 20,
-    effect: "slide",
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-  // Add click event listener to each slide
-  document.querySelectorAll(".why-us .swiper-slide").forEach((slide, index) => {
-    slide.addEventListener("click", () => {
-      const link = slide.getAttribute("data-link");
-
-      // Si tiene link, abrir en nueva pestaña
-      if (link) {
-        window.open(link, "_blank");
-        return;
-      }
-
-      // Si no tiene link, comportamiento original de navegación
-      if (index === swiper.slides.length - 1) {
-        swiper.slideTo(0); // Go to the first slide
-      } else {
-        swiper.slideTo(index + 1); // Go to the next slide
-      }
-    });
-  });
-</script>
