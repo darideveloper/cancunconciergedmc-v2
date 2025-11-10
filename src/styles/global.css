@@ -39,6 +39,10 @@ p {
   margin-bottom: 1rem;
 }
 
+b, strong {
+  font-weight: bold !important;
+}
+
 /* Custom scroll bar */
 
 /* width */
