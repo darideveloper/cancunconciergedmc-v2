@@ -21,7 +21,7 @@ interface TeamProps {
 export default function Team({ lang }: TeamProps) {
   // Translations and data
   const t = useTranslations(lang)
-  const teamKeys = ['omar', 'claudia', 'luis', 'monica']
+  const teamKeys = ['omar', 'claudia', 'luis', 'monica', 'miriam']
   const teamData = t('teamMenu.members')
 
   // States
@@ -77,8 +77,8 @@ export default function Team({ lang }: TeamProps) {
                 className={clsx(
                   'absolute inset-0',
                   'transition-all duration-500 ease-in-out',
-                  activeOption === teamKey 
-                    ? 'opacity-100 visible translate-x-0' 
+                  activeOption === teamKey
+                    ? 'opacity-100 visible translate-x-0'
                     : 'opacity-0 invisible translate-x-4 pointer-events-none'
                 )}
               >
