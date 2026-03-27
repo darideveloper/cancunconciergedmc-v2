@@ -54,7 +54,10 @@ if (!currentPage || currentPage === 'en' || currentPage === 'es') {
       name='robots'
       content='index, follow'
     />
-    <SEO currentPage={currentPage} lang={lang} />
+    <SEO
+      currentPage={currentPage}
+      lang={lang}
+    />
     <ClientRouter />
   </head>
   <body>
@@ -78,12 +81,6 @@ if (!currentPage || currentPage === 'en' || currentPage === 'es') {
     <Footer />
     <WhatsappButton lang={lang} />
 
-    <!-- AnythingLLM Chat Widget -->
-    <script
-      data-embed-id="2ff6cf06-b022-40eb-a14a-258044eaca47"
-      data-base-api-url="https://anythingllm.apps.darideveloper.com/api/embed"
-      src="https://anythingllm.apps.darideveloper.com/embed/anythingllm-chat-widget.min.js"
-    ></script>
-    <!-- AnythingLLM (https://anythingllm.com) -->
+   
   </body>
 </html>

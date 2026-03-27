@@ -1,67 +1,69 @@
 ---
 // Libs
-import { clsx } from "clsx";
-import { useTranslations } from "../../i18n/utils";
+import { clsx } from 'clsx'
+import { useTranslations } from '../../i18n/utils'
 
 // Components
-import InfoCard from "../ui/InfoCard.astro";
+import InfoCard from '../ui/InfoCard.astro'
 
 // i18n
-const { lang } = Astro.params as any;
-const t = useTranslations(lang);
+const { lang } = Astro.params as any
+const t = useTranslations(lang)
 
 // Data
-const slidesKeys = ["dmc", "sectur"];
-const slides = t("whyUs.slides");
+const slidesKeys = ['dmc', 'sectur', 'site']
+const slides = t('whyUs.slides')
 ---
 
 <section
   class={clsx(
-    "container",
-    "!max-w-xl",
-    "!mb-8",
-    "why-us",
-    "flex flex-col items-center justify-center"
+    'container',
+    '!mb-8',
+    'why-us',
+    'flex flex-col items-center justify-center',
   )}
-  id="why-us"
-  data-aos="fade-up"
-  data-aos-duration="800"
+  id='why-us'
+  data-aos='fade-up'
+  data-aos-duration='800'
 >
-  <h2 class={clsx("text-2xl", "font-semibold", "text-center", "mb-6")}>
-    {t("whyUs.title")}
+  <h2 class={clsx('text-2xl', 'font-semibold', 'text-center', 'mb-6')}>
+    {t('whyUs.title')}
   </h2>
 
-  <div class={clsx("grid grid-cols-1 md:grid-cols-2", "gap-8 w-full")}>
+  <div class={clsx('grid grid-cols-1 md:grid-cols-3', 'gap-8 w-full')}>
     {
       slidesKeys.map((slideKey) => {
-        const slide = slides[slideKey];
+        const slide = slides[slideKey]
         const link =
-          slideKey === "dmc"
-            ? "https://dmcfinder.com/listing/cancun-concierge-dmc/"
-            : null;
+          slideKey === 'dmc'
+            ? 'https://dmcfinder.com/listing/cancun-concierge-dmc/'
+            : slideKey === 'site'
+              ? 'https://siteglobal.com/'
+              : null
 
         const content = (
           <InfoCard
             imageSrc={`/why-us/${slideKey}.webp`}
             imageAlt={slide.alt}
             text={slide.text}
-            class="mx-auto"
+            class='mx-auto'
           />
-        );
+        )
 
         return link ? (
           <a
             href={link}
-            target="_blank"
-            rel="noopener noreferrer"
+            target='_blank'
+            rel='noopener noreferrer'
             class={clsx(
-              "flex flex-col",
-              "items-center",
-              "justify-start",
-              "text-center",
-              "hover:scale-105",
-              "transition-transform",
-              "duration-300"
+              'flex-col',
+              'items-center',
+              'justify-start',
+              'text-center',
+              'hover:scale-105',
+              'transition-transform',
+              'duration-300',
+              'contents',
             )}
           >
             {content}
@@ -69,18 +71,19 @@ const slides = t("whyUs.slides");
         ) : (
           <div
             class={clsx(
-              "flex flex-col",
-              "items-center",
-              "justify-start",
-              "text-center",
-              "hover:scale-105",
-              "transition-transform",
-              "duration-300"
+              'flex-col',
+              'items-center',
+              'justify-start',
+              'text-center',
+              'hover:scale-105',
+              'transition-transform',
+              'duration-300',
+              'contents',
             )}
           >
             {content}
           </div>
-        );
+        )
       })
     }
   </div>
