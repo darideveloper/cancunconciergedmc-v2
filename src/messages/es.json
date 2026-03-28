@@ -54,7 +54,8 @@
     "slides": {
       "dmc": {
         "alt": "Miembro de DMC Finder",
-        "text": "Miembro oficial. Conectando planificadores con empresas de gestión de destinos (DMC) confiables y verificadas en todo el mundo."
+        "text": "Miembro oficial. Conectando planificadores con empresas de gestión de destinos (DMC) confiables y verificadas en todo el mundo.",
+        "href": "https://dmcfinder.com/listing/cancun-concierge-dmc/"
       },
       "sectur": {
         "text": "Registro Nacional de Turismo - RNT 27230050068",
@@ -62,7 +63,8 @@
       },
       "site": {
         "alt": "Logo de SITE",
-        "text": "Orgulloso miembro de SITE (Society for Incentive Travel Excellence), la asociación global líder para profesionales de viajes de incentivo."
+        "text": "Orgulloso miembro de SITE (Society for Incentive Travel Excellence), la asociación global líder para profesionales de viajes de incentivo.",
+        "href": "https://siteglobal.com/"
       }
     }
   },

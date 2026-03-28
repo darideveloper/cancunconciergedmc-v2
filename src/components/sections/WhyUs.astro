@@ -11,8 +11,8 @@ const { lang } = Astro.params as any
 const t = useTranslations(lang)
 
 // Data
-const slidesKeys = ['dmc', 'sectur', 'site']
 const slides = t('whyUs.slides')
+const slideKeys = Object.keys(slides)
 ---
 
 <section
@@ -32,29 +32,20 @@ const slides = t('whyUs.slides')
 
   <div class={clsx('grid grid-cols-1 md:grid-cols-3', 'gap-8 w-full')}>
     {
-      slidesKeys.map((slideKey) => {
+      slideKeys.map((slideKey) => {
         const slide = slides[slideKey]
-        const link =
-          slideKey === 'dmc'
-            ? 'https://dmcfinder.com/listing/cancun-concierge-dmc/'
-            : slideKey === 'site'
-              ? 'https://siteglobal.com/'
-              : null
+        const Tag = slide.href ? 'a' : 'div'
+        const tagProps = slide.href
+          ? {
+              href: slide.href,
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            }
+          : {}
 
-        const content = (
-          <InfoCard
-            imageSrc={`/why-us/${slideKey}.webp`}
-            imageAlt={slide.alt}
-            text={slide.text}
-            class='mx-auto'
-          />
-        )
-
-        return link ? (
-          <a
-            href={link}
-            target='_blank'
-            rel='noopener noreferrer'
+        return (
+          <Tag
+            {...tagProps}
             class={clsx(
               'flex-col',
               'items-center',
@@ -66,23 +57,13 @@ const slides = t('whyUs.slides')
               'contents',
             )}
           >
-            {content}
-          </a>
-        ) : (
-          <div
-            class={clsx(
-              'flex-col',
-              'items-center',
-              'justify-start',
-              'text-center',
-              'hover:scale-105',
-              'transition-transform',
-              'duration-300',
-              'contents',
-            )}
-          >
-            {content}
-          </div>
+            <InfoCard
+              imageSrc={`/why-us/${slideKey}.webp`}
+              imageAlt={slide.alt}
+              text={slide.text}
+              class='mx-auto'
+            />
+          </Tag>
         )
       })
     }

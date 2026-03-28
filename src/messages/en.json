@@ -54,7 +54,8 @@
     "slides": {
       "dmc": {
         "alt": "DMC Finder Member",
-        "text": "Official member. Connecting planners with trusted, vetted Destination Management Companies worldwide"
+        "text": "Official member. Connecting planners with trusted, vetted Destination Management Companies worldwide",
+        "href": "https://dmcfinder.com/listing/cancun-concierge-dmc/"
       },
       "sectur": {
         "text": "Mexico's National Tourism Registry 27230050068",
@@ -62,7 +63,8 @@
       },
       "site": {
         "alt": "SITE Logo",
-        "text": "Proud Member of SITE (Society for Incentive Travel Excellence), the leading global association for incentive travel professionals."
+        "text": "Proud Member of SITE (Society for Incentive Travel Excellence), the leading global association for incentive travel professionals.",
+        "href": "https://siteglobal.com/"
       }
     }
   },
