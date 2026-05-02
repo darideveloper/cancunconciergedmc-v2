@@ -199,6 +199,10 @@
       "menuOfServices": {
         "title": "Menu of Services",
         "url": "https://cancunconciergedmc.com/menu-of-services/"
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "url": "/privacy"
       }
     }
   },
