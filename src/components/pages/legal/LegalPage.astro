@@ -1,0 +1,51 @@
+---
+import { getCollection, render } from 'astro:content'
+import LegalLayout from '../../../layouts/LegalLayout.astro'
+import type { LegalPageKey, SupportedLang } from '../../../i18n/routes'
+
+interface Props {
+  pageKey: LegalPageKey
+  lang: SupportedLang
+}
+
+const { pageKey, lang } = Astro.props as Props
+
+const PAGE_KEY_TO_SLUG: Record<LegalPageKey, string> = {
+  privacy: 'privacy-policy',
+}
+
+const slug = PAGE_KEY_TO_SLUG[pageKey]
+
+if (!slug) {
+  throw new Error(`Unknown legal page key: ${pageKey}`)
+}
+
+const legalEntries = await getCollection('legal')
+const expectedId = `${lang}/${slug}`
+
+const entry = legalEntries.find((item) => {
+  const cleanId = item.id.replace(/\.[^/.]+$/, '')
+  return cleanId === expectedId && item.data.lang === lang
+})
+
+if (!entry) {
+  throw new Error(`Missing legal content entry for ${expectedId}`)
+}
+
+if (entry.data.lang !== lang) {
+  throw new Error(
+    `Legal content language mismatch for ${entry.id}: expected ${lang}, received ${entry.data.lang}`
+  )
+}
+
+const { Content } = await render(entry)
+---
+
+<LegalLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  pageKey={pageKey}
+  lang={lang}
+>
+  <Content />
+</LegalLayout>
