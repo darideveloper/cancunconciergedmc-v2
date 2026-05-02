@@ -54,10 +54,12 @@ if (!currentPage || currentPage === 'en' || currentPage === 'es') {
       name='robots'
       content='index, follow'
     />
-    <SEO
-      currentPage={currentPage}
-      lang={lang}
-    />
+    <slot name='seo'>
+      <SEO
+        currentPage={currentPage}
+        lang={lang}
+      />
+    </slot>
     <ClientRouter />
   </head>
   <body>
@@ -78,7 +80,7 @@ if (!currentPage || currentPage === 'en' || currentPage === 'es') {
 
     <!-- Footer -->
     <WhyUs />
-    <Footer />
+    <Footer lang={lang} />
     <WhatsappButton lang={lang} />
 
    
