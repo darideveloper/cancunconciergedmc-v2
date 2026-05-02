@@ -12,7 +12,11 @@ import { socialLinks, contactClassicLinks } from '../../data/contact'
 import LinksList from '../ui/LinksList.astro'
 
 // i18n
-const { lang } = Astro.params as any
+interface Props {
+  lang?: 'en' | 'es'
+}
+
+const { lang = (Astro.params.lang as 'en' | 'es') || 'en' } = Astro.props as Props
 const t = useTranslations(lang)
 
 // Format links
