@@ -1,0 +1,134 @@
+---
+import Layout from './Layout.astro'
+import { domain } from '../data/setup'
+import { getLegalPath, type LegalPageKey, type SupportedLang } from '../i18n/routes'
+
+interface Props {
+  title: string
+  description: string
+  pageKey: LegalPageKey
+  lang: SupportedLang
+}
+
+const { title, description, pageKey, lang } = Astro.props as Props
+
+const pathFor = (targetLang: SupportedLang) => getLegalPath(pageKey, targetLang)
+const canonicalUrl = `${domain}/${pathFor(lang)}`
+const alternateUrls = {
+  en: `${domain}/${pathFor('en')}`,
+  es: `${domain}/${pathFor('es')}`,
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  url: canonicalUrl,
+  image: `${domain}/logo.webp`,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Cancun Concierge DMC',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${domain}/logo.webp`,
+    },
+  },
+}
+---
+
+<Layout>
+  <Fragment slot='seo'>
+    <title>{title}</title>
+    <meta name='description' content={description} />
+    <link rel='canonical' href={canonicalUrl} />
+    <meta name='author' content="Dari Dev's Team" />
+    <meta property='og:type' content='article' />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta property='og:url' content={canonicalUrl} />
+    <meta property='og:image' content='/logo.webp' />
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:site' content='@DeveloperDari' />
+    <meta name='twitter:title' content={title} />
+    <meta name='twitter:description' content={description} />
+    <meta name='twitter:image' content='/logo.webp' />
+    <script type='application/ld+json' set:html={JSON.stringify(jsonLd)} />
+    <link rel='sitemap' href='/sitemap-index.xml' />
+    <link rel='alternate' hreflang='en' href={alternateUrls.en} />
+    <link rel='alternate' hreflang='es' href={alternateUrls.es} />
+  </Fragment>
+
+  <section class='bg-white px-5 py-14 text-blue md:py-20'>
+    <div class='mx-auto max-w-3xl'>
+      <div class='mb-10 flex justify-center'>
+        <a href={lang === 'en' ? '/' : '/es'} aria-label='Cancun Concierge DMC'>
+          <img
+            src='/logo.webp'
+            alt='Cancun Concierge DMC'
+            class='h-auto w-48 max-w-full'
+            loading='eager'
+          />
+        </a>
+      </div>
+
+      <header class='mb-10 text-center'>
+        <h1 class='font-title text-4xl font-bold uppercase text-blue md:text-5xl'>
+          {title}
+        </h1>
+        <p class='mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 md:text-lg'>
+          {description}
+        </p>
+      </header>
+
+      <article class='legal-content'>
+        <slot />
+      </article>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-content {
+    color: #1f2937;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .legal-content :global(h1) {
+    display: none;
+  }
+
+  .legal-content :global(h2) {
+    color: #0f2f57;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 2rem 0 0.75rem;
+  }
+
+  .legal-content :global(p) {
+    margin: 1rem 0;
+  }
+
+  .legal-content :global(ul) {
+    list-style: disc;
+    margin: 1rem 0 1rem 1.5rem;
+  }
+
+  .legal-content :global(li) {
+    margin: 0.4rem 0;
+  }
+
+  .legal-content :global(a) {
+    color: #0f5f96;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .legal-content :global(strong) {
+    color: #0f2f57;
+    font-weight: 700;
+  }
+</style>
