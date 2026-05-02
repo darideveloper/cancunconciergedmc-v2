@@ -54,4 +54,10 @@ export const footerLinks: {
     urlLang: '',
     active: false,
   },
+  {
+    text: 'privacy',
+    url: '',
+    urlLang: '',
+    active: false,
+  },
 ]
